@@ -1,0 +1,6778 @@
+{
+  "types": {
+    "CUSTOMER_ID": {
+      "semantic_type": "identifier",
+      "confidence": 0.95,
+      "evidence": "uniq_ratio=1.000, key",
+      "source": "inferred",
+      "physical_dtype": "string",
+      "family": "keylike",
+      "parse_fail_rate": 0.0,
+      "is_primary_key": true,
+      "is_foreign_key": false,
+      "feature_role": "key"
+    },
+    "DATE_OF_BIRTH": {
+      "semantic_type": "datetime",
+      "confidence": 1.0,
+      "evidence": "config override",
+      "source": "override",
+      "physical_dtype": "datetime64[us]",
+      "family": "datetime",
+      "parse_fail_rate": 0.0,
+      "is_primary_key": false,
+      "is_foreign_key": false,
+      "feature_role": "feature"
+    },
+    "NUM_LOAN_ACCOUNT": {
+      "semantic_type": "count",
+      "confidence": 1.0,
+      "evidence": "config override",
+      "source": "override",
+      "physical_dtype": "int64",
+      "family": "numeric",
+      "parse_fail_rate": 0.0,
+      "is_primary_key": false,
+      "is_foreign_key": false,
+      "feature_role": "feature"
+    },
+    "LOAN_ACCOUNT_BALANCE": {
+      "semantic_type": "amount",
+      "confidence": 1.0,
+      "evidence": "config override",
+      "source": "override",
+      "physical_dtype": "float64",
+      "family": "numeric",
+      "parse_fail_rate": 0.0,
+      "is_primary_key": false,
+      "is_foreign_key": false,
+      "feature_role": "feature"
+    },
+    "NUM_OVER_DRAFT_ACCOUNT": {
+      "semantic_type": "count",
+      "confidence": 1.0,
+      "evidence": "config override",
+      "source": "override",
+      "physical_dtype": "int64",
+      "family": "numeric",
+      "parse_fail_rate": 0.0,
+      "is_primary_key": false,
+      "is_foreign_key": false,
+      "feature_role": "feature"
+    },
+    "OVER_DRAFT_ACCOUNT_BALANCE": {
+      "semantic_type": "amount",
+      "confidence": 1.0,
+      "evidence": "config override",
+      "source": "override",
+      "physical_dtype": "float64",
+      "family": "numeric",
+      "parse_fail_rate": 0.0,
+      "is_primary_key": false,
+      "is_foreign_key": false,
+      "feature_role": "feature"
+    },
+    "NUM_CURRENT_ACCOUNT": {
+      "semantic_type": "count",
+      "confidence": 1.0,
+      "evidence": "config override",
+      "source": "override",
+      "physical_dtype": "int64",
+      "family": "numeric",
+      "parse_fail_rate": 0.0,
+      "is_primary_key": false,
+      "is_foreign_key": false,
+      "feature_role": "feature"
+    },
+    "CURRENT_ACCOUNT_BALANCE": {
+      "semantic_type": "amount",
+      "confidence": 1.0,
+      "evidence": "config override",
+      "source": "override",
+      "physical_dtype": "float64",
+      "family": "numeric",
+      "parse_fail_rate": 0.0,
+      "is_primary_key": false,
+      "is_foreign_key": false,
+      "feature_role": "feature"
+    },
+    "NUM_SAVING_ACCOUNT": {
+      "semantic_type": "count",
+      "confidence": 1.0,
+      "evidence": "config override",
+      "source": "override",
+      "physical_dtype": "int64",
+      "family": "numeric",
+      "parse_fail_rate": 0.0,
+      "is_primary_key": false,
+      "is_foreign_key": false,
+      "feature_role": "feature"
+    },
+    "SAVING_ACCOUNT_BALANCE": {
+      "semantic_type": "amount",
+      "confidence": 1.0,
+      "evidence": "config override",
+      "source": "override",
+      "physical_dtype": "float64",
+      "family": "numeric",
+      "parse_fail_rate": 0.0,
+      "is_primary_key": false,
+      "is_foreign_key": false,
+      "feature_role": "feature"
+    },
+    "NUM_TERM_DEPOSIT_ACCOUNT": {
+      "semantic_type": "count",
+      "confidence": 1.0,
+      "evidence": "config override",
+      "source": "override",
+      "physical_dtype": "int64",
+      "family": "numeric",
+      "parse_fail_rate": 0.0,
+      "is_primary_key": false,
+      "is_foreign_key": false,
+      "feature_role": "feature"
+    },
+    "TERM_DEPOSIT_ACCOUNT_BALANCE": {
+      "semantic_type": "amount",
+      "confidence": 1.0,
+      "evidence": "config override",
+      "source": "override",
+      "physical_dtype": "float64",
+      "family": "numeric",
+      "parse_fail_rate": 0.0,
+      "is_primary_key": false,
+      "is_foreign_key": false,
+      "feature_role": "feature"
+    },
+    "CUSTOMER_PIN_CODE": {
+      "semantic_type": "pincode",
+      "confidence": 1.0,
+      "evidence": "config override",
+      "source": "override",
+      "physical_dtype": "object",
+      "family": "pattern",
+      "parse_fail_rate": 0.0,
+      "is_primary_key": false,
+      "is_foreign_key": false,
+      "feature_role": "feature"
+    },
+    "PERMANENT_PIN_CODE": {
+      "semantic_type": "pincode",
+      "confidence": 1.0,
+      "evidence": "config override",
+      "source": "override",
+      "physical_dtype": "object",
+      "family": "pattern",
+      "parse_fail_rate": 0.0,
+      "is_primary_key": false,
+      "is_foreign_key": false,
+      "feature_role": "feature"
+    },
+    "GENDER": {
+      "semantic_type": "categorical",
+      "confidence": 0.7,
+      "evidence": "4 levels, ratio=0.000",
+      "source": "inferred",
+      "physical_dtype": "string",
+      "family": "categorical",
+      "parse_fail_rate": 0.0,
+      "is_primary_key": false,
+      "is_foreign_key": false,
+      "feature_role": "feature"
+    },
+    "OCCUPATION": {
+      "semantic_type": "categorical",
+      "confidence": 0.7,
+      "evidence": "58 levels, ratio=0.000",
+      "source": "inferred",
+      "physical_dtype": "string",
+      "family": "categorical",
+      "parse_fail_rate": 0.0,
+      "is_primary_key": false,
+      "is_foreign_key": false,
+      "feature_role": "feature"
+    },
+    "NATIONALITY": {
+      "semantic_type": "categorical",
+      "confidence": 0.7,
+      "evidence": "37 levels, ratio=0.000",
+      "source": "inferred",
+      "physical_dtype": "string",
+      "family": "categorical",
+      "parse_fail_rate": 0.0,
+      "is_primary_key": false,
+      "is_foreign_key": false,
+      "feature_role": "feature"
+    },
+    "HASH_OF_AADHAR": {
+      "semantic_type": "hashed_pii",
+      "confidence": 1.0,
+      "evidence": "config override",
+      "source": "override",
+      "physical_dtype": "string",
+      "family": "keylike",
+      "parse_fail_rate": 0.0,
+      "is_primary_key": false,
+      "is_foreign_key": false,
+      "feature_role": "key"
+    },
+    "HASH_OF_PAN": {
+      "semantic_type": "hashed_pii",
+      "confidence": 1.0,
+      "evidence": "config override",
+      "source": "override",
+      "physical_dtype": "string",
+      "family": "keylike",
+      "parse_fail_rate": 0.0,
+      "is_primary_key": false,
+      "is_foreign_key": false,
+      "feature_role": "key"
+    },
+    "HASH_OF_VOTER_ID": {
+      "semantic_type": "hashed_pii",
+      "confidence": 1.0,
+      "evidence": "config override",
+      "source": "override",
+      "physical_dtype": "string",
+      "family": "keylike",
+      "parse_fail_rate": 0.0,
+      "is_primary_key": false,
+      "is_foreign_key": false,
+      "feature_role": "key"
+    },
+    "HASH_OF_PASSPORT": {
+      "semantic_type": "hashed_pii",
+      "confidence": 1.0,
+      "evidence": "config override",
+      "source": "override",
+      "physical_dtype": "string",
+      "family": "keylike",
+      "parse_fail_rate": 0.0,
+      "is_primary_key": false,
+      "is_foreign_key": false,
+      "feature_role": "key"
+    },
+    "HASH_OF_DRIVING_LICENCE": {
+      "semantic_type": "hashed_pii",
+      "confidence": 1.0,
+      "evidence": "config override",
+      "source": "override",
+      "physical_dtype": "string",
+      "family": "keylike",
+      "parse_fail_rate": 0.0,
+      "is_primary_key": false,
+      "is_foreign_key": false,
+      "feature_role": "key"
+    },
+    "HASH_OF_NREGA": {
+      "semantic_type": "hashed_pii",
+      "confidence": 1.0,
+      "evidence": "config override",
+      "source": "override",
+      "physical_dtype": "string",
+      "family": "keylike",
+      "parse_fail_rate": 0.0,
+      "is_primary_key": false,
+      "is_foreign_key": false,
+      "feature_role": "key"
+    },
+    "KYC_VERIFIED_FLAG": {
+      "semantic_type": "boolean_flag",
+      "confidence": 1.0,
+      "evidence": "config override",
+      "source": "override",
+      "physical_dtype": "string",
+      "family": "categorical",
+      "parse_fail_rate": 0.0,
+      "is_primary_key": false,
+      "is_foreign_key": false,
+      "feature_role": "feature"
+    },
+    "KYC_REVIEW_DATE": {
+      "semantic_type": "datetime",
+      "confidence": 1.0,
+      "evidence": "config override",
+      "source": "override",
+      "physical_dtype": "datetime64[us]",
+      "family": "datetime",
+      "parse_fail_rate": 0.0,
+      "is_primary_key": false,
+      "is_foreign_key": false,
+      "feature_role": "feature"
+    },
+    "CUSTOMER_OPEN_DATE": {
+      "semantic_type": "datetime",
+      "confidence": 1.0,
+      "evidence": "config override",
+      "source": "override",
+      "physical_dtype": "datetime64[us]",
+      "family": "datetime",
+      "parse_fail_rate": 0.0,
+      "is_primary_key": false,
+      "is_foreign_key": false,
+      "feature_role": "feature"
+    },
+    "CUSTOMER_SPECIAL_STATUS": {
+      "semantic_type": "categorical",
+      "confidence": 0.7,
+      "evidence": "8 levels, ratio=0.000",
+      "source": "inferred",
+      "physical_dtype": "string",
+      "family": "categorical",
+      "parse_fail_rate": 0.0,
+      "is_primary_key": false,
+      "is_foreign_key": false,
+      "feature_role": "feature"
+    },
+    "ANNUAL_INCOME": {
+      "semantic_type": "amount_string",
+      "confidence": 1.0,
+      "evidence": "config override",
+      "source": "override",
+      "physical_dtype": "string",
+      "family": "numeric",
+      "parse_fail_rate": 1.0,
+      "is_primary_key": false,
+      "is_foreign_key": false,
+      "feature_role": "feature"
+    },
+    "ADDRESS": {
+      "semantic_type": "free_text",
+      "confidence": 1.0,
+      "evidence": "config override",
+      "source": "override",
+      "physical_dtype": "string",
+      "family": "text",
+      "parse_fail_rate": 0.0,
+      "is_primary_key": false,
+      "is_foreign_key": false,
+      "feature_role": "feature"
+    },
+    "NUM_CREDIT_CARDS": {
+      "semantic_type": "count",
+      "confidence": 1.0,
+      "evidence": "config override",
+      "source": "override",
+      "physical_dtype": "int64",
+      "family": "numeric",
+      "parse_fail_rate": 0.0,
+      "is_primary_key": false,
+      "is_foreign_key": false,
+      "feature_role": "feature"
+    },
+    "CREDIT_CARD_OUTSTANDING_AMOUNT": {
+      "semantic_type": "continuous",
+      "confidence": 0.7,
+      "evidence": "float",
+      "source": "inferred",
+      "physical_dtype": "float64",
+      "family": "numeric",
+      "parse_fail_rate": 0.0,
+      "is_primary_key": false,
+      "is_foreign_key": false,
+      "feature_role": "feature"
+    },
+    "MAX_SANCTIONED_LIMIT": {
+      "semantic_type": "count",
+      "confidence": 0.6,
+      "evidence": "non-negative integers",
+      "source": "inferred",
+      "physical_dtype": "int64",
+      "family": "numeric",
+      "parse_fail_rate": 0.0,
+      "is_primary_key": false,
+      "is_foreign_key": false,
+      "feature_role": "feature"
+    }
+  },
+  "profiles": {
+    "CUSTOMER_ID": {
+      "_type": "identifier",
+      "_family": "keylike",
+      "count": 673969,
+      "n_present": 673969,
+      "n_missing": 0,
+      "pct_missing": 0.0,
+      "n_unique": 673969,
+      "cardinality_ratio": 1.0,
+      "memory_bytes": 11457605,
+      "n_blank": 0,
+      "top_values": [
+        {
+          "value": "C01473070",
+          "count": 1,
+          "pct": 1.4837477688142927e-06
+        },
+        {
+          "value": "C01679839",
+          "count": 1,
+          "pct": 1.4837477688142927e-06
+        },
+        {
+          "value": "U65868756",
+          "count": 1,
+          "pct": 1.4837477688142927e-06
+        },
+        {
+          "value": "R36911572",
+          "count": 1,
+          "pct": 1.4837477688142927e-06
+        },
+        {
+          "value": "R45635536",
+          "count": 1,
+          "pct": 1.4837477688142927e-06
+        },
+        {
+          "value": "U64880438",
+          "count": 1,
+          "pct": 1.4837477688142927e-06
+        },
+        {
+          "value": "U09523594",
+          "count": 1,
+          "pct": 1.4837477688142927e-06
+        },
+        {
+          "value": "U44736322",
+          "count": 1,
+          "pct": 1.4837477688142927e-06
+        },
+        {
+          "value": "C01814040",
+          "count": 1,
+          "pct": 1.4837477688142927e-06
+        },
+        {
+          "value": "R38075159",
+          "count": 1,
+          "pct": 1.4837477688142927e-06
+        },
+        {
+          "value": "BHG003077",
+          "count": 1,
+          "pct": 1.4837477688142927e-06
+        },
+        {
+          "value": "U48619568",
+          "count": 1,
+          "pct": 1.4837477688142927e-06
+        },
+        {
+          "value": "C01390243",
+          "count": 1,
+          "pct": 1.4837477688142927e-06
+        },
+        {
+          "value": "C02192821",
+          "count": 1,
+          "pct": 1.4837477688142927e-06
+        },
+        {
+          "value": "C01941325",
+          "count": 1,
+          "pct": 1.4837477688142927e-06
+        },
+        {
+          "value": "C00525002",
+          "count": 1,
+          "pct": 1.4837477688142927e-06
+        },
+        {
+          "value": "C02209191",
+          "count": 1,
+          "pct": 1.4837477688142927e-06
+        },
+        {
+          "value": "C01900213",
+          "count": 1,
+          "pct": 1.4837477688142927e-06
+        },
+        {
+          "value": "R49179563",
+          "count": 1,
+          "pct": 1.4837477688142927e-06
+        },
+        {
+          "value": "U66609692",
+          "count": 1,
+          "pct": 1.4837477688142927e-06
+        }
+      ],
+      "dominance": 1.4837477688142927e-06,
+      "is_constant": false,
+      "is_near_constant": false,
+      "entropy": 13.420939394771406,
+      "normalized_entropy": 1.0000000000000002,
+      "n_duplicates": 0,
+      "uniqueness_ratio": 1.0,
+      "length_consistent": true,
+      "length_min": 9,
+      "length_max": 9
+    },
+    "DATE_OF_BIRTH": {
+      "_type": "datetime",
+      "_family": "datetime",
+      "count": 673969,
+      "n_present": 673967,
+      "n_missing": 2,
+      "pct_missing": 3e-06,
+      "n_unique": 25496,
+      "cardinality_ratio": 0.03783,
+      "memory_bytes": 5391884,
+      "n_blank": 0,
+      "top_values": [
+        {
+          "value": "2005-01-01 00:00:00",
+          "count": 5630,
+          "pct": 0.00835352472747182
+        },
+        {
+          "value": "2003-01-01 00:00:00",
+          "count": 5250,
+          "pct": 0.007789698902171768
+        },
+        {
+          "value": "2004-01-01 00:00:00",
+          "count": 5111,
+          "pct": 0.007583457350285696
+        },
+        {
+          "value": "2006-01-01 00:00:00",
+          "count": 4886,
+          "pct": 0.0072496131116211926
+        },
+        {
+          "value": "2000-01-01 00:00:00",
+          "count": 4817,
+          "pct": 0.007147234211764077
+        },
+        {
+          "value": "2002-01-01 00:00:00",
+          "count": 4659,
+          "pct": 0.0069128013686130035
+        },
+        {
+          "value": "1995-01-01 00:00:00",
+          "count": 4651,
+          "pct": 0.006900931351238266
+        },
+        {
+          "value": "1996-01-01 00:00:00",
+          "count": 4598,
+          "pct": 0.006822292486130627
+        },
+        {
+          "value": "2007-01-01 00:00:00",
+          "count": 4477,
+          "pct": 0.006642758473337716
+        },
+        {
+          "value": "2001-01-01 00:00:00",
+          "count": 4374,
+          "pct": 0.006489931999637964
+        },
+        {
+          "value": "1997-01-01 00:00:00",
+          "count": 4348,
+          "pct": 0.006451354443170066
+        },
+        {
+          "value": "1998-01-01 00:00:00",
+          "count": 4206,
+          "pct": 0.006240661634768468
+        },
+        {
+          "value": "1999-01-01 00:00:00",
+          "count": 4156,
+          "pct": 0.006166474026176356
+        },
+        {
+          "value": "1990-01-01 00:00:00",
+          "count": 4124,
+          "pct": 0.0061189939566774045
+        },
+        {
+          "value": "1993-01-01 00:00:00",
+          "count": 4037,
+          "pct": 0.0059899075177271294
+        },
+        {
+          "value": "1994-01-01 00:00:00",
+          "count": 3943,
+          "pct": 0.005850434813573958
+        },
+        {
+          "value": "1992-01-01 00:00:00",
+          "count": 3855,
+          "pct": 0.005719864622451841
+        },
+        {
+          "value": "1991-01-01 00:00:00",
+          "count": 3516,
+          "pct": 0.005216872636197321
+        },
+        {
+          "value": "1989-01-01 00:00:00",
+          "count": 3433,
+          "pct": 0.005093721205934415
+        },
+        {
+          "value": "1988-01-01 00:00:00",
+          "count": 3275,
+          "pct": 0.004859288362783341
+        }
+      ],
+      "dominance": 0.00835352472747182,
+      "is_constant": false,
+      "is_near_constant": false,
+      "entropy": 8.795567327782543,
+      "normalized_entropy": 0.866876338239977,
+      "parse_fail_rate": 0.0,
+      "min": "1899-12-29T00:00:00",
+      "max": "2026-01-12T00:00:00",
+      "span_days": 46035,
+      "n_unique_days": 25496,
+      "max_gap_days": 2345,
+      "is_monotonic_increasing": false,
+      "has_time_component": true,
+      "n_future_dates": 0,
+      "n_sentinel_dates": 933,
+      "by_year": {
+        "1899": 1,
+        "1900": 4,
+        "1907": 1,
+        "1909": 1,
+        "1915": 1,
+        "1919": 1,
+        "1923": 2,
+        "1924": 1,
+        "1925": 1,
+        "1926": 4,
+        "1927": 2,
+        "1928": 3,
+        "1929": 6,
+        "1930": 5,
+        "1931": 2,
+        "1932": 4,
+        "1933": 11,
+        "1934": 12,
+        "1935": 16,
+        "1936": 19,
+        "1937": 23,
+        "1938": 36,
+        "1939": 34,
+        "1940": 67,
+        "1941": 56,
+        "1942": 65,
+        "1943": 87,
+        "1944": 102,
+        "1945": 161,
+        "1946": 156,
+        "1947": 216,
+        "1948": 238,
+        "1949": 290,
+        "1950": 462,
+        "1951": 385,
+        "1952": 531,
+        "1953": 539,
+        "1954": 596,
+        "1955": 791,
+        "1956": 748,
+        "1957": 761,
+        "1958": 862,
+        "1959": 849,
+        "1960": 1226,
+        "1961": 949,
+        "1962": 1235,
+        "1963": 1360,
+        "1964": 1491,
+        "1965": 1916,
+        "1966": 1496,
+        "1967": 1666,
+        "1968": 1993,
+        "1969": 2208,
+        "1970": 2948,
+        "1971": 2494,
+        "1972": 2944,
+        "1973": 3270,
+        "1974": 3486,
+        "1975": 4566,
+        "1976": 4382,
+        "1977": 4495,
+        "1978": 5264,
+        "1979": 5319,
+        "1980": 7456,
+        "1981": 6247,
+        "1982": 7917,
+        "1983": 8601,
+        "1984": 9534,
+        "1985": 10849,
+        "1986": 11141,
+        "1987": 11463,
+        "1988": 13548,
+        "1989": 13835,
+        "1990": 16722,
+        "1991": 15477,
+        "1992": 18632,
+        "1993": 19283,
+        "1994": 20608,
+        "1995": 22894,
+        "1996": 23987,
+        "1997": 24072,
+        "1998": 26956,
+        "1999": 27203,
+        "2000": 29701,
+        "2001": 28640,
+        "2002": 32001,
+        "2003": 33713,
+        "2004": 34518,
+        "2005": 35617,
+        "2006": 31753,
+        "2007": 23381,
+        "2008": 15583,
+        "2009": 10061,
+        "2010": 5691,
+        "2011": 3357,
+        "2012": 1692,
+        "2013": 723,
+        "2014": 328,
+        "2015": 310,
+        "2016": 256,
+        "2017": 804,
+        "2018": 518,
+        "2019": 511,
+        "2020": 593,
+        "2021": 683,
+        "2022": 1101,
+        "2023": 1396,
+        "2024": 1163,
+        "2025": 587,
+        "2026": 1
+      },
+      "by_dow": {
+        "0": 98705,
+        "1": 95938,
+        "2": 96717,
+        "3": 96774,
+        "4": 94048,
+        "5": 97836,
+        "6": 93949
+      },
+      "by_hour": {
+        "0": 673966,
+        "1": 1
+      },
+      "derived_feature_stubs": [
+        "recency_days",
+        "year",
+        "month",
+        "dayofweek",
+        "hour",
+        "age_years"
+      ]
+    },
+    "NUM_LOAN_ACCOUNT": {
+      "_type": "count",
+      "_family": "numeric",
+      "count": 673969,
+      "n_present": 673969,
+      "n_missing": 0,
+      "pct_missing": 0.0,
+      "n_unique": 18,
+      "cardinality_ratio": 2.7e-05,
+      "memory_bytes": 5391884,
+      "n_blank": 0,
+      "top_values": [
+        {
+          "value": "0",
+          "count": 647508,
+          "pct": 0.960738550289405
+        },
+        {
+          "value": "1",
+          "count": 21422,
+          "pct": 0.031784844703539775
+        },
+        {
+          "value": "2",
+          "count": 3733,
+          "pct": 0.005538830420983755
+        },
+        {
+          "value": "3",
+          "count": 821,
+          "pct": 0.0012181569181965342
+        },
+        {
+          "value": "4",
+          "count": 269,
+          "pct": 0.0003991281498110447
+        },
+        {
+          "value": "5",
+          "count": 112,
+          "pct": 0.00016617975010720077
+        },
+        {
+          "value": "6",
+          "count": 40,
+          "pct": 5.9349910752571704e-05
+        },
+        {
+          "value": "7",
+          "count": 29,
+          "pct": 4.302868529561449e-05
+        },
+        {
+          "value": "8",
+          "count": 14,
+          "pct": 2.0772468763400096e-05
+        },
+        {
+          "value": "9",
+          "count": 10,
+          "pct": 1.4837477688142926e-05
+        },
+        {
+          "value": "15",
+          "count": 2,
+          "pct": 2.9674955376285855e-06
+        },
+        {
+          "value": "12",
+          "count": 2,
+          "pct": 2.9674955376285855e-06
+        },
+        {
+          "value": "10",
+          "count": 2,
+          "pct": 2.9674955376285855e-06
+        },
+        {
+          "value": "20",
+          "count": 1,
+          "pct": 1.4837477688142927e-06
+        },
+        {
+          "value": "30",
+          "count": 1,
+          "pct": 1.4837477688142927e-06
+        },
+        {
+          "value": "13",
+          "count": 1,
+          "pct": 1.4837477688142927e-06
+        },
+        {
+          "value": "81",
+          "count": 1,
+          "pct": 1.4837477688142927e-06
+        },
+        {
+          "value": "11",
+          "count": 1,
+          "pct": 1.4837477688142927e-06
+        }
+      ],
+      "dominance": 0.960738550289405,
+      "is_constant": false,
+      "is_near_constant": false,
+      "entropy": 0.1912346979015428,
+      "normalized_entropy": 0.06616266484721611,
+      "min": 0.0,
+      "max": 81.0,
+      "range": 81.0,
+      "mean": 0.050241183199820766,
+      "trimmed_mean_10": 0.0,
+      "median": 0.0,
+      "std": 0.30525750457819834,
+      "var": 0.09318214410130878,
+      "sum": 33861.0,
+      "mad": 0.0,
+      "iqr": 0.0,
+      "cv": 6.0758422699584695,
+      "skew": 37.05338611188805,
+      "kurtosis": 7620.075022524534,
+      "percentiles": {
+        "p1": 0.0,
+        "p5": 0.0,
+        "p10": 0.0,
+        "p25": 0.0,
+        "p50": 0.0,
+        "p75": 0.0,
+        "p90": 0.0,
+        "p95": 0.0,
+        "p99": 1.0
+      },
+      "n_zero": 647508,
+      "n_negative": 0,
+      "zero_inflation": 0.960738550289405,
+      "all_positive": false,
+      "is_integer_valued": true,
+      "outliers": {
+        "fraction": 0.039261449710594996,
+        "count": 26461,
+        "lower": 0.0,
+        "upper": 0.0
+      },
+      "shape": "right_skewed",
+      "log_transform_candidate": false,
+      "is_monotonic": "none",
+      "histogram": {
+        "counts": [
+          672663,
+          1202,
+          83,
+          12,
+          4,
+          2,
+          0,
+          1,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "edges": [
+          0.0,
+          2.7,
+          5.4,
+          8.100000000000001,
+          10.8,
+          13.5,
+          16.200000000000003,
+          18.900000000000002,
+          21.6,
+          24.3,
+          27.0,
+          29.700000000000003,
+          32.400000000000006,
+          35.1,
+          37.800000000000004,
+          40.5,
+          43.2,
+          45.900000000000006,
+          48.6,
+          51.300000000000004,
+          54.0,
+          56.7,
+          59.400000000000006,
+          62.1,
+          64.80000000000001,
+          67.5,
+          70.2,
+          72.9,
+          75.60000000000001,
+          78.30000000000001,
+          81.0
+        ]
+      }
+    },
+    "LOAN_ACCOUNT_BALANCE": {
+      "_type": "amount",
+      "_family": "numeric",
+      "count": 673969,
+      "n_present": 673969,
+      "n_missing": 0,
+      "pct_missing": 0.0,
+      "n_unique": 24381,
+      "cardinality_ratio": 0.036175,
+      "memory_bytes": 5391884,
+      "n_blank": 0,
+      "top_values": [
+        {
+          "value": "0.0",
+          "count": 648514,
+          "pct": 0.9622312005448321
+        },
+        {
+          "value": "15000.0",
+          "count": 62,
+          "pct": 9.199236166648614e-05
+        },
+        {
+          "value": "13750.0",
+          "count": 55,
+          "pct": 8.16061272847861e-05
+        },
+        {
+          "value": "12500.0",
+          "count": 51,
+          "pct": 7.567113620952893e-05
+        },
+        {
+          "value": "11250.0",
+          "count": 38,
+          "pct": 5.638241521494312e-05
+        },
+        {
+          "value": "100000.0",
+          "count": 31,
+          "pct": 4.599618083324307e-05
+        },
+        {
+          "value": "20833.36",
+          "count": 31,
+          "pct": 4.599618083324307e-05
+        },
+        {
+          "value": "1111.13",
+          "count": 23,
+          "pct": 3.412619868272873e-05
+        },
+        {
+          "value": "10000.0",
+          "count": 22,
+          "pct": 3.264245091391444e-05
+        },
+        {
+          "value": "33333.28",
+          "count": 21,
+          "pct": 3.1158703145100144e-05
+        },
+        {
+          "value": "22222.16",
+          "count": 21,
+          "pct": 3.1158703145100144e-05
+        },
+        {
+          "value": "11111.04",
+          "count": 20,
+          "pct": 2.9674955376285852e-05
+        },
+        {
+          "value": "19444.48",
+          "count": 19,
+          "pct": 2.819120760747156e-05
+        },
+        {
+          "value": "3333.35",
+          "count": 18,
+          "pct": 2.6707459838657268e-05
+        },
+        {
+          "value": "2222.24",
+          "count": 17,
+          "pct": 2.5223712069842976e-05
+        },
+        {
+          "value": "18055.6",
+          "count": 16,
+          "pct": 2.3739964301028684e-05
+        },
+        {
+          "value": "16666.6",
+          "count": 15,
+          "pct": 2.2256216532214388e-05
+        },
+        {
+          "value": "38888.84",
+          "count": 15,
+          "pct": 2.2256216532214388e-05
+        },
+        {
+          "value": "47222.24",
+          "count": 15,
+          "pct": 2.2256216532214388e-05
+        },
+        {
+          "value": "44444.48",
+          "count": 14,
+          "pct": 2.0772468763400096e-05
+        }
+      ],
+      "dominance": 0.9622312005448321,
+      "is_constant": false,
+      "is_near_constant": false,
+      "entropy": 0.5397713451790855,
+      "normalized_entropy": 0.05343445727214337,
+      "min": 0.0,
+      "max": 10953891013.98,
+      "range": 10953891013.98,
+      "mean": 89714.96855408778,
+      "trimmed_mean_10": 0.0,
+      "median": 0.0,
+      "std": 15193350.74531159,
+      "var": 230837906870060.22,
+      "sum": 60465107641.42999,
+      "mad": 0.0,
+      "iqr": 0.0,
+      "cv": 169.3513467170392,
+      "skew": 585.5249566237956,
+      "kurtosis": 405581.75873433816,
+      "percentiles": {
+        "p1": 0.0,
+        "p5": 0.0,
+        "p10": 0.0,
+        "p25": 0.0,
+        "p50": 0.0,
+        "p75": 0.0,
+        "p90": 0.0,
+        "p95": 0.0,
+        "p99": 539627.627599996
+      },
+      "n_zero": 648514,
+      "n_negative": 0,
+      "zero_inflation": 0.9622312005448321,
+      "all_positive": false,
+      "is_integer_valued": false,
+      "outliers": {
+        "fraction": 0.03776879945516782,
+        "count": 25455,
+        "lower": 0.0,
+        "upper": 0.0
+      },
+      "shape": "right_skewed",
+      "log_transform_candidate": false,
+      "is_monotonic": "none",
+      "histogram": {
+        "counts": [
+          673947,
+          11,
+          3,
+          2,
+          2,
+          1,
+          1,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "edges": [
+          0.0,
+          365129700.46599996,
+          730259400.9319999,
+          1095389101.3979998,
+          1460518801.8639998,
+          1825648502.33,
+          2190778202.7959995,
+          2555907903.2619996,
+          2921037603.7279997,
+          3286167304.194,
+          3651297004.66,
+          4016426705.1259995,
+          4381556405.591999,
+          4746686106.058,
+          5111815806.523999,
+          5476945506.99,
+          5842075207.455999,
+          6207204907.921999,
+          6572334608.388,
+          6937464308.853999,
+          7302594009.32,
+          7667723709.785999,
+          8032853410.251999,
+          8397983110.717999,
+          8763112811.183998,
+          9128242511.65,
+          9493372212.116,
+          9858501912.581999,
+          10223631613.047998,
+          10588761313.513998,
+          10953891013.98
+        ]
+      }
+    },
+    "NUM_OVER_DRAFT_ACCOUNT": {
+      "_type": "count",
+      "_family": "numeric",
+      "count": 673969,
+      "n_present": 673969,
+      "n_missing": 0,
+      "pct_missing": 0.0,
+      "n_unique": 11,
+      "cardinality_ratio": 1.6e-05,
+      "memory_bytes": 5391884,
+      "n_blank": 0,
+      "top_values": [
+        {
+          "value": "0",
+          "count": 671154,
+          "pct": 0.9958232500307878
+        },
+        {
+          "value": "1",
+          "count": 2598,
+          "pct": 0.0038547767033795324
+        },
+        {
+          "value": "2",
+          "count": 156,
+          "pct": 0.00023146465193502966
+        },
+        {
+          "value": "3",
+          "count": 33,
+          "pct": 4.8963676370871656e-05
+        },
+        {
+          "value": "4",
+          "count": 16,
+          "pct": 2.3739964301028684e-05
+        },
+        {
+          "value": "5",
+          "count": 5,
+          "pct": 7.418738844071463e-06
+        },
+        {
+          "value": "7",
+          "count": 3,
+          "pct": 4.451243306442878e-06
+        },
+        {
+          "value": "11",
+          "count": 1,
+          "pct": 1.4837477688142927e-06
+        },
+        {
+          "value": "8",
+          "count": 1,
+          "pct": 1.4837477688142927e-06
+        },
+        {
+          "value": "9",
+          "count": 1,
+          "pct": 1.4837477688142927e-06
+        },
+        {
+          "value": "6",
+          "count": 1,
+          "pct": 1.4837477688142927e-06
+        }
+      ],
+      "dominance": 0.9958232500307878,
+      "is_constant": false,
+      "is_near_constant": true,
+      "entropy": 0.028493035982056412,
+      "normalized_entropy": 0.011882518934534084,
+      "min": 0.0,
+      "max": 11.0,
+      "range": 11.0,
+      "mean": 0.004678256715071465,
+      "trimmed_mean_10": 0.0,
+      "median": 0.0,
+      "std": 0.08019315745484672,
+      "var": 0.006430942502577838,
+      "sum": 3153.0,
+      "mad": 0.0,
+      "iqr": 0.0,
+      "cv": 17.1416752732907,
+      "skew": 29.179509989955733,
+      "kurtosis": 1740.4267770429462,
+      "percentiles": {
+        "p1": 0.0,
+        "p5": 0.0,
+        "p10": 0.0,
+        "p25": 0.0,
+        "p50": 0.0,
+        "p75": 0.0,
+        "p90": 0.0,
+        "p95": 0.0,
+        "p99": 0.0
+      },
+      "n_zero": 671154,
+      "n_negative": 0,
+      "zero_inflation": 0.9958232500307878,
+      "all_positive": false,
+      "is_integer_valued": true,
+      "outliers": {
+        "fraction": 0.0041767499692122335,
+        "count": 2815,
+        "lower": 0.0,
+        "upper": 0.0
+      },
+      "shape": "right_skewed",
+      "log_transform_candidate": false,
+      "is_monotonic": "none",
+      "histogram": {
+        "counts": [
+          671154,
+          0,
+          2598,
+          0,
+          0,
+          156,
+          0,
+          0,
+          33,
+          0,
+          16,
+          0,
+          0,
+          5,
+          0,
+          0,
+          1,
+          0,
+          0,
+          3,
+          0,
+          1,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "edges": [
+          0.0,
+          0.36666666666666664,
+          0.7333333333333333,
+          1.0999999999999999,
+          1.4666666666666666,
+          1.8333333333333333,
+          2.1999999999999997,
+          2.5666666666666664,
+          2.933333333333333,
+          3.3,
+          3.6666666666666665,
+          4.033333333333333,
+          4.3999999999999995,
+          4.766666666666667,
+          5.133333333333333,
+          5.5,
+          5.866666666666666,
+          6.2333333333333325,
+          6.6,
+          6.966666666666666,
+          7.333333333333333,
+          7.699999999999999,
+          8.066666666666666,
+          8.433333333333334,
+          8.799999999999999,
+          9.166666666666666,
+          9.533333333333333,
+          9.899999999999999,
+          10.266666666666666,
+          10.633333333333333,
+          11.0
+        ]
+      }
+    },
+    "OVER_DRAFT_ACCOUNT_BALANCE": {
+      "_type": "amount",
+      "_family": "numeric",
+      "count": 673969,
+      "n_present": 673969,
+      "n_missing": 0,
+      "pct_missing": 0.0,
+      "n_unique": 2430,
+      "cardinality_ratio": 0.003606,
+      "memory_bytes": 5391884,
+      "n_blank": 0,
+      "top_values": [
+        {
+          "value": "0.0",
+          "count": 671536,
+          "pct": 0.9963900416784748
+        },
+        {
+          "value": "121.0",
+          "count": 3,
+          "pct": 4.451243306442878e-06
+        },
+        {
+          "value": "145.0",
+          "count": 2,
+          "pct": 2.9674955376285855e-06
+        },
+        {
+          "value": "102807.0",
+          "count": 2,
+          "pct": 2.9674955376285855e-06
+        },
+        {
+          "value": "506035.18",
+          "count": 1,
+          "pct": 1.4837477688142927e-06
+        },
+        {
+          "value": "596792.25",
+          "count": 1,
+          "pct": 1.4837477688142927e-06
+        },
+        {
+          "value": "1478567.6",
+          "count": 1,
+          "pct": 1.4837477688142927e-06
+        },
+        {
+          "value": "299688.0",
+          "count": 1,
+          "pct": 1.4837477688142927e-06
+        },
+        {
+          "value": "406555.9",
+          "count": 1,
+          "pct": 1.4837477688142927e-06
+        },
+        {
+          "value": "1252551.97",
+          "count": 1,
+          "pct": 1.4837477688142927e-06
+        },
+        {
+          "value": "9702689.72",
+          "count": 1,
+          "pct": 1.4837477688142927e-06
+        },
+        {
+          "value": "37004.95",
+          "count": 1,
+          "pct": 1.4837477688142927e-06
+        },
+        {
+          "value": "1681143.61",
+          "count": 1,
+          "pct": 1.4837477688142927e-06
+        },
+        {
+          "value": "339696.85",
+          "count": 1,
+          "pct": 1.4837477688142927e-06
+        },
+        {
+          "value": "780051.11",
+          "count": 1,
+          "pct": 1.4837477688142927e-06
+        },
+        {
+          "value": "125719.19",
+          "count": 1,
+          "pct": 1.4837477688142927e-06
+        },
+        {
+          "value": "198214.25",
+          "count": 1,
+          "pct": 1.4837477688142927e-06
+        },
+        {
+          "value": "14661.43",
+          "count": 1,
+          "pct": 1.4837477688142927e-06
+        },
+        {
+          "value": "610533.08",
+          "count": 1,
+          "pct": 1.4837477688142927e-06
+        },
+        {
+          "value": "299119.68",
+          "count": 1,
+          "pct": 1.4837477688142927e-06
+        }
+      ],
+      "dominance": 0.9963900416784748,
+      "is_constant": false,
+      "is_near_constant": true,
+      "entropy": 0.052043462405005306,
+      "normalized_entropy": 0.006675964868652886,
+      "min": 0.0,
+      "max": 1728918569.41,
+      "range": 1728918569.41,
+      "mean": 9468.219536210123,
+      "trimmed_mean_10": 0.0,
+      "median": 0.0,
+      "std": 2397538.3136408282,
+      "var": 5748189965375.706,
+      "sum": 6381286452.6,
+      "mad": 0.0,
+      "iqr": 0.0,
+      "cv": 253.21955246936525,
+      "skew": 626.9969256369112,
+      "kurtosis": 426050.00731070695,
+      "percentiles": {
+        "p1": 0.0,
+        "p5": 0.0,
+        "p10": 0.0,
+        "p25": 0.0,
+        "p50": 0.0,
+        "p75": 0.0,
+        "p90": 0.0,
+        "p95": 0.0,
+        "p99": 0.0
+      },
+      "n_zero": 671536,
+      "n_negative": 0,
+      "zero_inflation": 0.9963900416784748,
+      "all_positive": false,
+      "is_integer_valued": false,
+      "outliers": {
+        "fraction": 0.003609958321525174,
+        "count": 2433,
+        "lower": 0.0,
+        "upper": 0.0
+      },
+      "shape": "right_skewed",
+      "log_transform_candidate": false,
+      "is_monotonic": "none",
+      "histogram": {
+        "counts": [
+          673956,
+          10,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "edges": [
+          0.0,
+          57630618.980333336,
+          115261237.96066667,
+          172891856.941,
+          230522475.92133334,
+          288153094.9016667,
+          345783713.882,
+          403414332.86233336,
+          461044951.8426667,
+          518675570.823,
+          576306189.8033334,
+          633936808.7836667,
+          691567427.764,
+          749198046.7443334,
+          806828665.7246667,
+          864459284.705,
+          922089903.6853334,
+          979720522.6656667,
+          1037351141.646,
+          1094981760.6263335,
+          1152612379.6066668,
+          1210242998.5870001,
+          1267873617.5673335,
+          1325504236.5476668,
+          1383134855.528,
+          1440765474.5083334,
+          1498396093.4886668,
+          1556026712.469,
+          1613657331.4493334,
+          1671287950.4296668,
+          1728918569.41
+        ]
+      }
+    },
+    "NUM_CURRENT_ACCOUNT": {
+      "_type": "count",
+      "_family": "numeric",
+      "count": 673969,
+      "n_present": 673969,
+      "n_missing": 0,
+      "pct_missing": 0.0,
+      "n_unique": 18,
+      "cardinality_ratio": 2.7e-05,
+      "memory_bytes": 5391884,
+      "n_blank": 0,
+      "top_values": [
+        {
+          "value": "0",
+          "count": 659697,
+          "pct": 0.9788239518434824
+        },
+        {
+          "value": "1",
+          "count": 14055,
+          "pct": 0.020854074890684884
+        },
+        {
+          "value": "2",
+          "count": 149,
+          "pct": 0.0002210784175533296
+        },
+        {
+          "value": "3",
+          "count": 30,
+          "pct": 4.4512433064428776e-05
+        },
+        {
+          "value": "4",
+          "count": 10,
+          "pct": 1.4837477688142926e-05
+        },
+        {
+          "value": "5",
+          "count": 5,
+          "pct": 7.418738844071463e-06
+        },
+        {
+          "value": "6",
+          "count": 5,
+          "pct": 7.418738844071463e-06
+        },
+        {
+          "value": "8",
+          "count": 3,
+          "pct": 4.451243306442878e-06
+        },
+        {
+          "value": "7",
+          "count": 3,
+          "pct": 4.451243306442878e-06
+        },
+        {
+          "value": "10",
+          "count": 3,
+          "pct": 4.451243306442878e-06
+        },
+        {
+          "value": "14",
+          "count": 2,
+          "pct": 2.9674955376285855e-06
+        },
+        {
+          "value": "139",
+          "count": 1,
+          "pct": 1.4837477688142927e-06
+        },
+        {
+          "value": "19",
+          "count": 1,
+          "pct": 1.4837477688142927e-06
+        },
+        {
+          "value": "15",
+          "count": 1,
+          "pct": 1.4837477688142927e-06
+        },
+        {
+          "value": "21",
+          "count": 1,
+          "pct": 1.4837477688142927e-06
+        },
+        {
+          "value": "12",
+          "count": 1,
+          "pct": 1.4837477688142927e-06
+        },
+        {
+          "value": "13",
+          "count": 1,
+          "pct": 1.4837477688142927e-06
+        },
+        {
+          "value": "38",
+          "count": 1,
+          "pct": 1.4837477688142927e-06
+        }
+      ],
+      "dominance": 0.9788239518434824,
+      "is_constant": false,
+      "is_near_constant": false,
+      "entropy": 0.10464855149893895,
+      "normalized_entropy": 0.03620591407075962,
+      "min": 0.0,
+      "max": 139.0,
+      "range": 139.0,
+      "mean": 0.02210487425979533,
+      "trimmed_mean_10": 0.0,
+      "median": 0.0,
+      "std": 0.23805123432954572,
+      "var": 0.05666839016582029,
+      "sum": 14898.0,
+      "mad": 0.0,
+      "iqr": 0.0,
+      "cv": 10.769173872321762,
+      "skew": 306.9611811331968,
+      "kurtosis": 173596.61208330476,
+      "percentiles": {
+        "p1": 0.0,
+        "p5": 0.0,
+        "p10": 0.0,
+        "p25": 0.0,
+        "p50": 0.0,
+        "p75": 0.0,
+        "p90": 0.0,
+        "p95": 0.0,
+        "p99": 1.0
+      },
+      "n_zero": 659697,
+      "n_negative": 0,
+      "zero_inflation": 0.9788239518434824,
+      "all_positive": false,
+      "is_integer_valued": true,
+      "outliers": {
+        "fraction": 0.021176048156517583,
+        "count": 14272,
+        "lower": 0.0,
+        "upper": 0.0
+      },
+      "shape": "right_skewed",
+      "log_transform_candidate": false,
+      "is_monotonic": "none",
+      "histogram": {
+        "counts": [
+          673941,
+          16,
+          5,
+          3,
+          2,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "edges": [
+          0.0,
+          4.633333333333334,
+          9.266666666666667,
+          13.900000000000002,
+          18.533333333333335,
+          23.166666666666668,
+          27.800000000000004,
+          32.43333333333334,
+          37.06666666666667,
+          41.7,
+          46.333333333333336,
+          50.96666666666667,
+          55.60000000000001,
+          60.23333333333334,
+          64.86666666666667,
+          69.5,
+          74.13333333333334,
+          78.76666666666668,
+          83.4,
+          88.03333333333335,
+          92.66666666666667,
+          97.30000000000001,
+          101.93333333333334,
+          106.56666666666668,
+          111.20000000000002,
+          115.83333333333334,
+          120.46666666666668,
+          125.10000000000001,
+          129.73333333333335,
+          134.36666666666667,
+          139.0
+        ]
+      }
+    },
+    "CURRENT_ACCOUNT_BALANCE": {
+      "_type": "amount",
+      "_family": "numeric",
+      "count": 673969,
+      "n_present": 673969,
+      "n_missing": 0,
+      "pct_missing": 0.0,
+      "n_unique": 12703,
+      "cardinality_ratio": 0.018848,
+      "memory_bytes": 5391884,
+      "n_blank": 0,
+      "top_values": [
+        {
+          "value": "0.0",
+          "count": 660906,
+          "pct": 0.9806178028959789
+        },
+        {
+          "value": "1.0",
+          "count": 59,
+          "pct": 8.754111836004326e-05
+        },
+        {
+          "value": "2.0",
+          "count": 22,
+          "pct": 3.264245091391444e-05
+        },
+        {
+          "value": "5000.0",
+          "count": 22,
+          "pct": 3.264245091391444e-05
+        },
+        {
+          "value": "1000.0",
+          "count": 20,
+          "pct": 2.9674955376285852e-05
+        },
+        {
+          "value": "2000.0",
+          "count": 15,
+          "pct": 2.2256216532214388e-05
+        },
+        {
+          "value": "500.0",
+          "count": 13,
+          "pct": 1.9288720994585804e-05
+        },
+        {
+          "value": "50.0",
+          "count": 9,
+          "pct": 1.3353729919328634e-05
+        },
+        {
+          "value": "10.0",
+          "count": 9,
+          "pct": 1.3353729919328634e-05
+        },
+        {
+          "value": "3.0",
+          "count": 9,
+          "pct": 1.3353729919328634e-05
+        },
+        {
+          "value": "5.0",
+          "count": 7,
+          "pct": 1.0386234381700048e-05
+        },
+        {
+          "value": "100.0",
+          "count": 6,
+          "pct": 8.902486612885756e-06
+        },
+        {
+          "value": "10000.0",
+          "count": 6,
+          "pct": 8.902486612885756e-06
+        },
+        {
+          "value": "236.0",
+          "count": 5,
+          "pct": 7.418738844071463e-06
+        },
+        {
+          "value": "0.47",
+          "count": 5,
+          "pct": 7.418738844071463e-06
+        },
+        {
+          "value": "1200.0",
+          "count": 5,
+          "pct": 7.418738844071463e-06
+        },
+        {
+          "value": "1500.0",
+          "count": 5,
+          "pct": 7.418738844071463e-06
+        },
+        {
+          "value": "7000.0",
+          "count": 5,
+          "pct": 7.418738844071463e-06
+        },
+        {
+          "value": "0.01",
+          "count": 4,
+          "pct": 5.934991075257171e-06
+        },
+        {
+          "value": "4.0",
+          "count": 4,
+          "pct": 5.934991075257171e-06
+        }
+      ],
+      "dominance": 0.9806178028959789,
+      "is_constant": false,
+      "is_near_constant": false,
+      "entropy": 0.27801984624038867,
+      "normalized_entropy": 0.029421355243423528,
+      "min": 0.0,
+      "max": 8743608154.0,
+      "range": 8743608154.0,
+      "mean": 18663.468347093116,
+      "trimmed_mean_10": 0.0,
+      "median": 0.0,
+      "std": 10675951.5077846,
+      "var": 113975940596568.27,
+      "sum": 12578599098.422,
+      "mad": 0.0,
+      "iqr": 0.0,
+      "cv": 572.0239833903867,
+      "skew": 815.2246552004459,
+      "kurtosis": 667571.2824840767,
+      "percentiles": {
+        "p1": 0.0,
+        "p5": 0.0,
+        "p10": 0.0,
+        "p25": 0.0,
+        "p50": 0.0,
+        "p75": 0.0,
+        "p90": 0.0,
+        "p95": 0.0,
+        "p99": 13280.142399999906
+      },
+      "n_zero": 660906,
+      "n_negative": 0,
+      "zero_inflation": 0.9806178028959789,
+      "all_positive": false,
+      "is_integer_valued": false,
+      "outliers": {
+        "fraction": 0.019382197104021105,
+        "count": 13063,
+        "lower": 0.0,
+        "upper": 0.0
+      },
+      "shape": "right_skewed",
+      "log_transform_candidate": false,
+      "is_monotonic": "none",
+      "histogram": {
+        "counts": [
+          673966,
+          2,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "edges": [
+          0.0,
+          291453605.1333333,
+          582907210.2666667,
+          874360815.4,
+          1165814420.5333333,
+          1457268025.6666665,
+          1748721630.8,
+          2040175235.9333334,
+          2331628841.0666666,
+          2623082446.2,
+          2914536051.333333,
+          3205989656.4666667,
+          3497443261.6,
+          3788896866.733333,
+          4080350471.866667,
+          4371804077.0,
+          4663257682.133333,
+          4954711287.266666,
+          5246164892.4,
+          5537618497.533333,
+          5829072102.666666,
+          6120525707.8,
+          6411979312.933333,
+          6703432918.066667,
+          6994886523.2,
+          7286340128.333333,
+          7577793733.466666,
+          7869247338.599999,
+          8160700943.733334,
+          8452154548.866667,
+          8743608154.0
+        ]
+      }
+    },
+    "NUM_SAVING_ACCOUNT": {
+      "_type": "count",
+      "_family": "numeric",
+      "count": 673969,
+      "n_present": 673969,
+      "n_missing": 0,
+      "pct_missing": 0.0,
+      "n_unique": 21,
+      "cardinality_ratio": 3.1e-05,
+      "memory_bytes": 5391884,
+      "n_blank": 0,
+      "top_values": [
+        {
+          "value": "1",
+          "count": 640183,
+          "pct": 0.9498700978828403
+        },
+        {
+          "value": "2",
+          "count": 18540,
+          "pct": 0.027508683633816984
+        },
+        {
+          "value": "0",
+          "count": 13687,
+          "pct": 0.020308055711761225
+        },
+        {
+          "value": "3",
+          "count": 1249,
+          "pct": 0.0018532009632490514
+        },
+        {
+          "value": "4",
+          "count": 178,
+          "pct": 0.00026410710284894407
+        },
+        {
+          "value": "5",
+          "count": 59,
+          "pct": 8.754111836004326e-05
+        },
+        {
+          "value": "6",
+          "count": 26,
+          "pct": 3.857744198917161e-05
+        },
+        {
+          "value": "7",
+          "count": 12,
+          "pct": 1.7804973225771512e-05
+        },
+        {
+          "value": "11",
+          "count": 7,
+          "pct": 1.0386234381700048e-05
+        },
+        {
+          "value": "8",
+          "count": 7,
+          "pct": 1.0386234381700048e-05
+        },
+        {
+          "value": "12",
+          "count": 3,
+          "pct": 4.451243306442878e-06
+        },
+        {
+          "value": "9",
+          "count": 3,
+          "pct": 4.451243306442878e-06
+        },
+        {
+          "value": "13",
+          "count": 3,
+          "pct": 4.451243306442878e-06
+        },
+        {
+          "value": "10",
+          "count": 3,
+          "pct": 4.451243306442878e-06
+        },
+        {
+          "value": "21",
+          "count": 2,
+          "pct": 2.9674955376285855e-06
+        },
+        {
+          "value": "15",
+          "count": 2,
+          "pct": 2.9674955376285855e-06
+        },
+        {
+          "value": "19",
+          "count": 1,
+          "pct": 1.4837477688142927e-06
+        },
+        {
+          "value": "23",
+          "count": 1,
+          "pct": 1.4837477688142927e-06
+        },
+        {
+          "value": "17",
+          "count": 1,
+          "pct": 1.4837477688142927e-06
+        },
+        {
+          "value": "24",
+          "count": 1,
+          "pct": 1.4837477688142927e-06
+        }
+      ],
+      "dominance": 0.9498700978828403,
+      "is_constant": false,
+      "is_near_constant": false,
+      "entropy": 0.24270448537504294,
+      "normalized_entropy": 0.07971840915599493,
+      "min": 0.0,
+      "max": 28.0,
+      "range": 28.0,
+      "mean": 1.0129620205083616,
+      "trimmed_mean_10": 1.0,
+      "median": 1.0,
+      "std": 0.26273773404493583,
+      "var": 0.06903111689106745,
+      "sum": 682705.0,
+      "mad": 0.0,
+      "iqr": 0.0,
+      "cv": 0.25937570089062095,
+      "skew": 10.117444899445172,
+      "kurtosis": 602.5704215668173,
+      "percentiles": {
+        "p1": 0.0,
+        "p5": 1.0,
+        "p10": 1.0,
+        "p25": 1.0,
+        "p50": 1.0,
+        "p75": 1.0,
+        "p90": 1.0,
+        "p95": 1.0,
+        "p99": 2.0
+      },
+      "n_zero": 13687,
+      "n_negative": 0,
+      "zero_inflation": 0.020308055711761225,
+      "all_positive": false,
+      "is_integer_valued": true,
+      "outliers": {
+        "fraction": 0.05012990211715969,
+        "count": 33786,
+        "lower": 1.0,
+        "upper": 1.0
+      },
+      "shape": "right_skewed",
+      "log_transform_candidate": false,
+      "is_monotonic": "none",
+      "histogram": {
+        "counts": [
+          13687,
+          640183,
+          18540,
+          1249,
+          178,
+          59,
+          26,
+          12,
+          7,
+          3,
+          3,
+          7,
+          3,
+          3,
+          0,
+          0,
+          2,
+          0,
+          1,
+          0,
+          1,
+          0,
+          2,
+          0,
+          1,
+          1,
+          0,
+          0,
+          0,
+          1
+        ],
+        "edges": [
+          0.0,
+          0.9333333333333333,
+          1.8666666666666667,
+          2.8,
+          3.7333333333333334,
+          4.666666666666667,
+          5.6,
+          6.533333333333333,
+          7.466666666666667,
+          8.4,
+          9.333333333333334,
+          10.266666666666667,
+          11.2,
+          12.133333333333333,
+          13.066666666666666,
+          14.0,
+          14.933333333333334,
+          15.866666666666667,
+          16.8,
+          17.733333333333334,
+          18.666666666666668,
+          19.6,
+          20.533333333333335,
+          21.46666666666667,
+          22.4,
+          23.333333333333332,
+          24.266666666666666,
+          25.2,
+          26.133333333333333,
+          27.066666666666666,
+          28.0
+        ]
+      }
+    },
+    "SAVING_ACCOUNT_BALANCE": {
+      "_type": "amount",
+      "_family": "numeric",
+      "count": 673969,
+      "n_present": 673969,
+      "n_missing": 0,
+      "pct_missing": 0.0,
+      "n_unique": 421684,
+      "cardinality_ratio": 0.625673,
+      "memory_bytes": 5391884,
+      "n_blank": 0,
+      "top_values": [
+        {
+          "value": "0.0",
+          "count": 26638,
+          "pct": 0.039524073065675125
+        },
+        {
+          "value": "1.0",
+          "count": 1012,
+          "pct": 0.0015015527420400641
+        },
+        {
+          "value": "2.0",
+          "count": 647,
+          "pct": 0.0009599848064228473
+        },
+        {
+          "value": "500.0",
+          "count": 638,
+          "pct": 0.0009466310765035187
+        },
+        {
+          "value": "1000.0",
+          "count": 630,
+          "pct": 0.0009347610943530043
+        },
+        {
+          "value": "3.0",
+          "count": 439,
+          "pct": 0.0006513652705094745
+        },
+        {
+          "value": "4.0",
+          "count": 382,
+          "pct": 0.0005667916476870598
+        },
+        {
+          "value": "2000.0",
+          "count": 352,
+          "pct": 0.000522279214622631
+        },
+        {
+          "value": "5.0",
+          "count": 336,
+          "pct": 0.0004985392503216023
+        },
+        {
+          "value": "6.0",
+          "count": 287,
+          "pct": 0.000425835609649702
+        },
+        {
+          "value": "10.0",
+          "count": 261,
+          "pct": 0.0003872581676605304
+        },
+        {
+          "value": "7.0",
+          "count": 255,
+          "pct": 0.00037835568104764464
+        },
+        {
+          "value": "8.0",
+          "count": 214,
+          "pct": 0.0003175220225262586
+        },
+        {
+          "value": "11.0",
+          "count": 212,
+          "pct": 0.00031455452698863
+        },
+        {
+          "value": "9.0",
+          "count": 204,
+          "pct": 0.0003026845448381157
+        },
+        {
+          "value": "12.0",
+          "count": 187,
+          "pct": 0.00027746083276827273
+        },
+        {
+          "value": "0.1",
+          "count": 174,
+          "pct": 0.0002581721117736869
+        },
+        {
+          "value": "1500.0",
+          "count": 172,
+          "pct": 0.00025520461623605836
+        },
+        {
+          "value": "0.5",
+          "count": 170,
+          "pct": 0.00025223712069842976
+        },
+        {
+          "value": "3000.0",
+          "count": 162,
+          "pct": 0.00024036713854791542
+        }
+      ],
+      "dominance": 0.039524073065675125,
+      "is_constant": false,
+      "is_near_constant": false,
+      "entropy": 12.203532946826787,
+      "normalized_entropy": 0.9422114047168271,
+      "min": 0.0,
+      "max": 3109414541.51,
+      "range": 3109414541.51,
+      "mean": 25621.223476643587,
+      "trimmed_mean_10": 6115.800586043813,
+      "median": 1978.91,
+      "std": 3971899.886923633,
+      "var": 15775988711743.969,
+      "sum": 17267910365.33,
+      "mad": 1950.8700000000001,
+      "iqr": 7508.46,
+      "cv": 155.02381806803385,
+      "skew": 724.376622743094,
+      "kurtosis": 559293.2322723032,
+      "percentiles": {
+        "p1": 0.0,
+        "p5": 0.75,
+        "p10": 10.23,
+        "p25": 338.56,
+        "p50": 1978.91,
+        "p75": 7847.02,
+        "p90": 27445.34800000002,
+        "p95": 58877.90399999999,
+        "p99": 270770.1523999979
+      },
+      "n_zero": 26638,
+      "n_negative": 0,
+      "zero_inflation": 0.039524073065675125,
+      "all_positive": false,
+      "is_integer_valued": false,
+      "outliers": {
+        "fraction": 0.13497356703349858,
+        "count": 90968,
+        "lower": -10924.130000000001,
+        "upper": 19109.71
+      },
+      "shape": "right_skewed",
+      "log_transform_candidate": false,
+      "is_monotonic": "none",
+      "histogram": {
+        "counts": [
+          673961,
+          2,
+          3,
+          0,
+          1,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "edges": [
+          0.0,
+          103647151.38366668,
+          207294302.76733336,
+          310941454.151,
+          414588605.5346667,
+          518235756.9183334,
+          621882908.302,
+          725530059.6856668,
+          829177211.0693334,
+          932824362.4530001,
+          1036471513.8366668,
+          1140118665.2203336,
+          1243765816.604,
+          1347412967.9876668,
+          1451060119.3713336,
+          1554707270.755,
+          1658354422.1386669,
+          1762001573.5223336,
+          1865648724.9060001,
+          1969295876.289667,
+          2072943027.6733336,
+          2176590179.057,
+          2280237330.440667,
+          2383884481.8243337,
+          2487531633.208,
+          2591178784.591667,
+          2694825935.9753337,
+          2798473087.359,
+          2902120238.742667,
+          3005767390.1263337,
+          3109414541.51
+        ]
+      }
+    },
+    "NUM_TERM_DEPOSIT_ACCOUNT": {
+      "_type": "count",
+      "_family": "numeric",
+      "count": 673969,
+      "n_present": 673969,
+      "n_missing": 0,
+      "pct_missing": 0.0,
+      "n_unique": 93,
+      "cardinality_ratio": 0.000138,
+      "memory_bytes": 5391884,
+      "n_blank": 0,
+      "top_values": [
+        {
+          "value": "0",
+          "count": 652586,
+          "pct": 0.9682730214594439
+        },
+        {
+          "value": "1",
+          "count": 12671,
+          "pct": 0.0188005679786459
+        },
+        {
+          "value": "2",
+          "count": 3595,
+          "pct": 0.005334073228887382
+        },
+        {
+          "value": "3",
+          "count": 1581,
+          "pct": 0.0023458052224953965
+        },
+        {
+          "value": "4",
+          "count": 949,
+          "pct": 0.0014080766326047638
+        },
+        {
+          "value": "5",
+          "count": 590,
+          "pct": 0.0008754111836004327
+        },
+        {
+          "value": "6",
+          "count": 374,
+          "pct": 0.0005549216655365455
+        },
+        {
+          "value": "7",
+          "count": 307,
+          "pct": 0.00045551056502598787
+        },
+        {
+          "value": "8",
+          "count": 212,
+          "pct": 0.00031455452698863
+        },
+        {
+          "value": "9",
+          "count": 176,
+          "pct": 0.0002611396073113155
+        },
+        {
+          "value": "10",
+          "count": 135,
+          "pct": 0.0002003059487899295
+        },
+        {
+          "value": "12",
+          "count": 98,
+          "pct": 0.00014540728134380067
+        },
+        {
+          "value": "11",
+          "count": 90,
+          "pct": 0.00013353729919328634
+        },
+        {
+          "value": "13",
+          "count": 70,
+          "pct": 0.00010386234381700048
+        },
+        {
+          "value": "14",
+          "count": 62,
+          "pct": 9.199236166648614e-05
+        },
+        {
+          "value": "17",
+          "count": 47,
+          "pct": 6.973614513427176e-05
+        },
+        {
+          "value": "15",
+          "count": 43,
+          "pct": 6.380115405901459e-05
+        },
+        {
+          "value": "16",
+          "count": 40,
+          "pct": 5.9349910752571704e-05
+        },
+        {
+          "value": "18",
+          "count": 25,
+          "pct": 3.709369422035732e-05
+        },
+        {
+          "value": "23",
+          "count": 23,
+          "pct": 3.412619868272873e-05
+        }
+      ],
+      "dominance": 0.9682730214594439,
+      "is_constant": false,
+      "is_near_constant": false,
+      "entropy": 0.18940243441780094,
+      "normalized_entropy": 0.041786713055919425,
+      "min": 0.0,
+      "max": 388.0,
+      "range": 388.0,
+      "mean": 0.08809010503450455,
+      "trimmed_mean_10": 0.0,
+      "median": 0.0,
+      "std": 1.2910209345287198,
+      "var": 1.6667350533914091,
+      "sum": 59370.0,
+      "mad": 0.0,
+      "iqr": 0.0,
+      "cv": 14.655686175229691,
+      "skew": 97.40177234486761,
+      "kurtosis": 19093.20474413325,
+      "percentiles": {
+        "p1": 0.0,
+        "p5": 0.0,
+        "p10": 0.0,
+        "p25": 0.0,
+        "p50": 0.0,
+        "p75": 0.0,
+        "p90": 0.0,
+        "p95": 0.0,
+        "p99": 2.0
+      },
+      "n_zero": 652586,
+      "n_negative": 0,
+      "zero_inflation": 0.9682730214594439,
+      "all_positive": false,
+      "is_integer_valued": true,
+      "outliers": {
+        "fraction": 0.03172697854055602,
+        "count": 21383,
+        "lower": 0.0,
+        "upper": 0.0
+      },
+      "shape": "right_skewed",
+      "log_transform_candidate": false,
+      "is_monotonic": "none",
+      "histogram": {
+        "counts": [
+          673364,
+          409,
+          108,
+          34,
+          21,
+          8,
+          3,
+          8,
+          4,
+          2,
+          2,
+          1,
+          1,
+          0,
+          1,
+          0,
+          0,
+          0,
+          1,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "edges": [
+          0.0,
+          12.933333333333334,
+          25.866666666666667,
+          38.8,
+          51.733333333333334,
+          64.66666666666667,
+          77.6,
+          90.53333333333333,
+          103.46666666666667,
+          116.4,
+          129.33333333333334,
+          142.26666666666668,
+          155.2,
+          168.13333333333333,
+          181.06666666666666,
+          194.0,
+          206.93333333333334,
+          219.86666666666667,
+          232.8,
+          245.73333333333335,
+          258.6666666666667,
+          271.6,
+          284.53333333333336,
+          297.4666666666667,
+          310.4,
+          323.3333333333333,
+          336.26666666666665,
+          349.2,
+          362.1333333333333,
+          375.06666666666666,
+          388.0
+        ]
+      }
+    },
+    "TERM_DEPOSIT_ACCOUNT_BALANCE": {
+      "_type": "amount",
+      "_family": "numeric",
+      "count": 673969,
+      "n_present": 673969,
+      "n_missing": 0,
+      "pct_missing": 0.0,
+      "n_unique": 17542,
+      "cardinality_ratio": 0.026028,
+      "memory_bytes": 5391884,
+      "n_blank": 0,
+      "top_values": [
+        {
+          "value": "0.0",
+          "count": 652970,
+          "pct": 0.9688427806026687
+        },
+        {
+          "value": "177.0",
+          "count": 468,
+          "pct": 0.000694393955805089
+        },
+        {
+          "value": "20000.0",
+          "count": 97,
+          "pct": 0.0001439235335749864
+        },
+        {
+          "value": "10000.0",
+          "count": 87,
+          "pct": 0.00012908605588684346
+        },
+        {
+          "value": "25000.0",
+          "count": 78,
+          "pct": 0.00011573232596751483
+        },
+        {
+          "value": "50000.0",
+          "count": 69,
+          "pct": 0.00010237859604818619
+        },
+        {
+          "value": "15000.0",
+          "count": 66,
+          "pct": 9.792735274174331e-05
+        },
+        {
+          "value": "30000.0",
+          "count": 61,
+          "pct": 9.050861389767185e-05
+        },
+        {
+          "value": "100000.0",
+          "count": 58,
+          "pct": 8.605737059122898e-05
+        },
+        {
+          "value": "200000.0",
+          "count": 51,
+          "pct": 7.567113620952893e-05
+        },
+        {
+          "value": "1000000.0",
+          "count": 48,
+          "pct": 7.121989290308605e-05
+        },
+        {
+          "value": "500000.0",
+          "count": 46,
+          "pct": 6.825239736545746e-05
+        },
+        {
+          "value": "1046.0",
+          "count": 42,
+          "pct": 6.231740629020029e-05
+        },
+        {
+          "value": "183.0",
+          "count": 34,
+          "pct": 5.044742413968595e-05
+        },
+        {
+          "value": "40000.0",
+          "count": 29,
+          "pct": 4.302868529561449e-05
+        },
+        {
+          "value": "300000.0",
+          "count": 29,
+          "pct": 4.302868529561449e-05
+        },
+        {
+          "value": "1109.0",
+          "count": 29,
+          "pct": 4.302868529561449e-05
+        },
+        {
+          "value": "5000.0",
+          "count": 29,
+          "pct": 4.302868529561449e-05
+        },
+        {
+          "value": "400000.0",
+          "count": 27,
+          "pct": 4.0061189757985903e-05
+        },
+        {
+          "value": "101.0",
+          "count": 25,
+          "pct": 3.709369422035732e-05
+        }
+      ],
+      "dominance": 0.9688427806026687,
+      "is_constant": false,
+      "is_near_constant": false,
+      "entropy": 0.4331619570129341,
+      "normalized_entropy": 0.04432524535307921,
+      "min": 0.0,
+      "max": 35306073220.0,
+      "range": 35306073220.0,
+      "mean": 142427.445698541,
+      "trimmed_mean_10": 0.0,
+      "median": 0.0,
+      "std": 45895729.335641116,
+      "var": 2106417971250428.5,
+      "sum": 95991683149.99998,
+      "mad": 0.0,
+      "iqr": 0.0,
+      "cv": 322.239362719339,
+      "skew": 688.7053604460516,
+      "kurtosis": 521215.8409267725,
+      "percentiles": {
+        "p1": 0.0,
+        "p5": 0.0,
+        "p10": 0.0,
+        "p25": 0.0,
+        "p50": 0.0,
+        "p75": 0.0,
+        "p90": 0.0,
+        "p95": 0.0,
+        "p99": 324420.6799999962
+      },
+      "n_zero": 652970,
+      "n_negative": 0,
+      "zero_inflation": 0.9688427806026687,
+      "all_positive": false,
+      "is_integer_valued": false,
+      "outliers": {
+        "fraction": 0.03115721939733133,
+        "count": 20999,
+        "lower": 0.0,
+        "upper": 0.0
+      },
+      "shape": "right_skewed",
+      "log_transform_candidate": false,
+      "is_monotonic": "none",
+      "histogram": {
+        "counts": [
+          673956,
+          5,
+          3,
+          1,
+          1,
+          2,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "edges": [
+          0.0,
+          1176869107.3333333,
+          2353738214.6666665,
+          3530607322.0,
+          4707476429.333333,
+          5884345536.666666,
+          7061214644.0,
+          8238083751.333333,
+          9414952858.666666,
+          10591821966.0,
+          11768691073.333332,
+          12945560180.666666,
+          14122429288.0,
+          15299298395.333332,
+          16476167502.666666,
+          17653036610.0,
+          18829905717.333332,
+          20006774824.666664,
+          21183643932.0,
+          22360513039.333332,
+          23537382146.666664,
+          24714251254.0,
+          25891120361.333332,
+          27067989468.666664,
+          28244858576.0,
+          29421727683.333332,
+          30598596790.666664,
+          31775465897.999996,
+          32952335005.333332,
+          34129204112.666664,
+          35306073220.0
+        ]
+      }
+    },
+    "CUSTOMER_PIN_CODE": {
+      "_type": "pincode",
+      "_family": "pattern",
+      "count": 673969,
+      "n_present": 673603,
+      "n_missing": 366,
+      "pct_missing": 0.000543,
+      "n_unique": 25546,
+      "cardinality_ratio": 0.037924,
+      "memory_bytes": 33235684,
+      "n_blank": 0,
+      "top_values": [
+        {
+          "value": "122108",
+          "count": 2444,
+          "pct": 0.003628249874184052
+        },
+        {
+          "value": "321204",
+          "count": 2226,
+          "pct": 0.003304617111265835
+        },
+        {
+          "value": "321024",
+          "count": 2125,
+          "pct": 0.0031546771614734495
+        },
+        {
+          "value": "122508",
+          "count": 1688,
+          "pct": 0.002505927081678674
+        },
+        {
+          "value": "301405",
+          "count": 1684,
+          "pct": 0.0024999888658453124
+        },
+        {
+          "value": "110094",
+          "count": 1618,
+          "pct": 0.002402008304594843
+        },
+        {
+          "value": "783330",
+          "count": 1549,
+          "pct": 0.002299574081469352
+        },
+        {
+          "value": "301411",
+          "count": 1479,
+          "pct": 0.002195655304385521
+        },
+        {
+          "value": "321023",
+          "count": 1428,
+          "pct": 0.002119943052510158
+        },
+        {
+          "value": "247001",
+          "count": 1424,
+          "pct": 0.0021140048366767965
+        },
+        {
+          "value": "301001",
+          "count": 1343,
+          "pct": 0.00199375596605122
+        },
+        {
+          "value": "248001",
+          "count": 1258,
+          "pct": 0.001867568879592282
+        },
+        {
+          "value": "250002",
+          "count": 1212,
+          "pct": 0.0017992793975086215
+        },
+        {
+          "value": "321022",
+          "count": 1128,
+          "pct": 0.001674576865008024
+        },
+        {
+          "value": "122108.0",
+          "count": 1082,
+          "pct": 0.0016062873829243635
+        },
+        {
+          "value": "110059",
+          "count": 1038,
+          "pct": 0.0015409670087573838
+        },
+        {
+          "value": "321204.0",
+          "count": 979,
+          "pct": 0.0014533783252152974
+        },
+        {
+          "value": "321024.0",
+          "count": 979,
+          "pct": 0.0014533783252152974
+        },
+        {
+          "value": "143001",
+          "count": 954,
+          "pct": 0.0014162644762567864
+        },
+        {
+          "value": "132103",
+          "count": 910,
+          "pct": 0.0013509441020898066
+        }
+      ],
+      "dominance": 0.003628249874184052,
+      "is_constant": false,
+      "is_near_constant": false,
+      "entropy": 8.979010940240617,
+      "normalized_entropy": 0.8847853869202619,
+      "length_min": 3,
+      "length_max": 8,
+      "length_mode": 6,
+      "validity_rate": 0.7527739146964952,
+      "decomposition_stubs": [
+        "region_lookup(requires_human)"
+      ]
+    },
+    "PERMANENT_PIN_CODE": {
+      "_type": "pincode",
+      "_family": "pattern",
+      "count": 673969,
+      "n_present": 658499,
+      "n_missing": 15470,
+      "pct_missing": 0.022954,
+      "n_unique": 25830,
+      "cardinality_ratio": 0.039226,
+      "memory_bytes": 33249608,
+      "n_blank": 0,
+      "top_values": [
+        {
+          "value": "122108",
+          "count": 2442,
+          "pct": 0.003708433877652054
+        },
+        {
+          "value": "321204",
+          "count": 2215,
+          "pct": 0.0033637104991807126
+        },
+        {
+          "value": "321024",
+          "count": 2069,
+          "pct": 0.003141994141221171
+        },
+        {
+          "value": "122508",
+          "count": 1707,
+          "pct": 0.002592259061896829
+        },
+        {
+          "value": "301405",
+          "count": 1672,
+          "pct": 0.0025391078801941993
+        },
+        {
+          "value": "110094",
+          "count": 1570,
+          "pct": 0.002384210150660821
+        },
+        {
+          "value": "783330",
+          "count": 1546,
+          "pct": 0.0023477636260647323
+        },
+        {
+          "value": "301411",
+          "count": 1471,
+          "pct": 0.002233868236701954
+        },
+        {
+          "value": "321023",
+          "count": 1421,
+          "pct": 0.002157937977126769
+        },
+        {
+          "value": "247001",
+          "count": 1400,
+          "pct": 0.0021260472681051907
+        },
+        {
+          "value": "301001",
+          "count": 1305,
+          "pct": 0.0019817797749123386
+        },
+        {
+          "value": "250002",
+          "count": 1168,
+          "pct": 0.0017737308636763306
+        },
+        {
+          "value": "321022",
+          "count": 1098,
+          "pct": 0.001667428500271071
+        },
+        {
+          "value": "122108.0",
+          "count": 1062,
+          "pct": 0.0016127587133769375
+        },
+        {
+          "value": "248001",
+          "count": 1049,
+          "pct": 0.0015930168458873893
+        },
+        {
+          "value": "321204.0",
+          "count": 984,
+          "pct": 0.0014943075084396483
+        },
+        {
+          "value": "321024.0",
+          "count": 967,
+          "pct": 0.0014684912201840853
+        },
+        {
+          "value": "110059",
+          "count": 965,
+          "pct": 0.0014654540098010779
+        },
+        {
+          "value": "143001",
+          "count": 893,
+          "pct": 0.001356114436012811
+        },
+        {
+          "value": "122107",
+          "count": 874,
+          "pct": 0.0013272609373742405
+        }
+      ],
+      "dominance": 0.003708433877652054,
+      "is_constant": false,
+      "is_near_constant": false,
+      "entropy": 8.987809459430535,
+      "normalized_entropy": 0.8846885747752414,
+      "length_min": 3,
+      "length_max": 8,
+      "length_mode": 6,
+      "validity_rate": 0.7490609679961517,
+      "decomposition_stubs": [
+        "region_lookup(requires_human)"
+      ]
+    },
+    "GENDER": {
+      "_type": "categorical",
+      "_family": "categorical",
+      "count": 673969,
+      "n_present": 663962,
+      "n_missing": 10007,
+      "pct_missing": 0.014848,
+      "n_unique": 4,
+      "cardinality_ratio": 6e-06,
+      "memory_bytes": 9459903,
+      "n_blank": 0,
+      "top_values": [
+        {
+          "value": "M     ",
+          "count": 543700,
+          "pct": 0.8188721643708525
+        },
+        {
+          "value": "F     ",
+          "count": 120210,
+          "pct": 0.18104951789409635
+        },
+        {
+          "value": "T     ",
+          "count": 45,
+          "pct": 6.77749630249924e-05
+        },
+        {
+          "value": "O     ",
+          "count": 7,
+          "pct": 1.0542772026109928e-05
+        }
+      ],
+      "dominance": 0.8188721643708525,
+      "is_constant": false,
+      "is_near_constant": false,
+      "entropy": 0.4738152807169021,
+      "normalized_entropy": 0.3417854778938434,
+      "n_levels": 3,
+      "max_class_share": 0.8178377363659887,
+      "imbalance_ratio": 10746.333333333334,
+      "gini_impurity": 0.29798606161249586,
+      "n_rare_levels": 1,
+      "rare_level_mass": 7.610388687918255e-05,
+      "case_whitespace_variants": 0,
+      "imbalanced": false
+    },
+    "OCCUPATION": {
+      "_type": "categorical",
+      "_family": "categorical",
+      "count": 673969,
+      "n_present": 663962,
+      "n_missing": 10007,
+      "pct_missing": 0.014848,
+      "n_unique": 58,
+      "cardinality_ratio": 8.7e-05,
+      "memory_bytes": 11880477,
+      "n_blank": 0,
+      "top_values": [
+        {
+          "value": "OTHERS",
+          "count": 218705,
+          "pct": 0.32939385085291023
+        },
+        {
+          "value": "STUDENT",
+          "count": 196742,
+          "pct": 0.2963151505658456
+        },
+        {
+          "value": "HOUSEWIFE",
+          "count": 50845,
+          "pct": 0.07657817766679419
+        },
+        {
+          "value": "PVT EMPLOYEE",
+          "count": 49005,
+          "pct": 0.07380693473421672
+        },
+        {
+          "value": "AGRICULTURE AND ALLIED ACTIVITIES",
+          "count": 48299,
+          "pct": 0.07274362086986906
+        },
+        {
+          "value": "FARMER",
+          "count": 35636,
+          "pct": 0.0536717462746362
+        },
+        {
+          "value": "LABOURER",
+          "count": 18970,
+          "pct": 0.028570912190757906
+        },
+        {
+          "value": "OTHERS-NOT WORKING",
+          "count": 14998,
+          "pct": 0.02258864212108524
+        },
+        {
+          "value": "SMALL BUSINESSMAN",
+          "count": 5694,
+          "pct": 0.008575791988095703
+        },
+        {
+          "value": "GOVT EMPLOYEE",
+          "count": 5554,
+          "pct": 0.008364936547573506
+        },
+        {
+          "value": "TRADER",
+          "count": 4636,
+          "pct": 0.006982327301863661
+        },
+        {
+          "value": "INDUSTRIALIST",
+          "count": 3599,
+          "pct": 0.005420490931709947
+        },
+        {
+          "value": "BUSINESS CORRESPONDENTS",
+          "count": 1983,
+          "pct": 0.002986616703967998
+        },
+        {
+          "value": "PERSON BELOW OFFICER RANK",
+          "count": 1675,
+          "pct": 0.0025227347348191612
+        },
+        {
+          "value": "PSU EMPLOYEE",
+          "count": 1383,
+          "pct": 0.002082950530301433
+        },
+        {
+          "value": "SMALL FARMER",
+          "count": 1072,
+          "pct": 0.0016145502302842632
+        },
+        {
+          "value": "ENTREPRENEUR",
+          "count": 709,
+          "pct": 0.0010678321952159913
+        },
+        {
+          "value": "ARCHITECT",
+          "count": 412,
+          "pct": 0.0006205174392510415
+        },
+        {
+          "value": "DOCTOR",
+          "count": 378,
+          "pct": 0.0005693096894099361
+        },
+        {
+          "value": "RETIRED - GOVT EMPLOYEE",
+          "count": 373,
+          "pct": 0.0005617791379627147
+        }
+      ],
+      "dominance": 0.32939385085291023,
+      "is_constant": false,
+      "is_near_constant": false,
+      "entropy": 1.9119182947742177,
+      "normalized_entropy": 0.47086445735312227,
+      "n_levels": 56,
+      "max_class_share": 0.33063587334283784,
+      "imbalance_ratio": 65168.0,
+      "gini_impurity": 0.7822627217222697,
+      "n_rare_levels": 48,
+      "rare_level_mass": 0.04596674767502625,
+      "case_whitespace_variants": 0,
+      "imbalanced": false
+    },
+    "NATIONALITY": {
+      "_type": "categorical",
+      "_family": "categorical",
+      "count": 673969,
+      "n_present": 663962,
+      "n_missing": 10007,
+      "pct_missing": 0.014848,
+      "n_unique": 37,
+      "cardinality_ratio": 5.6e-05,
+      "memory_bytes": 8796645,
+      "n_blank": 0,
+      "top_values": [
+        {
+          "value": "INDIA",
+          "count": 663773,
+          "pct": 0.999715345155295
+        },
+        {
+          "value": "ZIMBABWE",
+          "count": 56,
+          "pct": 8.434217620887942e-05
+        },
+        {
+          "value": "NAMIBIA",
+          "count": 19,
+          "pct": 2.8616095499441232e-05
+        },
+        {
+          "value": "NICARAGUA",
+          "count": 18,
+          "pct": 2.710998520999696e-05
+        },
+        {
+          "value": "NIGERIA",
+          "count": 16,
+          "pct": 2.4097764631108406e-05
+        },
+        {
+          "value": "MYANMAR",
+          "count": 13,
+          "pct": 1.957943376277558e-05
+        },
+        {
+          "value": "TANZANIA",
+          "count": 12,
+          "pct": 1.8073323473331306e-05
+        },
+        {
+          "value": "UNITED ARAB EMIRATES",
+          "count": 8,
+          "pct": 1.2048882315554203e-05
+        },
+        {
+          "value": "RUSSIAN FEDERATION",
+          "count": 5,
+          "pct": 7.530551447221377e-06
+        },
+        {
+          "value": "SUDAN",
+          "count": 4,
+          "pct": 6.0244411577771015e-06
+        },
+        {
+          "value": "ZAMBIA",
+          "count": 4,
+          "pct": 6.0244411577771015e-06
+        },
+        {
+          "value": "CAMEROON REPUBLIC",
+          "count": 4,
+          "pct": 6.0244411577771015e-06
+        },
+        {
+          "value": "RWANDA",
+          "count": 3,
+          "pct": 4.5183308683328265e-06
+        },
+        {
+          "value": "MALAWI",
+          "count": 2,
+          "pct": 3.0122205788885507e-06
+        },
+        {
+          "value": "UNITED STATES OF AMERICA",
+          "count": 2,
+          "pct": 3.0122205788885507e-06
+        },
+        {
+          "value": "GHANA",
+          "count": 2,
+          "pct": 3.0122205788885507e-06
+        },
+        {
+          "value": "SAN MARINO",
+          "count": 1,
+          "pct": 1.5061102894442754e-06
+        },
+        {
+          "value": "NEPAL",
+          "count": 1,
+          "pct": 1.5061102894442754e-06
+        },
+        {
+          "value": "CANADA",
+          "count": 1,
+          "pct": 1.5061102894442754e-06
+        },
+        {
+          "value": "MALAYSIA",
+          "count": 1,
+          "pct": 1.5061102894442754e-06
+        }
+      ],
+      "dominance": 0.999715345155295,
+      "is_constant": false,
+      "is_near_constant": true,
+      "entropy": 0.0033631668873555236,
+      "normalized_entropy": 0.0009313883529666626,
+      "n_levels": 18,
+      "max_class_share": 0.9997767619318211,
+      "imbalance_ratio": 197055.0,
+      "gini_impurity": 0.00044641924799559973,
+      "n_rare_levels": 17,
+      "rare_level_mass": 0.00022323806817893546,
+      "case_whitespace_variants": 0,
+      "imbalanced": true
+    },
+    "HASH_OF_AADHAR": {
+      "_type": "hashed_pii",
+      "_family": "keylike",
+      "count": 673969,
+      "n_present": 652138,
+      "n_missing": 21831,
+      "pct_missing": 0.032392,
+      "n_unique": 652055,
+      "cardinality_ratio": 0.999873,
+      "memory_bytes": 47212963,
+      "n_blank": 0,
+      "top_values": [
+        {
+          "value": "711853E307ED63E1BFEF288F33C2EE16843811130332E34B573545D8081DAFF8",
+          "count": 37,
+          "pct": 5.673645762093299e-05
+        },
+        {
+          "value": "5D3493F6D5874265FC3B8D312ED0FA18CDED9F59A0B6AED80D1BD267A5B4C90B",
+          "count": 3,
+          "pct": 4.600253320616188e-06
+        },
+        {
+          "value": "3F4833437CD3A4C4104B7D015323C9886CD8A8F1FE47E4F8364EFF08789D90B8",
+          "count": 3,
+          "pct": 4.600253320616188e-06
+        },
+        {
+          "value": "E00EEF88C6C01DFC0468B1B2E27F8E2A90A744550A25431636FEE8E5AB162C57",
+          "count": 3,
+          "pct": 4.600253320616188e-06
+        },
+        {
+          "value": "74BAA71D25D88F250A311EE301E51920829BF0B78AE3853FAC811583209BBA14",
+          "count": 2,
+          "pct": 3.066835547077459e-06
+        },
+        {
+          "value": "6CFDD571C96E9620F97F1A5C526545841DDF22BCF17F8144DB7162E26C22F8CB",
+          "count": 2,
+          "pct": 3.066835547077459e-06
+        },
+        {
+          "value": "C7844D44E0DC4CD6E5FDFE3210642562FD06C333486131475E2556329D06DBEF",
+          "count": 2,
+          "pct": 3.066835547077459e-06
+        },
+        {
+          "value": "45A9A33B2E5D06E24D993D56A57F66DE010630414A9E5B696C0BD86C132A9B33",
+          "count": 2,
+          "pct": 3.066835547077459e-06
+        },
+        {
+          "value": "15DEA174CC5B1F551A984D36773FC10D344B6AFD107D43D4B222D21ABC05FCB8",
+          "count": 2,
+          "pct": 3.066835547077459e-06
+        },
+        {
+          "value": "F0700944C7B4665581A1A85150FD45814C70B84922B9979826F3DCABC02D54CD",
+          "count": 2,
+          "pct": 3.066835547077459e-06
+        },
+        {
+          "value": "96A5FD9B660F78B8374175F00A9EAA5BF3A1C6FACBC878FFD8C75FBE32FBA2EA",
+          "count": 2,
+          "pct": 3.066835547077459e-06
+        },
+        {
+          "value": "05FE0D332B900E40558D8B2654F3F2B0BA956E29A82A946ED884AC45FBB40C18",
+          "count": 2,
+          "pct": 3.066835547077459e-06
+        },
+        {
+          "value": "0898F9088F79F3528D6DA92A4292E695AB81944EB49F8665EC51D255F40D097E",
+          "count": 2,
+          "pct": 3.066835547077459e-06
+        },
+        {
+          "value": "68A2BEFAD649E8095E543E6E4FB593173E92A0B6E1DC7224C090ED92EF52D766",
+          "count": 2,
+          "pct": 3.066835547077459e-06
+        },
+        {
+          "value": "71A1E4B148D3EA85AAA7CEB89C6AA25689F918DEED42FC83EEB7437DD267AAEC",
+          "count": 2,
+          "pct": 3.066835547077459e-06
+        },
+        {
+          "value": "7E577ED39188F0EA4DA49E7C90A89BB68587BA80A6B8B9AB0F2BFB6A629CA5DF",
+          "count": 2,
+          "pct": 3.066835547077459e-06
+        },
+        {
+          "value": "5748FA879EA31A973F80E583A6E9A906CD46806B136BC0413E10231BDC15713F",
+          "count": 2,
+          "pct": 3.066835547077459e-06
+        },
+        {
+          "value": "D189F4CC49F61F6184F4BE74DC4956193D9849137BADF298EC3310743F474E50",
+          "count": 2,
+          "pct": 3.066835547077459e-06
+        },
+        {
+          "value": "C641C568BC474CC65C1BC669F31E1F9AFA14C767AD4AEA627BECD78D234B144D",
+          "count": 2,
+          "pct": 3.066835547077459e-06
+        },
+        {
+          "value": "F14E151C6560C5449757789BEFC9206B889A2548140A82722FD33669AD599ABB",
+          "count": 2,
+          "pct": 3.066835547077459e-06
+        }
+      ],
+      "dominance": 5.673645762093299e-05,
+      "is_constant": false,
+      "is_near_constant": false,
+      "entropy": 13.387704286073912,
+      "normalized_entropy": 0.9999865619464023,
+      "n_duplicates": 83,
+      "uniqueness_ratio": 0.9998727263247963,
+      "length_consistent": true,
+      "length_min": 64,
+      "length_max": 64
+    },
+    "HASH_OF_PAN": {
+      "_type": "hashed_pii",
+      "_family": "keylike",
+      "count": 673969,
+      "n_present": 455870,
+      "n_missing": 218099,
+      "pct_missing": 0.323604,
+      "n_unique": 454977,
+      "cardinality_ratio": 0.998041,
+      "memory_bytes": 34651811,
+      "n_blank": 0,
+      "top_values": [
+        {
+          "value": "5FECEB66FFC86F38D952786C6D696C79C2DBC239DD4E91B46729D73A27FB57E9",
+          "count": 147,
+          "pct": 0.0003224603505385307
+        },
+        {
+          "value": "20EF0F0C8D0EEA98772412CEA9B3B92612E3E53CB5E59152B5703165F56E8A53",
+          "count": 8,
+          "pct": 1.754886261434181e-05
+        },
+        {
+          "value": "6980D34AB828E9336A1A7F92A39D7710E63AEDBB63583DD3070674E5CE0C9E9A",
+          "count": 4,
+          "pct": 8.774431307170905e-06
+        },
+        {
+          "value": "B525A59B7E7837DF6DBDD9C7AB9C21061E9BE97E478D2471CE13C2A86DCF71FE",
+          "count": 4,
+          "pct": 8.774431307170905e-06
+        },
+        {
+          "value": "93F4DEC3425344DD6B6313D32F4850C9694160B99E8D447BA706546215A81E05",
+          "count": 4,
+          "pct": 8.774431307170905e-06
+        },
+        {
+          "value": "B5FD214AA425532DE99953FF045958F9F69807E615E6E1C66A59CB9A0E3C6EC1",
+          "count": 3,
+          "pct": 6.580823480378178e-06
+        },
+        {
+          "value": "84C57BB70BD47FE2709DED1CAF27C3B1987845A3E69255FC329D514EC2C85468",
+          "count": 3,
+          "pct": 6.580823480378178e-06
+        },
+        {
+          "value": "CA7EAED33AC3D2CE27361DE32CE6DB3E4EBFDBAD2488FCB211D104B24CF9FA81",
+          "count": 2,
+          "pct": 4.387215653585452e-06
+        },
+        {
+          "value": "2D17E0A04241AA60813C8B358DAC379823E7C3D7CAE1F0C043301728732038E3",
+          "count": 2,
+          "pct": 4.387215653585452e-06
+        },
+        {
+          "value": "49D6F99824FBBCDD04D1DF1B63D2AC7B2AD409B0C86A46A686D184C8F58AFEC1",
+          "count": 2,
+          "pct": 4.387215653585452e-06
+        },
+        {
+          "value": "25B00F876F5663685A8696617938A2848BFEDF9A26C8E7DAC6F02FFCE6B8E1ED",
+          "count": 2,
+          "pct": 4.387215653585452e-06
+        },
+        {
+          "value": "6D3F97677DCDE0353D12AFD80C5E596511BC3CE67DBDD2286A3D7203136D55E0",
+          "count": 2,
+          "pct": 4.387215653585452e-06
+        },
+        {
+          "value": "5E896026EB5051A73B890F8FEFC1BA557EEB420198547ED87CE3D0662ED8A624",
+          "count": 2,
+          "pct": 4.387215653585452e-06
+        },
+        {
+          "value": "1E85C84201D63CAF61DD437D2C48CD94A6F6DEA328B266189ED4DA303AEA3CAB",
+          "count": 2,
+          "pct": 4.387215653585452e-06
+        },
+        {
+          "value": "B1ED86E228E7BFB193A72520834AC8D891CC4C7684BFDD955CD3FD3C9B0297BF",
+          "count": 2,
+          "pct": 4.387215653585452e-06
+        },
+        {
+          "value": "D45AE4E5514297AC830DE9918DAAE4C43227367BF384FBF6327A2A3011755C44",
+          "count": 2,
+          "pct": 4.387215653585452e-06
+        },
+        {
+          "value": "EEE7B6CFD62D0D6ED8C8527AE5F604D4A1BA6A6636F5754D294AE99D5D9A0574",
+          "count": 2,
+          "pct": 4.387215653585452e-06
+        },
+        {
+          "value": "F7FAFD135F07A8E63456D653E32FB38CEFA7ED1B25A5BD81278BFE33C1AB08EA",
+          "count": 2,
+          "pct": 4.387215653585452e-06
+        },
+        {
+          "value": "06A2325B7673FC6E91C3D524DA0F811E98CE4C750977696C114DEE4A8FAB7B54",
+          "count": 2,
+          "pct": 4.387215653585452e-06
+        },
+        {
+          "value": "8C1D195786FA75E76958D3D7D4C357DB1D3DBEE9CB050CE38FAC9340CEE65394",
+          "count": 2,
+          "pct": 4.387215653585452e-06
+        }
+      ],
+      "dominance": 0.0003224603505385307,
+      "is_constant": false,
+      "is_near_constant": false,
+      "entropy": 13.026055503336885,
+      "normalized_entropy": 0.9998505800163378,
+      "n_duplicates": 893,
+      "uniqueness_ratio": 0.998041108210674,
+      "length_consistent": true,
+      "length_min": 64,
+      "length_max": 64
+    },
+    "HASH_OF_VOTER_ID": {
+      "_type": "hashed_pii",
+      "_family": "keylike",
+      "count": 673969,
+      "n_present": 26458,
+      "n_missing": 647511,
+      "pct_missing": 0.960743,
+      "n_unique": 26143,
+      "cardinality_ratio": 0.988094,
+      "memory_bytes": 7169443,
+      "n_blank": 0,
+      "top_values": [
+        {
+          "value": "6B86B273FF34FCE19D6B804EFF5A3F5747ADA4EAA22F1D49C01E52DDB7875B4B",
+          "count": 38,
+          "pct": 0.0014362385667850933
+        },
+        {
+          "value": "A665A45920422F9D417E4867EFDC4FB8A04A1F3FFF1FA07E998E86F7F7A27AE3",
+          "count": 37,
+          "pct": 0.001398442815027591
+        },
+        {
+          "value": "F1534392279BDDBF9D43DDE8701CB5BE14B82F76EC6607BF8D6AD557F60F304E",
+          "count": 33,
+          "pct": 0.001247259807997581
+        },
+        {
+          "value": "5FECEB66FFC86F38D952786C6D696C79C2DBC239DD4E91B46729D73A27FB57E9",
+          "count": 25,
+          "pct": 0.0009448937939375615
+        },
+        {
+          "value": "5994471ABB01112AFCC18159F6CC74B4F511B99806DA59B3CAF5A9C173CACFC5",
+          "count": 20,
+          "pct": 0.0007559150351500491
+        },
+        {
+          "value": "7A3E6B16CB75F48FB897EFF3AE732F3154F6D203B53F33660F01B4C3B6BC2DF9",
+          "count": 20,
+          "pct": 0.0007559150351500491
+        },
+        {
+          "value": "938DB8C9F82C8CB58D3F3EF4FD250036A48D26A712753D2FDE5ABD03A85CABF4",
+          "count": 19,
+          "pct": 0.0007181192833925467
+        },
+        {
+          "value": "03AC674216F3E15C761EE1A5E255F067953623C8B388B4459E13F978D7C846F4",
+          "count": 16,
+          "pct": 0.0006047320281200394
+        },
+        {
+          "value": "2AC9A6746ACA543AF8DFF39894CFE8173AFBA21EB01C6FAE33D52947222855EF",
+          "count": 15,
+          "pct": 0.0005669362763625369
+        },
+        {
+          "value": "8D969EEF6ECAD3C29A3A629280E686CF0C3F5D5A86AFF3CA12020C923ADC6C92",
+          "count": 12,
+          "pct": 0.0004535490210900295
+        },
+        {
+          "value": "9AF15B336E6A9619928537DF30B2E6A2376569FCF9D7E773ECCEDE65606529A0",
+          "count": 12,
+          "pct": 0.0004535490210900295
+        },
+        {
+          "value": "20EF0F0C8D0EEA98772412CEA9B3B92612E3E53CB5E59152B5703165F56E8A53",
+          "count": 9,
+          "pct": 0.0003401617658175221
+        },
+        {
+          "value": "5340C19BD8EB0883E891174F56D361B9B8A1E895730338F9A62D9A07BA4C4C28",
+          "count": 9,
+          "pct": 0.0003401617658175221
+        },
+        {
+          "value": "83CF8B609DE60036A8277BD0E96135751BBC07EB234256D4B65B893360651BF2",
+          "count": 9,
+          "pct": 0.0003401617658175221
+        },
+        {
+          "value": "1C55D9B826E8DFA994370E306AE8DC2E849F3E003381DC848A0B95F782C0C0E3",
+          "count": 7,
+          "pct": 0.0002645702623025172
+        },
+        {
+          "value": "0FFE1ABD1A08215353C233D6E009613E95EEC4253832A761AF28FF37AC5A150C",
+          "count": 5,
+          "pct": 0.00018897875878751228
+        },
+        {
+          "value": "6D9EED144EE7038C5D3D1B16FC6F63FDFCDB34B0C9344F8026D7B99A092D86BD",
+          "count": 5,
+          "pct": 0.00018897875878751228
+        },
+        {
+          "value": "7E071FD9B023ED8F18458A73613A0834F6220BD5CC50357BA3493C6040A9EA8C",
+          "count": 4,
+          "pct": 0.00015118300703000984
+        },
+        {
+          "value": "E0BEBD22819993425814866B62701E2919EA26F1370499C1037B53B9D49C2C8A",
+          "count": 4,
+          "pct": 0.00015118300703000984
+        },
+        {
+          "value": "E7042AC7D09C7BC41C8CFA5749E41858F6980643BC0DB1A83CC793D3E24D3F77",
+          "count": 4,
+          "pct": 0.00015118300703000984
+        }
+      ],
+      "dominance": 0.0014362385667850933,
+      "is_constant": false,
+      "is_near_constant": false,
+      "entropy": 10.147685835016356,
+      "normalized_entropy": 0.9976747488746487,
+      "n_duplicates": 315,
+      "uniqueness_ratio": 0.9880943381963867,
+      "length_consistent": true,
+      "length_min": 64,
+      "length_max": 64
+    },
+    "HASH_OF_PASSPORT": {
+      "_type": "hashed_pii",
+      "_family": "keylike",
+      "count": 673969,
+      "n_present": 567,
+      "n_missing": 673402,
+      "pct_missing": 0.999159,
+      "n_unique": 564,
+      "cardinality_ratio": 0.994709,
+      "memory_bytes": 5512419,
+      "n_blank": 0,
+      "top_values": [
+        {
+          "value": "4CE472F5BE450BECE25ED6EEB4DD9CEE159046246526625196E00B1FE56199D8",
+          "count": 4,
+          "pct": 0.007054673721340388
+        },
+        {
+          "value": "73EB048F059B855CA6537DE78846D875D24575638B89B472602775F75488F948",
+          "count": 1,
+          "pct": 0.001763668430335097
+        },
+        {
+          "value": "98342322BFFD5B0E6F1531607A9DCA26076E2C1DBB34EE4C6A3E9B4D98C691CD",
+          "count": 1,
+          "pct": 0.001763668430335097
+        },
+        {
+          "value": "2A922298075C42BF314F173A53502594A0837EA1804C57AC4F3E6F80DC03F90F",
+          "count": 1,
+          "pct": 0.001763668430335097
+        },
+        {
+          "value": "3D50D1118DB73099E0587A9925D74B18C76F4890AAD3A262B0817092389E5746",
+          "count": 1,
+          "pct": 0.001763668430335097
+        },
+        {
+          "value": "7F6CCC48214CA7880D0BD3A6BA5F83F58FB8B4EF880459D761992EDA18FCB838",
+          "count": 1,
+          "pct": 0.001763668430335097
+        },
+        {
+          "value": "ADF24EEC0535D76984A2D23D18A44CCF7078D59FDBEF7AA3479C3378AA54B0DD",
+          "count": 1,
+          "pct": 0.001763668430335097
+        },
+        {
+          "value": "FD736C5AE069DBCC518AA4C48EBFA3A3A34F14A558D4BF2E60F77212D295E495",
+          "count": 1,
+          "pct": 0.001763668430335097
+        },
+        {
+          "value": "1BB4625C8FB800401B32F6521FC0F2E2FEDB563C10598E50014425178D9A5164",
+          "count": 1,
+          "pct": 0.001763668430335097
+        },
+        {
+          "value": "053343388B7844FAFBC224FA07CE6380001DEC09023C7D7A0271DA6B73C79963",
+          "count": 1,
+          "pct": 0.001763668430335097
+        },
+        {
+          "value": "ECA95819ECD1A8438763A8C519738F6BD4A25C595A7A5BF59FC27A2DE979784B",
+          "count": 1,
+          "pct": 0.001763668430335097
+        },
+        {
+          "value": "B4652A2D8B4EF54A52C88920970AA3B89EA274B79A48302F15D4B77A565DD986",
+          "count": 1,
+          "pct": 0.001763668430335097
+        },
+        {
+          "value": "6B3ABEE0BB0082ED8BD480DBAA65732CE302A5E91BF8ADE6B9C5A938BDF87E62",
+          "count": 1,
+          "pct": 0.001763668430335097
+        },
+        {
+          "value": "D9CA8F6793940C8E51BEAC6FC1670F27AA28A5019DFE4A2BB0AA969818F1DA81",
+          "count": 1,
+          "pct": 0.001763668430335097
+        },
+        {
+          "value": "B7E6CEAE9ABA59292FC6724FEF5480A6470DE05B25D9BD0FC48DF7AE0583FAE2",
+          "count": 1,
+          "pct": 0.001763668430335097
+        },
+        {
+          "value": "FCF39C34EDD8E5A7342B0DA5262B15BDF095402966E7F39DDD8B9EB41EC587BE",
+          "count": 1,
+          "pct": 0.001763668430335097
+        },
+        {
+          "value": "F4BE295202BE9A7726AE4003D041EEC5F6355ED3FD049EF16982DD682EB129D9",
+          "count": 1,
+          "pct": 0.001763668430335097
+        },
+        {
+          "value": "ED36149F7F99301B8CA0B6D1669C1CFD11B942A02E787ECFEEB708B4D97E7792",
+          "count": 1,
+          "pct": 0.001763668430335097
+        },
+        {
+          "value": "F0EE0CA6B63362E2FED77B59D536A64D2C50E14B61A1D5CE6AEE4B9D6C1156BD",
+          "count": 1,
+          "pct": 0.001763668430335097
+        },
+        {
+          "value": "038792D1EE404F60DA21658987F7DC4ED22D3E2C8B010E5AC8AABD3FEAF66EE8",
+          "count": 1,
+          "pct": 0.001763668430335097
+        }
+      ],
+      "dominance": 0.007054673721340388,
+      "is_constant": false,
+      "is_near_constant": false,
+      "entropy": 6.330579449328316,
+      "normalized_entropy": 0.9992936442227491,
+      "n_duplicates": 3,
+      "uniqueness_ratio": 0.9947089947089947,
+      "length_consistent": true,
+      "length_min": 64,
+      "length_max": 64
+    },
+    "HASH_OF_DRIVING_LICENCE": {
+      "_type": "hashed_pii",
+      "_family": "keylike",
+      "count": 673969,
+      "n_present": 1317,
+      "n_missing": 672652,
+      "pct_missing": 0.998046,
+      "n_unique": 1305,
+      "cardinality_ratio": 0.990888,
+      "memory_bytes": 5560419,
+      "n_blank": 0,
+      "top_values": [
+        {
+          "value": "A665A45920422F9D417E4867EFDC4FB8A04A1F3FFF1FA07E998E86F7F7A27AE3",
+          "count": 5,
+          "pct": 0.0037965072133637054
+        },
+        {
+          "value": "03AC674216F3E15C761EE1A5E255F067953623C8B388B4459E13F978D7C846F4",
+          "count": 3,
+          "pct": 0.002277904328018223
+        },
+        {
+          "value": "5994471ABB01112AFCC18159F6CC74B4F511B99806DA59B3CAF5A9C173CACFC5",
+          "count": 3,
+          "pct": 0.002277904328018223
+        },
+        {
+          "value": "8D969EEF6ECAD3C29A3A629280E686CF0C3F5D5A86AFF3CA12020C923ADC6C92",
+          "count": 3,
+          "pct": 0.002277904328018223
+        },
+        {
+          "value": "9AF15B336E6A9619928537DF30B2E6A2376569FCF9D7E773ECCEDE65606529A0",
+          "count": 2,
+          "pct": 0.0015186028853454822
+        },
+        {
+          "value": "559AEAD08264D5795D3909718CDD05ABD49572E84FE55590EEF31A88A08FDFFD",
+          "count": 2,
+          "pct": 0.0015186028853454822
+        },
+        {
+          "value": "5A647F0DAC09A220A4773ED0159023E7ABE99DB725A26484018B4124CE02538B",
+          "count": 1,
+          "pct": 0.0007593014426727411
+        },
+        {
+          "value": "C92ED0D14824665BD6B088EF5C34DFC93F5DBFB55A16B22E7BB08553732ACCEE",
+          "count": 1,
+          "pct": 0.0007593014426727411
+        },
+        {
+          "value": "21DDE96CF1A18C4B821BD1045724FF6FF47B807C227E1CFDA25F1D2030784B05",
+          "count": 1,
+          "pct": 0.0007593014426727411
+        },
+        {
+          "value": "A15FB86B353C7BCB0632942899ED37A453A2CEB05EB9856890A736973F407F9D",
+          "count": 1,
+          "pct": 0.0007593014426727411
+        },
+        {
+          "value": "58F2C3B026F0A42D51F7443978533226D13AF0B8A7A33B062F1E84086D9A94EB",
+          "count": 1,
+          "pct": 0.0007593014426727411
+        },
+        {
+          "value": "5CD938B238D83A4B5A83AC364EEF53A74CFC1FCD5791BC12A72DD622C907D633",
+          "count": 1,
+          "pct": 0.0007593014426727411
+        },
+        {
+          "value": "C6C22F1CC405A9233C4E576D16F6FB242CA21057EFC08692546E56B26261DBB2",
+          "count": 1,
+          "pct": 0.0007593014426727411
+        },
+        {
+          "value": "9EC4E293343ED0A377E4EEEFF531884395F5EF5AD65C01FDDEEF7C6A807DC70C",
+          "count": 1,
+          "pct": 0.0007593014426727411
+        },
+        {
+          "value": "8A3890D6AA28519724DFF753BB14850C14DB011B941BABDE613EEC77B2B62504",
+          "count": 1,
+          "pct": 0.0007593014426727411
+        },
+        {
+          "value": "F901C221E3A5E50DDD5E53D2C3DDF6E63A888C418AD40A43C82495D87843D3B2",
+          "count": 1,
+          "pct": 0.0007593014426727411
+        },
+        {
+          "value": "C61BF83D68121651617F53FC24B8E9838B8241825BE36CE5C01227E9E3B8AB43",
+          "count": 1,
+          "pct": 0.0007593014426727411
+        },
+        {
+          "value": "546C57CE4CE49E926FEBFA8EC8933729E1AB91C1273B2EA5644C463CF0B8AB2E",
+          "count": 1,
+          "pct": 0.0007593014426727411
+        },
+        {
+          "value": "F882A1A82DBF9992A9E4A9200440D588B2BAF8BE3E48F6444BBA64D094C7D07C",
+          "count": 1,
+          "pct": 0.0007593014426727411
+        },
+        {
+          "value": "D156F473D4710E82334102100A410B9BDBAB8D68DFC8E375DD38ABD66E0D0419",
+          "count": 1,
+          "pct": 0.0007593014426727411
+        }
+      ],
+      "dominance": 0.0037965072133637054,
+      "is_constant": false,
+      "is_near_constant": false,
+      "entropy": 7.167388627421017,
+      "normalized_entropy": 0.99908423048435,
+      "n_duplicates": 12,
+      "uniqueness_ratio": 0.9908883826879271,
+      "length_consistent": true,
+      "length_min": 64,
+      "length_max": 64
+    },
+    "HASH_OF_NREGA": {
+      "_type": "hashed_pii",
+      "_family": "keylike",
+      "count": 673969,
+      "n_present": 403,
+      "n_missing": 673566,
+      "pct_missing": 0.999402,
+      "n_unique": 391,
+      "cardinality_ratio": 0.970223,
+      "memory_bytes": 5501923,
+      "n_blank": 0,
+      "top_values": [
+        {
+          "value": "5FECEB66FFC86F38D952786C6D696C79C2DBC239DD4E91B46729D73A27FB57E9",
+          "count": 5,
+          "pct": 0.01240694789081886
+        },
+        {
+          "value": "A665A45920422F9D417E4867EFDC4FB8A04A1F3FFF1FA07E998E86F7F7A27AE3",
+          "count": 4,
+          "pct": 0.009925558312655087
+        },
+        {
+          "value": "5994471ABB01112AFCC18159F6CC74B4F511B99806DA59B3CAF5A9C173CACFC5",
+          "count": 3,
+          "pct": 0.007444168734491315
+        },
+        {
+          "value": "42CB4E6F84970E97D515B9D57DFD4E4FEF5D482061B7D2C33179F2AD76495E11",
+          "count": 2,
+          "pct": 0.004962779156327543
+        },
+        {
+          "value": "20EF0F0C8D0EEA98772412CEA9B3B92612E3E53CB5E59152B5703165F56E8A53",
+          "count": 2,
+          "pct": 0.004962779156327543
+        },
+        {
+          "value": "B79F477F6D435116155B1121455748240BB5E7C81F7043519980DF21A8167CA1",
+          "count": 2,
+          "pct": 0.004962779156327543
+        },
+        {
+          "value": "66E9440E129C21B3DC4BC0FFD89E95BCB756D2A06D06B05606900435057016B3",
+          "count": 1,
+          "pct": 0.0024813895781637717
+        },
+        {
+          "value": "6845BFEFE8D210C8B137902A6FB7CAE2A5BEC3F3C59F64B8E2999953BC5D7137",
+          "count": 1,
+          "pct": 0.0024813895781637717
+        },
+        {
+          "value": "E0C40F90EF1DFC78A085EC5395D09F72FCC7AB409036E4A44C471771F07130C1",
+          "count": 1,
+          "pct": 0.0024813895781637717
+        },
+        {
+          "value": "8026CCA06D11EC61B4034A6B4AB1514AECF84F9748AE2DC153046F1BAF1D1588",
+          "count": 1,
+          "pct": 0.0024813895781637717
+        },
+        {
+          "value": "0B232AAF73AD0E2CF2133C41AEFB77215E1E941EF5E6948F2F49AAF5908E2F93",
+          "count": 1,
+          "pct": 0.0024813895781637717
+        },
+        {
+          "value": "71F3E86C42376ED1C9583F0117FAD889F5139926594992B3F573E17939CB038F",
+          "count": 1,
+          "pct": 0.0024813895781637717
+        },
+        {
+          "value": "E1DAE6367ABC657835BAF6F79E0478E99DE69A31311040F35DDB4127BAE65191",
+          "count": 1,
+          "pct": 0.0024813895781637717
+        },
+        {
+          "value": "F22B5849C339BD21BFAA454526C64ACA0A6976EEA2F0FC84F0C80836B5DFE5D7",
+          "count": 1,
+          "pct": 0.0024813895781637717
+        },
+        {
+          "value": "6F32F51C2CCBF5EA582DD3B7DF07F874B33AEFE3E0CFF7E1A4B3AEC910FC13A1",
+          "count": 1,
+          "pct": 0.0024813895781637717
+        },
+        {
+          "value": "FEA3DA7F59694C897C996B3A3CC16AA57816C8BB00B5D29FCFDC5D68E617B791",
+          "count": 1,
+          "pct": 0.0024813895781637717
+        },
+        {
+          "value": "32EBA27B629EF7B2292F5350C9740F54C538D06EC8C632925E1E313C8E629518",
+          "count": 1,
+          "pct": 0.0024813895781637717
+        },
+        {
+          "value": "1F6517459FCBA2740B01AA49C2373B0073F8FFA679D0CA7B1C68B42F7F28BADC",
+          "count": 1,
+          "pct": 0.0024813895781637717
+        },
+        {
+          "value": "248E26D7AD2058AB3C458EB7F7D737E26AD52BEDFB355E724387028534A0C491",
+          "count": 1,
+          "pct": 0.0024813895781637717
+        },
+        {
+          "value": "53A23E850953E73E036D2C3C9EA2F40ABF36925B7FA853FB9ADA1E7758A358B8",
+          "count": 1,
+          "pct": 0.0024813895781637717
+        }
+      ],
+      "dominance": 0.01240694789081886,
+      "is_constant": false,
+      "is_near_constant": false,
+      "entropy": 5.9467105397233215,
+      "normalized_entropy": 0.9963146091442787,
+      "n_duplicates": 12,
+      "uniqueness_ratio": 0.9702233250620348,
+      "length_consistent": true,
+      "length_min": 64,
+      "length_max": 64
+    },
+    "KYC_VERIFIED_FLAG": {
+      "_type": "boolean_flag",
+      "_family": "categorical",
+      "count": 673969,
+      "n_present": 673969,
+      "n_missing": 0,
+      "pct_missing": 0.0,
+      "n_unique": 2,
+      "cardinality_ratio": 3e-06,
+      "memory_bytes": 6065853,
+      "n_blank": 0,
+      "top_values": [
+        {
+          "value": "Y",
+          "count": 663884,
+          "pct": 0.9850364037515078
+        },
+        {
+          "value": "N",
+          "count": 10085,
+          "pct": 0.014963596248492141
+        }
+      ],
+      "dominance": 0.9850364037515078,
+      "is_constant": false,
+      "is_near_constant": false,
+      "entropy": 0.07773012970123452,
+      "normalized_entropy": 0.11214087264762697,
+      "true_rate": 0.9850364037515078,
+      "n_true": 663884,
+      "n_false": 10085
+    },
+    "KYC_REVIEW_DATE": {
+      "_type": "datetime",
+      "_family": "datetime",
+      "count": 673969,
+      "n_present": 673969,
+      "n_missing": 0,
+      "pct_missing": 0.0,
+      "n_unique": 3865,
+      "cardinality_ratio": 0.005735,
+      "memory_bytes": 5391884,
+      "n_blank": 0,
+      "top_values": [
+        {
+          "value": "2017-05-07 00:00:00",
+          "count": 4866,
+          "pct": 0.007219916643050348
+        },
+        {
+          "value": "2017-05-06 00:00:00",
+          "count": 3512,
+          "pct": 0.005210922164075796
+        },
+        {
+          "value": "2017-06-17 00:00:00",
+          "count": 2057,
+          "pct": 0.003052069160451
+        },
+        {
+          "value": "2025-07-15 00:00:00",
+          "count": 904,
+          "pct": 0.0013413079830081206
+        },
+        {
+          "value": "2024-09-02 00:00:00",
+          "count": 872,
+          "pct": 0.0012938280544060631
+        },
+        {
+          "value": "2024-07-16 00:00:00",
+          "count": 866,
+          "pct": 0.0012849255677931774
+        },
+        {
+          "value": "2025-04-04 00:00:00",
+          "count": 866,
+          "pct": 0.0012849255677931774
+        },
+        {
+          "value": "2025-02-10 00:00:00",
+          "count": 853,
+          "pct": 0.0012656368467985916
+        },
+        {
+          "value": "2024-07-22 00:00:00",
+          "count": 849,
+          "pct": 0.0012597018557233344
+        },
+        {
+          "value": "2024-09-03 00:00:00",
+          "count": 828,
+          "pct": 0.0012285431525782342
+        },
+        {
+          "value": "2025-04-02 00:00:00",
+          "count": 828,
+          "pct": 0.0012285431525782342
+        },
+        {
+          "value": "2024-08-29 00:00:00",
+          "count": 824,
+          "pct": 0.001222608161502977
+        },
+        {
+          "value": "2024-07-23 00:00:00",
+          "count": 824,
+          "pct": 0.001222608161502977
+        },
+        {
+          "value": "2024-07-30 00:00:00",
+          "count": 820,
+          "pct": 0.00121667317042772
+        },
+        {
+          "value": "2024-03-27 00:00:00",
+          "count": 815,
+          "pct": 0.0012092544315836485
+        },
+        {
+          "value": "2025-08-28 00:00:00",
+          "count": 807,
+          "pct": 0.001197384449433134
+        },
+        {
+          "value": "2024-08-28 00:00:00",
+          "count": 805,
+          "pct": 0.0011944169538955056
+        },
+        {
+          "value": "2025-12-30 00:00:00",
+          "count": 802,
+          "pct": 0.0011899657105890627
+        },
+        {
+          "value": "2024-08-13 00:00:00",
+          "count": 801,
+          "pct": 0.0011884819628202484
+        },
+        {
+          "value": "2024-09-05 00:00:00",
+          "count": 801,
+          "pct": 0.0011884819628202484
+        }
+      ],
+      "dominance": 0.007219916643050348,
+      "is_constant": false,
+      "is_near_constant": false,
+      "entropy": 7.605997025855652,
+      "normalized_entropy": 0.9208544386870828,
+      "parse_fail_rate": 0.0,
+      "min": "1994-03-10T00:00:00",
+      "max": "2034-04-09T00:00:00",
+      "span_days": 14640,
+      "n_unique_days": 3865,
+      "max_gap_days": 4670,
+      "is_monotonic_increasing": false,
+      "has_time_component": false,
+      "n_future_dates": 1,
+      "n_sentinel_dates": 0,
+      "by_year": {
+        "1994": 1,
+        "2006": 1,
+        "2007": 1,
+        "2008": 1,
+        "2009": 1,
+        "2010": 1,
+        "2011": 2,
+        "2012": 9,
+        "2013": 6,
+        "2014": 53,
+        "2015": 1315,
+        "2016": 2183,
+        "2017": 20566,
+        "2018": 15638,
+        "2019": 23711,
+        "2020": 27466,
+        "2021": 43505,
+        "2022": 69449,
+        "2023": 114966,
+        "2024": 168920,
+        "2025": 163023,
+        "2026": 23150,
+        "2034": 1
+      },
+      "by_dow": {
+        "0": 112036,
+        "1": 125400,
+        "2": 118559,
+        "3": 116660,
+        "4": 109144,
+        "5": 71106,
+        "6": 21064
+      },
+      "derived_feature_stubs": [
+        "recency_days",
+        "year",
+        "month",
+        "dayofweek"
+      ]
+    },
+    "CUSTOMER_OPEN_DATE": {
+      "_type": "datetime",
+      "_family": "datetime",
+      "count": 673969,
+      "n_present": 673969,
+      "n_missing": 0,
+      "pct_missing": 0.0,
+      "n_unique": 7497,
+      "cardinality_ratio": 0.011124,
+      "memory_bytes": 5391884,
+      "n_blank": 0,
+      "top_values": [
+        {
+          "value": "2016-08-02 00:00:00",
+          "count": 653,
+          "pct": 0.0009688872930357331
+        },
+        {
+          "value": "2014-08-28 00:00:00",
+          "count": 639,
+          "pct": 0.000948114824272333
+        },
+        {
+          "value": "2016-06-30 00:00:00",
+          "count": 580,
+          "pct": 0.0008605737059122898
+        },
+        {
+          "value": "2016-07-11 00:00:00",
+          "count": 566,
+          "pct": 0.0008398012371488897
+        },
+        {
+          "value": "2014-08-27 00:00:00",
+          "count": 536,
+          "pct": 0.0007952888040844608
+        },
+        {
+          "value": "2025-06-12 00:00:00",
+          "count": 532,
+          "pct": 0.0007893538130092037
+        },
+        {
+          "value": "2024-03-01 00:00:00",
+          "count": 531,
+          "pct": 0.0007878700652403893
+        },
+        {
+          "value": "2024-07-30 00:00:00",
+          "count": 510,
+          "pct": 0.0007567113620952893
+        },
+        {
+          "value": "2024-12-03 00:00:00",
+          "count": 503,
+          "pct": 0.0007463251277135892
+        },
+        {
+          "value": "2024-07-22 00:00:00",
+          "count": 502,
+          "pct": 0.000744841379944775
+        },
+        {
+          "value": "2025-03-19 00:00:00",
+          "count": 498,
+          "pct": 0.0007389063888695178
+        },
+        {
+          "value": "2024-07-23 00:00:00",
+          "count": 496,
+          "pct": 0.0007359388933318891
+        },
+        {
+          "value": "2024-07-16 00:00:00",
+          "count": 494,
+          "pct": 0.0007329713977942605
+        },
+        {
+          "value": "2024-06-25 00:00:00",
+          "count": 484,
+          "pct": 0.0007181339201061176
+        },
+        {
+          "value": "2024-08-13 00:00:00",
+          "count": 472,
+          "pct": 0.0007003289468803461
+        },
+        {
+          "value": "2024-11-11 00:00:00",
+          "count": 472,
+          "pct": 0.0007003289468803461
+        },
+        {
+          "value": "2024-06-14 00:00:00",
+          "count": 467,
+          "pct": 0.0006929102080362747
+        },
+        {
+          "value": "2024-09-24 00:00:00",
+          "count": 466,
+          "pct": 0.0006914264602674604
+        },
+        {
+          "value": "2024-06-11 00:00:00",
+          "count": 462,
+          "pct": 0.0006854914691922032
+        },
+        {
+          "value": "2024-04-02 00:00:00",
+          "count": 462,
+          "pct": 0.0006854914691922032
+        }
+      ],
+      "dominance": 0.0009688872930357331,
+      "is_constant": false,
+      "is_near_constant": false,
+      "entropy": 8.425348951242638,
+      "normalized_entropy": 0.944306782427095,
+      "parse_fail_rate": 0.0,
+      "min": "2002-03-25T00:00:00",
+      "max": "2026-03-12T00:00:00",
+      "span_days": 8753,
+      "n_unique_days": 7497,
+      "max_gap_days": 103,
+      "is_monotonic_increasing": false,
+      "has_time_component": false,
+      "n_future_dates": 0,
+      "n_sentinel_dates": 0,
+      "by_year": {
+        "2002": 45,
+        "2003": 956,
+        "2004": 1645,
+        "2005": 3690,
+        "2006": 3968,
+        "2007": 6783,
+        "2008": 12604,
+        "2009": 11632,
+        "2010": 11817,
+        "2011": 15547,
+        "2012": 20278,
+        "2013": 28321,
+        "2014": 34036,
+        "2015": 35665,
+        "2016": 39054,
+        "2017": 34590,
+        "2018": 23289,
+        "2019": 24975,
+        "2020": 20895,
+        "2021": 29981,
+        "2022": 49547,
+        "2023": 76859,
+        "2024": 104228,
+        "2025": 82797,
+        "2026": 767
+      },
+      "by_dow": {
+        "0": 111729,
+        "1": 121992,
+        "2": 115914,
+        "3": 114917,
+        "4": 111099,
+        "5": 70984,
+        "6": 27334
+      },
+      "derived_feature_stubs": [
+        "recency_days",
+        "year",
+        "month",
+        "dayofweek"
+      ]
+    },
+    "CUSTOMER_SPECIAL_STATUS": {
+      "_type": "categorical",
+      "_family": "categorical",
+      "count": 673969,
+      "n_present": 627462,
+      "n_missing": 46507,
+      "pct_missing": 0.069005,
+      "n_unique": 8,
+      "cardinality_ratio": 1.3e-05,
+      "memory_bytes": 9265804,
+      "n_blank": 0,
+      "top_values": [
+        {
+          "value": "OTHERS",
+          "count": 621229,
+          "pct": 0.9900663307100669
+        },
+        {
+          "value": "ILLITERATE",
+          "count": 4472,
+          "pct": 0.0071271248298701755
+        },
+        {
+          "value": "BLIND",
+          "count": 716,
+          "pct": 0.0011411049593441514
+        },
+        {
+          "value": "HANDICAPPED",
+          "count": 531,
+          "pct": 0.0008462663874465705
+        },
+        {
+          "value": "SELF HELP GROUP",
+          "count": 394,
+          "pct": 0.0006279264720413347
+        },
+        {
+          "value": "PARDA-NASHEEN WOMAN",
+          "count": 104,
+          "pct": 0.00016574708906674828
+        },
+        {
+          "value": "VISUALLY IMPAIRED",
+          "count": 8,
+          "pct": 1.2749776082057559e-05
+        },
+        {
+          "value": "DIFFERENTLY ABLED",
+          "count": 8,
+          "pct": 1.2749776082057559e-05
+        }
+      ],
+      "dominance": 0.9900663307100669,
+      "is_constant": false,
+      "is_near_constant": true,
+      "entropy": 0.06519846868391636,
+      "normalized_entropy": 0.03135383581461351,
+      "n_levels": 8,
+      "max_class_share": 0.989950639431521,
+      "imbalance_ratio": 61436.666666666664,
+      "gini_impurity": 0.019943521258438124,
+      "n_rare_levels": 7,
+      "rare_level_mass": 0.010049360568479061,
+      "case_whitespace_variants": 0,
+      "imbalanced": true
+    },
+    "ANNUAL_INCOME": {
+      "_type": "amount_string",
+      "_family": "numeric",
+      "count": 673969,
+      "n_present": 661639,
+      "n_missing": 12330,
+      "pct_missing": 0.018295,
+      "n_unique": 17,
+      "cardinality_ratio": 2.6e-05,
+      "memory_bytes": 13184395,
+      "n_blank": 0,
+      "top_values": [
+        {
+          "value": "< 60000",
+          "count": 264554,
+          "pct": 0.3998464419419049
+        },
+        {
+          "value": "1 LAKH - 5 LAKH",
+          "count": 210456,
+          "pct": 0.3180828215990895
+        },
+        {
+          "value": "60000 - 1 LAKH",
+          "count": 144957,
+          "pct": 0.21908775026865104
+        },
+        {
+          "value": "5 LACS - 10 LACS",
+          "count": 30527,
+          "pct": 0.04613845314438841
+        },
+        {
+          "value": "10 LACS - 15 LACS",
+          "count": 4640,
+          "pct": 0.00701288769253324
+        },
+        {
+          "value": "5 LACS - 15 LACS",
+          "count": 3478,
+          "pct": 0.005256642972980734
+        },
+        {
+          "value": "15 LACS - 20 LACS",
+          "count": 972,
+          "pct": 0.0014690790597289458
+        },
+        {
+          "value": "ABOVE 15 LACS",
+          "count": 841,
+          "pct": 0.0012710858942716497
+        },
+        {
+          "value": "20 LACS - 30 LACS",
+          "count": 635,
+          "pct": 0.0009597378630945274
+        },
+        {
+          "value": "30 LACS - 40 LACS",
+          "count": 143,
+          "pct": 0.00021612994397246838
+        },
+        {
+          "value": "50 LACS - 60 LACS",
+          "count": 140,
+          "pct": 0.00021159574934367532
+        },
+        {
+          "value": "ABOVE 1 CR",
+          "count": 118,
+          "pct": 0.00017834498873252634
+        },
+        {
+          "value": "40 LACS - 50 LACS",
+          "count": 78,
+          "pct": 0.00011788906034861911
+        },
+        {
+          "value": "60 LACS - 70 LACS",
+          "count": 34,
+          "pct": 5.138753912632115e-05
+        },
+        {
+          "value": "90 LACS - 1 CR",
+          "count": 27,
+          "pct": 4.080775165913738e-05
+        },
+        {
+          "value": "80 LACS - 90 LACS",
+          "count": 20,
+          "pct": 3.0227964191953618e-05
+        },
+        {
+          "value": "70 LACS - 80 LACS",
+          "count": 19,
+          "pct": 2.8716565982355937e-05
+        }
+      ],
+      "dominance": 0.3998464419419049,
+      "is_constant": false,
+      "is_near_constant": false,
+      "entropy": 1.3002938087656843,
+      "normalized_entropy": 0.45894666262728295,
+      "_note": "no numeric values"
+    },
+    "ADDRESS": {
+      "_type": "free_text",
+      "_family": "text",
+      "count": 673969,
+      "n_present": 673606,
+      "n_missing": 363,
+      "pct_missing": 0.000539,
+      "n_unique": 656769,
+      "cardinality_ratio": 0.975005,
+      "memory_bytes": 41695721,
+      "n_blank": 0,
+      "top_values": [
+        {
+          "value": "JEROLI, JAIROLI |ALWAR|RJ|IN",
+          "count": 28,
+          "pct": 4.156732570671877e-05
+        },
+        {
+          "value": "KAKRALA, KAKRALA |BHAPU|RJ|IN",
+          "count": 28,
+          "pct": 4.156732570671877e-05
+        },
+        {
+          "value": "ALAWARA |ALWAR|RJ|IN",
+          "count": 25,
+          "pct": 3.711368366671318e-05
+        },
+        {
+          "value": "GULAB SINGH KUTI KHERA|DHARC|UL|IN",
+          "count": 23,
+          "pct": 3.414458897337613e-05
+        },
+        {
+          "value": "MAUJPUR LAXMANGARH|ALWAR|RJ|IN",
+          "count": 21,
+          "pct": 3.117549428003907e-05
+        },
+        {
+          "value": "RAMNAGAR BANKAT,RAMNAGAR BANKAT,MAJHAULIA,WES T CHAMPARAN|BETTI|BH|IN",
+          "count": 21,
+          "pct": 3.117549428003907e-05
+        },
+        {
+          "value": "CHAKMATHURA GODAGARI|JLG|WB|IN",
+          "count": 20,
+          "pct": 2.9690946933370544e-05
+        },
+        {
+          "value": "MAUJPUR LACCHAMANGARH|ALWAR|RJ|IN",
+          "count": 20,
+          "pct": 2.9690946933370544e-05
+        },
+        {
+          "value": "VILL PO PS ANANDAPUR DIST PASCHIM MIDNAPUR|ANPU|WB|IN",
+          "count": 20,
+          "pct": 2.9690946933370544e-05
+        },
+        {
+          "value": "BSL |BANSW|RJ|IN",
+          "count": 18,
+          "pct": 2.6721852240033492e-05
+        },
+        {
+          "value": "GANGERU DISTT SHAMLI|GANGE|UP|IN",
+          "count": 17,
+          "pct": 2.5237304893364966e-05
+        },
+        {
+          "value": "GAOMRI, GAONRI |JUREH|RJ|IN",
+          "count": 17,
+          "pct": 2.5237304893364966e-05
+        },
+        {
+          "value": "-, - -,|MALDA|WB|IN",
+          "count": 16,
+          "pct": 2.3752757546696436e-05
+        },
+        {
+          "value": "JALALPUR, JALALPUR |BHAPU|RJ|IN",
+          "count": 16,
+          "pct": 2.3752757546696436e-05
+        },
+        {
+          "value": "OLANDA, OLANDA |KAMAN|RJ|IN",
+          "count": 16,
+          "pct": 2.3752757546696436e-05
+        },
+        {
+          "value": "NOGAWAN, NOGAWAN |JUREH|RJ|IN",
+          "count": 16,
+          "pct": 2.3752757546696436e-05
+        },
+        {
+          "value": "78 RCC CO 56 APO BURTSE LEH LADAKH|LEH|JK|IN",
+          "count": 15,
+          "pct": 2.226821020002791e-05
+        },
+        {
+          "value": "PALKA, BAYARI |BHAPU|RJ|IN",
+          "count": 15,
+          "pct": 2.226821020002791e-05
+        },
+        {
+          "value": "- -,|MURSH|WB|IN",
+          "count": 14,
+          "pct": 2.0783662853359384e-05
+        },
+        {
+          "value": "-, - -,|RAIGN|WB|IN",
+          "count": 14,
+          "pct": 2.0783662853359384e-05
+        }
+      ],
+      "dominance": 4.156732570671877e-05,
+      "is_constant": false,
+      "is_near_constant": false,
+      "entropy": 13.378121780755563,
+      "normalized_entropy": 0.9987334269717593,
+      "char_len_mean": 53.770704205623844,
+      "char_len_max": 146,
+      "token_count_mean": 5.993726832050186,
+      "whitespace_only_frac": 0.0,
+      "embedded_digit_frac": 0.32733030180241024,
+      "note": "vectorization deferred (requires_human / later stage)"
+    },
+    "NUM_CREDIT_CARDS": {
+      "_type": "count",
+      "_family": "numeric",
+      "count": 673969,
+      "n_present": 673969,
+      "n_missing": 0,
+      "pct_missing": 0.0,
+      "n_unique": 5,
+      "cardinality_ratio": 7e-06,
+      "memory_bytes": 5391884,
+      "n_blank": 0,
+      "top_values": [
+        {
+          "value": "0",
+          "count": 666390,
+          "pct": 0.9887546756601565
+        },
+        {
+          "value": "1",
+          "count": 6313,
+          "pct": 0.00936689966452463
+        },
+        {
+          "value": "2",
+          "count": 1216,
+          "pct": 0.0018042372868781798
+        },
+        {
+          "value": "3",
+          "count": 46,
+          "pct": 6.825239736545746e-05
+        },
+        {
+          "value": "4",
+          "count": 4,
+          "pct": 5.934991075257171e-06
+        }
+      ],
+      "dominance": 0.9887546756601565,
+      "is_constant": false,
+      "is_near_constant": false,
+      "entropy": 0.06705525068722032,
+      "normalized_entropy": 0.0416637697976224,
+      "min": 0.0,
+      "max": 4.0,
+      "range": 4.0,
+      "mean": 0.01320387139467839,
+      "trimmed_mean_10": 0.0,
+      "median": 0.0,
+      "std": 0.13083869238742188,
+      "var": 0.01711876342565041,
+      "sum": 8899.0,
+      "mad": 0.0,
+      "iqr": 0.0,
+      "cv": 9.90911593096509,
+      "skew": 11.314938972424875,
+      "kurtosis": 146.89318733115266,
+      "percentiles": {
+        "p1": 0.0,
+        "p5": 0.0,
+        "p10": 0.0,
+        "p25": 0.0,
+        "p50": 0.0,
+        "p75": 0.0,
+        "p90": 0.0,
+        "p95": 0.0,
+        "p99": 1.0
+      },
+      "n_zero": 666390,
+      "n_negative": 0,
+      "zero_inflation": 0.9887546756601565,
+      "all_positive": false,
+      "is_integer_valued": true,
+      "outliers": {
+        "fraction": 0.011245324339843524,
+        "count": 7579,
+        "lower": 0.0,
+        "upper": 0.0
+      },
+      "shape": "right_skewed",
+      "log_transform_candidate": false,
+      "is_monotonic": "none",
+      "histogram": {
+        "counts": [
+          666390,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          6313,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1216,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          46,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          4
+        ],
+        "edges": [
+          0.0,
+          0.13333333333333333,
+          0.26666666666666666,
+          0.4,
+          0.5333333333333333,
+          0.6666666666666666,
+          0.8,
+          0.9333333333333333,
+          1.0666666666666667,
+          1.2,
+          1.3333333333333333,
+          1.4666666666666666,
+          1.6,
+          1.7333333333333334,
+          1.8666666666666667,
+          2.0,
+          2.1333333333333333,
+          2.2666666666666666,
+          2.4,
+          2.533333333333333,
+          2.6666666666666665,
+          2.8,
+          2.933333333333333,
+          3.0666666666666664,
+          3.2,
+          3.3333333333333335,
+          3.466666666666667,
+          3.6,
+          3.7333333333333334,
+          3.8666666666666667,
+          4.0
+        ]
+      }
+    },
+    "CREDIT_CARD_OUTSTANDING_AMOUNT": {
+      "_type": "continuous",
+      "_family": "numeric",
+      "count": 673969,
+      "n_present": 673969,
+      "n_missing": 0,
+      "pct_missing": 0.0,
+      "n_unique": 5242,
+      "cardinality_ratio": 0.007778,
+      "memory_bytes": 5391884,
+      "n_blank": 0,
+      "top_values": [
+        {
+          "value": "0.0",
+          "count": 668161,
+          "pct": 0.9913823929587265
+        },
+        {
+          "value": "295.0",
+          "count": 74,
+          "pct": 0.00010979733489225766
+        },
+        {
+          "value": "250.0",
+          "count": 62,
+          "pct": 9.199236166648614e-05
+        },
+        {
+          "value": "50000.0",
+          "count": 54,
+          "pct": 8.012237951597181e-05
+        },
+        {
+          "value": "40000.0",
+          "count": 30,
+          "pct": 4.4512433064428776e-05
+        },
+        {
+          "value": "49000.0",
+          "count": 19,
+          "pct": 2.819120760747156e-05
+        },
+        {
+          "value": "30000.0",
+          "count": 15,
+          "pct": 2.2256216532214388e-05
+        },
+        {
+          "value": "25000.0",
+          "count": 15,
+          "pct": 2.2256216532214388e-05
+        },
+        {
+          "value": "20000.0",
+          "count": 14,
+          "pct": 2.0772468763400096e-05
+        },
+        {
+          "value": "590.0",
+          "count": 12,
+          "pct": 1.7804973225771512e-05
+        },
+        {
+          "value": "35000.0",
+          "count": 11,
+          "pct": 1.632122545695722e-05
+        },
+        {
+          "value": "45000.0",
+          "count": 10,
+          "pct": 1.4837477688142926e-05
+        },
+        {
+          "value": "50590.0",
+          "count": 10,
+          "pct": 1.4837477688142926e-05
+        },
+        {
+          "value": "40472.0",
+          "count": 9,
+          "pct": 1.3353729919328634e-05
+        },
+        {
+          "value": "15000.0",
+          "count": 9,
+          "pct": 1.3353729919328634e-05
+        },
+        {
+          "value": "20236.0",
+          "count": 8,
+          "pct": 1.1869982150514342e-05
+        },
+        {
+          "value": "10000.0",
+          "count": 8,
+          "pct": 1.1869982150514342e-05
+        },
+        {
+          "value": "60000.0",
+          "count": 8,
+          "pct": 1.1869982150514342e-05
+        },
+        {
+          "value": "2000.0",
+          "count": 7,
+          "pct": 1.0386234381700048e-05
+        },
+        {
+          "value": "80000.0",
+          "count": 7,
+          "pct": 1.0386234381700048e-05
+        }
+      ],
+      "dominance": 0.9913823929587265,
+      "is_constant": false,
+      "is_near_constant": true,
+      "entropy": 0.12182058627358096,
+      "normalized_entropy": 0.014223968500194204,
+      "min": -75134.72,
+      "max": 498560.61,
+      "range": 573695.33,
+      "mean": 296.11988489084814,
+      "trimmed_mean_10": 0.0,
+      "median": 0.0,
+      "std": 4403.53288069347,
+      "var": 19391101.83134853,
+      "sum": 199575622.70000002,
+      "mad": 0.0,
+      "iqr": 0.0,
+      "cv": 14.870777362069566,
+      "skew": 26.617013671106225,
+      "kurtosis": 1322.2144776784107,
+      "percentiles": {
+        "p1": 0.0,
+        "p5": 0.0,
+        "p10": 0.0,
+        "p25": 0.0,
+        "p50": 0.0,
+        "p75": 0.0,
+        "p90": 0.0,
+        "p95": 0.0,
+        "p99": 0.0
+      },
+      "n_zero": 668161,
+      "n_negative": 225,
+      "zero_inflation": 0.9913823929587265,
+      "all_positive": false,
+      "is_integer_valued": false,
+      "outliers": {
+        "fraction": 0.008617607041273411,
+        "count": 5808,
+        "lower": 0.0,
+        "upper": 0.0
+      },
+      "shape": "right_skewed",
+      "log_transform_candidate": false,
+      "is_monotonic": "none",
+      "histogram": {
+        "counts": [
+          1,
+          0,
+          2,
+          668853,
+          1456,
+          1256,
+          1753,
+          234,
+          134,
+          193,
+          16,
+          17,
+          10,
+          14,
+          13,
+          2,
+          4,
+          0,
+          3,
+          3,
+          1,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          1,
+          1,
+          1
+        ],
+        "edges": [
+          -75134.72,
+          -56011.54233333333,
+          -36888.36466666667,
+          -17765.187000000005,
+          1357.9906666666648,
+          20481.168333333335,
+          39604.34599999999,
+          58727.523666666675,
+          77850.70133333333,
+          96973.87899999999,
+          116097.05666666667,
+          135220.23433333333,
+          154343.41199999998,
+          173466.58966666667,
+          192589.76733333335,
+          211712.94499999998,
+          230836.12266666666,
+          249959.30033333335,
+          269082.478,
+          288205.6556666667,
+          307328.8333333334,
+          326452.01099999994,
+          345575.1886666666,
+          364698.3663333333,
+          383821.544,
+          402944.7216666667,
+          422067.89933333336,
+          441191.07700000005,
+          460314.25466666673,
+          479437.4323333333,
+          498560.61
+        ]
+      }
+    },
+    "MAX_SANCTIONED_LIMIT": {
+      "_type": "count",
+      "_family": "numeric",
+      "count": 673969,
+      "n_present": 673969,
+      "n_missing": 0,
+      "pct_missing": 0.0,
+      "n_unique": 173,
+      "cardinality_ratio": 0.000257,
+      "memory_bytes": 5391884,
+      "n_blank": 0,
+      "top_values": [
+        {
+          "value": "0",
+          "count": 666395,
+          "pct": 0.9887620943990005
+        },
+        {
+          "value": "50000",
+          "count": 3368,
+          "pct": 0.0049972624853665375
+        },
+        {
+          "value": "100000",
+          "count": 693,
+          "pct": 0.0010282372037883048
+        },
+        {
+          "value": "30000",
+          "count": 537,
+          "pct": 0.0007967725518532752
+        },
+        {
+          "value": "40000",
+          "count": 499,
+          "pct": 0.000740390136638332
+        },
+        {
+          "value": "20000",
+          "count": 362,
+          "pct": 0.000537116692310774
+        },
+        {
+          "value": "25000",
+          "count": 260,
+          "pct": 0.0003857744198917161
+        },
+        {
+          "value": "60000",
+          "count": 232,
+          "pct": 0.0003442294823649159
+        },
+        {
+          "value": "200000",
+          "count": 127,
+          "pct": 0.00018843596663941517
+        },
+        {
+          "value": "35000",
+          "count": 125,
+          "pct": 0.0001854684711017866
+        },
+        {
+          "value": "75000",
+          "count": 111,
+          "pct": 0.0001646960023383865
+        },
+        {
+          "value": "80000",
+          "count": 107,
+          "pct": 0.0001587610112631293
+        },
+        {
+          "value": "70000",
+          "count": 94,
+          "pct": 0.00013947229026854352
+        },
+        {
+          "value": "45000",
+          "count": 85,
+          "pct": 0.00012611856034921488
+        },
+        {
+          "value": "300000",
+          "count": 78,
+          "pct": 0.00011573232596751483
+        },
+        {
+          "value": "150000",
+          "count": 76,
+          "pct": 0.00011276483042988624
+        },
+        {
+          "value": "500000",
+          "count": 58,
+          "pct": 8.605737059122898e-05
+        },
+        {
+          "value": "10000",
+          "count": 56,
+          "pct": 8.308987505360038e-05
+        },
+        {
+          "value": "65000",
+          "count": 38,
+          "pct": 5.638241521494312e-05
+        },
+        {
+          "value": "1000000",
+          "count": 32,
+          "pct": 4.747992860205737e-05
+        }
+      ],
+      "dominance": 0.9887620943990005,
+      "is_constant": false,
+      "is_near_constant": false,
+      "entropy": 0.08944453800173789,
+      "normalized_entropy": 0.01735677796638535,
+      "min": 0.0,
+      "max": 5000000.0,
+      "range": 5000000.0,
+      "mean": 1024.8049094246176,
+      "trimmed_mean_10": 0.0,
+      "median": 0.0,
+      "std": 28167.350051775506,
+      "var": 793399608.9392575,
+      "sum": 690686740.0,
+      "mad": 0.0,
+      "iqr": 0.0,
+      "cv": 27.48557290537398,
+      "skew": 108.62535015576069,
+      "kurtosis": 15648.893949391108,
+      "percentiles": {
+        "p1": 0.0,
+        "p5": 0.0,
+        "p10": 0.0,
+        "p25": 0.0,
+        "p50": 0.0,
+        "p75": 0.0,
+        "p90": 0.0,
+        "p95": 0.0,
+        "p99": 30000.0
+      },
+      "n_zero": 666395,
+      "n_negative": 0,
+      "zero_inflation": 0.9887620943990005,
+      "all_positive": false,
+      "is_integer_valued": true,
+      "outliers": {
+        "fraction": 0.011237905600999453,
+        "count": 7574,
+        "lower": 0.0,
+        "upper": 0.0
+      },
+      "shape": "right_skewed",
+      "log_transform_candidate": false,
+      "is_monotonic": "none",
+      "histogram": {
+        "counts": [
+          673428,
+          314,
+          38,
+          72,
+          21,
+          20,
+          34,
+          1,
+          1,
+          7,
+          0,
+          1,
+          7,
+          2,
+          0,
+          6,
+          0,
+          1,
+          3,
+          0,
+          1,
+          0,
+          0,
+          0,
+          4,
+          0,
+          0,
+          1,
+          1,
+          6
+        ],
+        "edges": [
+          0.0,
+          166666.66666666666,
+          333333.3333333333,
+          500000.0,
+          666666.6666666666,
+          833333.3333333333,
+          1000000.0,
+          1166666.6666666665,
+          1333333.3333333333,
+          1500000.0,
+          1666666.6666666665,
+          1833333.3333333333,
+          2000000.0,
+          2166666.6666666665,
+          2333333.333333333,
+          2500000.0,
+          2666666.6666666665,
+          2833333.333333333,
+          3000000.0,
+          3166666.6666666665,
+          3333333.333333333,
+          3500000.0,
+          3666666.6666666665,
+          3833333.333333333,
+          4000000.0,
+          4166666.6666666665,
+          4333333.333333333,
+          4500000.0,
+          4666666.666666666,
+          4833333.333333333,
+          5000000.0
+        ]
+      }
+    }
+  },
+  "load_info": {
+    "total_rows": 673969,
+    "sampled": false,
+    "sample_rows": 673969
+  },
+  "quality_score": 78.8,
+  "entity_checks": {
+    "primary_key": [
+      "CUSTOMER_ID"
+    ],
+    "primary_key_unique": true,
+    "full_row_duplicate_rate": 0.0,
+    "schema_conflicts": [
+      {
+        "column": "CURRENT_ACCOUNT_BALANCE",
+        "type": "dtype_mismatch",
+        "types": [
+          "double",
+          "int64"
+        ]
+      },
+      {
+        "column": "CUSTOMER_PIN_CODE",
+        "type": "dtype_mismatch",
+        "types": [
+          "double",
+          "large_string"
+        ]
+      },
+      {
+        "column": "PERMANENT_PIN_CODE",
+        "type": "dtype_mismatch",
+        "types": [
+          "double",
+          "large_string"
+        ]
+      },
+      {
+        "column": "CREDIT_CARD_OUTSTANDING_AMOUNT",
+        "type": "dtype_mismatch",
+        "types": [
+          "double",
+          "int64"
+        ]
+      }
+    ],
+    "n_columns": 32,
+    "n_drop_suggested": 4,
+    "n_warn": 7
+  },
+  "relationships": {
+    "redundant_pairs": [],
+    "top_numeric_corr": [
+      {
+        "a": "NUM_CURRENT_ACCOUNT",
+        "b": "CURRENT_ACCOUNT_BALANCE",
+        "pearson": 0.8801
+      },
+      {
+        "a": "NUM_CREDIT_CARDS",
+        "b": "CREDIT_CARD_OUTSTANDING_AMOUNT",
+        "pearson": 0.6162
+      },
+      {
+        "a": "NUM_LOAN_ACCOUNT",
+        "b": "NUM_OVER_DRAFT_ACCOUNT",
+        "pearson": 0.3943
+      },
+      {
+        "a": "NUM_CREDIT_CARDS",
+        "b": "MAX_SANCTIONED_LIMIT",
+        "pearson": 0.313
+      },
+      {
+        "a": "NUM_OVER_DRAFT_ACCOUNT",
+        "b": "OVER_DRAFT_ACCOUNT_BALANCE",
+        "pearson": 0.214
+      },
+      {
+        "a": "CREDIT_CARD_OUTSTANDING_AMOUNT",
+        "b": "MAX_SANCTIONED_LIMIT",
+        "pearson": 0.1887
+      },
+      {
+        "a": "NUM_CURRENT_ACCOUNT",
+        "b": "NUM_SAVING_ACCOUNT",
+        "pearson": -0.1704
+      },
+      {
+        "a": "NUM_LOAN_ACCOUNT",
+        "b": "NUM_CREDIT_CARDS",
+        "pearson": 0.1403
+      },
+      {
+        "a": "NUM_LOAN_ACCOUNT",
+        "b": "CREDIT_CARD_OUTSTANDING_AMOUNT",
+        "pearson": 0.1236
+      },
+      {
+        "a": "NUM_TERM_DEPOSIT_ACCOUNT",
+        "b": "TERM_DEPOSIT_ACCOUNT_BALANCE",
+        "pearson": 0.1133
+      },
+      {
+        "a": "NUM_SAVING_ACCOUNT",
+        "b": "SAVING_ACCOUNT_BALANCE",
+        "pearson": 0.1124
+      },
+      {
+        "a": "NUM_LOAN_ACCOUNT",
+        "b": "LOAN_ACCOUNT_BALANCE",
+        "pearson": 0.1038
+      },
+      {
+        "a": "NUM_LOAN_ACCOUNT",
+        "b": "MAX_SANCTIONED_LIMIT",
+        "pearson": 0.0987
+      },
+      {
+        "a": "SAVING_ACCOUNT_BALANCE",
+        "b": "NUM_TERM_DEPOSIT_ACCOUNT",
+        "pearson": 0.0937
+      },
+      {
+        "a": "NUM_OVER_DRAFT_ACCOUNT",
+        "b": "NUM_TERM_DEPOSIT_ACCOUNT",
+        "pearson": 0.0902
+      },
+      {
+        "a": "LOAN_ACCOUNT_BALANCE",
+        "b": "OVER_DRAFT_ACCOUNT_BALANCE",
+        "pearson": 0.0882
+      },
+      {
+        "a": "NUM_OVER_DRAFT_ACCOUNT",
+        "b": "NUM_CREDIT_CARDS",
+        "pearson": 0.087
+      },
+      {
+        "a": "NUM_SAVING_ACCOUNT",
+        "b": "NUM_TERM_DEPOSIT_ACCOUNT",
+        "pearson": 0.0849
+      },
+      {
+        "a": "NUM_OVER_DRAFT_ACCOUNT",
+        "b": "CREDIT_CARD_OUTSTANDING_AMOUNT",
+        "pearson": 0.0825
+      },
+      {
+        "a": "NUM_LOAN_ACCOUNT",
+        "b": "OVER_DRAFT_ACCOUNT_BALANCE",
+        "pearson": 0.0823
+      },
+      {
+        "a": "NUM_LOAN_ACCOUNT",
+        "b": "NUM_TERM_DEPOSIT_ACCOUNT",
+        "pearson": 0.0778
+      },
+      {
+        "a": "LOAN_ACCOUNT_BALANCE",
+        "b": "NUM_CURRENT_ACCOUNT",
+        "pearson": 0.0762
+      },
+      {
+        "a": "NUM_OVER_DRAFT_ACCOUNT",
+        "b": "MAX_SANCTIONED_LIMIT",
+        "pearson": 0.0712
+      },
+      {
+        "a": "NUM_LOAN_ACCOUNT",
+        "b": "NUM_SAVING_ACCOUNT",
+        "pearson": 0.0568
+      },
+      {
+        "a": "NUM_CURRENT_ACCOUNT",
+        "b": "TERM_DEPOSIT_ACCOUNT_BALANCE",
+        "pearson": 0.0557
+      },
+      {
+        "a": "NUM_LOAN_ACCOUNT",
+        "b": "NUM_CURRENT_ACCOUNT",
+        "pearson": 0.0531
+      },
+      {
+        "a": "NUM_OVER_DRAFT_ACCOUNT",
+        "b": "NUM_CURRENT_ACCOUNT",
+        "pearson": 0.0485
+      },
+      {
+        "a": "OVER_DRAFT_ACCOUNT_BALANCE",
+        "b": "NUM_CURRENT_ACCOUNT",
+        "pearson": 0.0476
+      },
+      {
+        "a": "OVER_DRAFT_ACCOUNT_BALANCE",
+        "b": "NUM_TERM_DEPOSIT_ACCOUNT",
+        "pearson": 0.0447
+      },
+      {
+        "a": "NUM_OVER_DRAFT_ACCOUNT",
+        "b": "NUM_SAVING_ACCOUNT",
+        "pearson": 0.0413
+      },
+      {
+        "a": "LOAN_ACCOUNT_BALANCE",
+        "b": "NUM_OVER_DRAFT_ACCOUNT",
+        "pearson": 0.0378
+      },
+      {
+        "a": "NUM_CURRENT_ACCOUNT",
+        "b": "NUM_TERM_DEPOSIT_ACCOUNT",
+        "pearson": 0.0346
+      },
+      {
+        "a": "NUM_TERM_DEPOSIT_ACCOUNT",
+        "b": "NUM_CREDIT_CARDS",
+        "pearson": 0.0325
+      },
+      {
+        "a": "LOAN_ACCOUNT_BALANCE",
+        "b": "NUM_TERM_DEPOSIT_ACCOUNT",
+        "pearson": 0.0314
+      },
+      {
+        "a": "SAVING_ACCOUNT_BALANCE",
+        "b": "TERM_DEPOSIT_ACCOUNT_BALANCE",
+        "pearson": 0.0296
+      },
+      {
+        "a": "NUM_CURRENT_ACCOUNT",
+        "b": "MAX_SANCTIONED_LIMIT",
+        "pearson": 0.0289
+      },
+      {
+        "a": "NUM_SAVING_ACCOUNT",
+        "b": "CREDIT_CARD_OUTSTANDING_AMOUNT",
+        "pearson": 0.0279
+      },
+      {
+        "a": "NUM_SAVING_ACCOUNT",
+        "b": "NUM_CREDIT_CARDS",
+        "pearson": 0.0277
+      },
+      {
+        "a": "LOAN_ACCOUNT_BALANCE",
+        "b": "NUM_SAVING_ACCOUNT",
+        "pearson": -0.0277
+      },
+      {
+        "a": "NUM_SAVING_ACCOUNT",
+        "b": "MAX_SANCTIONED_LIMIT",
+        "pearson": -0.0246
+      },
+      {
+        "a": "CURRENT_ACCOUNT_BALANCE",
+        "b": "NUM_SAVING_ACCOUNT",
+        "pearson": -0.0226
+      },
+      {
+        "a": "NUM_LOAN_ACCOUNT",
+        "b": "SAVING_ACCOUNT_BALANCE",
+        "pearson": 0.0226
+      },
+      {
+        "a": "NUM_CURRENT_ACCOUNT",
+        "b": "NUM_CREDIT_CARDS",
+        "pearson": 0.0225
+      },
+      {
+        "a": "OVER_DRAFT_ACCOUNT_BALANCE",
+        "b": "TERM_DEPOSIT_ACCOUNT_BALANCE",
+        "pearson": 0.0219
+      },
+      {
+        "a": "NUM_TERM_DEPOSIT_ACCOUNT",
+        "b": "MAX_SANCTIONED_LIMIT",
+        "pearson": 0.0212
+      },
+      {
+        "a": "OVER_DRAFT_ACCOUNT_BALANCE",
+        "b": "NUM_SAVING_ACCOUNT",
+        "pearson": -0.0206
+      },
+      {
+        "a": "NUM_LOAN_ACCOUNT",
+        "b": "TERM_DEPOSIT_ACCOUNT_BALANCE",
+        "pearson": 0.019
+      },
+      {
+        "a": "CURRENT_ACCOUNT_BALANCE",
+        "b": "TERM_DEPOSIT_ACCOUNT_BALANCE",
+        "pearson": 0.0168
+      },
+      {
+        "a": "NUM_OVER_DRAFT_ACCOUNT",
+        "b": "SAVING_ACCOUNT_BALANCE",
+        "pearson": 0.0163
+      },
+      {
+        "a": "NUM_CURRENT_ACCOUNT",
+        "b": "SAVING_ACCOUNT_BALANCE",
+        "pearson": 0.0149
+      }
+    ],
+    "top_spearman_corr": [
+      {
+        "a": "NUM_CREDIT_CARDS",
+        "b": "MAX_SANCTIONED_LIMIT",
+        "spearman": 0.9995
+      },
+      {
+        "a": "NUM_TERM_DEPOSIT_ACCOUNT",
+        "b": "TERM_DEPOSIT_ACCOUNT_BALANCE",
+        "spearman": 0.9911
+      },
+      {
+        "a": "NUM_LOAN_ACCOUNT",
+        "b": "LOAN_ACCOUNT_BALANCE",
+        "spearman": 0.9796
+      },
+      {
+        "a": "NUM_CURRENT_ACCOUNT",
+        "b": "CURRENT_ACCOUNT_BALANCE",
+        "spearman": 0.9572
+      },
+      {
+        "a": "NUM_OVER_DRAFT_ACCOUNT",
+        "b": "OVER_DRAFT_ACCOUNT_BALANCE",
+        "spearman": 0.9284
+      },
+      {
+        "a": "NUM_CREDIT_CARDS",
+        "b": "CREDIT_CARD_OUTSTANDING_AMOUNT",
+        "spearman": 0.8106
+      },
+      {
+        "a": "CREDIT_CARD_OUTSTANDING_AMOUNT",
+        "b": "MAX_SANCTIONED_LIMIT",
+        "spearman": 0.8103
+      },
+      {
+        "a": "NUM_CURRENT_ACCOUNT",
+        "b": "NUM_SAVING_ACCOUNT",
+        "spearman": -0.4385
+      },
+      {
+        "a": "CURRENT_ACCOUNT_BALANCE",
+        "b": "NUM_SAVING_ACCOUNT",
+        "spearman": -0.4333
+      },
+      {
+        "a": "NUM_LOAN_ACCOUNT",
+        "b": "NUM_OVER_DRAFT_ACCOUNT",
+        "spearman": 0.322
+      },
+      {
+        "a": "LOAN_ACCOUNT_BALANCE",
+        "b": "OVER_DRAFT_ACCOUNT_BALANCE",
+        "spearman": 0.3058
+      },
+      {
+        "a": "NUM_LOAN_ACCOUNT",
+        "b": "OVER_DRAFT_ACCOUNT_BALANCE",
+        "spearman": 0.2991
+      },
+      {
+        "a": "LOAN_ACCOUNT_BALANCE",
+        "b": "NUM_OVER_DRAFT_ACCOUNT",
+        "spearman": 0.2965
+      },
+      {
+        "a": "NUM_SAVING_ACCOUNT",
+        "b": "SAVING_ACCOUNT_BALANCE",
+        "spearman": 0.2477
+      },
+      {
+        "a": "NUM_OVER_DRAFT_ACCOUNT",
+        "b": "TERM_DEPOSIT_ACCOUNT_BALANCE",
+        "spearman": 0.1589
+      },
+      {
+        "a": "NUM_CURRENT_ACCOUNT",
+        "b": "SAVING_ACCOUNT_BALANCE",
+        "spearman": -0.1588
+      },
+      {
+        "a": "NUM_OVER_DRAFT_ACCOUNT",
+        "b": "NUM_TERM_DEPOSIT_ACCOUNT",
+        "spearman": 0.1582
+      },
+      {
+        "a": "CURRENT_ACCOUNT_BALANCE",
+        "b": "SAVING_ACCOUNT_BALANCE",
+        "spearman": -0.1555
+      },
+      {
+        "a": "OVER_DRAFT_ACCOUNT_BALANCE",
+        "b": "TERM_DEPOSIT_ACCOUNT_BALANCE",
+        "spearman": 0.1377
+      },
+      {
+        "a": "OVER_DRAFT_ACCOUNT_BALANCE",
+        "b": "NUM_TERM_DEPOSIT_ACCOUNT",
+        "spearman": 0.1368
+      },
+      {
+        "a": "SAVING_ACCOUNT_BALANCE",
+        "b": "TERM_DEPOSIT_ACCOUNT_BALANCE",
+        "spearman": 0.1298
+      },
+      {
+        "a": "NUM_LOAN_ACCOUNT",
+        "b": "NUM_CREDIT_CARDS",
+        "spearman": 0.1298
+      },
+      {
+        "a": "NUM_LOAN_ACCOUNT",
+        "b": "MAX_SANCTIONED_LIMIT",
+        "spearman": 0.1297
+      },
+      {
+        "a": "SAVING_ACCOUNT_BALANCE",
+        "b": "NUM_TERM_DEPOSIT_ACCOUNT",
+        "spearman": 0.1294
+      },
+      {
+        "a": "LOAN_ACCOUNT_BALANCE",
+        "b": "NUM_CREDIT_CARDS",
+        "spearman": 0.1288
+      },
+      {
+        "a": "LOAN_ACCOUNT_BALANCE",
+        "b": "MAX_SANCTIONED_LIMIT",
+        "spearman": 0.1287
+      },
+      {
+        "a": "NUM_LOAN_ACCOUNT",
+        "b": "NUM_CURRENT_ACCOUNT",
+        "spearman": 0.1252
+      },
+      {
+        "a": "LOAN_ACCOUNT_BALANCE",
+        "b": "NUM_CURRENT_ACCOUNT",
+        "spearman": 0.1251
+      },
+      {
+        "a": "NUM_LOAN_ACCOUNT",
+        "b": "NUM_TERM_DEPOSIT_ACCOUNT",
+        "spearman": 0.1236
+      },
+      {
+        "a": "NUM_LOAN_ACCOUNT",
+        "b": "TERM_DEPOSIT_ACCOUNT_BALANCE",
+        "spearman": 0.1208
+      },
+      {
+        "a": "NUM_LOAN_ACCOUNT",
+        "b": "CURRENT_ACCOUNT_BALANCE",
+        "spearman": 0.1201
+      },
+      {
+        "a": "LOAN_ACCOUNT_BALANCE",
+        "b": "CURRENT_ACCOUNT_BALANCE",
+        "spearman": 0.12
+      },
+      {
+        "a": "NUM_OVER_DRAFT_ACCOUNT",
+        "b": "CURRENT_ACCOUNT_BALANCE",
+        "spearman": 0.1188
+      },
+      {
+        "a": "NUM_OVER_DRAFT_ACCOUNT",
+        "b": "NUM_CURRENT_ACCOUNT",
+        "spearman": 0.1178
+      },
+      {
+        "a": "LOAN_ACCOUNT_BALANCE",
+        "b": "NUM_TERM_DEPOSIT_ACCOUNT",
+        "spearman": 0.117
+      },
+      {
+        "a": "OVER_DRAFT_ACCOUNT_BALANCE",
+        "b": "CURRENT_ACCOUNT_BALANCE",
+        "spearman": 0.1151
+      },
+      {
+        "a": "LOAN_ACCOUNT_BALANCE",
+        "b": "TERM_DEPOSIT_ACCOUNT_BALANCE",
+        "spearman": 0.1142
+      },
+      {
+        "a": "OVER_DRAFT_ACCOUNT_BALANCE",
+        "b": "NUM_CURRENT_ACCOUNT",
+        "spearman": 0.1136
+      },
+      {
+        "a": "NUM_SAVING_ACCOUNT",
+        "b": "NUM_TERM_DEPOSIT_ACCOUNT",
+        "spearman": 0.1012
+      },
+      {
+        "a": "NUM_SAVING_ACCOUNT",
+        "b": "TERM_DEPOSIT_ACCOUNT_BALANCE",
+        "spearman": 0.1006
+      },
+      {
+        "a": "NUM_OVER_DRAFT_ACCOUNT",
+        "b": "NUM_CREDIT_CARDS",
+        "spearman": 0.0946
+      },
+      {
+        "a": "NUM_OVER_DRAFT_ACCOUNT",
+        "b": "MAX_SANCTIONED_LIMIT",
+        "spearman": 0.0941
+      },
+      {
+        "a": "OVER_DRAFT_ACCOUNT_BALANCE",
+        "b": "NUM_CREDIT_CARDS",
+        "spearman": 0.0902
+      },
+      {
+        "a": "OVER_DRAFT_ACCOUNT_BALANCE",
+        "b": "MAX_SANCTIONED_LIMIT",
+        "spearman": 0.0896
+      },
+      {
+        "a": "NUM_LOAN_ACCOUNT",
+        "b": "CREDIT_CARD_OUTSTANDING_AMOUNT",
+        "spearman": 0.0894
+      },
+      {
+        "a": "LOAN_ACCOUNT_BALANCE",
+        "b": "CREDIT_CARD_OUTSTANDING_AMOUNT",
+        "spearman": 0.0888
+      },
+      {
+        "a": "OVER_DRAFT_ACCOUNT_BALANCE",
+        "b": "CREDIT_CARD_OUTSTANDING_AMOUNT",
+        "spearman": 0.0731
+      },
+      {
+        "a": "NUM_OVER_DRAFT_ACCOUNT",
+        "b": "CREDIT_CARD_OUTSTANDING_AMOUNT",
+        "spearman": 0.073
+      },
+      {
+        "a": "CURRENT_ACCOUNT_BALANCE",
+        "b": "MAX_SANCTIONED_LIMIT",
+        "spearman": 0.0559
+      },
+      {
+        "a": "CURRENT_ACCOUNT_BALANCE",
+        "b": "NUM_CREDIT_CARDS",
+        "spearman": 0.0558
+      }
+    ],
+    "nonlinear_pairs": [
+      {
+        "a": "NUM_LOAN_ACCOUNT",
+        "b": "LOAN_ACCOUNT_BALANCE",
+        "pearson": 0.1038,
+        "spearman": 0.9796
+      },
+      {
+        "a": "NUM_OVER_DRAFT_ACCOUNT",
+        "b": "OVER_DRAFT_ACCOUNT_BALANCE",
+        "pearson": 0.214,
+        "spearman": 0.9284
+      },
+      {
+        "a": "NUM_TERM_DEPOSIT_ACCOUNT",
+        "b": "TERM_DEPOSIT_ACCOUNT_BALANCE",
+        "pearson": 0.1133,
+        "spearman": 0.9911
+      },
+      {
+        "a": "NUM_CREDIT_CARDS",
+        "b": "MAX_SANCTIONED_LIMIT",
+        "pearson": 0.313,
+        "spearman": 0.9995
+      },
+      {
+        "a": "CREDIT_CARD_OUTSTANDING_AMOUNT",
+        "b": "MAX_SANCTIONED_LIMIT",
+        "pearson": 0.1887,
+        "spearman": 0.8103
+      }
+    ],
+    "vif": [
+      {
+        "column": "NUM_CURRENT_ACCOUNT",
+        "vif": 5.235
+      },
+      {
+        "column": "CURRENT_ACCOUNT_BALANCE",
+        "vif": 5.007
+      },
+      {
+        "column": "NUM_CREDIT_CARDS",
+        "vif": 1.734
+      },
+      {
+        "column": "CREDIT_CARD_OUTSTANDING_AMOUNT",
+        "vif": 1.617
+      },
+      {
+        "column": "NUM_OVER_DRAFT_ACCOUNT",
+        "vif": 1.244
+      },
+      {
+        "column": "NUM_LOAN_ACCOUNT",
+        "vif": 1.226
+      },
+      {
+        "column": "NUM_SAVING_ACCOUNT",
+        "vif": 1.153
+      },
+      {
+        "column": "MAX_SANCTIONED_LIMIT",
+        "vif": 1.116
+      },
+      {
+        "column": "OVER_DRAFT_ACCOUNT_BALANCE",
+        "vif": 1.06
+      },
+      {
+        "column": "NUM_TERM_DEPOSIT_ACCOUNT",
+        "vif": 1.042
+      },
+      {
+        "column": "LOAN_ACCOUNT_BALANCE",
+        "vif": 1.039
+      },
+      {
+        "column": "SAVING_ACCOUNT_BALANCE",
+        "vif": 1.022
+      },
+      {
+        "column": "TERM_DEPOSIT_ACCOUNT_BALANCE",
+        "vif": 1.022
+      }
+    ],
+    "numeric_categorical_assoc": [],
+    "categorical_associations": [],
+    "directional_associations": [],
+    "functional_dependencies": [
+      {
+        "determinant": "HASH_OF_PASSPORT",
+        "depends": "GENDER"
+      },
+      {
+        "determinant": "HASH_OF_PASSPORT",
+        "depends": "OCCUPATION"
+      },
+      {
+        "determinant": "HASH_OF_PASSPORT",
+        "depends": "NATIONALITY"
+      },
+      {
+        "determinant": "HASH_OF_PASSPORT",
+        "depends": "HASH_OF_DRIVING_LICENCE"
+      },
+      {
+        "determinant": "HASH_OF_PASSPORT",
+        "depends": "HASH_OF_NREGA"
+      },
+      {
+        "determinant": "HASH_OF_PASSPORT",
+        "depends": "KYC_VERIFIED_FLAG"
+      },
+      {
+        "determinant": "HASH_OF_PASSPORT",
+        "depends": "CUSTOMER_SPECIAL_STATUS"
+      },
+      {
+        "determinant": "HASH_OF_DRIVING_LICENCE",
+        "depends": "GENDER"
+      },
+      {
+        "determinant": "HASH_OF_DRIVING_LICENCE",
+        "depends": "NATIONALITY"
+      },
+      {
+        "determinant": "HASH_OF_DRIVING_LICENCE",
+        "depends": "HASH_OF_PASSPORT"
+      },
+      {
+        "determinant": "HASH_OF_DRIVING_LICENCE",
+        "depends": "HASH_OF_NREGA"
+      },
+      {
+        "determinant": "HASH_OF_DRIVING_LICENCE",
+        "depends": "KYC_VERIFIED_FLAG"
+      },
+      {
+        "determinant": "HASH_OF_DRIVING_LICENCE",
+        "depends": "CUSTOMER_SPECIAL_STATUS"
+      },
+      {
+        "determinant": "HASH_OF_NREGA",
+        "depends": "GENDER"
+      },
+      {
+        "determinant": "HASH_OF_NREGA",
+        "depends": "NATIONALITY"
+      },
+      {
+        "determinant": "HASH_OF_NREGA",
+        "depends": "HASH_OF_PASSPORT"
+      },
+      {
+        "determinant": "HASH_OF_NREGA",
+        "depends": "HASH_OF_DRIVING_LICENCE"
+      },
+      {
+        "determinant": "HASH_OF_NREGA",
+        "depends": "KYC_VERIFIED_FLAG"
+      },
+      {
+        "determinant": "HASH_OF_NREGA",
+        "depends": "CUSTOMER_SPECIAL_STATUS"
+      }
+    ],
+    "co_missing_pairs": [
+      {
+        "a": "GENDER",
+        "b": "OCCUPATION",
+        "phi": 1.0
+      },
+      {
+        "a": "GENDER",
+        "b": "NATIONALITY",
+        "phi": 1.0
+      },
+      {
+        "a": "OCCUPATION",
+        "b": "NATIONALITY",
+        "phi": 1.0
+      },
+      {
+        "a": "CUSTOMER_PIN_CODE",
+        "b": "ADDRESS",
+        "phi": 0.9951
+      },
+      {
+        "a": "GENDER",
+        "b": "ANNUAL_INCOME",
+        "phi": 0.8931
+      },
+      {
+        "a": "OCCUPATION",
+        "b": "ANNUAL_INCOME",
+        "phi": 0.8931
+      },
+      {
+        "a": "NATIONALITY",
+        "b": "ANNUAL_INCOME",
+        "phi": 0.8931
+      },
+      {
+        "a": "PERMANENT_PIN_CODE",
+        "b": "GENDER",
+        "phi": 0.7919
+      },
+      {
+        "a": "PERMANENT_PIN_CODE",
+        "b": "OCCUPATION",
+        "phi": 0.7919
+      },
+      {
+        "a": "PERMANENT_PIN_CODE",
+        "b": "NATIONALITY",
+        "phi": 0.7919
+      },
+      {
+        "a": "PERMANENT_PIN_CODE",
+        "b": "ANNUAL_INCOME",
+        "phi": 0.7072
+      },
+      {
+        "a": "GENDER",
+        "b": "HASH_OF_AADHAR",
+        "phi": 0.6678
+      },
+      {
+        "a": "OCCUPATION",
+        "b": "HASH_OF_AADHAR",
+        "phi": 0.6678
+      },
+      {
+        "a": "NATIONALITY",
+        "b": "HASH_OF_AADHAR",
+        "phi": 0.6678
+      },
+      {
+        "a": "PERMANENT_PIN_CODE",
+        "b": "HASH_OF_AADHAR",
+        "phi": 0.6205
+      },
+      {
+        "a": "HASH_OF_AADHAR",
+        "b": "ANNUAL_INCOME",
+        "phi": 0.5945
+      }
+    ],
+    "corr_matrix": {
+      "columns": [
+        "NUM_LOAN_ACCOUNT",
+        "LOAN_ACCOUNT_BALANCE",
+        "NUM_OVER_DRAFT_ACCOUNT",
+        "OVER_DRAFT_ACCOUNT_BALANCE",
+        "NUM_CURRENT_ACCOUNT",
+        "CURRENT_ACCOUNT_BALANCE",
+        "NUM_SAVING_ACCOUNT",
+        "SAVING_ACCOUNT_BALANCE",
+        "NUM_TERM_DEPOSIT_ACCOUNT",
+        "TERM_DEPOSIT_ACCOUNT_BALANCE",
+        "NUM_CREDIT_CARDS",
+        "CREDIT_CARD_OUTSTANDING_AMOUNT",
+        "MAX_SANCTIONED_LIMIT"
+      ],
+      "pearson": [
+        [
+          1.0,
+          0.1038,
+          0.3943,
+          0.0823,
+          0.0531,
+          0.0047,
+          0.0568,
+          0.0226,
+          0.0778,
+          0.019,
+          0.1403,
+          0.1236,
+          0.0987
+        ],
+        [
+          0.1038,
+          1.0,
+          0.0378,
+          0.0882,
+          0.0762,
+          0.0028,
+          -0.0277,
+          0.0004,
+          0.0314,
+          0.0147,
+          0.0061,
+          0.0058,
+          0.0095
+        ],
+        [
+          0.3943,
+          0.0378,
+          1.0,
+          0.214,
+          0.0485,
+          0.0055,
+          0.0413,
+          0.0163,
+          0.0902,
+          0.0068,
+          0.087,
+          0.0825,
+          0.0712
+        ],
+        [
+          0.0823,
+          0.0882,
+          0.214,
+          1.0,
+          0.0476,
+          0.0085,
+          -0.0206,
+          0.0025,
+          0.0447,
+          0.0219,
+          0.0088,
+          0.0099,
+          0.0142
+        ],
+        [
+          0.0531,
+          0.0762,
+          0.0485,
+          0.0476,
+          1.0,
+          0.8801,
+          -0.1704,
+          0.0149,
+          0.0346,
+          0.0557,
+          0.0225,
+          0.0126,
+          0.0289
+        ],
+        [
+          0.0047,
+          0.0028,
+          0.0055,
+          0.0085,
+          0.8801,
+          1.0,
+          -0.0226,
+          0.0128,
+          0.0105,
+          0.0168,
+          0.0005,
+          -0.0002,
+          0.0016
+        ],
+        [
+          0.0568,
+          -0.0277,
+          0.0413,
+          -0.0206,
+          -0.1704,
+          -0.0226,
+          1.0,
+          0.1124,
+          0.0849,
+          0.0117,
+          0.0277,
+          0.0279,
+          -0.0246
+        ],
+        [
+          0.0226,
+          0.0004,
+          0.0163,
+          0.0025,
+          0.0149,
+          0.0128,
+          0.1124,
+          1.0,
+          0.0937,
+          0.0296,
+          0.0143,
+          0.0035,
+          0.0048
+        ],
+        [
+          0.0778,
+          0.0314,
+          0.0902,
+          0.0447,
+          0.0346,
+          0.0105,
+          0.0849,
+          0.0937,
+          1.0,
+          0.1133,
+          0.0325,
+          0.0114,
+          0.0212
+        ],
+        [
+          0.019,
+          0.0147,
+          0.0068,
+          0.0219,
+          0.0557,
+          0.0168,
+          0.0117,
+          0.0296,
+          0.1133,
+          1.0,
+          0.0006,
+          0.0,
+          0.0008
+        ],
+        [
+          0.1403,
+          0.0061,
+          0.087,
+          0.0088,
+          0.0225,
+          0.0005,
+          0.0277,
+          0.0143,
+          0.0325,
+          0.0006,
+          1.0,
+          0.6162,
+          0.313
+        ],
+        [
+          0.1236,
+          0.0058,
+          0.0825,
+          0.0099,
+          0.0126,
+          -0.0002,
+          0.0279,
+          0.0035,
+          0.0114,
+          0.0,
+          0.6162,
+          1.0,
+          0.1887
+        ],
+        [
+          0.0987,
+          0.0095,
+          0.0712,
+          0.0142,
+          0.0289,
+          0.0016,
+          -0.0246,
+          0.0048,
+          0.0212,
+          0.0008,
+          0.313,
+          0.1887,
+          1.0
+        ]
+      ],
+      "spearman": [
+        [
+          1.0,
+          0.9796,
+          0.322,
+          0.2991,
+          0.1252,
+          0.1201,
+          0.0118,
+          0.0394,
+          0.1236,
+          0.1208,
+          0.1298,
+          0.0894,
+          0.1297
+        ],
+        [
+          0.9796,
+          1.0,
+          0.2965,
+          0.3058,
+          0.1251,
+          0.12,
+          0.0096,
+          0.0367,
+          0.117,
+          0.1142,
+          0.1288,
+          0.0888,
+          0.1287
+        ],
+        [
+          0.322,
+          0.2965,
+          1.0,
+          0.9284,
+          0.1178,
+          0.1188,
+          -0.0092,
+          -0.0009,
+          0.1582,
+          0.1589,
+          0.0946,
+          0.073,
+          0.0941
+        ],
+        [
+          0.2991,
+          0.3058,
+          0.9284,
+          1.0,
+          0.1136,
+          0.1151,
+          -0.0186,
+          -0.0069,
+          0.1368,
+          0.1377,
+          0.0902,
+          0.0731,
+          0.0896
+        ],
+        [
+          0.1252,
+          0.1251,
+          0.1178,
+          0.1136,
+          1.0,
+          0.9572,
+          -0.4385,
+          -0.1588,
+          0.0552,
+          0.054,
+          0.0553,
+          0.0352,
+          0.0554
+        ],
+        [
+          0.1201,
+          0.12,
+          0.1188,
+          0.1151,
+          0.9572,
+          1.0,
+          -0.4333,
+          -0.1555,
+          0.0557,
+          0.0545,
+          0.0558,
+          0.0345,
+          0.0559
+        ],
+        [
+          0.0118,
+          0.0096,
+          -0.0092,
+          -0.0186,
+          -0.4385,
+          -0.4333,
+          1.0,
+          0.2477,
+          0.1012,
+          0.1006,
+          0.0188,
+          0.0199,
+          0.0188
+        ],
+        [
+          0.0394,
+          0.0367,
+          -0.0009,
+          -0.0069,
+          -0.1588,
+          -0.1555,
+          0.2477,
+          1.0,
+          0.1294,
+          0.1298,
+          0.042,
+          0.0304,
+          0.0419
+        ],
+        [
+          0.1236,
+          0.117,
+          0.1582,
+          0.1368,
+          0.0552,
+          0.0557,
+          0.1012,
+          0.1294,
+          1.0,
+          0.9911,
+          0.0542,
+          0.0333,
+          0.0544
+        ],
+        [
+          0.1208,
+          0.1142,
+          0.1589,
+          0.1377,
+          0.054,
+          0.0545,
+          0.1006,
+          0.1298,
+          0.9911,
+          1.0,
+          0.0536,
+          0.0323,
+          0.0538
+        ],
+        [
+          0.1298,
+          0.1288,
+          0.0946,
+          0.0902,
+          0.0553,
+          0.0558,
+          0.0188,
+          0.042,
+          0.0542,
+          0.0536,
+          1.0,
+          0.8106,
+          0.9995
+        ],
+        [
+          0.0894,
+          0.0888,
+          0.073,
+          0.0731,
+          0.0352,
+          0.0345,
+          0.0199,
+          0.0304,
+          0.0333,
+          0.0323,
+          0.8106,
+          1.0,
+          0.8103
+        ],
+        [
+          0.1297,
+          0.1287,
+          0.0941,
+          0.0896,
+          0.0554,
+          0.0559,
+          0.0188,
+          0.0419,
+          0.0544,
+          0.0538,
+          0.9995,
+          0.8103,
+          1.0
+        ]
+      ]
+    },
+    "cramers_matrix": {
+      "columns": [
+        "GENDER",
+        "NATIONALITY",
+        "KYC_VERIFIED_FLAG",
+        "CUSTOMER_SPECIAL_STATUS"
+      ],
+      "values": [
+        [
+          1.0,
+          0.0,
+          0.017,
+          0.0393
+        ],
+        [
+          0.0,
+          1.0,
+          0.0382,
+          0.0
+        ],
+        [
+          0.017,
+          0.0382,
+          1.0,
+          0.0051
+        ],
+        [
+          0.0393,
+          0.0,
+          0.0051,
+          1.0
+        ]
+      ]
+    }
+  }
+}

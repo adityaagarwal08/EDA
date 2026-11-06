@@ -1,0 +1,5481 @@
+{
+  "types": {
+    "ACCOUNT_NUMBER": {
+      "semantic_type": "identifier",
+      "confidence": 0.95,
+      "evidence": "uniq_ratio=1.000, key",
+      "source": "inferred",
+      "physical_dtype": "string",
+      "family": "keylike",
+      "parse_fail_rate": 0.0,
+      "is_primary_key": true,
+      "is_foreign_key": false,
+      "feature_role": "key"
+    },
+    "CUSTOMER_ID": {
+      "semantic_type": "identifier",
+      "confidence": 0.95,
+      "evidence": "uniq_ratio=0.995, key",
+      "source": "inferred",
+      "physical_dtype": "string",
+      "family": "keylike",
+      "parse_fail_rate": 0.0,
+      "is_primary_key": false,
+      "is_foreign_key": true,
+      "feature_role": "key"
+    },
+    "ACCOUNT_OPEN_MODE": {
+      "semantic_type": "categorical",
+      "confidence": 0.7,
+      "evidence": "21 levels, ratio=0.000",
+      "source": "inferred",
+      "physical_dtype": "string",
+      "family": "categorical",
+      "parse_fail_rate": 0.0,
+      "is_primary_key": false,
+      "is_foreign_key": false,
+      "feature_role": "feature"
+    },
+    "HAS_NOMINATION": {
+      "semantic_type": "boolean_flag",
+      "confidence": 0.9,
+      "evidence": "2 bool-coded values",
+      "source": "inferred",
+      "physical_dtype": "string",
+      "family": "categorical",
+      "parse_fail_rate": 0.0,
+      "is_primary_key": false,
+      "is_foreign_key": false,
+      "feature_role": "feature"
+    },
+    "BRANCH_CODE": {
+      "semantic_type": "categorical_id",
+      "confidence": 1.0,
+      "evidence": "config override",
+      "source": "override",
+      "physical_dtype": "int64",
+      "family": "categorical",
+      "parse_fail_rate": 0.0,
+      "is_primary_key": false,
+      "is_foreign_key": false,
+      "feature_role": "feature"
+    },
+    "PMJDY_FLAG": {
+      "semantic_type": "boolean_flag",
+      "confidence": 1.0,
+      "evidence": "config override",
+      "source": "override",
+      "physical_dtype": "string",
+      "family": "categorical",
+      "parse_fail_rate": 0.0,
+      "is_primary_key": false,
+      "is_foreign_key": false,
+      "feature_role": "feature"
+    },
+    "SCSS_FLAG": {
+      "semantic_type": "boolean_flag",
+      "confidence": 1.0,
+      "evidence": "config override",
+      "source": "override",
+      "physical_dtype": "string",
+      "family": "categorical",
+      "parse_fail_rate": 0.0,
+      "is_primary_key": false,
+      "is_foreign_key": false,
+      "feature_role": "feature"
+    },
+    "PMJJBY_FLAG": {
+      "semantic_type": "boolean_flag",
+      "confidence": 1.0,
+      "evidence": "config override",
+      "source": "override",
+      "physical_dtype": "string",
+      "family": "categorical",
+      "parse_fail_rate": 0.0,
+      "is_primary_key": false,
+      "is_foreign_key": false,
+      "feature_role": "feature"
+    },
+    "CHEQUE_ALLOWED_FLAG": {
+      "semantic_type": "boolean_flag",
+      "confidence": 1.0,
+      "evidence": "config override",
+      "source": "override",
+      "physical_dtype": "string",
+      "family": "categorical",
+      "parse_fail_rate": 0.0,
+      "is_primary_key": false,
+      "is_foreign_key": false,
+      "feature_role": "feature"
+    },
+    "CHEQUE_BOOK_AVAILED_FLAG": {
+      "semantic_type": "boolean_flag",
+      "confidence": 1.0,
+      "evidence": "config override",
+      "source": "override",
+      "physical_dtype": "string",
+      "family": "categorical",
+      "parse_fail_rate": 0.0,
+      "is_primary_key": false,
+      "is_foreign_key": false,
+      "feature_role": "feature"
+    },
+    "NUM_CHEQUE_BOOKS": {
+      "semantic_type": "count",
+      "confidence": 1.0,
+      "evidence": "config override",
+      "source": "override",
+      "physical_dtype": "int64",
+      "family": "numeric",
+      "parse_fail_rate": 0.0,
+      "is_primary_key": false,
+      "is_foreign_key": false,
+      "feature_role": "feature"
+    },
+    "LAST_MOBILE_UPDATE_DATE": {
+      "semantic_type": "datetime",
+      "confidence": 1.0,
+      "evidence": "config override",
+      "source": "override",
+      "physical_dtype": "datetime64[us]",
+      "family": "datetime",
+      "parse_fail_rate": 0.0,
+      "is_primary_key": false,
+      "is_foreign_key": false,
+      "feature_role": "feature"
+    },
+    "PAN_FLAG": {
+      "semantic_type": "boolean_flag",
+      "confidence": 1.0,
+      "evidence": "config override",
+      "source": "override",
+      "physical_dtype": "string",
+      "family": "categorical",
+      "parse_fail_rate": 0.0,
+      "is_primary_key": false,
+      "is_foreign_key": false,
+      "feature_role": "feature"
+    },
+    "AADHAR_FLAG": {
+      "semantic_type": "boolean_flag",
+      "confidence": 1.0,
+      "evidence": "config override",
+      "source": "override",
+      "physical_dtype": "string",
+      "family": "categorical",
+      "parse_fail_rate": 0.0,
+      "is_primary_key": false,
+      "is_foreign_key": false,
+      "feature_role": "feature"
+    },
+    "GSTN_FLAG": {
+      "semantic_type": "boolean_flag",
+      "confidence": 1.0,
+      "evidence": "config override",
+      "source": "override",
+      "physical_dtype": "string",
+      "family": "categorical",
+      "parse_fail_rate": 0.0,
+      "is_primary_key": false,
+      "is_foreign_key": false,
+      "feature_role": "feature"
+    },
+    "PASSPORT_FLAG": {
+      "semantic_type": "boolean_flag",
+      "confidence": 1.0,
+      "evidence": "config override",
+      "source": "override",
+      "physical_dtype": "string",
+      "family": "categorical",
+      "parse_fail_rate": 0.0,
+      "is_primary_key": false,
+      "is_foreign_key": false,
+      "feature_role": "feature"
+    },
+    "VOTER_ID_FLAG": {
+      "semantic_type": "boolean_flag",
+      "confidence": 1.0,
+      "evidence": "config override",
+      "source": "override",
+      "physical_dtype": "string",
+      "family": "categorical",
+      "parse_fail_rate": 0.0,
+      "is_primary_key": false,
+      "is_foreign_key": false,
+      "feature_role": "feature"
+    },
+    "KYC_RATING": {
+      "semantic_type": "categorical",
+      "confidence": 0.7,
+      "evidence": "3 levels, ratio=0.000",
+      "source": "inferred",
+      "physical_dtype": "string",
+      "family": "categorical",
+      "parse_fail_rate": 0.0,
+      "is_primary_key": false,
+      "is_foreign_key": false,
+      "feature_role": "feature"
+    },
+    "INTERNET_BANKING_FLAG": {
+      "semantic_type": "boolean_flag",
+      "confidence": 1.0,
+      "evidence": "config override",
+      "source": "override",
+      "physical_dtype": "string",
+      "family": "categorical",
+      "parse_fail_rate": 0.0,
+      "is_primary_key": false,
+      "is_foreign_key": false,
+      "feature_role": "feature"
+    },
+    "MOBILE_BANKING_FLAG": {
+      "semantic_type": "boolean_flag",
+      "confidence": 1.0,
+      "evidence": "config override",
+      "source": "override",
+      "physical_dtype": "string",
+      "family": "categorical",
+      "parse_fail_rate": 0.0,
+      "is_primary_key": false,
+      "is_foreign_key": false,
+      "feature_role": "feature"
+    },
+    "UPI_FLAG": {
+      "semantic_type": "boolean_flag",
+      "confidence": 1.0,
+      "evidence": "config override",
+      "source": "override",
+      "physical_dtype": "string",
+      "family": "categorical",
+      "parse_fail_rate": 0.0,
+      "is_primary_key": false,
+      "is_foreign_key": false,
+      "feature_role": "feature"
+    },
+    "DEMAT_FLAG": {
+      "semantic_type": "boolean_flag",
+      "confidence": 1.0,
+      "evidence": "config override",
+      "source": "override",
+      "physical_dtype": "string",
+      "family": "categorical",
+      "parse_fail_rate": 0.0,
+      "is_primary_key": false,
+      "is_foreign_key": false,
+      "feature_role": "feature"
+    },
+    "MUTUAL_FUND_FLAG": {
+      "semantic_type": "boolean_flag",
+      "confidence": 1.0,
+      "evidence": "config override",
+      "source": "override",
+      "physical_dtype": "string",
+      "family": "categorical",
+      "parse_fail_rate": 0.0,
+      "is_primary_key": false,
+      "is_foreign_key": false,
+      "feature_role": "feature"
+    },
+    "MPASSBOOK_FLAG": {
+      "semantic_type": "boolean_flag",
+      "confidence": 1.0,
+      "evidence": "config override",
+      "source": "override",
+      "physical_dtype": "string",
+      "family": "categorical",
+      "parse_fail_rate": 0.0,
+      "is_primary_key": false,
+      "is_foreign_key": false,
+      "feature_role": "feature"
+    },
+    "FAST_TAG_FLAG": {
+      "semantic_type": "boolean_flag",
+      "confidence": 1.0,
+      "evidence": "config override",
+      "source": "override",
+      "physical_dtype": "string",
+      "family": "categorical",
+      "parse_fail_rate": 0.0,
+      "is_primary_key": false,
+      "is_foreign_key": false,
+      "feature_role": "feature"
+    },
+    "SSA_FLAG": {
+      "semantic_type": "boolean_flag",
+      "confidence": 1.0,
+      "evidence": "config override",
+      "source": "override",
+      "physical_dtype": "string",
+      "family": "categorical",
+      "parse_fail_rate": 0.0,
+      "is_primary_key": false,
+      "is_foreign_key": false,
+      "feature_role": "feature"
+    },
+    "PPF_FLAG": {
+      "semantic_type": "boolean_flag",
+      "confidence": 1.0,
+      "evidence": "config override",
+      "source": "override",
+      "physical_dtype": "string",
+      "family": "categorical",
+      "parse_fail_rate": 0.0,
+      "is_primary_key": false,
+      "is_foreign_key": false,
+      "feature_role": "feature"
+    },
+    "LOCKER_FLAG": {
+      "semantic_type": "boolean_flag",
+      "confidence": 1.0,
+      "evidence": "config override",
+      "source": "override",
+      "physical_dtype": "string",
+      "family": "categorical",
+      "parse_fail_rate": 0.0,
+      "is_primary_key": false,
+      "is_foreign_key": false,
+      "feature_role": "feature"
+    },
+    "ATM_ISSUED_FLAG": {
+      "semantic_type": "boolean_flag",
+      "confidence": 1.0,
+      "evidence": "config override",
+      "source": "override",
+      "physical_dtype": "string",
+      "family": "categorical",
+      "parse_fail_rate": 0.0,
+      "is_primary_key": false,
+      "is_foreign_key": false,
+      "feature_role": "feature"
+    },
+    "CREDIT_CARD_FLAG": {
+      "semantic_type": "boolean_flag",
+      "confidence": 1.0,
+      "evidence": "config override",
+      "source": "override",
+      "physical_dtype": "string",
+      "family": "categorical",
+      "parse_fail_rate": 0.0,
+      "is_primary_key": false,
+      "is_foreign_key": false,
+      "feature_role": "feature"
+    },
+    "NUM_CREDIT_CARDS": {
+      "semantic_type": "count",
+      "confidence": 1.0,
+      "evidence": "config override",
+      "source": "override",
+      "physical_dtype": "int64",
+      "family": "numeric",
+      "parse_fail_rate": 0.0,
+      "is_primary_key": false,
+      "is_foreign_key": false,
+      "feature_role": "feature"
+    },
+    "ACCOUNT_STATUS": {
+      "semantic_type": "binary",
+      "confidence": 0.7,
+      "evidence": "2 levels, ratio=0.000",
+      "source": "inferred",
+      "physical_dtype": "string",
+      "family": "categorical",
+      "parse_fail_rate": 0.0,
+      "is_primary_key": false,
+      "is_foreign_key": false,
+      "feature_role": "feature"
+    },
+    "FREEZE_CODES": {
+      "semantic_type": "categorical",
+      "confidence": 0.7,
+      "evidence": "222 levels, ratio=0.000",
+      "source": "inferred",
+      "physical_dtype": "string",
+      "family": "categorical",
+      "parse_fail_rate": 0.0,
+      "is_primary_key": false,
+      "is_foreign_key": false,
+      "feature_role": "feature"
+    },
+    "CURRENCY_CODE": {
+      "semantic_type": "constant",
+      "confidence": 1.0,
+      "evidence": "1 value",
+      "source": "inferred",
+      "physical_dtype": "string",
+      "family": "other",
+      "parse_fail_rate": 0.0,
+      "is_primary_key": false,
+      "is_foreign_key": false,
+      "feature_role": "feature"
+    },
+    "KYC_COMPLIANT_FLAG": {
+      "semantic_type": "boolean_flag",
+      "confidence": 1.0,
+      "evidence": "config override",
+      "source": "override",
+      "physical_dtype": "string",
+      "family": "categorical",
+      "parse_fail_rate": 0.0,
+      "is_primary_key": false,
+      "is_foreign_key": false,
+      "feature_role": "feature"
+    },
+    "KYC_REVIEW_DATE": {
+      "semantic_type": "datetime",
+      "confidence": 1.0,
+      "evidence": "config override",
+      "source": "override",
+      "physical_dtype": "datetime64[us]",
+      "family": "datetime",
+      "parse_fail_rate": 0.0,
+      "is_primary_key": false,
+      "is_foreign_key": false,
+      "feature_role": "feature"
+    },
+    "LAST_FREEZE_DATE": {
+      "semantic_type": "datetime",
+      "confidence": 1.0,
+      "evidence": "config override",
+      "source": "override",
+      "physical_dtype": "datetime64[us]",
+      "family": "datetime",
+      "parse_fail_rate": 0.0,
+      "is_primary_key": false,
+      "is_foreign_key": false,
+      "feature_role": "feature"
+    },
+    "LAST_UNFREEZE_DATE": {
+      "semantic_type": "datetime",
+      "confidence": 1.0,
+      "evidence": "config override",
+      "source": "override",
+      "physical_dtype": "datetime64[us]",
+      "family": "datetime",
+      "parse_fail_rate": 0.0,
+      "is_primary_key": false,
+      "is_foreign_key": false,
+      "feature_role": "feature"
+    },
+    "PINCODE": {
+      "semantic_type": "pincode",
+      "confidence": 1.0,
+      "evidence": "config override",
+      "source": "override",
+      "physical_dtype": "float64",
+      "family": "pattern",
+      "parse_fail_rate": 0.0,
+      "is_primary_key": false,
+      "is_foreign_key": false,
+      "feature_role": "feature"
+    },
+    "AREA_CATEGORY": {
+      "semantic_type": "boolean_flag",
+      "confidence": 0.9,
+      "evidence": "2 bool-coded values",
+      "source": "inferred",
+      "physical_dtype": "string",
+      "family": "categorical",
+      "parse_fail_rate": 0.0,
+      "is_primary_key": false,
+      "is_foreign_key": false,
+      "feature_role": "feature"
+    },
+    "BRANCH_CATEGORY": {
+      "semantic_type": "categorical",
+      "confidence": 0.7,
+      "evidence": "6 levels, ratio=0.000",
+      "source": "inferred",
+      "physical_dtype": "string",
+      "family": "categorical",
+      "parse_fail_rate": 0.0,
+      "is_primary_key": false,
+      "is_foreign_key": false,
+      "feature_role": "feature"
+    },
+    "SCHEME_TYPE": {
+      "semantic_type": "categorical",
+      "confidence": 0.7,
+      "evidence": "6 levels, ratio=0.000",
+      "source": "inferred",
+      "physical_dtype": "string",
+      "family": "categorical",
+      "parse_fail_rate": 0.0,
+      "is_primary_key": false,
+      "is_foreign_key": false,
+      "feature_role": "feature"
+    },
+    "ACCOUNT_TYPE": {
+      "semantic_type": "categorical",
+      "confidence": 0.7,
+      "evidence": "175 levels, ratio=0.000",
+      "source": "inferred",
+      "physical_dtype": "string",
+      "family": "categorical",
+      "parse_fail_rate": 0.0,
+      "is_primary_key": false,
+      "is_foreign_key": false,
+      "feature_role": "feature"
+    },
+    "APY_FLAG": {
+      "semantic_type": "boolean_flag",
+      "confidence": 1.0,
+      "evidence": "config override",
+      "source": "override",
+      "physical_dtype": "string",
+      "family": "categorical",
+      "parse_fail_rate": 0.0,
+      "is_primary_key": false,
+      "is_foreign_key": false,
+      "feature_role": "feature"
+    },
+    "UDHYAM_FLAG": {
+      "semantic_type": "boolean_flag",
+      "confidence": 1.0,
+      "evidence": "config override",
+      "source": "override",
+      "physical_dtype": "string",
+      "family": "categorical",
+      "parse_fail_rate": 0.0,
+      "is_primary_key": false,
+      "is_foreign_key": false,
+      "feature_role": "feature"
+    },
+    "ACCOUNT_OPEN_DATE": {
+      "semantic_type": "datetime",
+      "confidence": 1.0,
+      "evidence": "config override",
+      "source": "override",
+      "physical_dtype": "datetime64[us]",
+      "family": "datetime",
+      "parse_fail_rate": 0.0,
+      "is_primary_key": false,
+      "is_foreign_key": false,
+      "feature_role": "feature"
+    },
+    "LIEN_AMOUNT": {
+      "semantic_type": "amount",
+      "confidence": 1.0,
+      "evidence": "config override",
+      "source": "override",
+      "physical_dtype": "float64",
+      "family": "numeric",
+      "parse_fail_rate": 0.0,
+      "is_primary_key": false,
+      "is_foreign_key": false,
+      "feature_role": "feature"
+    },
+    "LAST_TRANSACTION_DATE": {
+      "semantic_type": "datetime",
+      "confidence": 1.0,
+      "evidence": "config override",
+      "source": "override",
+      "physical_dtype": "datetime64[us]",
+      "family": "datetime",
+      "parse_fail_rate": 0.0,
+      "is_primary_key": false,
+      "is_foreign_key": false,
+      "feature_role": "feature"
+    }
+  },
+  "profiles": {
+    "ACCOUNT_NUMBER": {
+      "_type": "identifier",
+      "_family": "keylike",
+      "count": 668884,
+      "n_present": 668884,
+      "n_missing": 0,
+      "pct_missing": 0.0,
+      "n_unique": 668884,
+      "cardinality_ratio": 1.0,
+      "memory_bytes": 48159780,
+      "n_blank": 0,
+      "top_values": [
+        {
+          "value": "C6710BACB0FDF739D89EB9CFFE5C9B43FA257C59A3D5C87D43C266563F77CEA2",
+          "count": 1,
+          "pct": 1.4950275384072575e-06
+        },
+        {
+          "value": "A960A90C33C0BF01042C409738C7DCB8B2FE1827541E70133AA4CB2411B6DC0C",
+          "count": 1,
+          "pct": 1.4950275384072575e-06
+        },
+        {
+          "value": "182CE70A5517F2F50B8F8B8FEC2D966118CDD1F7874268A6FF442EDA61C3F44A",
+          "count": 1,
+          "pct": 1.4950275384072575e-06
+        },
+        {
+          "value": "2C75297B543850B4D45099D47B6707D56483A0EE134FF208C23294A1AED3C247",
+          "count": 1,
+          "pct": 1.4950275384072575e-06
+        },
+        {
+          "value": "D12F9F2AB0500665A8C718F65247A65E80B85E09DEE7FA993E938D2450800C39",
+          "count": 1,
+          "pct": 1.4950275384072575e-06
+        },
+        {
+          "value": "3A4310534199745C3586BD650246A87A3827210409E18265A7DF5C280DDA6032",
+          "count": 1,
+          "pct": 1.4950275384072575e-06
+        },
+        {
+          "value": "A41FA975A9345C27212B0459F89DF66396EB3A53F1691EDCEE4ADDD879ADC7CC",
+          "count": 1,
+          "pct": 1.4950275384072575e-06
+        },
+        {
+          "value": "F484F87BBEB7289C57944BC47780617C21D65461DCB3D40C1435F993EE83FAE9",
+          "count": 1,
+          "pct": 1.4950275384072575e-06
+        },
+        {
+          "value": "78CC69F91FFD4E29B50A024FB548D035CE56CF53024F087BC62DD099EDFBCEA8",
+          "count": 1,
+          "pct": 1.4950275384072575e-06
+        },
+        {
+          "value": "9681E15C5464D10967079A193BE8B45DE5A7132F4EE5E2C382B89BCF2AFF6CD1",
+          "count": 1,
+          "pct": 1.4950275384072575e-06
+        },
+        {
+          "value": "93E8081CBF90DF3625A9C2A5C4BB047DAF39C6DD6399B57941874FD53ABBA993",
+          "count": 1,
+          "pct": 1.4950275384072575e-06
+        },
+        {
+          "value": "01B29F16A02F6621F5E0BC9D934360944058F685EE14AB5B3F0946F1B9DAEA90",
+          "count": 1,
+          "pct": 1.4950275384072575e-06
+        },
+        {
+          "value": "EEE3D09B23BE4619CD6CD95685103B555D7B7931F1105E99AB7EF5CFB7F35CA9",
+          "count": 1,
+          "pct": 1.4950275384072575e-06
+        },
+        {
+          "value": "CE399A058A54C6C73DF288C291FA983CC3CA706B06C05045F752F46E938F71CC",
+          "count": 1,
+          "pct": 1.4950275384072575e-06
+        },
+        {
+          "value": "503EF223809DB5192E526EEB3F1793C115E68EEB161EFF7C23F436E9306DBF1E",
+          "count": 1,
+          "pct": 1.4950275384072575e-06
+        },
+        {
+          "value": "2C3248516E699D0B091B0C244F8376E482EE66AB39BABD693920791CAF9C704C",
+          "count": 1,
+          "pct": 1.4950275384072575e-06
+        },
+        {
+          "value": "B86F38A391438975D78C7D2C1061524273F6792C38A58722B4E54009279ACCED",
+          "count": 1,
+          "pct": 1.4950275384072575e-06
+        },
+        {
+          "value": "0CF14F30AC8BBF8D4FC684E4D1C8EE2563B29B05B6E30DB38BC982DFDA552396",
+          "count": 1,
+          "pct": 1.4950275384072575e-06
+        },
+        {
+          "value": "6D44D4576187C22B8698A1C8686995D43FFABE05BCBA5710035F68360C70A66A",
+          "count": 1,
+          "pct": 1.4950275384072575e-06
+        },
+        {
+          "value": "744115B959B27C6B597B3D1BB014B8A260A713B355863CD149ACDA505A1EE2D0",
+          "count": 1,
+          "pct": 1.4950275384072575e-06
+        }
+      ],
+      "dominance": 1.4950275384072575e-06,
+      "is_constant": false,
+      "is_near_constant": false,
+      "entropy": 13.41336593095197,
+      "normalized_entropy": 0.9999999999999998,
+      "n_duplicates": 0,
+      "uniqueness_ratio": 1.0,
+      "length_consistent": true,
+      "length_min": 64,
+      "length_max": 64
+    },
+    "CUSTOMER_ID": {
+      "_type": "identifier",
+      "_family": "keylike",
+      "count": 668884,
+      "n_present": 668884,
+      "n_missing": 0,
+      "pct_missing": 0.0,
+      "n_unique": 665276,
+      "cardinality_ratio": 0.994606,
+      "memory_bytes": 11371160,
+      "n_blank": 0,
+      "top_values": [
+        {
+          "value": "R48830296",
+          "count": 43,
+          "pct": 6.428618415151207e-05
+        },
+        {
+          "value": "R53221721",
+          "count": 42,
+          "pct": 6.279115661310481e-05
+        },
+        {
+          "value": "R59239096",
+          "count": 37,
+          "pct": 5.5316018921068526e-05
+        },
+        {
+          "value": "U56824685",
+          "count": 37,
+          "pct": 5.5316018921068526e-05
+        },
+        {
+          "value": "R59134991",
+          "count": 36,
+          "pct": 5.382099138266127e-05
+        },
+        {
+          "value": "U66533077",
+          "count": 35,
+          "pct": 5.2325963844254014e-05
+        },
+        {
+          "value": "R32468897",
+          "count": 35,
+          "pct": 5.2325963844254014e-05
+        },
+        {
+          "value": "R56331827",
+          "count": 30,
+          "pct": 4.485082615221772e-05
+        },
+        {
+          "value": "R29554753",
+          "count": 28,
+          "pct": 4.186077107540321e-05
+        },
+        {
+          "value": "R54205871",
+          "count": 27,
+          "pct": 4.0365743536995954e-05
+        },
+        {
+          "value": "R59757662",
+          "count": 25,
+          "pct": 3.7375688460181436e-05
+        },
+        {
+          "value": "R48834344",
+          "count": 24,
+          "pct": 3.588066092177418e-05
+        },
+        {
+          "value": "R59239917",
+          "count": 24,
+          "pct": 3.588066092177418e-05
+        },
+        {
+          "value": "R53290755",
+          "count": 24,
+          "pct": 3.588066092177418e-05
+        },
+        {
+          "value": "R60627635",
+          "count": 23,
+          "pct": 3.4385633383366924e-05
+        },
+        {
+          "value": "R54381132",
+          "count": 23,
+          "pct": 3.4385633383366924e-05
+        },
+        {
+          "value": "R54430432",
+          "count": 23,
+          "pct": 3.4385633383366924e-05
+        },
+        {
+          "value": "R48815521",
+          "count": 22,
+          "pct": 3.289060584495966e-05
+        },
+        {
+          "value": "U66132875",
+          "count": 21,
+          "pct": 3.1395578306552406e-05
+        },
+        {
+          "value": "R56162890",
+          "count": 21,
+          "pct": 3.1395578306552406e-05
+        }
+      ],
+      "dominance": 6.428618415151207e-05,
+      "is_constant": false,
+      "is_near_constant": false,
+      "entropy": 13.401560535979845,
+      "normalized_entropy": 0.9995229150109519,
+      "n_duplicates": 3608,
+      "uniqueness_ratio": 0.9946059406414266,
+      "length_consistent": true,
+      "length_min": 9,
+      "length_max": 9
+    },
+    "ACCOUNT_OPEN_MODE": {
+      "_type": "categorical",
+      "_family": "categorical",
+      "count": 668884,
+      "n_present": 668884,
+      "n_missing": 0,
+      "pct_missing": 0.0,
+      "n_unique": 21,
+      "cardinality_ratio": 3.1e-05,
+      "memory_bytes": 9007853,
+      "n_blank": 0,
+      "top_values": [
+        {
+          "value": "BRANCH",
+          "count": 258995,
+          "pct": 0.38720465730978765
+        },
+        {
+          "value": "BCA",
+          "count": 237756,
+          "pct": 0.35545176742155593
+        },
+        {
+          "value": "TAB_EKYC",
+          "count": 96589,
+          "pct": 0.14440321490721858
+        },
+        {
+          "value": "TAB_OTHER",
+          "count": 37850,
+          "pct": 0.0565867923287147
+        },
+        {
+          "value": "OOSA",
+          "count": 7920,
+          "pct": 0.011840618104185479
+        },
+        {
+          "value": "EVEDA",
+          "count": 7765,
+          "pct": 0.011608888835732354
+        },
+        {
+          "value": "DMS_OTHER",
+          "count": 6429,
+          "pct": 0.009611532044420258
+        },
+        {
+          "value": "KYC-VIDEO",
+          "count": 5972,
+          "pct": 0.008928304459368142
+        },
+        {
+          "value": "KYC-BRANCH",
+          "count": 4072,
+          "pct": 0.0060877521363943525
+        },
+        {
+          "value": "ONLINE FDR - MB",
+          "count": 2552,
+          "pct": 0.003815310278015321
+        },
+        {
+          "value": "KIT",
+          "count": 1667,
+          "pct": 0.002492210906524898
+        },
+        {
+          "value": "TAB_ETB",
+          "count": 1163,
+          "pct": 0.0017387170271676404
+        },
+        {
+          "value": "KYC-AADHR OTP",
+          "count": 56,
+          "pct": 8.372154215080642e-05
+        },
+        {
+          "value": "DMS_EKYC",
+          "count": 34,
+          "pct": 5.083093630584675e-05
+        },
+        {
+          "value": "ONLINE-LOANS",
+          "count": 29,
+          "pct": 4.3355798613810466e-05
+        },
+        {
+          "value": "ONLINE OD - MB",
+          "count": 23,
+          "pct": 3.4385633383366924e-05
+        },
+        {
+          "value": "DMS_NRE_NRO",
+          "count": 8,
+          "pct": 1.196022030725806e-05
+        },
+        {
+          "value": "TAB",
+          "count": 1,
+          "pct": 1.4950275384072575e-06
+        },
+        {
+          "value": "ONLINE FDR - IB",
+          "count": 1,
+          "pct": 1.4950275384072575e-06
+        },
+        {
+          "value": "ONLINE OD - IB",
+          "count": 1,
+          "pct": 1.4950275384072575e-06
+        }
+      ],
+      "dominance": 0.38720465730978765,
+      "is_constant": false,
+      "is_near_constant": false,
+      "entropy": 1.4486185402362448,
+      "normalized_entropy": 0.4758114186602829,
+      "n_levels": 17,
+      "max_class_share": 0.38778,
+      "imbalance_ratio": 15511.2,
+      "gini_impurity": 0.6992379073999999,
+      "n_rare_levels": 11,
+      "rare_level_mass": 0.032815,
+      "case_whitespace_variants": 0,
+      "imbalanced": false
+    },
+    "HAS_NOMINATION": {
+      "_type": "boolean_flag",
+      "_family": "categorical",
+      "count": 668884,
+      "n_present": 667778,
+      "n_missing": 1106,
+      "pct_missing": 0.001654,
+      "n_unique": 2,
+      "cardinality_ratio": 3e-06,
+      "memory_bytes": 6102594,
+      "n_blank": 0,
+      "top_values": [
+        {
+          "value": "Y",
+          "count": 557093,
+          "pct": 0.8342488072383337
+        },
+        {
+          "value": "N",
+          "count": 110685,
+          "pct": 0.1657511927616663
+        }
+      ],
+      "dominance": 0.8342488072383337,
+      "is_constant": false,
+      "is_near_constant": false,
+      "entropy": 0.4490847888907019,
+      "normalized_entropy": 0.6478923978712827,
+      "true_rate": 0.8328693764539142,
+      "n_true": 557093,
+      "n_false": 111791
+    },
+    "BRANCH_CODE": {
+      "_type": "categorical_id",
+      "_family": "categorical",
+      "count": 668884,
+      "n_present": 668884,
+      "n_missing": 0,
+      "pct_missing": 0.0,
+      "n_unique": 10180,
+      "cardinality_ratio": 0.015219,
+      "memory_bytes": 5351204,
+      "n_blank": 0,
+      "top_values": [
+        {
+          "value": "5310",
+          "count": 4862,
+          "pct": 0.007268823891736086
+        },
+        {
+          "value": "79200",
+          "count": 1540,
+          "pct": 0.0023023424091471764
+        },
+        {
+          "value": "236400",
+          "count": 1517,
+          "pct": 0.0022679567757638098
+        },
+        {
+          "value": "90000",
+          "count": 1453,
+          "pct": 0.002172275013305745
+        },
+        {
+          "value": "235500",
+          "count": 1451,
+          "pct": 0.0021692849582289307
+        },
+        {
+          "value": "233300",
+          "count": 1410,
+          "pct": 0.002107988829154233
+        },
+        {
+          "value": "267600",
+          "count": 1228,
+          "pct": 0.001835893817164112
+        },
+        {
+          "value": "110220",
+          "count": 1208,
+          "pct": 0.001805993266395967
+        },
+        {
+          "value": "118220",
+          "count": 1175,
+          "pct": 0.0017566573576285275
+        },
+        {
+          "value": "787100",
+          "count": 1073,
+          "pct": 0.0016041645487109872
+        },
+        {
+          "value": "874800",
+          "count": 1061,
+          "pct": 0.0015862242182501
+        },
+        {
+          "value": "82700",
+          "count": 1060,
+          "pct": 0.001584729190711693
+        },
+        {
+          "value": "331900",
+          "count": 984,
+          "pct": 0.0014711070977927413
+        },
+        {
+          "value": "195910",
+          "count": 982,
+          "pct": 0.0014681170427159268
+        },
+        {
+          "value": "603100",
+          "count": 946,
+          "pct": 0.0014142960513332655
+        },
+        {
+          "value": "108620",
+          "count": 915,
+          "pct": 0.0013679501976426405
+        },
+        {
+          "value": "694300",
+          "count": 874,
+          "pct": 0.001306654068567943
+        },
+        {
+          "value": "108520",
+          "count": 859,
+          "pct": 0.001284228655491834
+        },
+        {
+          "value": "109020",
+          "count": 847,
+          "pct": 0.001266288325030947
+        },
+        {
+          "value": "355800",
+          "count": 846,
+          "pct": 0.0012647932974925399
+        }
+      ],
+      "dominance": 0.007268823891736086,
+      "is_constant": false,
+      "is_near_constant": false,
+      "entropy": 8.766591439353961,
+      "normalized_entropy": 0.9499805122743951,
+      "n_levels": 10048,
+      "max_class_share": 0.00761,
+      "imbalance_ratio": 1522.0,
+      "gini_impurity": 0.9996873651,
+      "n_rare_levels": 10048,
+      "rare_level_mass": 1.0,
+      "case_whitespace_variants": 0,
+      "imbalanced": false
+    },
+    "PMJDY_FLAG": {
+      "_type": "boolean_flag",
+      "_family": "categorical",
+      "count": 668884,
+      "n_present": 668884,
+      "n_missing": 0,
+      "pct_missing": 0.0,
+      "n_unique": 2,
+      "cardinality_ratio": 3e-06,
+      "memory_bytes": 6020088,
+      "n_blank": 0,
+      "top_values": [
+        {
+          "value": "N",
+          "count": 529645,
+          "pct": 0.7918338605797118
+        },
+        {
+          "value": "Y",
+          "count": 139239,
+          "pct": 0.2081661394202881
+        }
+      ],
+      "dominance": 0.7918338605797118,
+      "is_constant": false,
+      "is_near_constant": false,
+      "entropy": 0.511516784604266,
+      "normalized_entropy": 0.7379627284800426,
+      "true_rate": 0.2081661394202881,
+      "n_true": 139239,
+      "n_false": 529645
+    },
+    "SCSS_FLAG": {
+      "_type": "boolean_flag",
+      "_family": "categorical",
+      "count": 668884,
+      "n_present": 668884,
+      "n_missing": 0,
+      "pct_missing": 0.0,
+      "n_unique": 2,
+      "cardinality_ratio": 3e-06,
+      "memory_bytes": 6020088,
+      "n_blank": 0,
+      "top_values": [
+        {
+          "value": "N",
+          "count": 668000,
+          "pct": 0.998678395656048
+        },
+        {
+          "value": "Y",
+          "count": 884,
+          "pct": 0.0013216043439520156
+        }
+      ],
+      "dominance": 0.998678395656048,
+      "is_constant": false,
+      "is_near_constant": true,
+      "entropy": 0.010081525395975458,
+      "normalized_entropy": 0.014544566693369938,
+      "true_rate": 0.0013216043439520156,
+      "n_true": 884,
+      "n_false": 668000
+    },
+    "PMJJBY_FLAG": {
+      "_type": "boolean_flag",
+      "_family": "categorical",
+      "count": 668884,
+      "n_present": 668884,
+      "n_missing": 0,
+      "pct_missing": 0.0,
+      "n_unique": 2,
+      "cardinality_ratio": 3e-06,
+      "memory_bytes": 6020088,
+      "n_blank": 0,
+      "top_values": [
+        {
+          "value": "N",
+          "count": 638514,
+          "pct": 0.9545960136585716
+        },
+        {
+          "value": "Y",
+          "count": 30370,
+          "pct": 0.04540398634142841
+        }
+      ],
+      "dominance": 0.9545960136585716,
+      "is_constant": false,
+      "is_near_constant": false,
+      "entropy": 0.18475344134561436,
+      "normalized_entropy": 0.2665428736164878,
+      "true_rate": 0.04540398634142841,
+      "n_true": 30370,
+      "n_false": 638514
+    },
+    "CHEQUE_ALLOWED_FLAG": {
+      "_type": "boolean_flag",
+      "_family": "categorical",
+      "count": 668884,
+      "n_present": 668691,
+      "n_missing": 193,
+      "pct_missing": 0.000289,
+      "n_unique": 2,
+      "cardinality_ratio": 3e-06,
+      "memory_bytes": 6103507,
+      "n_blank": 0,
+      "top_values": [
+        {
+          "value": "Y",
+          "count": 480517,
+          "pct": 0.7185934908649885
+        },
+        {
+          "value": "N",
+          "count": 188174,
+          "pct": 0.28140650913501153
+        }
+      ],
+      "dominance": 0.7185934908649885,
+      "is_constant": false,
+      "is_near_constant": false,
+      "entropy": 0.5942768099142836,
+      "normalized_entropy": 0.8573602065786501,
+      "true_rate": 0.7183861476728401,
+      "n_true": 480517,
+      "n_false": 188367
+    },
+    "CHEQUE_BOOK_AVAILED_FLAG": {
+      "_type": "boolean_flag",
+      "_family": "categorical",
+      "count": 668884,
+      "n_present": 668884,
+      "n_missing": 0,
+      "pct_missing": 0.0,
+      "n_unique": 2,
+      "cardinality_ratio": 3e-06,
+      "memory_bytes": 6020088,
+      "n_blank": 0,
+      "top_values": [
+        {
+          "value": "N",
+          "count": 368357,
+          "pct": 0.5507038589650821
+        },
+        {
+          "value": "Y",
+          "count": 300527,
+          "pct": 0.4492961410349179
+        }
+      ],
+      "dominance": 0.5507038589650821,
+      "is_constant": false,
+      "is_near_constant": false,
+      "entropy": 0.6879965689070162,
+      "normalized_entropy": 0.9925692381107744,
+      "true_rate": 0.4492961410349179,
+      "n_true": 300527,
+      "n_false": 368357
+    },
+    "NUM_CHEQUE_BOOKS": {
+      "_type": "count",
+      "_family": "numeric",
+      "count": 668884,
+      "n_present": 668884,
+      "n_missing": 0,
+      "pct_missing": 0.0,
+      "n_unique": 204,
+      "cardinality_ratio": 0.000305,
+      "memory_bytes": 5351204,
+      "n_blank": 0,
+      "top_values": [
+        {
+          "value": "0",
+          "count": 368357,
+          "pct": 0.5507038589650821
+        },
+        {
+          "value": "1",
+          "count": 208322,
+          "pct": 0.3114471268560767
+        },
+        {
+          "value": "2",
+          "count": 44135,
+          "pct": 0.0659830404076043
+        },
+        {
+          "value": "3",
+          "count": 18231,
+          "pct": 0.02725584705270271
+        },
+        {
+          "value": "4",
+          "count": 9557,
+          "pct": 0.01428797818455816
+        },
+        {
+          "value": "5",
+          "count": 5281,
+          "pct": 0.007895240430328727
+        },
+        {
+          "value": "6",
+          "count": 3370,
+          "pct": 0.005038242804432457
+        },
+        {
+          "value": "7",
+          "count": 2309,
+          "pct": 0.0034520185861823573
+        },
+        {
+          "value": "8",
+          "count": 1633,
+          "pct": 0.0024413799702190514
+        },
+        {
+          "value": "9",
+          "count": 1218,
+          "pct": 0.0018209435417800397
+        },
+        {
+          "value": "10",
+          "count": 954,
+          "pct": 0.0014262562716405235
+        },
+        {
+          "value": "11",
+          "count": 712,
+          "pct": 0.0010644596073459674
+        },
+        {
+          "value": "12",
+          "count": 641,
+          "pct": 0.000958312652119052
+        },
+        {
+          "value": "13",
+          "count": 459,
+          "pct": 0.0006862176401289311
+        },
+        {
+          "value": "14",
+          "count": 394,
+          "pct": 0.0005890408501324594
+        },
+        {
+          "value": "15",
+          "count": 363,
+          "pct": 0.0005426949964418345
+        },
+        {
+          "value": "16",
+          "count": 310,
+          "pct": 0.0004634585369062498
+        },
+        {
+          "value": "17",
+          "count": 250,
+          "pct": 0.00037375688460181437
+        },
+        {
+          "value": "18",
+          "count": 216,
+          "pct": 0.00032292594829596763
+        },
+        {
+          "value": "19",
+          "count": 201,
+          "pct": 0.00030050053521985876
+        }
+      ],
+      "dominance": 0.5507038589650821,
+      "is_constant": false,
+      "is_near_constant": false,
+      "entropy": 1.2177883203349191,
+      "normalized_entropy": 0.22898850002341484,
+      "min": 0.0,
+      "max": 1868.0,
+      "range": 1868.0,
+      "mean": 0.9475544339526734,
+      "trimmed_mean_10": 0.5497030725535761,
+      "median": 0.0,
+      "std": 5.946312264788519,
+      "var": 35.35862955037437,
+      "sum": 633804.0,
+      "mad": 0.0,
+      "iqr": 1.0,
+      "cv": 6.275430784470915,
+      "skew": 136.96031539204495,
+      "kurtosis": 30366.18020939383,
+      "percentiles": {
+        "p1": 0.0,
+        "p5": 0.0,
+        "p10": 0.0,
+        "p25": 0.0,
+        "p50": 0.0,
+        "p75": 1.0,
+        "p90": 2.0,
+        "p95": 3.0,
+        "p99": 9.0
+      },
+      "n_zero": 368357,
+      "n_negative": 0,
+      "zero_inflation": 0.5507038589650821,
+      "all_positive": false,
+      "is_integer_valued": true,
+      "outliers": {
+        "fraction": 0.07186597377123687,
+        "count": 48070,
+        "lower": -1.5,
+        "upper": 2.5
+      },
+      "shape": "right_skewed",
+      "log_transform_candidate": false,
+      "is_monotonic": "none",
+      "histogram": {
+        "counts": [
+          668622,
+          163,
+          38,
+          22,
+          10,
+          5,
+          5,
+          3,
+          4,
+          2,
+          0,
+          2,
+          0,
+          2,
+          1,
+          0,
+          2,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          1
+        ],
+        "edges": [
+          0.0,
+          62.266666666666666,
+          124.53333333333333,
+          186.8,
+          249.06666666666666,
+          311.3333333333333,
+          373.6,
+          435.8666666666667,
+          498.1333333333333,
+          560.4,
+          622.6666666666666,
+          684.9333333333333,
+          747.2,
+          809.4666666666667,
+          871.7333333333333,
+          934.0,
+          996.2666666666667,
+          1058.5333333333333,
+          1120.8,
+          1183.0666666666666,
+          1245.3333333333333,
+          1307.6,
+          1369.8666666666666,
+          1432.1333333333332,
+          1494.4,
+          1556.6666666666667,
+          1618.9333333333334,
+          1681.2,
+          1743.4666666666667,
+          1805.7333333333333,
+          1868.0
+        ]
+      }
+    },
+    "LAST_MOBILE_UPDATE_DATE": {
+      "_type": "datetime",
+      "_family": "datetime",
+      "count": 668884,
+      "n_present": 651425,
+      "n_missing": 17459,
+      "pct_missing": 0.026102,
+      "n_unique": 5318,
+      "cardinality_ratio": 0.008164,
+      "memory_bytes": 5351204,
+      "n_blank": 0,
+      "top_values": [
+        {
+          "value": "2015-01-25 00:00:00",
+          "count": 72924,
+          "pct": 0.11194535057757993
+        },
+        {
+          "value": "2020-06-27 00:00:00",
+          "count": 3502,
+          "pct": 0.005375906666154968
+        },
+        {
+          "value": "2024-09-02 00:00:00",
+          "count": 572,
+          "pct": 0.000878074989446214
+        },
+        {
+          "value": "2024-03-01 00:00:00",
+          "count": 572,
+          "pct": 0.000878074989446214
+        },
+        {
+          "value": "2025-06-12 00:00:00",
+          "count": 559,
+          "pct": 0.0008581187396860729
+        },
+        {
+          "value": "2024-07-22 00:00:00",
+          "count": 539,
+          "pct": 0.0008274168169781633
+        },
+        {
+          "value": "2024-07-16 00:00:00",
+          "count": 533,
+          "pct": 0.0008182062401657904
+        },
+        {
+          "value": "2024-07-30 00:00:00",
+          "count": 533,
+          "pct": 0.0008182062401657904
+        },
+        {
+          "value": "2024-12-03 00:00:00",
+          "count": 529,
+          "pct": 0.0008120658556242085
+        },
+        {
+          "value": "2024-07-23 00:00:00",
+          "count": 527,
+          "pct": 0.0008089956633534175
+        },
+        {
+          "value": "2024-11-11 00:00:00",
+          "count": 524,
+          "pct": 0.000804390374947231
+        },
+        {
+          "value": "2024-06-25 00:00:00",
+          "count": 523,
+          "pct": 0.0008028552788118356
+        },
+        {
+          "value": "2024-08-27 00:00:00",
+          "count": 521,
+          "pct": 0.0007997850865410446
+        },
+        {
+          "value": "2024-08-13 00:00:00",
+          "count": 510,
+          "pct": 0.0007828990290516944
+        },
+        {
+          "value": "2025-03-19 00:00:00",
+          "count": 506,
+          "pct": 0.0007767586445101125
+        },
+        {
+          "value": "2024-04-02 00:00:00",
+          "count": 503,
+          "pct": 0.000772153356103926
+        },
+        {
+          "value": "2024-06-14 00:00:00",
+          "count": 498,
+          "pct": 0.0007644778754269487
+        },
+        {
+          "value": "2024-09-24 00:00:00",
+          "count": 495,
+          "pct": 0.0007598725870207622
+        },
+        {
+          "value": "2024-06-11 00:00:00",
+          "count": 491,
+          "pct": 0.0007537322024791802
+        },
+        {
+          "value": "2024-09-03 00:00:00",
+          "count": 489,
+          "pct": 0.0007506620102083893
+        }
+      ],
+      "dominance": 0.11194535057757993,
+      "is_constant": false,
+      "is_near_constant": false,
+      "entropy": 7.456971090681511,
+      "normalized_entropy": 0.8692270939812089,
+      "parse_fail_rate": 0.0,
+      "min": "2007-07-22T00:00:00",
+      "max": "2026-04-28T00:00:00",
+      "span_days": 6855,
+      "n_unique_days": 5318,
+      "max_gap_days": 225,
+      "is_monotonic_increasing": false,
+      "has_time_component": false,
+      "n_future_dates": 0,
+      "n_sentinel_dates": 0,
+      "by_year": {
+        "2007": 5,
+        "2008": 36,
+        "2009": 208,
+        "2010": 322,
+        "2011": 875,
+        "2012": 1124,
+        "2013": 3145,
+        "2014": 4395,
+        "2015": 95821,
+        "2016": 32544,
+        "2017": 36451,
+        "2018": 29335,
+        "2019": 38553,
+        "2020": 38397,
+        "2021": 33476,
+        "2022": 59651,
+        "2023": 86307,
+        "2024": 112290,
+        "2025": 78206,
+        "2026": 284
+      },
+      "by_dow": {
+        "0": 97621,
+        "1": 107768,
+        "2": 101547,
+        "3": 100602,
+        "4": 97025,
+        "5": 61741,
+        "6": 85121
+      },
+      "derived_feature_stubs": [
+        "recency_days",
+        "year",
+        "month",
+        "dayofweek"
+      ]
+    },
+    "PAN_FLAG": {
+      "_type": "boolean_flag",
+      "_family": "categorical",
+      "count": 668884,
+      "n_present": 668884,
+      "n_missing": 0,
+      "pct_missing": 0.0,
+      "n_unique": 2,
+      "cardinality_ratio": 3e-06,
+      "memory_bytes": 6020088,
+      "n_blank": 0,
+      "top_values": [
+        {
+          "value": "Y",
+          "count": 452655,
+          "pct": 0.6767316903977372
+        },
+        {
+          "value": "N",
+          "count": 216229,
+          "pct": 0.3232683096022629
+        }
+      ],
+      "dominance": 0.6767316903977372,
+      "is_constant": false,
+      "is_near_constant": false,
+      "entropy": 0.6293085164253698,
+      "normalized_entropy": 0.9079002758360718,
+      "true_rate": 0.6767316903977372,
+      "n_true": 452655,
+      "n_false": 216229
+    },
+    "AADHAR_FLAG": {
+      "_type": "boolean_flag",
+      "_family": "categorical",
+      "count": 668884,
+      "n_present": 668884,
+      "n_missing": 0,
+      "pct_missing": 0.0,
+      "n_unique": 2,
+      "cardinality_ratio": 3e-06,
+      "memory_bytes": 6020088,
+      "n_blank": 0,
+      "top_values": [
+        {
+          "value": "Y",
+          "count": 647098,
+          "pct": 0.9674293300482595
+        },
+        {
+          "value": "N",
+          "count": 21786,
+          "pct": 0.03257066995174051
+        }
+      ],
+      "dominance": 0.9674293300482595,
+      "is_constant": false,
+      "is_near_constant": false,
+      "entropy": 0.14356753986243606,
+      "normalized_entropy": 0.20712417779216508,
+      "true_rate": 0.9674293300482595,
+      "n_true": 647098,
+      "n_false": 21786
+    },
+    "GSTN_FLAG": {
+      "_type": "boolean_flag",
+      "_family": "categorical",
+      "count": 668884,
+      "n_present": 668884,
+      "n_missing": 0,
+      "pct_missing": 0.0,
+      "n_unique": 2,
+      "cardinality_ratio": 3e-06,
+      "memory_bytes": 6020088,
+      "n_blank": 0,
+      "top_values": [
+        {
+          "value": "N",
+          "count": 668334,
+          "pct": 0.999177734853876
+        },
+        {
+          "value": "Y",
+          "count": 550,
+          "pct": 0.0008222651461239916
+        }
+      ],
+      "dominance": 0.999177734853876,
+      "is_constant": false,
+      "is_near_constant": true,
+      "entropy": 0.006662844415594776,
+      "normalized_entropy": 0.009612452596593307,
+      "true_rate": 0.0008222651461239916,
+      "n_true": 550,
+      "n_false": 668334
+    },
+    "PASSPORT_FLAG": {
+      "_type": "boolean_flag",
+      "_family": "categorical",
+      "count": 668884,
+      "n_present": 668884,
+      "n_missing": 0,
+      "pct_missing": 0.0,
+      "n_unique": 2,
+      "cardinality_ratio": 3e-06,
+      "memory_bytes": 6020088,
+      "n_blank": 0,
+      "top_values": [
+        {
+          "value": "N",
+          "count": 668313,
+          "pct": 0.9991463392755695
+        },
+        {
+          "value": "Y",
+          "count": 571,
+          "pct": 0.000853660724430544
+        }
+      ],
+      "dominance": 0.9991463392755695,
+      "is_constant": false,
+      "is_near_constant": true,
+      "entropy": 0.006885243059098565,
+      "normalized_entropy": 0.009933306016676656,
+      "true_rate": 0.000853660724430544,
+      "n_true": 571,
+      "n_false": 668313
+    },
+    "VOTER_ID_FLAG": {
+      "_type": "boolean_flag",
+      "_family": "categorical",
+      "count": 668884,
+      "n_present": 668884,
+      "n_missing": 0,
+      "pct_missing": 0.0,
+      "n_unique": 2,
+      "cardinality_ratio": 3e-06,
+      "memory_bytes": 6020088,
+      "n_blank": 0,
+      "top_values": [
+        {
+          "value": "N",
+          "count": 642355,
+          "pct": 0.9603384144335939
+        },
+        {
+          "value": "Y",
+          "count": 26529,
+          "pct": 0.039661585566406136
+        }
+      ],
+      "dominance": 0.9603384144335939,
+      "is_constant": false,
+      "is_near_constant": false,
+      "entropy": 0.166867153197734,
+      "normalized_entropy": 0.24073841440562976,
+      "true_rate": 0.039661585566406136,
+      "n_true": 26529,
+      "n_false": 642355
+    },
+    "KYC_RATING": {
+      "_type": "categorical",
+      "_family": "categorical",
+      "count": 668884,
+      "n_present": 668884,
+      "n_missing": 0,
+      "pct_missing": 0.0,
+      "n_unique": 3,
+      "cardinality_ratio": 4e-06,
+      "memory_bytes": 7709434,
+      "n_blank": 0,
+      "top_values": [
+        {
+          "value": "LOW",
+          "count": 529046,
+          "pct": 0.790938339084206
+        },
+        {
+          "value": "MEDIUM",
+          "count": 105870,
+          "pct": 0.15827856549117636
+        },
+        {
+          "value": "HIGH",
+          "count": 33968,
+          "pct": 0.05078309542461772
+        }
+      ],
+      "dominance": 0.790938339084206,
+      "is_constant": false,
+      "is_near_constant": false,
+      "entropy": 0.6286168026210798,
+      "normalized_entropy": 0.5721916722624469,
+      "n_levels": 3,
+      "max_class_share": 0.79034,
+      "imbalance_ratio": 15.309249394673124,
+      "gini_impurity": 0.34772248254999993,
+      "n_rare_levels": 0,
+      "rare_level_mass": 0.0,
+      "case_whitespace_variants": 0,
+      "imbalanced": false
+    },
+    "INTERNET_BANKING_FLAG": {
+      "_type": "boolean_flag",
+      "_family": "categorical",
+      "count": 668884,
+      "n_present": 668884,
+      "n_missing": 0,
+      "pct_missing": 0.0,
+      "n_unique": 2,
+      "cardinality_ratio": 3e-06,
+      "memory_bytes": 6020088,
+      "n_blank": 0,
+      "top_values": [
+        {
+          "value": "N",
+          "count": 376859,
+          "pct": 0.5634145830966206
+        },
+        {
+          "value": "Y",
+          "count": 292025,
+          "pct": 0.4365854169033794
+        }
+      ],
+      "dominance": 0.5634145830966206,
+      "is_constant": false,
+      "is_near_constant": false,
+      "entropy": 0.6850826596053887,
+      "normalized_entropy": 0.9883653556117161,
+      "true_rate": 0.4365854169033794,
+      "n_true": 292025,
+      "n_false": 376859
+    },
+    "MOBILE_BANKING_FLAG": {
+      "_type": "boolean_flag",
+      "_family": "categorical",
+      "count": 668884,
+      "n_present": 668884,
+      "n_missing": 0,
+      "pct_missing": 0.0,
+      "n_unique": 2,
+      "cardinality_ratio": 3e-06,
+      "memory_bytes": 6020088,
+      "n_blank": 0,
+      "top_values": [
+        {
+          "value": "Y",
+          "count": 443321,
+          "pct": 0.6627771033542438
+        },
+        {
+          "value": "N",
+          "count": 225563,
+          "pct": 0.3372228966457562
+        }
+      ],
+      "dominance": 0.6627771033542438,
+      "is_constant": false,
+      "is_near_constant": false,
+      "entropy": 0.6391762341807732,
+      "normalized_entropy": 0.9221363833066842,
+      "true_rate": 0.6627771033542438,
+      "n_true": 443321,
+      "n_false": 225563
+    },
+    "UPI_FLAG": {
+      "_type": "boolean_flag",
+      "_family": "categorical",
+      "count": 668884,
+      "n_present": 668884,
+      "n_missing": 0,
+      "pct_missing": 0.0,
+      "n_unique": 2,
+      "cardinality_ratio": 3e-06,
+      "memory_bytes": 6020088,
+      "n_blank": 0,
+      "top_values": [
+        {
+          "value": "Y",
+          "count": 627196,
+          "pct": 0.9376752919788782
+        },
+        {
+          "value": "N",
+          "count": 41688,
+          "pct": 0.06232470802112175
+        }
+      ],
+      "dominance": 0.9376752919788782,
+      "is_constant": false,
+      "is_near_constant": false,
+      "entropy": 0.23331669679258743,
+      "normalized_entropy": 0.33660484141925984,
+      "true_rate": 0.9376752919788782,
+      "n_true": 627196,
+      "n_false": 41688
+    },
+    "DEMAT_FLAG": {
+      "_type": "boolean_flag",
+      "_family": "categorical",
+      "count": 668884,
+      "n_present": 668884,
+      "n_missing": 0,
+      "pct_missing": 0.0,
+      "n_unique": 2,
+      "cardinality_ratio": 3e-06,
+      "memory_bytes": 6020088,
+      "n_blank": 0,
+      "top_values": [
+        {
+          "value": "N",
+          "count": 668002,
+          "pct": 0.9986813857111247
+        },
+        {
+          "value": "Y",
+          "count": 882,
+          "pct": 0.0013186142888752012
+        }
+      ],
+      "dominance": 0.9986813857111247,
+      "is_constant": false,
+      "is_near_constant": true,
+      "entropy": 0.010061705158198323,
+      "normalized_entropy": 0.014515972134619625,
+      "true_rate": 0.0013186142888752012,
+      "n_true": 882,
+      "n_false": 668002
+    },
+    "MUTUAL_FUND_FLAG": {
+      "_type": "boolean_flag",
+      "_family": "categorical",
+      "count": 668884,
+      "n_present": 668884,
+      "n_missing": 0,
+      "pct_missing": 0.0,
+      "n_unique": 2,
+      "cardinality_ratio": 3e-06,
+      "memory_bytes": 6020088,
+      "n_blank": 0,
+      "top_values": [
+        {
+          "value": "N",
+          "count": 668560,
+          "pct": 0.999515611077556
+        },
+        {
+          "value": "Y",
+          "count": 324,
+          "pct": 0.0004843889224439514
+        }
+      ],
+      "dominance": 0.999515611077556,
+      "is_constant": false,
+      "is_near_constant": true,
+      "entropy": 0.004181429334283763,
+      "normalized_entropy": 0.0060325273643988256,
+      "true_rate": 0.0004843889224439514,
+      "n_true": 324,
+      "n_false": 668560
+    },
+    "MPASSBOOK_FLAG": {
+      "_type": "boolean_flag",
+      "_family": "categorical",
+      "count": 668884,
+      "n_present": 668884,
+      "n_missing": 0,
+      "pct_missing": 0.0,
+      "n_unique": 2,
+      "cardinality_ratio": 3e-06,
+      "memory_bytes": 6020088,
+      "n_blank": 0,
+      "top_values": [
+        {
+          "value": "N",
+          "count": 522786,
+          "pct": 0.7815794666937765
+        },
+        {
+          "value": "Y",
+          "count": 146098,
+          "pct": 0.2184205333062235
+        }
+      ],
+      "dominance": 0.7815794666937765,
+      "is_constant": false,
+      "is_near_constant": false,
+      "entropy": 0.5249016020268824,
+      "normalized_entropy": 0.7572729381988555,
+      "true_rate": 0.2184205333062235,
+      "n_true": 146098,
+      "n_false": 522786
+    },
+    "FAST_TAG_FLAG": {
+      "_type": "boolean_flag",
+      "_family": "categorical",
+      "count": 668884,
+      "n_present": 668884,
+      "n_missing": 0,
+      "pct_missing": 0.0,
+      "n_unique": 2,
+      "cardinality_ratio": 3e-06,
+      "memory_bytes": 6020088,
+      "n_blank": 0,
+      "top_values": [
+        {
+          "value": "N",
+          "count": 668587,
+          "pct": 0.9995559768210931
+        },
+        {
+          "value": "Y",
+          "count": 297,
+          "pct": 0.0004440231789069555
+        }
+      ],
+      "dominance": 0.9995559768210931,
+      "is_constant": false,
+      "is_near_constant": true,
+      "entropy": 0.0038716209224092892,
+      "normalized_entropy": 0.005585568304961836,
+      "true_rate": 0.0004440231789069555,
+      "n_true": 297,
+      "n_false": 668587
+    },
+    "SSA_FLAG": {
+      "_type": "boolean_flag",
+      "_family": "categorical",
+      "count": 668884,
+      "n_present": 668884,
+      "n_missing": 0,
+      "pct_missing": 0.0,
+      "n_unique": 2,
+      "cardinality_ratio": 3e-06,
+      "memory_bytes": 6020088,
+      "n_blank": 0,
+      "top_values": [
+        {
+          "value": "N",
+          "count": 666094,
+          "pct": 0.9958288731678437
+        },
+        {
+          "value": "Y",
+          "count": 2790,
+          "pct": 0.004171126832156248
+        }
+      ],
+      "dominance": 0.9958288731678437,
+      "is_constant": false,
+      "is_near_constant": true,
+      "entropy": 0.027018393080961888,
+      "normalized_entropy": 0.0389793017106924,
+      "true_rate": 0.004171126832156248,
+      "n_true": 2790,
+      "n_false": 666094
+    },
+    "PPF_FLAG": {
+      "_type": "boolean_flag",
+      "_family": "categorical",
+      "count": 668884,
+      "n_present": 668884,
+      "n_missing": 0,
+      "pct_missing": 0.0,
+      "n_unique": 2,
+      "cardinality_ratio": 3e-06,
+      "memory_bytes": 6020088,
+      "n_blank": 0,
+      "top_values": [
+        {
+          "value": "N",
+          "count": 665129,
+          "pct": 0.9943861715932808
+        },
+        {
+          "value": "Y",
+          "count": 3755,
+          "pct": 0.0056138284067192516
+        }
+      ],
+      "dominance": 0.9943861715932808,
+      "is_constant": false,
+      "is_near_constant": true,
+      "entropy": 0.0346918325832241,
+      "normalized_entropy": 0.05004973482716757,
+      "true_rate": 0.0056138284067192516,
+      "n_true": 3755,
+      "n_false": 665129
+    },
+    "LOCKER_FLAG": {
+      "_type": "boolean_flag",
+      "_family": "categorical",
+      "count": 668884,
+      "n_present": 668884,
+      "n_missing": 0,
+      "pct_missing": 0.0,
+      "n_unique": 2,
+      "cardinality_ratio": 3e-06,
+      "memory_bytes": 6020088,
+      "n_blank": 0,
+      "top_values": [
+        {
+          "value": "N",
+          "count": 665966,
+          "pct": 0.9956375096429276
+        },
+        {
+          "value": "Y",
+          "count": 2918,
+          "pct": 0.004362490357072377
+        }
+      ],
+      "dominance": 0.9956375096429276,
+      "is_constant": false,
+      "is_near_constant": true,
+      "entropy": 0.02806184040254438,
+      "normalized_entropy": 0.04048467798696833,
+      "true_rate": 0.004362490357072377,
+      "n_true": 2918,
+      "n_false": 665966
+    },
+    "ATM_ISSUED_FLAG": {
+      "_type": "boolean_flag",
+      "_family": "categorical",
+      "count": 668884,
+      "n_present": 668884,
+      "n_missing": 0,
+      "pct_missing": 0.0,
+      "n_unique": 2,
+      "cardinality_ratio": 3e-06,
+      "memory_bytes": 6020088,
+      "n_blank": 0,
+      "top_values": [
+        {
+          "value": "Y",
+          "count": 629624,
+          "pct": 0.941305218842131
+        },
+        {
+          "value": "N",
+          "count": 39260,
+          "pct": 0.05869478115786893
+        }
+      ],
+      "dominance": 0.941305218842131,
+      "is_constant": false,
+      "is_near_constant": false,
+      "entropy": 0.22336096030354902,
+      "normalized_entropy": 0.3222417497581268,
+      "true_rate": 0.941305218842131,
+      "n_true": 629624,
+      "n_false": 39260
+    },
+    "CREDIT_CARD_FLAG": {
+      "_type": "boolean_flag",
+      "_family": "categorical",
+      "count": 668884,
+      "n_present": 668884,
+      "n_missing": 0,
+      "pct_missing": 0.0,
+      "n_unique": 2,
+      "cardinality_ratio": 3e-06,
+      "memory_bytes": 6020088,
+      "n_blank": 0,
+      "top_values": [
+        {
+          "value": "N",
+          "count": 659559,
+          "pct": 0.9860588682043523
+        },
+        {
+          "value": "Y",
+          "count": 9325,
+          "pct": 0.013941131795647675
+        }
+      ],
+      "dominance": 0.9860588682043523,
+      "is_constant": false,
+      "is_near_constant": false,
+      "entropy": 0.07341272442672,
+      "normalized_entropy": 0.10591217346857702,
+      "true_rate": 0.013941131795647675,
+      "n_true": 9325,
+      "n_false": 659559
+    },
+    "NUM_CREDIT_CARDS": {
+      "_type": "count",
+      "_family": "numeric",
+      "count": 668884,
+      "n_present": 668884,
+      "n_missing": 0,
+      "pct_missing": 0.0,
+      "n_unique": 8,
+      "cardinality_ratio": 1.2e-05,
+      "memory_bytes": 5351204,
+      "n_blank": 0,
+      "top_values": [
+        {
+          "value": "0",
+          "count": 661202,
+          "pct": 0.9885151984499555
+        },
+        {
+          "value": "1",
+          "count": 6239,
+          "pct": 0.009327476812122879
+        },
+        {
+          "value": "2",
+          "count": 1331,
+          "pct": 0.0019898816536200598
+        },
+        {
+          "value": "3",
+          "count": 54,
+          "pct": 8.073148707399191e-05
+        },
+        {
+          "value": "4",
+          "count": 42,
+          "pct": 6.279115661310481e-05
+        },
+        {
+          "value": "10",
+          "count": 10,
+          "pct": 1.4950275384072575e-05
+        },
+        {
+          "value": "9",
+          "count": 3,
+          "pct": 4.4850826152217725e-06
+        },
+        {
+          "value": "6",
+          "count": 3,
+          "pct": 4.4850826152217725e-06
+        }
+      ],
+      "dominance": 0.9885151984499555,
+      "is_constant": false,
+      "is_near_constant": false,
+      "entropy": 0.06904399398176553,
+      "normalized_entropy": 0.03320314257355352,
+      "min": 0.0,
+      "max": 10.0,
+      "range": 10.0,
+      "mean": 0.014017378200106446,
+      "trimmed_mean_10": 0.0,
+      "median": 0.0,
+      "std": 0.1443661033192552,
+      "var": 0.02084157178758587,
+      "sum": 9376.0,
+      "mad": 0.0,
+      "iqr": 0.0,
+      "cv": 10.299080274381048,
+      "skew": 16.536279371547504,
+      "kurtosis": 562.6676066834692,
+      "percentiles": {
+        "p1": 0.0,
+        "p5": 0.0,
+        "p10": 0.0,
+        "p25": 0.0,
+        "p50": 0.0,
+        "p75": 0.0,
+        "p90": 0.0,
+        "p95": 0.0,
+        "p99": 1.0
+      },
+      "n_zero": 661202,
+      "n_negative": 0,
+      "zero_inflation": 0.9885151984499555,
+      "all_positive": false,
+      "is_integer_valued": true,
+      "outliers": {
+        "fraction": 0.011484801550044553,
+        "count": 7682,
+        "lower": 0.0,
+        "upper": 0.0
+      },
+      "shape": "right_skewed",
+      "log_transform_candidate": false,
+      "is_monotonic": "none",
+      "histogram": {
+        "counts": [
+          661202,
+          0,
+          0,
+          6239,
+          0,
+          0,
+          1331,
+          0,
+          0,
+          54,
+          0,
+          0,
+          42,
+          0,
+          0,
+          0,
+          0,
+          0,
+          3,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          3,
+          0,
+          10
+        ],
+        "edges": [
+          0.0,
+          0.3333333333333333,
+          0.6666666666666666,
+          1.0,
+          1.3333333333333333,
+          1.6666666666666665,
+          2.0,
+          2.333333333333333,
+          2.6666666666666665,
+          3.0,
+          3.333333333333333,
+          3.6666666666666665,
+          4.0,
+          4.333333333333333,
+          4.666666666666666,
+          5.0,
+          5.333333333333333,
+          5.666666666666666,
+          6.0,
+          6.333333333333333,
+          6.666666666666666,
+          7.0,
+          7.333333333333333,
+          7.666666666666666,
+          8.0,
+          8.333333333333332,
+          8.666666666666666,
+          9.0,
+          9.333333333333332,
+          9.666666666666666,
+          10.0
+        ]
+      }
+    },
+    "ACCOUNT_STATUS": {
+      "_type": "binary",
+      "_family": "categorical",
+      "count": 668884,
+      "n_present": 664351,
+      "n_missing": 4533,
+      "pct_missing": 0.006777,
+      "n_unique": 2,
+      "cardinality_ratio": 3e-06,
+      "memory_bytes": 6099167,
+      "n_blank": 0,
+      "top_values": [
+        {
+          "value": "A",
+          "count": 663903,
+          "pct": 0.9993256576719234
+        },
+        {
+          "value": "D",
+          "count": 448,
+          "pct": 0.000674342328076574
+        }
+      ],
+      "dominance": 0.9993256576719234,
+      "is_constant": false,
+      "is_near_constant": true,
+      "entropy": 0.005598009290099637,
+      "normalized_entropy": 0.008076220241677094,
+      "n_levels": 2,
+      "max_class_share": 0.9993706987257908,
+      "imbalance_ratio": 1588.064,
+      "gini_impurity": 0.0012578105082310387,
+      "n_rare_levels": 1,
+      "rare_level_mass": 0.00062930127420922,
+      "case_whitespace_variants": 0,
+      "imbalanced": true
+    },
+    "FREEZE_CODES": {
+      "_type": "categorical",
+      "_family": "categorical",
+      "count": 668884,
+      "n_present": 668884,
+      "n_missing": 0,
+      "pct_missing": 0.0,
+      "n_unique": 222,
+      "cardinality_ratio": 0.000332,
+      "memory_bytes": 14879151,
+      "n_blank": 0,
+      "top_values": [
+        {
+          "value": "XX|XX|XX|XX|XX",
+          "count": 509898,
+          "pct": 0.7623115517787837
+        },
+        {
+          "value": "045|XX|XX|XX|XX",
+          "count": 142628,
+          "pct": 0.21323278774795032
+        },
+        {
+          "value": "999|XX|XX|XX|XX",
+          "count": 5988,
+          "pct": 0.008952224899982658
+        },
+        {
+          "value": "030|XX|XX|XX|XX",
+          "count": 3057,
+          "pct": 0.004570299184910986
+        },
+        {
+          "value": "013|XX|XX|XX|XX",
+          "count": 2241,
+          "pct": 0.003350356713570664
+        },
+        {
+          "value": "045|013|XX|XX|XX",
+          "count": 1069,
+          "pct": 0.0015981844385573583
+        },
+        {
+          "value": "999|045|XX|XX|XX",
+          "count": 720,
+          "pct": 0.0010764198276532254
+        },
+        {
+          "value": "045|999|XX|XX|XX",
+          "count": 522,
+          "pct": 0.0007804043750485884
+        },
+        {
+          "value": "030|045|XX|XX|XX",
+          "count": 318,
+          "pct": 0.00047541875721350785
+        },
+        {
+          "value": "046|XX|XX|XX|XX",
+          "count": 309,
+          "pct": 0.0004619635093678426
+        },
+        {
+          "value": "038|XX|XX|XX|XX",
+          "count": 294,
+          "pct": 0.0004395380962917337
+        },
+        {
+          "value": "045|046|XX|XX|XX",
+          "count": 189,
+          "pct": 0.00028256020475897166
+        },
+        {
+          "value": "045|045|XX|XX|XX",
+          "count": 181,
+          "pct": 0.0002705999844517136
+        },
+        {
+          "value": "046|045|XX|XX|XX",
+          "count": 158,
+          "pct": 0.00023621435106834667
+        },
+        {
+          "value": "999|046|045|XX|XX",
+          "count": 107,
+          "pct": 0.00015996794660957654
+        },
+        {
+          "value": "022|XX|XX|XX|XX",
+          "count": 102,
+          "pct": 0.00015249280891754027
+        },
+        {
+          "value": "999|999|XX|XX|XX",
+          "count": 99,
+          "pct": 0.0001480077263023185
+        },
+        {
+          "value": "013|045|XX|XX|XX",
+          "count": 73,
+          "pct": 0.00010913701030372979
+        },
+        {
+          "value": "007|XX|XX|XX|XX",
+          "count": 72,
+          "pct": 0.00010764198276532254
+        },
+        {
+          "value": "038|045|XX|XX|XX",
+          "count": 64,
+          "pct": 9.568176245806448e-05
+        }
+      ],
+      "dominance": 0.7623115517787837,
+      "is_constant": false,
+      "is_near_constant": false,
+      "entropy": 0.6829568675111448,
+      "normalized_entropy": 0.12641081805156176,
+      "n_levels": 119,
+      "max_class_share": 0.761945,
+      "imbalance_ratio": 152389.0,
+      "gini_impurity": 0.37368776984999985,
+      "n_rare_levels": 117,
+      "rare_level_mass": 0.02444,
+      "case_whitespace_variants": 0,
+      "imbalanced": false
+    },
+    "CURRENCY_CODE": {
+      "_type": "constant",
+      "_family": "other",
+      "count": 668884,
+      "n_present": 668884,
+      "n_missing": 0,
+      "pct_missing": 0.0,
+      "n_unique": 1,
+      "cardinality_ratio": 1e-06,
+      "memory_bytes": 7357856,
+      "n_blank": 0,
+      "top_values": [
+        {
+          "value": "INR",
+          "count": 668884,
+          "pct": 1.0
+        }
+      ],
+      "dominance": 1.0,
+      "is_constant": true,
+      "is_near_constant": true,
+      "entropy": -0.0,
+      "normalized_entropy": 0.0
+    },
+    "KYC_COMPLIANT_FLAG": {
+      "_type": "boolean_flag",
+      "_family": "categorical",
+      "count": 668884,
+      "n_present": 668884,
+      "n_missing": 0,
+      "pct_missing": 0.0,
+      "n_unique": 2,
+      "cardinality_ratio": 3e-06,
+      "memory_bytes": 6020088,
+      "n_blank": 0,
+      "top_values": [
+        {
+          "value": "Y",
+          "count": 597052,
+          "pct": 0.8926091818611299
+        },
+        {
+          "value": "N",
+          "count": 71832,
+          "pct": 0.10739081813887012
+        }
+      ],
+      "dominance": 0.8926091818611299,
+      "is_constant": false,
+      "is_near_constant": false,
+      "entropy": 0.3410251999876479,
+      "normalized_entropy": 0.4919953648403466,
+      "true_rate": 0.8926091818611299,
+      "n_true": 597052,
+      "n_false": 71832
+    },
+    "KYC_REVIEW_DATE": {
+      "_type": "datetime",
+      "_family": "datetime",
+      "count": 668884,
+      "n_present": 668884,
+      "n_missing": 0,
+      "pct_missing": 0.0,
+      "n_unique": 3854,
+      "cardinality_ratio": 0.005762,
+      "memory_bytes": 5351204,
+      "n_blank": 0,
+      "top_values": [
+        {
+          "value": "2017-05-07 00:00:00",
+          "count": 4866,
+          "pct": 0.007274804001889715
+        },
+        {
+          "value": "2017-05-06 00:00:00",
+          "count": 3514,
+          "pct": 0.0052535267699631025
+        },
+        {
+          "value": "2017-06-17 00:00:00",
+          "count": 2058,
+          "pct": 0.003076766674042136
+        },
+        {
+          "value": "2024-09-02 00:00:00",
+          "count": 960,
+          "pct": 0.001435226436870967
+        },
+        {
+          "value": "2025-07-15 00:00:00",
+          "count": 933,
+          "pct": 0.0013948606933339711
+        },
+        {
+          "value": "2024-07-16 00:00:00",
+          "count": 868,
+          "pct": 0.0012976839033374994
+        },
+        {
+          "value": "2025-04-04 00:00:00",
+          "count": 868,
+          "pct": 0.0012976839033374994
+        },
+        {
+          "value": "2025-02-10 00:00:00",
+          "count": 868,
+          "pct": 0.0012976839033374994
+        },
+        {
+          "value": "2024-07-22 00:00:00",
+          "count": 850,
+          "pct": 0.0012707734076461688
+        },
+        {
+          "value": "2024-09-03 00:00:00",
+          "count": 834,
+          "pct": 0.0012468529670316528
+        },
+        {
+          "value": "2025-04-02 00:00:00",
+          "count": 831,
+          "pct": 0.001242367884416431
+        },
+        {
+          "value": "2025-03-19 00:00:00",
+          "count": 830,
+          "pct": 0.0012408728568780237
+        },
+        {
+          "value": "2025-08-26 00:00:00",
+          "count": 827,
+          "pct": 0.001236387774262802
+        },
+        {
+          "value": "2024-08-29 00:00:00",
+          "count": 826,
+          "pct": 0.0012348927467243946
+        },
+        {
+          "value": "2024-07-23 00:00:00",
+          "count": 825,
+          "pct": 0.0012333977191859875
+        },
+        {
+          "value": "2024-07-30 00:00:00",
+          "count": 822,
+          "pct": 0.0012289126365707657
+        },
+        {
+          "value": "2024-03-27 00:00:00",
+          "count": 817,
+          "pct": 0.0012214374988787293
+        },
+        {
+          "value": "2025-08-28 00:00:00",
+          "count": 814,
+          "pct": 0.0012169524162635075
+        },
+        {
+          "value": "2025-08-29 00:00:00",
+          "count": 813,
+          "pct": 0.0012154573887251004
+        },
+        {
+          "value": "2025-08-20 00:00:00",
+          "count": 811,
+          "pct": 0.0012124673336482857
+        }
+      ],
+      "dominance": 0.007274804001889715,
+      "is_constant": false,
+      "is_near_constant": false,
+      "entropy": 7.603313426189928,
+      "normalized_entropy": 0.9208472856909918,
+      "parse_fail_rate": 0.0,
+      "min": "1994-03-10T00:00:00",
+      "max": "2034-04-09T00:00:00",
+      "span_days": 14640,
+      "n_unique_days": 3854,
+      "max_gap_days": 4670,
+      "is_monotonic_increasing": false,
+      "has_time_component": false,
+      "n_future_dates": 1,
+      "n_sentinel_dates": 0,
+      "by_year": {
+        "1994": 1,
+        "2006": 1,
+        "2007": 1,
+        "2008": 1,
+        "2009": 1,
+        "2010": 1,
+        "2011": 2,
+        "2012": 9,
+        "2013": 6,
+        "2014": 53,
+        "2015": 1315,
+        "2016": 2184,
+        "2017": 20584,
+        "2018": 15653,
+        "2019": 23725,
+        "2020": 27489,
+        "2021": 43535,
+        "2022": 69506,
+        "2023": 115161,
+        "2024": 169617,
+        "2025": 157449,
+        "2026": 22589,
+        "2034": 1
+      },
+      "by_dow": {
+        "0": 111142,
+        "1": 124359,
+        "2": 117589,
+        "3": 115909,
+        "4": 108431,
+        "5": 70558,
+        "6": 20896
+      },
+      "derived_feature_stubs": [
+        "recency_days",
+        "year",
+        "month",
+        "dayofweek"
+      ]
+    },
+    "LAST_FREEZE_DATE": {
+      "_type": "datetime",
+      "_family": "datetime",
+      "count": 668884,
+      "n_present": 373327,
+      "n_missing": 295557,
+      "pct_missing": 0.441866,
+      "n_unique": 318242,
+      "cardinality_ratio": 0.852448,
+      "memory_bytes": 5351204,
+      "n_blank": 0,
+      "top_values": [
+        {
+          "value": "2025-12-29 11:03:34",
+          "count": 2292,
+          "pct": 0.0061393898646494895
+        },
+        {
+          "value": "2025-10-23 16:41:04",
+          "count": 1809,
+          "pct": 0.004845617916732516
+        },
+        {
+          "value": "2025-07-11 15:25:41",
+          "count": 1308,
+          "pct": 0.0035036308651664625
+        },
+        {
+          "value": "2025-12-12 12:42:03",
+          "count": 992,
+          "pct": 0.0026571879344381736
+        },
+        {
+          "value": "2025-12-12 11:22:38",
+          "count": 876,
+          "pct": 0.0023464683775885485
+        },
+        {
+          "value": "2025-05-17 17:03:36",
+          "count": 544,
+          "pct": 0.0014571675769499662
+        },
+        {
+          "value": "2025-03-04 14:12:24",
+          "count": 489,
+          "pct": 0.0013098436491333334
+        },
+        {
+          "value": "2026-02-16 17:05:03",
+          "count": 409,
+          "pct": 0.0010955542995818679
+        },
+        {
+          "value": "2025-02-19 11:15:09",
+          "count": 397,
+          "pct": 0.001063410897149148
+        },
+        {
+          "value": "2026-02-12 12:13:47",
+          "count": 366,
+          "pct": 0.0009803737741979552
+        },
+        {
+          "value": "2025-04-04 17:46:22",
+          "count": 344,
+          "pct": 0.0009214442030713021
+        },
+        {
+          "value": "2025-12-08 14:43:09",
+          "count": 337,
+          "pct": 0.0009026938849855489
+        },
+        {
+          "value": "2025-05-21 13:53:06",
+          "count": 334,
+          "pct": 0.0008946580343773689
+        },
+        {
+          "value": "2025-08-22 17:26:45",
+          "count": 333,
+          "pct": 0.0008919794175079756
+        },
+        {
+          "value": "2023-12-29 15:41:49",
+          "count": 331,
+          "pct": 0.000886622183769189
+        },
+        {
+          "value": "2025-04-04 16:13:01",
+          "count": 331,
+          "pct": 0.000886622183769189
+        },
+        {
+          "value": "2025-12-11 17:16:05",
+          "count": 328,
+          "pct": 0.000878586333161009
+        },
+        {
+          "value": "2025-08-22 11:34:28",
+          "count": 324,
+          "pct": 0.0008678718656834357
+        },
+        {
+          "value": "2024-03-24 12:04:47",
+          "count": 323,
+          "pct": 0.0008651932488140424
+        },
+        {
+          "value": "2025-08-22 14:19:45",
+          "count": 314,
+          "pct": 0.0008410856969895025
+        }
+      ],
+      "dominance": 0.0061393898646494895,
+      "is_constant": false,
+      "is_near_constant": false,
+      "entropy": 12.175261876664122,
+      "normalized_entropy": 0.9609089721740253,
+      "parse_fail_rate": 0.0,
+      "min": "2005-01-07T16:51:49",
+      "max": "2026-04-29T19:12:27",
+      "span_days": 7782,
+      "n_unique_days": 4405,
+      "max_gap_days": 241,
+      "is_monotonic_increasing": false,
+      "has_time_component": true,
+      "n_future_dates": 0,
+      "n_sentinel_dates": 0,
+      "by_year": {
+        "2005": 4,
+        "2006": 14,
+        "2007": 24,
+        "2008": 32,
+        "2009": 64,
+        "2010": 169,
+        "2011": 113,
+        "2012": 141,
+        "2013": 228,
+        "2014": 587,
+        "2015": 1075,
+        "2016": 2181,
+        "2017": 3736,
+        "2018": 4273,
+        "2019": 6217,
+        "2020": 5975,
+        "2021": 4141,
+        "2022": 18546,
+        "2023": 45202,
+        "2024": 58924,
+        "2025": 185706,
+        "2026": 35975
+      },
+      "by_dow": {
+        "0": 58673,
+        "1": 59185,
+        "2": 58466,
+        "3": 61489,
+        "4": 64257,
+        "5": 47149,
+        "6": 24108
+      },
+      "by_hour": {
+        "0": 16095,
+        "1": 2009,
+        "2": 1692,
+        "3": 1670,
+        "4": 2716,
+        "5": 1258,
+        "6": 1779,
+        "7": 2005,
+        "8": 4377,
+        "9": 9030,
+        "10": 22747,
+        "11": 36062,
+        "12": 35750,
+        "13": 32339,
+        "14": 29243,
+        "15": 33928,
+        "16": 37672,
+        "17": 35141,
+        "18": 24650,
+        "19": 16943,
+        "20": 8822,
+        "21": 7182,
+        "22": 5530,
+        "23": 4687
+      },
+      "derived_feature_stubs": [
+        "recency_days",
+        "year",
+        "month",
+        "dayofweek",
+        "hour"
+      ]
+    },
+    "LAST_UNFREEZE_DATE": {
+      "_type": "datetime",
+      "_family": "datetime",
+      "count": 668884,
+      "n_present": 319517,
+      "n_missing": 349367,
+      "pct_missing": 0.522313,
+      "n_unique": 308078,
+      "cardinality_ratio": 0.964199,
+      "memory_bytes": 5351204,
+      "n_blank": 0,
+      "top_values": [
+        {
+          "value": "2025-03-06 00:00:00",
+          "count": 695,
+          "pct": 0.002175158129301414
+        },
+        {
+          "value": "2025-01-10 00:00:00",
+          "count": 617,
+          "pct": 0.0019310396629913275
+        },
+        {
+          "value": "2015-07-23 00:00:00",
+          "count": 150,
+          "pct": 0.0004694585890578592
+        },
+        {
+          "value": "2018-12-19 00:00:00",
+          "count": 36,
+          "pct": 0.00011267006137388622
+        },
+        {
+          "value": "2018-12-10 00:00:00",
+          "count": 36,
+          "pct": 0.00011267006137388622
+        },
+        {
+          "value": "2018-12-31 00:00:00",
+          "count": 35,
+          "pct": 0.00010954033744683382
+        },
+        {
+          "value": "2024-09-18 00:00:00",
+          "count": 29,
+          "pct": 9.076199388451945e-05
+        },
+        {
+          "value": "2018-10-30 00:00:00",
+          "count": 27,
+          "pct": 8.450254603041466e-05
+        },
+        {
+          "value": "2019-09-23 00:00:00",
+          "count": 27,
+          "pct": 8.450254603041466e-05
+        },
+        {
+          "value": "2018-12-20 00:00:00",
+          "count": 27,
+          "pct": 8.450254603041466e-05
+        },
+        {
+          "value": "2018-12-15 00:00:00",
+          "count": 27,
+          "pct": 8.450254603041466e-05
+        },
+        {
+          "value": "2019-09-30 00:00:00",
+          "count": 25,
+          "pct": 7.824309817630987e-05
+        },
+        {
+          "value": "2019-01-07 00:00:00",
+          "count": 24,
+          "pct": 7.511337424925748e-05
+        },
+        {
+          "value": "2019-01-24 00:00:00",
+          "count": 24,
+          "pct": 7.511337424925748e-05
+        },
+        {
+          "value": "2018-10-22 00:00:00",
+          "count": 24,
+          "pct": 7.511337424925748e-05
+        },
+        {
+          "value": "2019-06-18 00:00:00",
+          "count": 23,
+          "pct": 7.198365032220508e-05
+        },
+        {
+          "value": "2018-10-29 00:00:00",
+          "count": 23,
+          "pct": 7.198365032220508e-05
+        },
+        {
+          "value": "2018-12-17 00:00:00",
+          "count": 23,
+          "pct": 7.198365032220508e-05
+        },
+        {
+          "value": "2019-02-06 00:00:00",
+          "count": 23,
+          "pct": 7.198365032220508e-05
+        },
+        {
+          "value": "2019-01-15 00:00:00",
+          "count": 23,
+          "pct": 7.198365032220508e-05
+        }
+      ],
+      "dominance": 0.002175158129301414,
+      "is_constant": false,
+      "is_near_constant": false,
+      "entropy": 12.568571907974674,
+      "normalized_entropy": 0.9944978815539011,
+      "parse_fail_rate": 0.0,
+      "min": "2005-01-07T17:06:26",
+      "max": "2026-04-29T19:32:05",
+      "span_days": 7782,
+      "n_unique_days": 4119,
+      "max_gap_days": 156,
+      "is_monotonic_increasing": false,
+      "has_time_component": true,
+      "n_future_dates": 0,
+      "n_sentinel_dates": 0,
+      "by_year": {
+        "2005": 8,
+        "2006": 12,
+        "2007": 25,
+        "2008": 31,
+        "2009": 105,
+        "2010": 186,
+        "2011": 131,
+        "2012": 164,
+        "2013": 193,
+        "2014": 437,
+        "2015": 837,
+        "2016": 1710,
+        "2017": 4512,
+        "2018": 4594,
+        "2019": 7470,
+        "2020": 13647,
+        "2021": 20143,
+        "2022": 41672,
+        "2023": 56106,
+        "2024": 79471,
+        "2025": 73047,
+        "2026": 15016
+      },
+      "by_dow": {
+        "0": 54912,
+        "1": 61740,
+        "2": 58496,
+        "3": 57517,
+        "4": 55297,
+        "5": 31378,
+        "6": 177
+      },
+      "by_hour": {
+        "0": 11287,
+        "1": 12,
+        "2": 22,
+        "3": 17,
+        "4": 12,
+        "5": 11,
+        "6": 6,
+        "7": 16,
+        "8": 26,
+        "9": 345,
+        "10": 13081,
+        "11": 23897,
+        "12": 27629,
+        "13": 30106,
+        "14": 21197,
+        "15": 41578,
+        "16": 62619,
+        "17": 55229,
+        "18": 24558,
+        "19": 6520,
+        "20": 1130,
+        "21": 147,
+        "22": 48,
+        "23": 24
+      },
+      "derived_feature_stubs": [
+        "recency_days",
+        "year",
+        "month",
+        "dayofweek",
+        "hour"
+      ]
+    },
+    "PINCODE": {
+      "_type": "pincode",
+      "_family": "pattern",
+      "count": 668884,
+      "n_present": 668883,
+      "n_missing": 1,
+      "pct_missing": 1e-06,
+      "n_unique": 5683,
+      "cardinality_ratio": 0.008496,
+      "memory_bytes": 5351204,
+      "n_blank": 0,
+      "top_values": [
+        {
+          "value": "122108.0",
+          "count": 5297,
+          "pct": 0.007919172710324525
+        },
+        {
+          "value": "321024.0",
+          "count": 3661,
+          "pct": 0.005473304000849177
+        },
+        {
+          "value": "321023.0",
+          "count": 2386,
+          "pct": 0.003567141039613804
+        },
+        {
+          "value": "321204.0",
+          "count": 2288,
+          "pct": 0.0034206281218090457
+        },
+        {
+          "value": "301405.0",
+          "count": 2278,
+          "pct": 0.0034056778240738666
+        },
+        {
+          "value": "301411.0",
+          "count": 1935,
+          "pct": 0.0028928826117572133
+        },
+        {
+          "value": "247001.0",
+          "count": 1731,
+          "pct": 0.0025878965379595533
+        },
+        {
+          "value": "783301.0",
+          "count": 1643,
+          "pct": 0.0024563339178899747
+        },
+        {
+          "value": "121102.0",
+          "count": 1490,
+          "pct": 0.00222759436254173
+        },
+        {
+          "value": "132103.0",
+          "count": 1460,
+          "pct": 0.002182743469336192
+        },
+        {
+          "value": "248001.0",
+          "count": 1449,
+          "pct": 0.0021662981418274943
+        },
+        {
+          "value": "321022.0",
+          "count": 1410,
+          "pct": 0.0021079919806602948
+        },
+        {
+          "value": "301001.0",
+          "count": 1360,
+          "pct": 0.002033240491984398
+        },
+        {
+          "value": "822114.0",
+          "count": 1311,
+          "pct": 0.001959984033082019
+        },
+        {
+          "value": "251001.0",
+          "count": 1289,
+          "pct": 0.0019270933780646243
+        },
+        {
+          "value": "244001.0",
+          "count": 1276,
+          "pct": 0.001907657991008891
+        },
+        {
+          "value": "250002.0",
+          "count": 1258,
+          "pct": 0.001880747455085568
+        },
+        {
+          "value": "201301.0",
+          "count": 1238,
+          "pct": 0.0018508468596152093
+        },
+        {
+          "value": "301707.0",
+          "count": 1225,
+          "pct": 0.001831411472559476
+        },
+        {
+          "value": "845438.0",
+          "count": 1213,
+          "pct": 0.0018134711152772607
+        }
+      ],
+      "dominance": 0.007919172710324525,
+      "is_constant": false,
+      "is_near_constant": false,
+      "entropy": 8.050939664003145,
+      "normalized_entropy": 0.9312575182946039,
+      "length_min": 8,
+      "length_max": 8,
+      "length_mode": 8,
+      "validity_rate": 0.0,
+      "decomposition_stubs": [
+        "region_lookup(requires_human)"
+      ]
+    },
+    "AREA_CATEGORY": {
+      "_type": "boolean_flag",
+      "_family": "categorical",
+      "count": 668884,
+      "n_present": 668884,
+      "n_missing": 0,
+      "pct_missing": 0.0,
+      "n_unique": 2,
+      "cardinality_ratio": 3e-06,
+      "memory_bytes": 6020088,
+      "n_blank": 0,
+      "top_values": [
+        {
+          "value": "N",
+          "count": 390293,
+          "pct": 0.5834987830475837
+        },
+        {
+          "value": "Y",
+          "count": 278591,
+          "pct": 0.41650121695241626
+        }
+      ],
+      "dominance": 0.5834987830475837,
+      "is_constant": false,
+      "is_near_constant": false,
+      "entropy": 0.6791375404425708,
+      "normalized_entropy": 0.9797883616780247,
+      "true_rate": 0.41650121695241626,
+      "n_true": 278591,
+      "n_false": 390293
+    },
+    "BRANCH_CATEGORY": {
+      "_type": "categorical",
+      "_family": "categorical",
+      "count": 668884,
+      "n_present": 668480,
+      "n_missing": 404,
+      "pct_missing": 0.000604,
+      "n_unique": 6,
+      "cardinality_ratio": 9e-06,
+      "memory_bytes": 9398511,
+      "n_blank": 0,
+      "top_values": [
+        {
+          "value": "MEDIUM",
+          "count": 293493,
+          "pct": 0.4390452967927238
+        },
+        {
+          "value": "LARGE",
+          "count": 197607,
+          "pct": 0.295606450454763
+        },
+        {
+          "value": "SMALL",
+          "count": 103617,
+          "pct": 0.1550038894207755
+        },
+        {
+          "value": "VERY LARGE",
+          "count": 66976,
+          "pct": 0.10019147917663954
+        },
+        {
+          "value": "NEW",
+          "count": 6381,
+          "pct": 0.00954553614169459
+        },
+        {
+          "value": "EXCEPTIONALLY LARGE",
+          "count": 406,
+          "pct": 0.0006073480134035423
+        }
+      ],
+      "dominance": 0.4390452967927238,
+      "is_constant": false,
+      "is_near_constant": false,
+      "entropy": 1.2900480069069815,
+      "normalized_entropy": 0.7199895014160432,
+      "n_levels": 6,
+      "max_class_share": 0.4397468607734254,
+      "imbalance_ratio": 671.0,
+      "gini_impurity": 0.685600995851135,
+      "n_rare_levels": 2,
+      "rare_level_mass": 0.010200610335684627,
+      "case_whitespace_variants": 0,
+      "imbalanced": false
+    },
+    "SCHEME_TYPE": {
+      "_type": "categorical",
+      "_family": "categorical",
+      "count": 668884,
+      "n_present": 668884,
+      "n_missing": 0,
+      "pct_missing": 0.0,
+      "n_unique": 6,
+      "cardinality_ratio": 9e-06,
+      "memory_bytes": 7357856,
+      "n_blank": 0,
+      "top_values": [
+        {
+          "value": "SBA",
+          "count": 653149,
+          "pct": 0.9764757416831618
+        },
+        {
+          "value": "CAA",
+          "count": 11202,
+          "pct": 0.016747298485238097
+        },
+        {
+          "value": "TDA",
+          "count": 2700,
+          "pct": 0.004036574353699595
+        },
+        {
+          "value": "CCA",
+          "count": 1264,
+          "pct": 0.0018897148085467734
+        },
+        {
+          "value": "ODA",
+          "count": 553,
+          "pct": 0.0008267502287392133
+        },
+        {
+          "value": "LAA",
+          "count": 16,
+          "pct": 2.392044061451612e-05
+        }
+      ],
+      "dominance": 0.9764757416831618,
+      "is_constant": false,
+      "is_near_constant": false,
+      "entropy": 0.13195863350866455,
+      "normalized_entropy": 0.07364751562636718,
+      "n_levels": 6,
+      "max_class_share": 0.97664,
+      "imbalance_ratio": 48832.0,
+      "gini_impurity": 0.04588081895000007,
+      "n_rare_levels": 4,
+      "rare_level_mass": 0.006835,
+      "case_whitespace_variants": 0,
+      "imbalanced": true
+    },
+    "ACCOUNT_TYPE": {
+      "_type": "categorical",
+      "_family": "categorical",
+      "count": 668884,
+      "n_present": 668884,
+      "n_missing": 0,
+      "pct_missing": 0.0,
+      "n_unique": 175,
+      "cardinality_ratio": 0.000262,
+      "memory_bytes": 8695624,
+      "n_blank": 0,
+      "top_values": [
+        {
+          "value": "SBGEN",
+          "count": 419589,
+          "pct": 0.6272971098127628
+        },
+        {
+          "value": "SBBDA",
+          "count": 142191,
+          "pct": 0.21257946071366635
+        },
+        {
+          "value": "SBVID",
+          "count": 20324,
+          "pct": 0.0303849396905891
+        },
+        {
+          "value": "SBSLA",
+          "count": 19903,
+          "pct": 0.029755533096919647
+        },
+        {
+          "value": "SBPWR",
+          "count": 12945,
+          "pct": 0.019353131484681946
+        },
+        {
+          "value": "CAGEN",
+          "count": 9809,
+          "pct": 0.01466472512423679
+        },
+        {
+          "value": "SBWSL",
+          "count": 9524,
+          "pct": 0.01423864227579072
+        },
+        {
+          "value": "SBWPL",
+          "count": 3184,
+          "pct": 0.004760167682288707
+        },
+        {
+          "value": "SBKIS",
+          "count": 2821,
+          "pct": 0.004217472685846873
+        },
+        {
+          "value": "RDNEW",
+          "count": 2691,
+          "pct": 0.00402311910585393
+        },
+        {
+          "value": "SBSAL",
+          "count": 2476,
+          "pct": 0.0037016881850963695
+        },
+        {
+          "value": "SBSNR",
+          "count": 2035,
+          "pct": 0.003042381040658769
+        },
+        {
+          "value": "SBMIN",
+          "count": 1586,
+          "pct": 0.00237111367591391
+        },
+        {
+          "value": "SBSVV",
+          "count": 1414,
+          "pct": 0.002113968939307862
+        },
+        {
+          "value": "SBDPS",
+          "count": 1410,
+          "pct": 0.002107988829154233
+        },
+        {
+          "value": "SBNEO",
+          "count": 1141,
+          "pct": 0.0017058264213226809
+        },
+        {
+          "value": "SBRIS",
+          "count": 1053,
+          "pct": 0.001574263997942842
+        },
+        {
+          "value": "SBPEN",
+          "count": 994,
+          "pct": 0.001486057373176814
+        },
+        {
+          "value": "SBPPS",
+          "count": 942,
+          "pct": 0.0014083159411796364
+        },
+        {
+          "value": "SBSPP",
+          "count": 831,
+          "pct": 0.001242367884416431
+        }
+      ],
+      "dominance": 0.6272971098127628,
+      "is_constant": false,
+      "is_near_constant": false,
+      "entropy": 1.3697624663744834,
+      "normalized_entropy": 0.26521185452606877,
+      "n_levels": 140,
+      "max_class_share": 0.62814,
+      "imbalance_ratio": 125628.0,
+      "gini_impurity": 0.5579442240499999,
+      "n_rare_levels": 133,
+      "rare_level_mass": 0.052025,
+      "case_whitespace_variants": 0,
+      "imbalanced": false
+    },
+    "APY_FLAG": {
+      "_type": "boolean_flag",
+      "_family": "categorical",
+      "count": 668884,
+      "n_present": 668884,
+      "n_missing": 0,
+      "pct_missing": 0.0,
+      "n_unique": 2,
+      "cardinality_ratio": 3e-06,
+      "memory_bytes": 6020088,
+      "n_blank": 0,
+      "top_values": [
+        {
+          "value": "N",
+          "count": 636681,
+          "pct": 0.951855628180671
+        },
+        {
+          "value": "Y",
+          "count": 32203,
+          "pct": 0.04814437181932891
+        }
+      ],
+      "dominance": 0.951855628180671,
+      "is_constant": false,
+      "is_near_constant": false,
+      "entropy": 0.19301478066913308,
+      "normalized_entropy": 0.27846146688962925,
+      "true_rate": 0.04814437181932891,
+      "n_true": 32203,
+      "n_false": 636681
+    },
+    "UDHYAM_FLAG": {
+      "_type": "boolean_flag",
+      "_family": "categorical",
+      "count": 668884,
+      "n_present": 1952,
+      "n_missing": 666932,
+      "pct_missing": 0.997082,
+      "n_unique": 2,
+      "cardinality_ratio": 0.001025,
+      "memory_bytes": 5436768,
+      "n_blank": 0,
+      "top_values": [
+        {
+          "value": "N",
+          "count": 1920,
+          "pct": 0.9836065573770492
+        },
+        {
+          "value": "Y",
+          "count": 32,
+          "pct": 0.01639344262295082
+        }
+      ],
+      "dominance": 0.9836065573770492,
+      "is_constant": false,
+      "is_near_constant": false,
+      "entropy": 0.08364970461058928,
+      "normalized_entropy": 0.12068101401352381,
+      "true_rate": 4.784088122903224e-05,
+      "n_true": 32,
+      "n_false": 668852
+    },
+    "ACCOUNT_OPEN_DATE": {
+      "_type": "datetime",
+      "_family": "datetime",
+      "count": 668884,
+      "n_present": 668884,
+      "n_missing": 0,
+      "pct_missing": 0.0,
+      "n_unique": 11857,
+      "cardinality_ratio": 0.017727,
+      "memory_bytes": 5351204,
+      "n_blank": 0,
+      "top_values": [
+        {
+          "value": "2014-08-28 00:00:00",
+          "count": 663,
+          "pct": 0.0009912032579640117
+        },
+        {
+          "value": "2025-06-12 00:00:00",
+          "count": 547,
+          "pct": 0.0008177800635087698
+        },
+        {
+          "value": "2024-03-01 00:00:00",
+          "count": 541,
+          "pct": 0.0008088098982783262
+        },
+        {
+          "value": "2024-07-30 00:00:00",
+          "count": 520,
+          "pct": 0.0007774143199717738
+        },
+        {
+          "value": "2014-08-27 00:00:00",
+          "count": 516,
+          "pct": 0.0007714342098181448
+        },
+        {
+          "value": "2024-07-22 00:00:00",
+          "count": 511,
+          "pct": 0.0007639590721261086
+        },
+        {
+          "value": "2024-07-23 00:00:00",
+          "count": 510,
+          "pct": 0.0007624640445877013
+        },
+        {
+          "value": "2024-12-03 00:00:00",
+          "count": 506,
+          "pct": 0.0007564839344340723
+        },
+        {
+          "value": "2025-03-19 00:00:00",
+          "count": 504,
+          "pct": 0.0007534938793572577
+        },
+        {
+          "value": "2024-07-16 00:00:00",
+          "count": 500,
+          "pct": 0.0007475137692036287
+        },
+        {
+          "value": "2024-06-25 00:00:00",
+          "count": 487,
+          "pct": 0.0007280784112043344
+        },
+        {
+          "value": "2024-08-13 00:00:00",
+          "count": 481,
+          "pct": 0.0007191082459738909
+        },
+        {
+          "value": "2024-11-11 00:00:00",
+          "count": 479,
+          "pct": 0.0007161181908970763
+        },
+        {
+          "value": "2024-09-24 00:00:00",
+          "count": 476,
+          "pct": 0.0007116331082818545
+        },
+        {
+          "value": "2024-04-02 00:00:00",
+          "count": 471,
+          "pct": 0.0007041579705898182
+        },
+        {
+          "value": "2024-06-11 00:00:00",
+          "count": 470,
+          "pct": 0.000702662943051411
+        },
+        {
+          "value": "2024-06-14 00:00:00",
+          "count": 468,
+          "pct": 0.0006996728879745964
+        },
+        {
+          "value": "2024-09-03 00:00:00",
+          "count": 464,
+          "pct": 0.0006936927778209675
+        },
+        {
+          "value": "2024-08-06 00:00:00",
+          "count": 464,
+          "pct": 0.0006936927778209675
+        },
+        {
+          "value": "2024-08-27 00:00:00",
+          "count": 464,
+          "pct": 0.0006936927778209675
+        }
+      ],
+      "dominance": 0.0009912032579640117,
+      "is_constant": false,
+      "is_near_constant": false,
+      "entropy": 8.477619054958474,
+      "normalized_entropy": 0.903732432830017,
+      "parse_fail_rate": 0.0,
+      "min": "1900-06-29T00:00:00",
+      "max": "2026-01-26T00:00:00",
+      "span_days": 45867,
+      "n_unique_days": 11857,
+      "max_gap_days": 10202,
+      "is_monotonic_increasing": false,
+      "has_time_component": false,
+      "n_future_dates": 0,
+      "n_sentinel_dates": 1,
+      "by_year": {
+        "1900": 3,
+        "1901": 4,
+        "1902": 1,
+        "1903": 32,
+        "1904": 20,
+        "1905": 9,
+        "1908": 1,
+        "1911": 1,
+        "1939": 1,
+        "1945": 1,
+        "1946": 1,
+        "1950": 1,
+        "1963": 1,
+        "1966": 1,
+        "1967": 2,
+        "1968": 2,
+        "1969": 2,
+        "1970": 8,
+        "1971": 5,
+        "1972": 5,
+        "1973": 16,
+        "1974": 10,
+        "1975": 16,
+        "1976": 25,
+        "1977": 29,
+        "1978": 32,
+        "1979": 34,
+        "1980": 56,
+        "1981": 50,
+        "1982": 57,
+        "1983": 67,
+        "1984": 105,
+        "1985": 128,
+        "1986": 105,
+        "1987": 161,
+        "1988": 210,
+        "1989": 220,
+        "1990": 318,
+        "1991": 302,
+        "1992": 316,
+        "1993": 342,
+        "1994": 353,
+        "1995": 437,
+        "1996": 555,
+        "1997": 615,
+        "1998": 753,
+        "1999": 801,
+        "2000": 984,
+        "2001": 1463,
+        "2002": 1538,
+        "2003": 1503,
+        "2004": 1792,
+        "2005": 2616,
+        "2006": 3585,
+        "2007": 4799,
+        "2008": 6370,
+        "2009": 9710,
+        "2010": 11690,
+        "2011": 15308,
+        "2012": 20040,
+        "2013": 27800,
+        "2014": 33237,
+        "2015": 35153,
+        "2016": 37337,
+        "2017": 34441,
+        "2018": 23305,
+        "2019": 26434,
+        "2020": 21577,
+        "2021": 30004,
+        "2022": 49652,
+        "2023": 77269,
+        "2024": 105948,
+        "2025": 78912,
+        "2026": 203
+      },
+      "by_dow": {
+        "0": 114069,
+        "1": 124550,
+        "2": 118144,
+        "3": 117324,
+        "4": 113436,
+        "5": 68248,
+        "6": 13113
+      },
+      "derived_feature_stubs": [
+        "recency_days",
+        "year",
+        "month",
+        "dayofweek"
+      ]
+    },
+    "LIEN_AMOUNT": {
+      "_type": "amount",
+      "_family": "numeric",
+      "count": 668884,
+      "n_present": 668884,
+      "n_missing": 0,
+      "pct_missing": 0.0,
+      "n_unique": 104593,
+      "cardinality_ratio": 0.156369,
+      "memory_bytes": 5351204,
+      "n_blank": 0,
+      "top_values": [
+        {
+          "value": "0.0",
+          "count": 265724,
+          "pct": 0.3972646976157301
+        },
+        {
+          "value": "500.0",
+          "count": 25290,
+          "pct": 0.03780924644631954
+        },
+        {
+          "value": "1000.0",
+          "count": 24294,
+          "pct": 0.036320199018065914
+        },
+        {
+          "value": "2000.0",
+          "count": 14581,
+          "pct": 0.02179899653751622
+        },
+        {
+          "value": "1500.0",
+          "count": 7584,
+          "pct": 0.01133828885128064
+        },
+        {
+          "value": "3000.0",
+          "count": 7069,
+          "pct": 0.010568349669000903
+        },
+        {
+          "value": "5000.0",
+          "count": 6373,
+          "pct": 0.009527810502269451
+        },
+        {
+          "value": "4000.0",
+          "count": 4600,
+          "pct": 0.006877126676673384
+        },
+        {
+          "value": "10000.0",
+          "count": 4553,
+          "pct": 0.0068068603823682435
+        },
+        {
+          "value": "600.0",
+          "count": 4294,
+          "pct": 0.006419648249920764
+        },
+        {
+          "value": "2500.0",
+          "count": 3900,
+          "pct": 0.005830607399788304
+        },
+        {
+          "value": "700.0",
+          "count": 3261,
+          "pct": 0.004875284802746066
+        },
+        {
+          "value": "800.0",
+          "count": 3063,
+          "pct": 0.004579269350141429
+        },
+        {
+          "value": "1200.0",
+          "count": 2909,
+          "pct": 0.004349035109226712
+        },
+        {
+          "value": "6000.0",
+          "count": 2543,
+          "pct": 0.0038018550301696557
+        },
+        {
+          "value": "900.0",
+          "count": 2323,
+          "pct": 0.003472948971720059
+        },
+        {
+          "value": "20000.0",
+          "count": 2213,
+          "pct": 0.003308495942495261
+        },
+        {
+          "value": "3500.0",
+          "count": 2113,
+          "pct": 0.003158993188654535
+        },
+        {
+          "value": "1100.0",
+          "count": 1891,
+          "pct": 0.002827097075128124
+        },
+        {
+          "value": "1800.0",
+          "count": 1846,
+          "pct": 0.0027598208358997974
+        }
+      ],
+      "dominance": 0.3972646976157301,
+      "is_constant": false,
+      "is_near_constant": false,
+      "entropy": 5.5720940259698395,
+      "normalized_entropy": 0.48210547366649237,
+      "min": 0.0,
+      "max": 99999999999999.0,
+      "range": 99999999999999.0,
+      "mean": 301492105.0343301,
+      "trimmed_mean_10": 2501.582112311314,
+      "median": 700.0,
+      "std": 172922208112.5781,
+      "var": 2.990209005852977e+22,
+      "sum": 201663245183782.88,
+      "mad": 700.0,
+      "iqr": 3077.485,
+      "cv": 573.554680952219,
+      "skew": 578.2626050614195,
+      "kurtosis": 334404.03673290287,
+      "percentiles": {
+        "p1": 0.0,
+        "p5": 0.0,
+        "p10": 0.0,
+        "p25": 0.0,
+        "p50": 700.0,
+        "p75": 3077.485,
+        "p90": 12000.0,
+        "p95": 30000.0,
+        "p99": 150000.0
+      },
+      "n_zero": 265724,
+      "n_negative": 0,
+      "zero_inflation": 0.3972646976157301,
+      "all_positive": false,
+      "is_integer_valued": false,
+      "outliers": {
+        "fraction": 0.1414953863450165,
+        "count": 94644,
+        "lower": -4616.2275,
+        "upper": 7693.7125
+      },
+      "shape": "right_skewed",
+      "log_transform_candidate": false,
+      "is_monotonic": "none",
+      "histogram": {
+        "counts": [
+          668882,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          2
+        ],
+        "edges": [
+          0.0,
+          3333333333333.3,
+          6666666666666.6,
+          9999999999999.898,
+          13333333333333.2,
+          16666666666666.5,
+          19999999999999.797,
+          23333333333333.098,
+          26666666666666.4,
+          29999999999999.7,
+          33333333333333.0,
+          36666666666666.3,
+          39999999999999.59,
+          43333333333332.9,
+          46666666666666.195,
+          49999999999999.5,
+          53333333333332.8,
+          56666666666666.09,
+          59999999999999.4,
+          63333333333332.695,
+          66666666666666.0,
+          69999999999999.3,
+          73333333333332.6,
+          76666666666665.89,
+          79999999999999.19,
+          83333333333332.5,
+          86666666666665.8,
+          89999999999999.1,
+          93333333333332.39,
+          96666666666665.69,
+          99999999999999.0
+        ]
+      }
+    },
+    "LAST_TRANSACTION_DATE": {
+      "_type": "datetime",
+      "_family": "datetime",
+      "count": 668884,
+      "n_present": 668835,
+      "n_missing": 49,
+      "pct_missing": 7.3e-05,
+      "n_unique": 976,
+      "cardinality_ratio": 0.001459,
+      "memory_bytes": 5351204,
+      "n_blank": 0,
+      "top_values": [
+        {
+          "value": "2026-04-29 00:00:00",
+          "count": 207915,
+          "pct": 0.31086142322097376
+        },
+        {
+          "value": "2026-04-28 00:00:00",
+          "count": 58471,
+          "pct": 0.08742215942646542
+        },
+        {
+          "value": "2026-04-27 00:00:00",
+          "count": 28038,
+          "pct": 0.04192065307587073
+        },
+        {
+          "value": "2026-04-26 00:00:00",
+          "count": 15012,
+          "pct": 0.02244499764515912
+        },
+        {
+          "value": "2026-04-25 00:00:00",
+          "count": 12551,
+          "pct": 0.01876546532403358
+        },
+        {
+          "value": "2026-04-24 00:00:00",
+          "count": 10523,
+          "pct": 0.015733327352785067
+        },
+        {
+          "value": "2026-04-23 00:00:00",
+          "count": 8556,
+          "pct": 0.012792392742604679
+        },
+        {
+          "value": "2026-04-22 00:00:00",
+          "count": 8095,
+          "pct": 0.012103134554860317
+        },
+        {
+          "value": "2026-04-21 00:00:00",
+          "count": 6777,
+          "pct": 0.01013254390096212
+        },
+        {
+          "value": "2026-04-20 00:00:00",
+          "count": 6737,
+          "pct": 0.010072738418294497
+        },
+        {
+          "value": "2026-04-18 00:00:00",
+          "count": 5697,
+          "pct": 0.008517795868936284
+        },
+        {
+          "value": "2026-03-31 00:00:00",
+          "count": 5226,
+          "pct": 0.007813586310525018
+        },
+        {
+          "value": "2026-04-17 00:00:00",
+          "count": 5120,
+          "pct": 0.007655101781455815
+        },
+        {
+          "value": "2026-04-16 00:00:00",
+          "count": 4958,
+          "pct": 0.0074128895766519395
+        },
+        {
+          "value": "2026-04-15 00:00:00",
+          "count": 4730,
+          "pct": 0.007071998325446485
+        },
+        {
+          "value": "2026-04-13 00:00:00",
+          "count": 4474,
+          "pct": 0.006689243236373694
+        },
+        {
+          "value": "2026-04-06 00:00:00",
+          "count": 4086,
+          "pct": 0.006109130054497746
+        },
+        {
+          "value": "2026-04-10 00:00:00",
+          "count": 3923,
+          "pct": 0.00586542271262718
+        },
+        {
+          "value": "2026-04-19 00:00:00",
+          "count": 3900,
+          "pct": 0.005831034560093297
+        },
+        {
+          "value": "2026-04-08 00:00:00",
+          "count": 3845,
+          "pct": 0.0057488020214253146
+        }
+      ],
+      "dominance": 0.31086142322097376,
+      "is_constant": false,
+      "is_near_constant": false,
+      "entropy": 4.104466706156681,
+      "normalized_entropy": 0.5962793658903985,
+      "parse_fail_rate": 0.0,
+      "min": "2005-08-06T00:00:00",
+      "max": "2026-04-29T00:00:00",
+      "span_days": 7571,
+      "n_unique_days": 976,
+      "max_gap_days": 1139,
+      "is_monotonic_increasing": false,
+      "has_time_component": false,
+      "n_future_dates": 0,
+      "n_sentinel_dates": 0,
+      "by_year": {
+        "2005": 1,
+        "2008": 1,
+        "2009": 1,
+        "2011": 1,
+        "2012": 2,
+        "2013": 1,
+        "2014": 1,
+        "2015": 2,
+        "2016": 3,
+        "2017": 5,
+        "2018": 5,
+        "2019": 6,
+        "2020": 5,
+        "2021": 9,
+        "2022": 18,
+        "2023": 131,
+        "2024": 2757,
+        "2025": 128695,
+        "2026": 537191
+      },
+      "by_dow": {
+        "0": 80092,
+        "1": 110978,
+        "2": 259775,
+        "3": 54379,
+        "4": 59331,
+        "5": 55105,
+        "6": 49175
+      },
+      "derived_feature_stubs": [
+        "recency_days",
+        "year",
+        "month",
+        "dayofweek"
+      ]
+    }
+  },
+  "load_info": {
+    "total_rows": 668884,
+    "sampled": false,
+    "sample_rows": 668884
+  },
+  "quality_score": 85.8,
+  "entity_checks": {
+    "primary_key": [
+      "ACCOUNT_NUMBER"
+    ],
+    "primary_key_unique": true,
+    "full_row_duplicate_rate": 0.0,
+    "schema_conflicts": [
+      {
+        "column": "PINCODE",
+        "type": "dtype_mismatch",
+        "types": [
+          "double",
+          "int64"
+        ]
+      }
+    ],
+    "n_columns": 48,
+    "n_drop_suggested": 2,
+    "n_warn": 12
+  },
+  "relationships": {
+    "redundant_pairs": [],
+    "top_numeric_corr": [
+      {
+        "a": "NUM_CHEQUE_BOOKS",
+        "b": "NUM_CREDIT_CARDS",
+        "pearson": 0.0334
+      },
+      {
+        "a": "NUM_CREDIT_CARDS",
+        "b": "LIEN_AMOUNT",
+        "pearson": -0.0002
+      },
+      {
+        "a": "NUM_CHEQUE_BOOKS",
+        "b": "LIEN_AMOUNT",
+        "pearson": 0.0
+      }
+    ],
+    "top_spearman_corr": [
+      {
+        "a": "NUM_CHEQUE_BOOKS",
+        "b": "NUM_CREDIT_CARDS",
+        "spearman": 0.1084
+      },
+      {
+        "a": "NUM_CREDIT_CARDS",
+        "b": "LIEN_AMOUNT",
+        "spearman": -0.0054
+      },
+      {
+        "a": "NUM_CHEQUE_BOOKS",
+        "b": "LIEN_AMOUNT",
+        "spearman": -0.003
+      }
+    ],
+    "nonlinear_pairs": [],
+    "vif": [
+      {
+        "column": "NUM_CREDIT_CARDS",
+        "vif": 1.001
+      },
+      {
+        "column": "NUM_CHEQUE_BOOKS",
+        "vif": 1.001
+      },
+      {
+        "column": "LIEN_AMOUNT",
+        "vif": 1.0
+      }
+    ],
+    "numeric_categorical_assoc": [
+      {
+        "categorical": "CREDIT_CARD_FLAG",
+        "numeric": "NUM_CREDIT_CARDS",
+        "eta": 0.7208
+      }
+    ],
+    "categorical_associations": [
+      {
+        "a": "ACCOUNT_OPEN_MODE",
+        "b": "PMJDY_FLAG",
+        "cramers_v": 0.6316
+      },
+      {
+        "a": "ACCOUNT_OPEN_MODE",
+        "b": "CHEQUE_ALLOWED_FLAG",
+        "cramers_v": 0.6206
+      },
+      {
+        "a": "ACCOUNT_OPEN_MODE",
+        "b": "CHEQUE_BOOK_AVAILED_FLAG",
+        "cramers_v": 0.5851
+      },
+      {
+        "a": "AADHAR_FLAG",
+        "b": "SCHEME_TYPE",
+        "cramers_v": 0.5783
+      },
+      {
+        "a": "CHEQUE_ALLOWED_FLAG",
+        "b": "CHEQUE_BOOK_AVAILED_FLAG",
+        "cramers_v": 0.5546
+      },
+      {
+        "a": "PMJDY_FLAG",
+        "b": "CHEQUE_ALLOWED_FLAG",
+        "cramers_v": 0.5273
+      },
+      {
+        "a": "INTERNET_BANKING_FLAG",
+        "b": "MOBILE_BANKING_FLAG",
+        "cramers_v": 0.5212
+      }
+    ],
+    "directional_associations": [
+      {
+        "a": "ACCOUNT_OPEN_MODE",
+        "b": "PMJDY_FLAG",
+        "u_a_given_b": 0.1474,
+        "u_b_given_a": 0.4184
+      },
+      {
+        "a": "ACCOUNT_OPEN_MODE",
+        "b": "CHEQUE_ALLOWED_FLAG",
+        "u_a_given_b": 0.1483,
+        "u_b_given_a": 0.3628
+      },
+      {
+        "a": "ACCOUNT_OPEN_MODE",
+        "b": "CHEQUE_BOOK_AVAILED_FLAG",
+        "u_a_given_b": 0.1341,
+        "u_b_given_a": 0.2822
+      },
+      {
+        "a": "PMJDY_FLAG",
+        "b": "CHEQUE_ALLOWED_FLAG",
+        "u_a_given_b": 0.2501,
+        "u_b_given_a": 0.2155
+      },
+      {
+        "a": "CHEQUE_ALLOWED_FLAG",
+        "b": "CHEQUE_BOOK_AVAILED_FLAG",
+        "u_a_given_b": 0.3355,
+        "u_b_given_a": 0.2886
+      },
+      {
+        "a": "AADHAR_FLAG",
+        "b": "SCHEME_TYPE",
+        "u_a_given_b": 0.3068,
+        "u_b_given_a": 0.3333
+      },
+      {
+        "a": "INTERNET_BANKING_FLAG",
+        "b": "MOBILE_BANKING_FLAG",
+        "u_a_given_b": 0.228,
+        "u_b_given_a": 0.2448
+      }
+    ],
+    "functional_dependencies": [],
+    "co_missing_pairs": [
+      {
+        "a": "LAST_FREEZE_DATE",
+        "b": "LAST_UNFREEZE_DATE",
+        "phi": 0.6239
+      }
+    ],
+    "corr_matrix": {
+      "columns": [
+        "NUM_CHEQUE_BOOKS",
+        "NUM_CREDIT_CARDS",
+        "LIEN_AMOUNT"
+      ],
+      "pearson": [
+        [
+          1.0,
+          0.0334,
+          0.0
+        ],
+        [
+          0.0334,
+          1.0,
+          -0.0002
+        ],
+        [
+          0.0,
+          -0.0002,
+          1.0
+        ]
+      ],
+      "spearman": [
+        [
+          1.0,
+          0.1084,
+          -0.003
+        ],
+        [
+          0.1084,
+          1.0,
+          -0.0054
+        ],
+        [
+          -0.003,
+          -0.0054,
+          1.0
+        ]
+      ]
+    },
+    "cramers_matrix": {
+      "columns": [
+        "ACCOUNT_OPEN_MODE",
+        "HAS_NOMINATION",
+        "PMJDY_FLAG",
+        "SCSS_FLAG",
+        "PMJJBY_FLAG",
+        "CHEQUE_ALLOWED_FLAG",
+        "CHEQUE_BOOK_AVAILED_FLAG",
+        "PAN_FLAG",
+        "AADHAR_FLAG",
+        "GSTN_FLAG",
+        "PASSPORT_FLAG",
+        "VOTER_ID_FLAG",
+        "KYC_RATING",
+        "INTERNET_BANKING_FLAG",
+        "MOBILE_BANKING_FLAG",
+        "UPI_FLAG",
+        "DEMAT_FLAG",
+        "MUTUAL_FUND_FLAG",
+        "MPASSBOOK_FLAG",
+        "FAST_TAG_FLAG",
+        "SSA_FLAG",
+        "PPF_FLAG",
+        "LOCKER_FLAG",
+        "ATM_ISSUED_FLAG",
+        "CREDIT_CARD_FLAG",
+        "ACCOUNT_STATUS",
+        "KYC_COMPLIANT_FLAG",
+        "AREA_CATEGORY",
+        "BRANCH_CATEGORY",
+        "SCHEME_TYPE"
+      ],
+      "values": [
+        [
+          1.0,
+          0.3415,
+          0.6316,
+          0.04,
+          0.0394,
+          0.6206,
+          0.5851,
+          0.3621,
+          0.2656,
+          0.0344,
+          0.1783,
+          0.1819,
+          0.156,
+          0.386,
+          0.3053,
+          0.0761,
+          0.0393,
+          0.021,
+          0.3135,
+          0.0217,
+          0.0565,
+          0.0756,
+          0.0746,
+          0.0786,
+          0.1109,
+          0.0452,
+          0.0379,
+          0.1536,
+          0.1043,
+          0.4829
+        ],
+        [
+          0.3415,
+          1.0,
+          0.1547,
+          0.0077,
+          0.0213,
+          0.0871,
+          0.0226,
+          0.0208,
+          0.0846,
+          0.0474,
+          0.0026,
+          0.0356,
+          0.0385,
+          0.0592,
+          0.0358,
+          0.0179,
+          0.0066,
+          0.0,
+          0.0708,
+          0.0076,
+          0.0013,
+          0.0018,
+          0.0223,
+          0.0805,
+          0.0165,
+          0.0091,
+          0.0024,
+          0.0186,
+          0.0555,
+          0.1817
+        ],
+        [
+          0.6316,
+          0.1547,
+          1.0,
+          0.0177,
+          0.0321,
+          0.5273,
+          0.4431,
+          0.3738,
+          0.0852,
+          0.0149,
+          0.0135,
+          0.0736,
+          0.1141,
+          0.3286,
+          0.3403,
+          0.1454,
+          0.0187,
+          0.0102,
+          0.183,
+          0.0102,
+          0.0295,
+          0.0372,
+          0.0341,
+          0.0151,
+          0.0606,
+          0.0039,
+          0.0015,
+          0.0606,
+          0.1199,
+          0.0789
+        ],
+        [
+          0.04,
+          0.0077,
+          0.0177,
+          1.0,
+          0.0066,
+          0.0216,
+          0.0382,
+          0.0231,
+          0.0,
+          0.0,
+          0.014,
+          0.0,
+          0.005,
+          0.0225,
+          0.0162,
+          0.0086,
+          0.117,
+          0.0324,
+          0.0145,
+          0.0482,
+          0.0008,
+          0.0505,
+          0.1746,
+          0.0027,
+          0.053,
+          0.0,
+          0.0096,
+          0.0218,
+          0.0308,
+          0.018
+        ],
+        [
+          0.0394,
+          0.0213,
+          0.0321,
+          0.0066,
+          1.0,
+          0.0253,
+          0.038,
+          0.0451,
+          0.021,
+          0.0052,
+          0.0,
+          0.0104,
+          0.01,
+          0.0216,
+          0.0242,
+          0.0033,
+          0.0171,
+          0.0151,
+          0.041,
+          0.0068,
+          0.032,
+          0.0379,
+          0.011,
+          0.0,
+          0.0215,
+          0.0028,
+          0.0023,
+          0.0203,
+          0.016,
+          0.0144
+        ],
+        [
+          0.6206,
+          0.0871,
+          0.5273,
+          0.0216,
+          0.0253,
+          1.0,
+          0.5546,
+          0.2891,
+          0.0824,
+          0.0182,
+          0.0155,
+          0.0314,
+          0.1163,
+          0.3355,
+          0.2697,
+          0.0442,
+          0.0202,
+          0.0117,
+          0.1943,
+          0.0126,
+          0.0338,
+          0.0426,
+          0.0406,
+          0.0103,
+          0.0664,
+          0.0094,
+          0.0,
+          0.0892,
+          0.157,
+          0.1319
+        ],
+        [
+          0.5851,
+          0.0226,
+          0.4431,
+          0.0382,
+          0.038,
+          0.5546,
+          1.0,
+          0.3558,
+          0.1146,
+          0.0315,
+          0.008,
+          0.0301,
+          0.0814,
+          0.3328,
+          0.2702,
+          0.0539,
+          0.0355,
+          0.0204,
+          0.115,
+          0.021,
+          0.0427,
+          0.0617,
+          0.0674,
+          0.0434,
+          0.0965,
+          0.0059,
+          0.01,
+          0.1707,
+          0.173,
+          0.1539
+        ],
+        [
+          0.3621,
+          0.0208,
+          0.3738,
+          0.0231,
+          0.0451,
+          0.2891,
+          0.3558,
+          1.0,
+          0.039,
+          0.0203,
+          0.0002,
+          0.0136,
+          0.0973,
+          0.2344,
+          0.2329,
+          0.0692,
+          0.0256,
+          0.0127,
+          0.1199,
+          0.0135,
+          0.0328,
+          0.046,
+          0.0432,
+          0.0324,
+          0.0806,
+          0.0,
+          0.0083,
+          0.118,
+          0.1176,
+          0.1041
+        ],
+        [
+          0.2656,
+          0.0846,
+          0.0852,
+          0.0,
+          0.021,
+          0.0824,
+          0.1146,
+          0.039,
+          1.0,
+          0.1613,
+          0.0815,
+          0.2293,
+          0.122,
+          0.0622,
+          0.0835,
+          0.0863,
+          0.0007,
+          0.0032,
+          0.0215,
+          0.0,
+          0.0,
+          0.0039,
+          0.0029,
+          0.0668,
+          0.0399,
+          0.0479,
+          0.0192,
+          0.0353,
+          0.0486,
+          0.5783
+        ],
+        [
+          0.0344,
+          0.0474,
+          0.0149,
+          0.0,
+          0.0052,
+          0.0182,
+          0.0315,
+          0.0203,
+          0.1613,
+          1.0,
+          0.0,
+          0.0037,
+          0.0577,
+          0.0276,
+          0.0245,
+          0.0628,
+          0.0,
+          0.0069,
+          0.0,
+          0.0073,
+          0.0,
+          0.0039,
+          0.0021,
+          0.0475,
+          0.0194,
+          0.0,
+          0.01,
+          0.0165,
+          0.0252,
+          0.2635
+        ],
+        [
+          0.1783,
+          0.0026,
+          0.0135,
+          0.014,
+          0.0,
+          0.0155,
+          0.008,
+          0.0002,
+          0.0815,
+          0.0,
+          1.0,
+          0.0,
+          0.0435,
+          0.0128,
+          0.0067,
+          0.0055,
+          0.0128,
+          0.0,
+          0.0029,
+          0.0,
+          0.0025,
+          0.0043,
+          0.0269,
+          0.0,
+          0.0175,
+          0.0,
+          0.0073,
+          0.0,
+          0.0137,
+          0.0032
+        ],
+        [
+          0.1819,
+          0.0356,
+          0.0736,
+          0.0,
+          0.0104,
+          0.0314,
+          0.0301,
+          0.0136,
+          0.2293,
+          0.0037,
+          0.0,
+          1.0,
+          0.0103,
+          0.0076,
+          0.0034,
+          0.0,
+          0.0,
+          0.0083,
+          0.0603,
+          0.0019,
+          0.0086,
+          0.0082,
+          0.0011,
+          0.0354,
+          0.0082,
+          0.0,
+          0.0086,
+          0.0487,
+          0.0194,
+          0.0147
+        ],
+        [
+          0.156,
+          0.0385,
+          0.1141,
+          0.005,
+          0.01,
+          0.1163,
+          0.0814,
+          0.0973,
+          0.122,
+          0.0577,
+          0.0435,
+          0.0103,
+          1.0,
+          0.0884,
+          0.0732,
+          0.0334,
+          0.0075,
+          0.0082,
+          0.0766,
+          0.0,
+          0.0016,
+          0.0156,
+          0.006,
+          0.0337,
+          0.0311,
+          0.0347,
+          0.0139,
+          0.0297,
+          0.0141,
+          0.1949
+        ],
+        [
+          0.386,
+          0.0592,
+          0.3286,
+          0.0225,
+          0.0216,
+          0.3355,
+          0.3328,
+          0.2344,
+          0.0622,
+          0.0276,
+          0.0128,
+          0.0076,
+          0.0884,
+          1.0,
+          0.5212,
+          0.1087,
+          0.0364,
+          0.0211,
+          0.1703,
+          0.0187,
+          0.0336,
+          0.0609,
+          0.0514,
+          0.0584,
+          0.0894,
+          0.0122,
+          0.0007,
+          0.1166,
+          0.1284,
+          0.0879
+        ],
+        [
+          0.3053,
+          0.0358,
+          0.3403,
+          0.0162,
+          0.0242,
+          0.2697,
+          0.2702,
+          0.2329,
+          0.0835,
+          0.0245,
+          0.0067,
+          0.0034,
+          0.0732,
+          0.5212,
+          1.0,
+          0.236,
+          0.0258,
+          0.0122,
+          0.1982,
+          0.0118,
+          0.027,
+          0.0405,
+          0.0326,
+          0.1198,
+          0.064,
+          0.0091,
+          0.0056,
+          0.0841,
+          0.0841,
+          0.0779
+        ],
+        [
+          0.0761,
+          0.0179,
+          0.1454,
+          0.0086,
+          0.0033,
+          0.0442,
+          0.0539,
+          0.0692,
+          0.0863,
+          0.0628,
+          0.0055,
+          0.0,
+          0.0334,
+          0.1087,
+          0.236,
+          1.0,
+          0.0053,
+          0.0014,
+          0.1007,
+          0.0,
+          0.0087,
+          0.0115,
+          0.0084,
+          0.2359,
+          0.0199,
+          0.0592,
+          0.0122,
+          0.009,
+          0.0139,
+          0.1334
+        ],
+        [
+          0.0393,
+          0.0066,
+          0.0187,
+          0.117,
+          0.0171,
+          0.0202,
+          0.0355,
+          0.0256,
+          0.0007,
+          0.0,
+          0.0128,
+          0.0,
+          0.0075,
+          0.0364,
+          0.0258,
+          0.0053,
+          1.0,
+          0.1413,
+          0.0302,
+          0.1163,
+          0.0489,
+          0.1226,
+          0.174,
+          0.0061,
+          0.1688,
+          0.0,
+          0.0053,
+          0.0161,
+          0.0266,
+          0.1137
+        ],
+        [
+          0.021,
+          0.0,
+          0.0102,
+          0.0324,
+          0.0151,
+          0.0117,
+          0.0204,
+          0.0127,
+          0.0032,
+          0.0069,
+          0.0,
+          0.0083,
+          0.0082,
+          0.0211,
+          0.0122,
+          0.0014,
+          0.1413,
+          1.0,
+          0.0125,
+          0.0448,
+          0.0121,
+          0.0445,
+          0.0434,
+          0.0026,
+          0.0486,
+          0.0,
+          0.0,
+          0.006,
+          0.0038,
+          0.06
+        ],
+        [
+          0.3135,
+          0.0708,
+          0.183,
+          0.0145,
+          0.041,
+          0.1943,
+          0.115,
+          0.1199,
+          0.0215,
+          0.0,
+          0.0029,
+          0.0603,
+          0.0766,
+          0.1703,
+          0.1982,
+          0.1007,
+          0.0302,
+          0.0125,
+          1.0,
+          0.0167,
+          0.0356,
+          0.0538,
+          0.0269,
+          0.037,
+          0.0924,
+          0.0102,
+          0.0065,
+          0.0236,
+          0.0669,
+          0.024
+        ],
+        [
+          0.0217,
+          0.0076,
+          0.0102,
+          0.0482,
+          0.0068,
+          0.0126,
+          0.021,
+          0.0135,
+          0.0,
+          0.0073,
+          0.0,
+          0.0019,
+          0.0,
+          0.0187,
+          0.0118,
+          0.0,
+          0.1163,
+          0.0448,
+          0.0167,
+          1.0,
+          0.0166,
+          0.0599,
+          0.0967,
+          0.0,
+          0.0764,
+          0.0,
+          0.0033,
+          0.0116,
+          0.0221,
+          0.0399
+        ],
+        [
+          0.0565,
+          0.0013,
+          0.0295,
+          0.0008,
+          0.032,
+          0.0338,
+          0.0427,
+          0.0328,
+          0.0,
+          0.0,
+          0.0025,
+          0.0086,
+          0.0016,
+          0.0336,
+          0.027,
+          0.0087,
+          0.0489,
+          0.0121,
+          0.0356,
+          0.0166,
+          1.0,
+          0.0688,
+          0.0174,
+          0.0073,
+          0.0431,
+          0.0,
+          0.0,
+          0.0088,
+          0.0162,
+          0.0176
+        ],
+        [
+          0.0756,
+          0.0018,
+          0.0372,
+          0.0505,
+          0.0379,
+          0.0426,
+          0.0617,
+          0.046,
+          0.0039,
+          0.0039,
+          0.0043,
+          0.0082,
+          0.0156,
+          0.0609,
+          0.0405,
+          0.0115,
+          0.1226,
+          0.0445,
+          0.0538,
+          0.0599,
+          0.0688,
+          1.0,
+          0.0807,
+          0.0063,
+          0.0936,
+          0.0,
+          0.0023,
+          0.011,
+          0.0308,
+          0.042
+        ],
+        [
+          0.0746,
+          0.0223,
+          0.0341,
+          0.1746,
+          0.011,
+          0.0406,
+          0.0674,
+          0.0432,
+          0.0029,
+          0.0021,
+          0.0269,
+          0.0011,
+          0.006,
+          0.0514,
+          0.0326,
+          0.0084,
+          0.174,
+          0.0434,
+          0.0269,
+          0.0967,
+          0.0174,
+          0.0807,
+          1.0,
+          0.0018,
+          0.1077,
+          0.0,
+          0.0183,
+          0.0428,
+          0.0608,
+          0.0621
+        ],
+        [
+          0.0786,
+          0.0805,
+          0.0151,
+          0.0027,
+          0.0,
+          0.0103,
+          0.0434,
+          0.0324,
+          0.0668,
+          0.0475,
+          0.0,
+          0.0354,
+          0.0337,
+          0.0584,
+          0.1198,
+          0.2359,
+          0.0061,
+          0.0026,
+          0.037,
+          0.0,
+          0.0073,
+          0.0063,
+          0.0018,
+          1.0,
+          0.0141,
+          0.023,
+          0.0051,
+          0.031,
+          0.018,
+          0.0949
+        ],
+        [
+          0.1109,
+          0.0165,
+          0.0606,
+          0.053,
+          0.0215,
+          0.0664,
+          0.0965,
+          0.0806,
+          0.0399,
+          0.0194,
+          0.0175,
+          0.0082,
+          0.0311,
+          0.0894,
+          0.064,
+          0.0199,
+          0.1688,
+          0.0486,
+          0.0924,
+          0.0764,
+          0.0431,
+          0.0936,
+          0.1077,
+          0.0141,
+          1.0,
+          0.0019,
+          0.0058,
+          0.0345,
+          0.0466,
+          0.0903
+        ],
+        [
+          0.0452,
+          0.0091,
+          0.0039,
+          0.0,
+          0.0028,
+          0.0094,
+          0.0059,
+          0.0,
+          0.0479,
+          0.0,
+          0.0,
+          0.0,
+          0.0347,
+          0.0122,
+          0.0091,
+          0.0592,
+          0.0,
+          0.0,
+          0.0102,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.023,
+          0.0019,
+          1.0,
+          0.0,
+          0.0112,
+          0.0063,
+          0.0532
+        ],
+        [
+          0.0379,
+          0.0024,
+          0.0015,
+          0.0096,
+          0.0023,
+          0.0,
+          0.01,
+          0.0083,
+          0.0192,
+          0.01,
+          0.0073,
+          0.0086,
+          0.0139,
+          0.0007,
+          0.0056,
+          0.0122,
+          0.0053,
+          0.0,
+          0.0065,
+          0.0033,
+          0.0,
+          0.0023,
+          0.0183,
+          0.0051,
+          0.0058,
+          0.0,
+          1.0,
+          0.0,
+          0.0026,
+          0.0418
+        ],
+        [
+          0.1536,
+          0.0186,
+          0.0606,
+          0.0218,
+          0.0203,
+          0.0892,
+          0.1707,
+          0.118,
+          0.0353,
+          0.0165,
+          0.0,
+          0.0487,
+          0.0297,
+          0.1166,
+          0.0841,
+          0.009,
+          0.0161,
+          0.006,
+          0.0236,
+          0.0116,
+          0.0088,
+          0.011,
+          0.0428,
+          0.031,
+          0.0345,
+          0.0112,
+          0.0,
+          1.0,
+          0.3871,
+          0.0364
+        ],
+        [
+          0.1043,
+          0.0555,
+          0.1199,
+          0.0308,
+          0.016,
+          0.157,
+          0.173,
+          0.1176,
+          0.0486,
+          0.0252,
+          0.0137,
+          0.0194,
+          0.0141,
+          0.1284,
+          0.0841,
+          0.0139,
+          0.0266,
+          0.0038,
+          0.0669,
+          0.0221,
+          0.0162,
+          0.0308,
+          0.0608,
+          0.018,
+          0.0466,
+          0.0063,
+          0.0026,
+          0.3871,
+          1.0,
+          0.0217
+        ],
+        [
+          0.4829,
+          0.1817,
+          0.0789,
+          0.018,
+          0.0144,
+          0.1319,
+          0.1539,
+          0.1041,
+          0.5783,
+          0.2635,
+          0.0032,
+          0.0147,
+          0.1949,
+          0.0879,
+          0.0779,
+          0.1334,
+          0.1137,
+          0.06,
+          0.024,
+          0.0399,
+          0.0176,
+          0.042,
+          0.0621,
+          0.0949,
+          0.0903,
+          0.0532,
+          0.0418,
+          0.0364,
+          0.0217,
+          1.0
+        ]
+      ]
+    }
+  }
+}

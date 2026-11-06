@@ -1,0 +1,4058 @@
+{
+  "types": {
+    "ACCOUNT_NUMBER": {
+      "semantic_type": "categorical",
+      "confidence": 0.7,
+      "evidence": "200 levels, ratio=0.002",
+      "source": "inferred",
+      "physical_dtype": "string",
+      "family": "categorical",
+      "parse_fail_rate": 0.0,
+      "is_primary_key": true,
+      "is_foreign_key": true,
+      "feature_role": "key"
+    },
+    "MODE_OF_TRANSACTION": {
+      "semantic_type": "categorical",
+      "confidence": 0.7,
+      "evidence": "8 levels, ratio=0.000",
+      "source": "inferred",
+      "physical_dtype": "string",
+      "family": "categorical",
+      "parse_fail_rate": 0.0,
+      "is_primary_key": false,
+      "is_foreign_key": false,
+      "feature_role": "feature"
+    },
+    "BENEFICIARY_NAME": {
+      "semantic_type": "free_text",
+      "confidence": 1.0,
+      "evidence": "config override",
+      "source": "override",
+      "physical_dtype": "string",
+      "family": "text",
+      "parse_fail_rate": 0.0,
+      "is_primary_key": false,
+      "is_foreign_key": false,
+      "feature_role": "feature"
+    },
+    "BENEFICIARY_IFSC": {
+      "semantic_type": "bank_code",
+      "confidence": 1.0,
+      "evidence": "config override",
+      "source": "override",
+      "physical_dtype": "string",
+      "family": "pattern",
+      "parse_fail_rate": 0.0,
+      "is_primary_key": false,
+      "is_foreign_key": false,
+      "feature_role": "feature"
+    },
+    "BENEFICIARY_ACCOUNT_NUMBER": {
+      "semantic_type": "unknown",
+      "confidence": 0.3,
+      "evidence": "no rule matched",
+      "source": "inferred",
+      "physical_dtype": "string",
+      "family": "other",
+      "parse_fail_rate": 0.0,
+      "is_primary_key": false,
+      "is_foreign_key": false,
+      "feature_role": "feature"
+    },
+    "BENEFICIARY_BANK": {
+      "semantic_type": "categorical",
+      "confidence": 0.7,
+      "evidence": "66 levels, ratio=0.009",
+      "source": "inferred",
+      "physical_dtype": "string",
+      "family": "categorical",
+      "parse_fail_rate": 0.0,
+      "is_primary_key": false,
+      "is_foreign_key": false,
+      "feature_role": "feature"
+    },
+    "BENEFICIARY_VIRTUAL_ADDRESS": {
+      "semantic_type": "vpa",
+      "confidence": 1.0,
+      "evidence": "config override",
+      "source": "override",
+      "physical_dtype": "string",
+      "family": "pattern",
+      "parse_fail_rate": 0.0,
+      "is_primary_key": false,
+      "is_foreign_key": false,
+      "feature_role": "feature"
+    },
+    "TRANSACTION_TYPE": {
+      "semantic_type": "categorical",
+      "confidence": 0.7,
+      "evidence": "13 levels, ratio=0.000",
+      "source": "inferred",
+      "physical_dtype": "string",
+      "family": "categorical",
+      "parse_fail_rate": 0.0,
+      "is_primary_key": false,
+      "is_foreign_key": false,
+      "feature_role": "feature"
+    },
+    "TRANSACTION_SUB_TYPE": {
+      "semantic_type": "categorical",
+      "confidence": 0.7,
+      "evidence": "3 levels, ratio=0.000",
+      "source": "inferred",
+      "physical_dtype": "string",
+      "family": "categorical",
+      "parse_fail_rate": 0.0,
+      "is_primary_key": false,
+      "is_foreign_key": false,
+      "feature_role": "feature"
+    },
+    "CREDIT_DEBIT_INDICATOR": {
+      "semantic_type": "binary",
+      "confidence": 0.7,
+      "evidence": "2 levels, ratio=0.000",
+      "source": "inferred",
+      "physical_dtype": "string",
+      "family": "categorical",
+      "parse_fail_rate": 0.0,
+      "is_primary_key": false,
+      "is_foreign_key": false,
+      "feature_role": "feature"
+    },
+    "TRANSACTION_AMOUNT": {
+      "semantic_type": "amount",
+      "confidence": 1.0,
+      "evidence": "config override",
+      "source": "override",
+      "physical_dtype": "float64",
+      "family": "numeric",
+      "parse_fail_rate": 0.0,
+      "is_primary_key": false,
+      "is_foreign_key": false,
+      "feature_role": "feature"
+    },
+    "TRANSACTION_DATE": {
+      "semantic_type": "datetime",
+      "confidence": 1.0,
+      "evidence": "config override",
+      "source": "override",
+      "physical_dtype": "string",
+      "family": "datetime",
+      "parse_fail_rate": 0.0272,
+      "is_primary_key": false,
+      "is_foreign_key": false,
+      "feature_role": "feature"
+    },
+    "TRANSACTION_ID": {
+      "semantic_type": "amount_string",
+      "confidence": 0.8,
+      "evidence": "numeric_parse=0.97",
+      "source": "inferred",
+      "physical_dtype": "string",
+      "family": "numeric",
+      "parse_fail_rate": 0.0272,
+      "is_primary_key": false,
+      "is_foreign_key": false,
+      "feature_role": "feature"
+    },
+    "TRANSACTION_NARRATION": {
+      "semantic_type": "free_text",
+      "confidence": 0.7,
+      "evidence": "high-card, avg_len=48.6",
+      "source": "inferred",
+      "physical_dtype": "string",
+      "family": "text",
+      "parse_fail_rate": 0.0,
+      "is_primary_key": false,
+      "is_foreign_key": false,
+      "feature_role": "feature"
+    },
+    "REMITTER_NAME": {
+      "semantic_type": "free_text",
+      "confidence": 1.0,
+      "evidence": "config override",
+      "source": "override",
+      "physical_dtype": "string",
+      "family": "text",
+      "parse_fail_rate": 0.0,
+      "is_primary_key": false,
+      "is_foreign_key": false,
+      "feature_role": "feature"
+    },
+    "REMITTER_ACCOUNT_NUMBER": {
+      "semantic_type": "unknown",
+      "confidence": 0.3,
+      "evidence": "no rule matched",
+      "source": "inferred",
+      "physical_dtype": "string",
+      "family": "other",
+      "parse_fail_rate": 0.0,
+      "is_primary_key": false,
+      "is_foreign_key": false,
+      "feature_role": "feature"
+    },
+    "REMITTER_IFSC": {
+      "semantic_type": "bank_code",
+      "confidence": 1.0,
+      "evidence": "config override",
+      "source": "override",
+      "physical_dtype": "string",
+      "family": "pattern",
+      "parse_fail_rate": 0.0,
+      "is_primary_key": false,
+      "is_foreign_key": false,
+      "feature_role": "feature"
+    },
+    "REMITTER_BANK": {
+      "semantic_type": "categorical",
+      "confidence": 0.7,
+      "evidence": "87 levels, ratio=0.011",
+      "source": "inferred",
+      "physical_dtype": "string",
+      "family": "categorical",
+      "parse_fail_rate": 0.0,
+      "is_primary_key": false,
+      "is_foreign_key": false,
+      "feature_role": "feature"
+    },
+    "REMITTER_VIRTUAL_ADDRESS": {
+      "semantic_type": "vpa",
+      "confidence": 1.0,
+      "evidence": "config override",
+      "source": "override",
+      "physical_dtype": "string",
+      "family": "pattern",
+      "parse_fail_rate": 0.0,
+      "is_primary_key": false,
+      "is_foreign_key": false,
+      "feature_role": "feature"
+    },
+    "INITIATOR_APPLICATION_NAME": {
+      "semantic_type": "free_text",
+      "confidence": 1.0,
+      "evidence": "config override",
+      "source": "override",
+      "physical_dtype": "string",
+      "family": "text",
+      "parse_fail_rate": 0.0,
+      "is_primary_key": false,
+      "is_foreign_key": false,
+      "feature_role": "feature"
+    },
+    "TRANSACTION_INITIATOR_DETAILS": {
+      "semantic_type": "categorical",
+      "confidence": 0.7,
+      "evidence": "7 levels, ratio=0.000",
+      "source": "inferred",
+      "physical_dtype": "string",
+      "family": "categorical",
+      "parse_fail_rate": 0.0,
+      "is_primary_key": false,
+      "is_foreign_key": false,
+      "feature_role": "feature"
+    },
+    "INITIATOR_DEVICE_OS": {
+      "semantic_type": "categorical",
+      "confidence": 0.7,
+      "evidence": "324 levels, ratio=0.003",
+      "source": "inferred",
+      "physical_dtype": "string",
+      "family": "categorical",
+      "parse_fail_rate": 0.0,
+      "is_primary_key": false,
+      "is_foreign_key": false,
+      "feature_role": "feature"
+    },
+    "MOBILE_NUMBER": {
+      "semantic_type": "phone",
+      "confidence": 1.0,
+      "evidence": "config override",
+      "source": "override",
+      "physical_dtype": "float64",
+      "family": "pattern",
+      "parse_fail_rate": 0.0,
+      "is_primary_key": false,
+      "is_foreign_key": false,
+      "feature_role": "feature"
+    },
+    "INITIATOR_IP_ADDRESS": {
+      "semantic_type": "ip_address",
+      "confidence": 1.0,
+      "evidence": "config override",
+      "source": "override",
+      "physical_dtype": "string",
+      "family": "pattern",
+      "parse_fail_rate": 0.0,
+      "is_primary_key": false,
+      "is_foreign_key": false,
+      "feature_role": "feature"
+    },
+    "TRANSACTION_TIME": {
+      "semantic_type": "datetime",
+      "confidence": 1.0,
+      "evidence": "config override",
+      "source": "override",
+      "physical_dtype": "string",
+      "family": "datetime",
+      "parse_fail_rate": 0.0,
+      "is_primary_key": false,
+      "is_foreign_key": false,
+      "feature_role": "feature"
+    },
+    "CUSTOMER_ID": {
+      "semantic_type": "categorical",
+      "confidence": 0.7,
+      "evidence": "2867 levels, ratio=0.035",
+      "source": "inferred",
+      "physical_dtype": "string",
+      "family": "categorical",
+      "parse_fail_rate": 0.0,
+      "is_primary_key": false,
+      "is_foreign_key": true,
+      "feature_role": "key"
+    }
+  },
+  "profiles": {
+    "ACCOUNT_NUMBER": {
+      "_type": "categorical",
+      "_family": "categorical",
+      "count": 128048,
+      "n_present": 128048,
+      "n_missing": 0,
+      "pct_missing": 0.0,
+      "n_unique": 200,
+      "cardinality_ratio": 0.001562,
+      "memory_bytes": 9219588,
+      "n_blank": 0,
+      "top_values": [
+        {
+          "value": "3D28912983C147EC568B990B0AF067D6579F17ED61C018D818AF89A607CA7EFB",
+          "count": 8369,
+          "pct": 0.06535830313632388
+        },
+        {
+          "value": "9F0E0E33C0E945FC854A503AE4194901AB355DD1EADC65FC50AD44E2A50D4415",
+          "count": 2957,
+          "pct": 0.023092902661501935
+        },
+        {
+          "value": "627B72A2CD41EA618A0DF1D6AE9A72D490DCAB24BE606825E00EA7C4B724717F",
+          "count": 2834,
+          "pct": 0.022132325377983257
+        },
+        {
+          "value": "14015BEBED4570991634B845DE94DF1549BFE3E04C1D506B71D67E2EF05E3004",
+          "count": 2777,
+          "pct": 0.02168717980757216
+        },
+        {
+          "value": "746C86572DD84B19EE0F55A0B2DB318C8F25DEFA7E09B7F67A12C1C4049303AE",
+          "count": 2772,
+          "pct": 0.021648131950518557
+        },
+        {
+          "value": "C583C3EEC82DFEF1F5DB88B499233AD57B35123784E253DE1804FB07C3A79B73",
+          "count": 2688,
+          "pct": 0.02099212795201799
+        },
+        {
+          "value": "7303534511AE37A0FF80D6B1DFC5D12CD3CFC843E27862A9A37F8FAAD1F59C3B",
+          "count": 2670,
+          "pct": 0.020851555666625016
+        },
+        {
+          "value": "B89489858614B2EA668CC845C1210478DC6903D6C4C252B62289E3C8E885C5E4",
+          "count": 2590,
+          "pct": 0.020226789953767338
+        },
+        {
+          "value": "49C0744D5B6FB62A088EB39423547363D4963B69F4DCB9C5AC2EBD00DB9EAEF1",
+          "count": 2517,
+          "pct": 0.019656691240784705
+        },
+        {
+          "value": "48D80AD98D04DFFD2C0838EC44A3C01EFDB59113AC892D41429827E61497E87A",
+          "count": 2476,
+          "pct": 0.019336498812945146
+        },
+        {
+          "value": "73D07CB0EC0728EB10102E0D8CEE6B3CAC558873E15E113AD36F24DE9549D6D5",
+          "count": 2461,
+          "pct": 0.019219355241784333
+        },
+        {
+          "value": "1C8D82FADB27CEC01BA62559723498DA02C94E14E78922B2501FAA85554F5A30",
+          "count": 2125,
+          "pct": 0.01659533924778208
+        },
+        {
+          "value": "03A8CB228E6ED0E3CBBA15B05D7E1ABA29A60AC9CA18583BAE2CEE0BF65A555E",
+          "count": 2084,
+          "pct": 0.01627514681994252
+        },
+        {
+          "value": "43F8A9E955FF957F1BAD8B4AF27757981C4BCE02F38F3E985D777E6F16F3AC3F",
+          "count": 2076,
+          "pct": 0.016212670248656753
+        },
+        {
+          "value": "FC6FFD34B200E460CE915F8E03903E14DCD22DAD039A947B70D5793598A5DE05",
+          "count": 1996,
+          "pct": 0.015587904535799075
+        },
+        {
+          "value": "B9F13532B6E85110AA7AE22C2FF1F8743220B3F291CB8ED439D5C9939FDF154A",
+          "count": 1874,
+          "pct": 0.014635136823691115
+        },
+        {
+          "value": "FEDEFD3CAC87F8F3A60D2596D11D2D7FB0823B5088197BC1CFAC3134A603E1F2",
+          "count": 1635,
+          "pct": 0.012768649256528802
+        },
+        {
+          "value": "BFC74A3E453B8F7A29F32F2EFD6C82B6104684CEFC0F92D5D89F925CDBFEAC31",
+          "count": 1620,
+          "pct": 0.012651505685367987
+        },
+        {
+          "value": "0A1E101BF9EF7C6930706821814789DCB08A84F2C98032D3D1C4A65C8A5BAEE1",
+          "count": 1606,
+          "pct": 0.012542171685617894
+        },
+        {
+          "value": "C00E9FFD969F783A5FF252FF8F328001AB38F5096A12A174E4DAF6A1FD8912AB",
+          "count": 1595,
+          "pct": 0.012456266400099962
+        }
+      ],
+      "dominance": 0.06535830313632388,
+      "is_constant": false,
+      "is_near_constant": false,
+      "entropy": 4.656893642522694,
+      "normalized_entropy": 0.878938221391739,
+      "n_levels": 200,
+      "max_class_share": 0.06535830313632388,
+      "imbalance_ratio": 2789.6666666666665,
+      "gini_impurity": 0.9854705574503104,
+      "n_rare_levels": 169,
+      "rare_level_mass": 0.47176058977883295,
+      "case_whitespace_variants": 0,
+      "imbalanced": false
+    },
+    "MODE_OF_TRANSACTION": {
+      "_type": "categorical",
+      "_family": "categorical",
+      "count": 128048,
+      "n_present": 128048,
+      "n_missing": 0,
+      "pct_missing": 0.0,
+      "n_unique": 8,
+      "cardinality_ratio": 6.2e-05,
+      "memory_bytes": 1417002,
+      "n_blank": 0,
+      "top_values": [
+        {
+          "value": "UPI",
+          "count": 117022,
+          "pct": 0.9138916656253905
+        },
+        {
+          "value": "IMPS",
+          "count": 4531,
+          "pct": 0.03538516806197676
+        },
+        {
+          "value": "ATM",
+          "count": 2235,
+          "pct": 0.01745439210296139
+        },
+        {
+          "value": "NEFT",
+          "count": 2203,
+          "pct": 0.01720448581781832
+        },
+        {
+          "value": "NRTGS",
+          "count": 804,
+          "pct": 0.006278895414219668
+        },
+        {
+          "value": "IBS",
+          "count": 641,
+          "pct": 0.005005935274272148
+        },
+        {
+          "value": "MBS",
+          "count": 434,
+          "pct": 0.003389353992252905
+        },
+        {
+          "value": "POS",
+          "count": 178,
+          "pct": 0.0013901037111083343
+        }
+      ],
+      "dominance": 0.9138916656253905,
+      "is_constant": false,
+      "is_near_constant": false,
+      "entropy": 0.4278558049290925,
+      "normalized_entropy": 0.20575514932891917,
+      "n_levels": 8,
+      "max_class_share": 0.9138916656253905,
+      "imbalance_ratio": 657.4269662921348,
+      "gini_impurity": 0.16287135922133034,
+      "n_rare_levels": 4,
+      "rare_level_mass": 0.016064288391853056,
+      "case_whitespace_variants": 0,
+      "imbalanced": false
+    },
+    "BENEFICIARY_NAME": {
+      "_type": "free_text",
+      "_family": "text",
+      "count": 128048,
+      "n_present": 124621,
+      "n_missing": 3427,
+      "pct_missing": 0.026763,
+      "n_unique": 24375,
+      "cardinality_ratio": 0.195593,
+      "memory_bytes": 3083975,
+      "n_blank": 0,
+      "top_values": [
+        {
+          "value": "RAM SINGH SO SHMUKH RAM",
+          "count": 6706,
+          "pct": 0.05381115542324327
+        },
+        {
+          "value": "PREM SUKH DASS OM PARKASH",
+          "count": 2773,
+          "pct": 0.022251466446265075
+        },
+        {
+          "value": "SAHIL",
+          "count": 1685,
+          "pct": 0.013520995658837595
+        },
+        {
+          "value": "VIRENDRA NATH CHOUHAN",
+          "count": 1478,
+          "pct": 0.011859959396891375
+        },
+        {
+          "value": "ASHA RANI",
+          "count": 1169,
+          "pct": 0.009380441498623828
+        },
+        {
+          "value": "RAM SINGH S/O SHMUKH RAM",
+          "count": 1165,
+          "pct": 0.009348344179552402
+        },
+        {
+          "value": "VISHAL KUMAR",
+          "count": 1096,
+          "pct": 0.008794665425570329
+        },
+        {
+          "value": "NIRMALA DEVI",
+          "count": 1092,
+          "pct": 0.008762568106498905
+        },
+        {
+          "value": "CHAPTER 15",
+          "count": 1003,
+          "pct": 0.008048402757159708
+        },
+        {
+          "value": "REAL FAST FOOD",
+          "count": 981,
+          "pct": 0.007871867502266873
+        },
+        {
+          "value": "PAWAN KUMAR",
+          "count": 960,
+          "pct": 0.007703356577141894
+        },
+        {
+          "value": "RAJ KUMAR",
+          "count": 943,
+          "pct": 0.00756694297108834
+        },
+        {
+          "value": "KIRAN",
+          "count": 894,
+          "pct": 0.007173750812463389
+        },
+        {
+          "value": "ASHOK KUMAR SO SOHAN LAL",
+          "count": 893,
+          "pct": 0.007165726482695533
+        },
+        {
+          "value": "SANT RAM SO GUGAN RAM",
+          "count": 891,
+          "pct": 0.007149677823159821
+        },
+        {
+          "value": "SUNIL KUMAR",
+          "count": 851,
+          "pct": 0.006828704632445575
+        },
+        {
+          "value": "RAKESH KUMAR S/O EMI LAL",
+          "count": 806,
+          "pct": 0.006467609792892049
+        },
+        {
+          "value": "PREM SINGH MOHAN LAL",
+          "count": 795,
+          "pct": 0.006379342165445631
+        },
+        {
+          "value": "RAHUL",
+          "count": 780,
+          "pct": 0.006258977218927789
+        },
+        {
+          "value": "SHISHPAL SO MOHAN LAL",
+          "count": 713,
+          "pct": 0.005721347124481428
+        }
+      ],
+      "dominance": 0.05381115542324327,
+      "is_constant": false,
+      "is_near_constant": false,
+      "entropy": 7.642254263626085,
+      "normalized_entropy": 0.7565604629601648,
+      "char_len_mean": 16.397300615466094,
+      "char_len_max": 66,
+      "token_count_mean": 2.7909260878985083,
+      "whitespace_only_frac": 0.0,
+      "embedded_digit_frac": 0.048113881288065416,
+      "note": "vectorization deferred (requires_human / later stage)"
+    },
+    "BENEFICIARY_IFSC": {
+      "_type": "bank_code",
+      "_family": "pattern",
+      "count": 128048,
+      "n_present": 124226,
+      "n_missing": 3822,
+      "pct_missing": 0.029848,
+      "n_unique": 9729,
+      "cardinality_ratio": 0.078317,
+      "memory_bytes": 2407013,
+      "n_blank": 0,
+      "top_values": [
+        {
+          "value": "PUNB0000100",
+          "count": 47434,
+          "pct": 0.3818363305588202
+        },
+        {
+          "value": "YESB0PTMUPI",
+          "count": 8649,
+          "pct": 0.06962310627404891
+        },
+        {
+          "value": "YESB0YBLUPI",
+          "count": 5714,
+          "pct": 0.04599681226152335
+        },
+        {
+          "value": "PUNB0000130",
+          "count": 3597,
+          "pct": 0.028955291162880557
+        },
+        {
+          "value": "UTIB0000553",
+          "count": 2679,
+          "pct": 0.021565533785197946
+        },
+        {
+          "value": "PUNB0000110",
+          "count": 2585,
+          "pct": 0.020808848389226087
+        },
+        {
+          "value": "YESB0MCHUPI",
+          "count": 1797,
+          "pct": 0.01446557081448328
+        },
+        {
+          "value": "AIRP0000001",
+          "count": 1441,
+          "pct": 0.01159982612335582
+        },
+        {
+          "value": "ICIC0DC0099",
+          "count": 1434,
+          "pct": 0.01154347721088983
+        },
+        {
+          "value": "IPOS0000001",
+          "count": 1176,
+          "pct": 0.00946661729428622
+        },
+        {
+          "value": "HDFC0MERUPI",
+          "count": 1164,
+          "pct": 0.009370019158630238
+        },
+        {
+          "value": "PUNB0044010",
+          "count": 1090,
+          "pct": 0.00877433065541835
+        },
+        {
+          "value": "PUNB0000200",
+          "count": 968,
+          "pct": 0.007792249609582535
+        },
+        {
+          "value": "CNRB0000033",
+          "count": 923,
+          "pct": 0.007430006600872603
+        },
+        {
+          "value": "SBIN0000600",
+          "count": 857,
+          "pct": 0.006898716854764703
+        },
+        {
+          "value": "PUNB0466900",
+          "count": 844,
+          "pct": 0.006794068874470723
+        },
+        {
+          "value": "punb0000100",
+          "count": 813,
+          "pct": 0.0065445236906927695
+        },
+        {
+          "value": "HDFC0001348",
+          "count": 683,
+          "pct": 0.005498043887752966
+        },
+        {
+          "value": "FDRL0001382",
+          "count": 635,
+          "pct": 0.005111651345129039
+        },
+        {
+          "value": "KKBK0004058",
+          "count": 558,
+          "pct": 0.004491813308003156
+        }
+      ],
+      "dominance": 0.3818363305588202,
+      "is_constant": false,
+      "is_near_constant": false,
+      "entropy": 4.213518714032411,
+      "normalized_entropy": 0.4588456951021213,
+      "length_min": 11,
+      "length_max": 11,
+      "length_mode": 11,
+      "validity_rate": 0.9667299921111523,
+      "invalid_examples": [
+        "idib000a503",
+        "idib000a503",
+        "aubl0002399",
+        "aubl0002399",
+        "punb0000100",
+        "punb0000100",
+        "punb0000100",
+        "punb0000100",
+        "punb0000100",
+        "punb0000100"
+      ],
+      "decomposition_stubs": [
+        "bank_prefix",
+        "branch_code"
+      ]
+    },
+    "BENEFICIARY_ACCOUNT_NUMBER": {
+      "_type": "unknown",
+      "_family": "other",
+      "count": 128048,
+      "n_present": 125054,
+      "n_missing": 2994,
+      "pct_missing": 0.023382,
+      "n_unique": 19992,
+      "cardinality_ratio": 0.159867,
+      "memory_bytes": 9043983,
+      "n_blank": 0,
+      "top_values": [
+        {
+          "value": "A2989BB83CDF2B7972B137EBAFAEED0EEE1DEA9E81E7165C766A05A15EDA9A78",
+          "count": 9314,
+          "pct": 0.07447982471572281
+        },
+        {
+          "value": "3D28912983C147EC568B990B0AF067D6579F17ED61C018D818AF89A607CA7EFB",
+          "count": 8053,
+          "pct": 0.06439618084987285
+        },
+        {
+          "value": "47ABE34B7EE1A5F34102D454262D394DC01A7D954A706B1920DC28BE86172966",
+          "count": 6209,
+          "pct": 0.049650550961984424
+        },
+        {
+          "value": "627B72A2CD41EA618A0DF1D6AE9A72D490DCAB24BE606825E00EA7C4B724717F",
+          "count": 2796,
+          "pct": 0.022358341196603067
+        },
+        {
+          "value": "3BEB32B58112C170F204072B4D6675F7FFEB387D52A106E66AAACFD79EE314AD",
+          "count": 1949,
+          "pct": 0.0155852671645849
+        },
+        {
+          "value": "48D80AD98D04DFFD2C0838EC44A3C01EFDB59113AC892D41429827E61497E87A",
+          "count": 1734,
+          "pct": 0.013866009883730228
+        },
+        {
+          "value": "7303534511AE37A0FF80D6B1DFC5D12CD3CFC843E27862A9A37F8FAAD1F59C3B",
+          "count": 1548,
+          "pct": 0.01237865242215363
+        },
+        {
+          "value": "9F0E0E33C0E945FC854A503AE4194901AB355DD1EADC65FC50AD44E2A50D4415",
+          "count": 1479,
+          "pct": 0.011826890783181665
+        },
+        {
+          "value": "36955E44989522029BEECADAAD044E9925938189B643E6197A6E0F413F3E0FFB",
+          "count": 1403,
+          "pct": 0.01121915332576327
+        },
+        {
+          "value": "F93396136CC7E0B9A640515FD84F103C7931EDED518369AE63C165584A5D594F",
+          "count": 1132,
+          "pct": 0.00905208949733715
+        },
+        {
+          "value": "14015BEBED4570991634B845DE94DF1549BFE3E04C1D506B71D67E2EF05E3004",
+          "count": 1128,
+          "pct": 0.009020103315367761
+        },
+        {
+          "value": "0A1E101BF9EF7C6930706821814789DCB08A84F2C98032D3D1C4A65C8A5BAEE1",
+          "count": 1090,
+          "pct": 0.008716234586658564
+        },
+        {
+          "value": "9AD83FAD73315084C1118CCE6C3971662B6CC68787BECBCD674683F3F7E47F48",
+          "count": 1003,
+          "pct": 0.008020535128824348
+        },
+        {
+          "value": "FB85F70E3E1AF57FDDAF757B8B1541D02F68AD6D65DBED63B8FDDCCFC4644CCA",
+          "count": 981,
+          "pct": 0.007844611127992706
+        },
+        {
+          "value": "73D07CB0EC0728EB10102E0D8CEE6B3CAC558873E15E113AD36F24DE9549D6D5",
+          "count": 974,
+          "pct": 0.007788635309546276
+        },
+        {
+          "value": "B9F13532B6E85110AA7AE22C2FF1F8743220B3F291CB8ED439D5C9939FDF154A",
+          "count": 939,
+          "pct": 0.00750875621731412
+        },
+        {
+          "value": "B89489858614B2EA668CC845C1210478DC6903D6C4C252B62289E3C8E885C5E4",
+          "count": 920,
+          "pct": 0.007356821852959521
+        },
+        {
+          "value": "746C86572DD84B19EE0F55A0B2DB318C8F25DEFA7E09B7F67A12C1C4049303AE",
+          "count": 900,
+          "pct": 0.007196890943112575
+        },
+        {
+          "value": "271E8F4280952A66350457B48A4730EBFA3A4F3930C6762EE8D1D2F90B7FE951",
+          "count": 881,
+          "pct": 0.007044956578757976
+        },
+        {
+          "value": "ADA0D32BD64A6A6C4B62312BCDFDF0E3582FE587AEC9254036CE4C599F99E10D",
+          "count": 877,
+          "pct": 0.0070129703967885875
+        }
+      ],
+      "dominance": 0.07447982471572281,
+      "is_constant": false,
+      "is_near_constant": false,
+      "entropy": 6.535242885081215,
+      "normalized_entropy": 0.6599197374777562
+    },
+    "BENEFICIARY_BANK": {
+      "_type": "categorical",
+      "_family": "categorical",
+      "count": 128048,
+      "n_present": 7645,
+      "n_missing": 120403,
+      "pct_missing": 0.940296,
+      "n_unique": 66,
+      "cardinality_ratio": 0.008633,
+      "memory_bytes": 1164836,
+      "n_blank": 0,
+      "top_values": [
+        {
+          "value": "PUNJAB NATIONAL BANK",
+          "count": 4513,
+          "pct": 0.5903204708960105
+        },
+        {
+          "value": "PNB",
+          "count": 1321,
+          "pct": 0.17279267495094833
+        },
+        {
+          "value": "HDFC BANK LTD",
+          "count": 355,
+          "pct": 0.04643557880967953
+        },
+        {
+          "value": "AXIS BANK LTD",
+          "count": 269,
+          "pct": 0.03518639633747547
+        },
+        {
+          "value": "STATE BANK OF INDIA",
+          "count": 261,
+          "pct": 0.034139960758665794
+        },
+        {
+          "value": "KOTAK MAHINDRA BANK LTD",
+          "count": 157,
+          "pct": 0.020536298234139962
+        },
+        {
+          "value": "ICICI BANK LTD",
+          "count": 100,
+          "pct": 0.013080444735120994
+        },
+        {
+          "value": "UNION BANK OF INDIA",
+          "count": 84,
+          "pct": 0.010987573577501636
+        },
+        {
+          "value": "CANARA BANK",
+          "count": 46,
+          "pct": 0.006017004578155657
+        },
+        {
+          "value": "CENTRAL BANK OF INDIA",
+          "count": 41,
+          "pct": 0.005362982341399608
+        },
+        {
+          "value": "State Bank of India",
+          "count": 41,
+          "pct": 0.005362982341399608
+        },
+        {
+          "value": "BANK OF INDIA",
+          "count": 40,
+          "pct": 0.005232177894048398
+        },
+        {
+          "value": "ICICI Bank Limited",
+          "count": 39,
+          "pct": 0.005101373446697188
+        },
+        {
+          "value": "BANK OF BARODA",
+          "count": 37,
+          "pct": 0.0048397645519947675
+        },
+        {
+          "value": "Punjab and Sind Bank",
+          "count": 26,
+          "pct": 0.0034009156311314583
+        },
+        {
+          "value": "Karnataka Bank Limited",
+          "count": 26,
+          "pct": 0.0034009156311314583
+        },
+        {
+          "value": "Punjab Gramin Bank",
+          "count": 19,
+          "pct": 0.0024852844996729887
+        },
+        {
+          "value": "UJJIVAN SMALL FINANCE BANK LIMITED",
+          "count": 17,
+          "pct": 0.002223675604970569
+        },
+        {
+          "value": "FEDERAL BANK LTD",
+          "count": 14,
+          "pct": 0.0018312622629169393
+        },
+        {
+          "value": "YES BANK LTD",
+          "count": 14,
+          "pct": 0.0018312622629169393
+        }
+      ],
+      "dominance": 0.5903204708960105,
+      "is_constant": false,
+      "is_near_constant": false,
+      "entropy": 1.6389808573330709,
+      "normalized_entropy": 0.39119711724511674,
+      "n_levels": 66,
+      "max_class_share": 0.5903204708960105,
+      "imbalance_ratio": 4513.0,
+      "gini_impurity": 0.6161467097206353,
+      "n_rare_levels": 58,
+      "rare_level_mass": 0.07652060170045781,
+      "case_whitespace_variants": 12,
+      "imbalanced": false
+    },
+    "BENEFICIARY_VIRTUAL_ADDRESS": {
+      "_type": "vpa",
+      "_family": "pattern",
+      "count": 128048,
+      "n_present": 116445,
+      "n_missing": 11603,
+      "pct_missing": 0.090614,
+      "n_unique": 31690,
+      "cardinality_ratio": 0.272146,
+      "memory_bytes": 3379207,
+      "n_blank": 0,
+      "top_values": [
+        {
+          "value": "amzn0010756375@apl",
+          "count": 3672,
+          "pct": 0.03153420069560737
+        },
+        {
+          "value": "AMZN0010756375@apl",
+          "count": 2948,
+          "pct": 0.025316673107475634
+        },
+        {
+          "value": "9417142797m1@pnb",
+          "count": 2638,
+          "pct": 0.022654472068358453
+        },
+        {
+          "value": "kashyapasha778@okaxis",
+          "count": 1376,
+          "pct": 0.01181673751556529
+        },
+        {
+          "value": "ramsinghgodara42@okhdfcbank",
+          "count": 1165,
+          "pct": 0.01000472325990811
+        },
+        {
+          "value": "8728976661m@pnb",
+          "count": 991,
+          "pct": 0.008510455579887501
+        },
+        {
+          "value": "9814076870m@pnb",
+          "count": 981,
+          "pct": 0.008424578127012753
+        },
+        {
+          "value": "6284618075@ikwik",
+          "count": 863,
+          "pct": 0.007411224183090729
+        },
+        {
+          "value": "pk446284@okaxis",
+          "count": 831,
+          "pct": 0.007136416333891536
+        },
+        {
+          "value": "7878768725-u575@ybl",
+          "count": 788,
+          "pct": 0.0067671432865301214
+        },
+        {
+          "value": "premshakya10@oksbi",
+          "count": 727,
+          "pct": 0.0062432908239941605
+        },
+        {
+          "value": "kirank44758@okhdfcbank",
+          "count": 665,
+          "pct": 0.005710850616170725
+        },
+        {
+          "value": "9351525905m@pnb",
+          "count": 655,
+          "pct": 0.005624973163295977
+        },
+        {
+          "value": "vishalkumarcharan519@okicici",
+          "count": 622,
+          "pct": 0.005341577568809309
+        },
+        {
+          "value": "sunilkkumar045@ibl",
+          "count": 620,
+          "pct": 0.00532440207823436
+        },
+        {
+          "value": "jeeturajput762@okaxis",
+          "count": 613,
+          "pct": 0.005264287861222036
+        },
+        {
+          "value": "7508763457@ptyes",
+          "count": 540,
+          "pct": 0.004637382455236378
+        },
+        {
+          "value": "rakesh95016-3@okhdfcbank",
+          "count": 513,
+          "pct": 0.004405513332474559
+        },
+        {
+          "value": "7976966717@axl",
+          "count": 482,
+          "pct": 0.004139293228562841
+        },
+        {
+          "value": "7976966717@ybl",
+          "count": 476,
+          "pct": 0.004087766756837992
+        }
+      ],
+      "dominance": 0.03153420069560737,
+      "is_constant": false,
+      "is_near_constant": false,
+      "entropy": 8.243849197169812,
+      "normalized_entropy": 0.7954499157527052,
+      "length_min": 7,
+      "length_max": 65,
+      "length_mode": 14,
+      "validity_rate": 1.0,
+      "invalid_examples": [],
+      "decomposition_stubs": [
+        "psp_handle",
+        "known_psp_flag"
+      ]
+    },
+    "TRANSACTION_TYPE": {
+      "_type": "categorical",
+      "_family": "categorical",
+      "count": 128048,
+      "n_present": 70932,
+      "n_missing": 57116,
+      "pct_missing": 0.446051,
+      "n_unique": 13,
+      "cardinality_ratio": 0.000183,
+      "memory_bytes": 1279978,
+      "n_blank": 0,
+      "top_values": [
+        {
+          "value": "PIN",
+          "count": 61734,
+          "pct": 0.8703265098968026
+        },
+        {
+          "value": "CREDIT",
+          "count": 4275,
+          "pct": 0.06026899001860937
+        },
+        {
+          "value": "DEBIT",
+          "count": 2669,
+          "pct": 0.037627586984717756
+        },
+        {
+          "value": "UPI_MANDATE",
+          "count": 1157,
+          "pct": 0.016311396830767495
+        },
+        {
+          "value": "PMT",
+          "count": 454,
+          "pct": 0.00640049624992951
+        },
+        {
+          "value": "T",
+          "count": 426,
+          "pct": 0.0060057519878193195
+        },
+        {
+          "value": "XFR",
+          "count": 79,
+          "pct": 0.001113742739525179
+        },
+        {
+          "value": "SHP",
+          "count": 57,
+          "pct": 0.0008035865335814583
+        },
+        {
+          "value": "TXP",
+          "count": 48,
+          "pct": 0.0006767044493317544
+        },
+        {
+          "value": "BIOAUTH",
+          "count": 22,
+          "pct": 0.00031015620594372075
+        },
+        {
+          "value": "CCP",
+          "count": 5,
+          "pct": 7.049004680539108e-05
+        },
+        {
+          "value": "SSA",
+          "count": 4,
+          "pct": 5.639203744431286e-05
+        },
+        {
+          "value": "PPF",
+          "count": 2,
+          "pct": 2.819601872215643e-05
+        }
+      ],
+      "dominance": 0.8703265098968026,
+      "is_constant": false,
+      "is_near_constant": false,
+      "entropy": 0.5660403099264251,
+      "normalized_entropy": 0.22068284049343584,
+      "n_levels": 13,
+      "max_class_share": 0.8703265098968026,
+      "imbalance_ratio": 30867.0,
+      "gini_impurity": 0.23713803339102502,
+      "n_rare_levels": 9,
+      "rare_level_mass": 0.015465516269102803,
+      "case_whitespace_variants": 0,
+      "imbalanced": false
+    },
+    "TRANSACTION_SUB_TYPE": {
+      "_type": "categorical",
+      "_family": "categorical",
+      "count": 128048,
+      "n_present": 63339,
+      "n_missing": 64709,
+      "pct_missing": 0.50535,
+      "n_unique": 3,
+      "cardinality_ratio": 4.7e-05,
+      "memory_bytes": 1290673,
+      "n_blank": 0,
+      "top_values": [
+        {
+          "value": "MPIN",
+          "count": 61734,
+          "pct": 0.9746601619855065
+        },
+        {
+          "value": "DS",
+          "count": 1179,
+          "pct": 0.01861412399943163
+        },
+        {
+          "value": "CI",
+          "count": 426,
+          "pct": 0.00672571401506181
+        }
+      ],
+      "dominance": 0.9746601619855065,
+      "is_constant": false,
+      "is_near_constant": false,
+      "entropy": 0.13281242138719845,
+      "normalized_entropy": 0.12089107572992115,
+      "n_levels": 3,
+      "max_class_share": 0.9746601619855065,
+      "imbalance_ratio": 144.91549295774647,
+      "gini_impurity": 0.049645847797107456,
+      "n_rare_levels": 1,
+      "rare_level_mass": 0.00672571401506181,
+      "case_whitespace_variants": 0,
+      "imbalanced": true
+    },
+    "CREDIT_DEBIT_INDICATOR": {
+      "_type": "binary",
+      "_family": "categorical",
+      "count": 128048,
+      "n_present": 125635,
+      "n_missing": 2413,
+      "pct_missing": 0.018844,
+      "n_unique": 2,
+      "cardinality_ratio": 1.6e-05,
+      "memory_bytes": 1726002,
+      "n_blank": 0,
+      "top_values": [
+        {
+          "value": "DEBIT",
+          "count": 68335,
+          "pct": 0.5439169021371433
+        },
+        {
+          "value": "CREDIT",
+          "count": 57300,
+          "pct": 0.45608309786285667
+        }
+      ],
+      "dominance": 0.5439169021371433,
+      "is_constant": false,
+      "is_near_constant": false,
+      "entropy": 0.6892848167886184,
+      "normalized_entropy": 0.9944277869409975,
+      "n_levels": 2,
+      "max_class_share": 0.5439169021371433,
+      "imbalance_ratio": 1.192582897033159,
+      "gini_impurity": 0.49614261141335314,
+      "n_rare_levels": 0,
+      "rare_level_mass": 0.0,
+      "case_whitespace_variants": 0,
+      "imbalanced": false
+    },
+    "TRANSACTION_AMOUNT": {
+      "_type": "amount",
+      "_family": "numeric",
+      "count": 128048,
+      "n_present": 128048,
+      "n_missing": 0,
+      "pct_missing": 0.0,
+      "n_unique": 6864,
+      "cardinality_ratio": 0.053605,
+      "memory_bytes": 1024516,
+      "n_blank": 0,
+      "top_values": [
+        {
+          "value": "100.0",
+          "count": 11759,
+          "pct": 0.091832750218668
+        },
+        {
+          "value": "1000.0",
+          "count": 6821,
+          "pct": 0.053269086592527805
+        },
+        {
+          "value": "500.0",
+          "count": 6807,
+          "pct": 0.053159752592777706
+        },
+        {
+          "value": "200.0",
+          "count": 6767,
+          "pct": 0.05284736973634887
+        },
+        {
+          "value": "2000.0",
+          "count": 4601,
+          "pct": 0.03593183806072723
+        },
+        {
+          "value": "20.0",
+          "count": 4174,
+          "pct": 0.032597151068349366
+        },
+        {
+          "value": "50.0",
+          "count": 4158,
+          "pct": 0.03247219792577783
+        },
+        {
+          "value": "300.0",
+          "count": 4157,
+          "pct": 0.032464388354367116
+        },
+        {
+          "value": "10.0",
+          "count": 3675,
+          "pct": 0.0287001749343996
+        },
+        {
+          "value": "30.0",
+          "count": 2617,
+          "pct": 0.020437648381856802
+        },
+        {
+          "value": "1.0",
+          "count": 2335,
+          "pct": 0.018235349244033486
+        },
+        {
+          "value": "10000.0",
+          "count": 2208,
+          "pct": 0.017243533674871924
+        },
+        {
+          "value": "5000.0",
+          "count": 2184,
+          "pct": 0.017056103961014618
+        },
+        {
+          "value": "40.0",
+          "count": 1998,
+          "pct": 0.015603523678620517
+        },
+        {
+          "value": "150.0",
+          "count": 1945,
+          "pct": 0.015189616393852306
+        },
+        {
+          "value": "3000.0",
+          "count": 1573,
+          "pct": 0.012284455829064102
+        },
+        {
+          "value": "1500.0",
+          "count": 1539,
+          "pct": 0.012018930401099588
+        },
+        {
+          "value": "400.0",
+          "count": 1491,
+          "pct": 0.011644070973384981
+        },
+        {
+          "value": "60.0",
+          "count": 1484,
+          "pct": 0.011589403973509934
+        },
+        {
+          "value": "600.0",
+          "count": 967,
+          "pct": 0.0075518555541671875
+        }
+      ],
+      "dominance": 0.091832750218668,
+      "is_constant": false,
+      "is_near_constant": false,
+      "entropy": 5.099161792510401,
+      "normalized_entropy": 0.5772170531639146,
+      "min": 0.01,
+      "max": 93800000.0,
+      "range": 93799999.99,
+      "mean": 23616.7591927246,
+      "trimmed_mean_10": 1124.4630674778948,
+      "median": 300.0,
+      "std": 551286.1425862417,
+      "var": 303916411007.618,
+      "sum": 3024078781.1099997,
+      "mad": 267.0,
+      "iqr": 1100.0,
+      "cv": 23.343005621028283,
+      "skew": 97.45261465872433,
+      "kurtosis": 13789.799349300947,
+      "percentiles": {
+        "p1": 1.0,
+        "p5": 10.0,
+        "p10": 20.0,
+        "p25": 100.0,
+        "p50": 300.0,
+        "p75": 1200.0,
+        "p90": 5000.0,
+        "p95": 12000.0,
+        "p99": 119422.76999999906
+      },
+      "n_zero": 0,
+      "n_negative": 0,
+      "zero_inflation": 0.0,
+      "all_positive": true,
+      "is_integer_valued": false,
+      "outliers": {
+        "fraction": 0.153661127077346,
+        "count": 19676,
+        "lower": -1550.0,
+        "upper": 2850.0
+      },
+      "shape": "right_skewed",
+      "log_transform_candidate": true,
+      "is_monotonic": "none",
+      "histogram": {
+        "counts": [
+          127819,
+          152,
+          46,
+          12,
+          3,
+          2,
+          5,
+          3,
+          0,
+          2,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          1,
+          0,
+          1
+        ],
+        "edges": [
+          0.01,
+          3126666.676333333,
+          6253333.342666666,
+          9380000.009,
+          12506666.675333332,
+          15633333.341666665,
+          18760000.008,
+          21886666.674333334,
+          25013333.340666667,
+          28140000.007,
+          31266666.673333332,
+          34393333.339666665,
+          37520000.006,
+          40646666.67233333,
+          43773333.33866666,
+          46900000.004999995,
+          50026666.67133333,
+          53153333.33766666,
+          56280000.00399999,
+          59406666.670333326,
+          62533333.33666666,
+          65660000.00299999,
+          68786666.66933334,
+          71913333.33566667,
+          75040000.002,
+          78166666.66833334,
+          81293333.33466667,
+          84420000.001,
+          87546666.66733333,
+          90673333.33366667,
+          93800000.0
+        ]
+      }
+    },
+    "TRANSACTION_DATE": {
+      "_type": "datetime",
+      "_family": "datetime",
+      "count": 128048,
+      "n_present": 128048,
+      "n_missing": 0,
+      "pct_missing": 0.0,
+      "n_unique": 1205,
+      "cardinality_ratio": 0.009411,
+      "memory_bytes": 2311812,
+      "n_blank": 0,
+      "top_values": [
+        {
+          "value": "2025-04-08",
+          "count": 593,
+          "pct": 0.004631075846557541
+        },
+        {
+          "value": "2025-04-06",
+          "count": 522,
+          "pct": 0.004076596276396351
+        },
+        {
+          "value": "2025-06-16",
+          "count": 500,
+          "pct": 0.0039047857053604897
+        },
+        {
+          "value": "2025-07-26",
+          "count": 466,
+          "pct": 0.0036392602773959765
+        },
+        {
+          "value": "2025-04-17",
+          "count": 466,
+          "pct": 0.0036392602773959765
+        },
+        {
+          "value": "2025-04-16",
+          "count": 462,
+          "pct": 0.0036080219917530927
+        },
+        {
+          "value": "2025-06-18",
+          "count": 460,
+          "pct": 0.0035924028489316504
+        },
+        {
+          "value": "2025-06-17",
+          "count": 454,
+          "pct": 0.003545545420467325
+        },
+        {
+          "value": "2025-11-12",
+          "count": 453,
+          "pct": 0.003537735849056604
+        },
+        {
+          "value": "2025-11-15",
+          "count": 452,
+          "pct": 0.003529926277645883
+        },
+        {
+          "value": "2025-04-19",
+          "count": 445,
+          "pct": 0.003475259277770836
+        },
+        {
+          "value": "2025-04-09",
+          "count": 441,
+          "pct": 0.003444020992127952
+        },
+        {
+          "value": "2025-11-19",
+          "count": 438,
+          "pct": 0.003420592277895789
+        },
+        {
+          "value": "2025-04-18",
+          "count": 436,
+          "pct": 0.003404973135074347
+        },
+        {
+          "value": "2025-10-01",
+          "count": 434,
+          "pct": 0.003389353992252905
+        },
+        {
+          "value": "2025-04-21",
+          "count": 431,
+          "pct": 0.0033659252780207424
+        },
+        {
+          "value": "2025-03-13",
+          "count": 430,
+          "pct": 0.0033581157066100214
+        },
+        {
+          "value": "2025-11-13",
+          "count": 429,
+          "pct": 0.0033503061351993
+        },
+        {
+          "value": "2025-04-22",
+          "count": 428,
+          "pct": 0.003342496563788579
+        },
+        {
+          "value": "2025-11-18",
+          "count": 428,
+          "pct": 0.003342496563788579
+        }
+      ],
+      "dominance": 0.004631075846557541,
+      "is_constant": false,
+      "is_near_constant": false,
+      "entropy": 6.084977982614019,
+      "normalized_entropy": 0.8577356282629269,
+      "parse_fail_rate": 0.0272,
+      "min": "2025-01-01T00:00:00",
+      "max": "2026-01-31T00:00:00",
+      "span_days": 395,
+      "n_unique_days": 396,
+      "max_gap_days": 1,
+      "is_monotonic_increasing": false,
+      "has_time_component": false,
+      "n_future_dates": 0,
+      "n_sentinel_dates": 0,
+      "by_year": {
+        "2025": 118191,
+        "2026": 6369
+      },
+      "by_dow": {
+        "0": 18176,
+        "1": 18100,
+        "2": 17650,
+        "3": 17729,
+        "4": 18044,
+        "5": 18031,
+        "6": 16830
+      },
+      "derived_feature_stubs": [
+        "recency_days",
+        "year",
+        "month",
+        "dayofweek"
+      ]
+    },
+    "TRANSACTION_ID": {
+      "_type": "amount_string",
+      "_family": "numeric",
+      "count": 128048,
+      "n_present": 125598,
+      "n_missing": 2450,
+      "pct_missing": 0.019133,
+      "n_unique": 125256,
+      "cardinality_ratio": 0.997277,
+      "memory_bytes": 2561773,
+      "n_blank": 0,
+      "top_values": [
+        {
+          "value": "AXISP00601558935",
+          "count": 4,
+          "pct": 3.184764088600137e-05
+        },
+        {
+          "value": "ICIN302200271062",
+          "count": 4,
+          "pct": 3.184764088600137e-05
+        },
+        {
+          "value": "AXISP00601617588",
+          "count": 4,
+          "pct": 3.184764088600137e-05
+        },
+        {
+          "value": "AXISP00601540538",
+          "count": 4,
+          "pct": 3.184764088600137e-05
+        },
+        {
+          "value": "IOBAN25022401972",
+          "count": 4,
+          "pct": 3.184764088600137e-05
+        },
+        {
+          "value": "AXISP00601615476",
+          "count": 4,
+          "pct": 3.184764088600137e-05
+        },
+        {
+          "value": "PUNBQ25022292774",
+          "count": 4,
+          "pct": 3.184764088600137e-05
+        },
+        {
+          "value": "PUNBQ25022292790",
+          "count": 4,
+          "pct": 3.184764088600137e-05
+        },
+        {
+          "value": "PUNBQ25022292843",
+          "count": 4,
+          "pct": 3.184764088600137e-05
+        },
+        {
+          "value": "PUNBQ25022213472",
+          "count": 4,
+          "pct": 3.184764088600137e-05
+        },
+        {
+          "value": "PUNBQ25022292747",
+          "count": 4,
+          "pct": 3.184764088600137e-05
+        },
+        {
+          "value": "PUNBQ25022292867",
+          "count": 4,
+          "pct": 3.184764088600137e-05
+        },
+        {
+          "value": "PUNBQ25022292799",
+          "count": 4,
+          "pct": 3.184764088600137e-05
+        },
+        {
+          "value": "PUNBQ25022292823",
+          "count": 4,
+          "pct": 3.184764088600137e-05
+        },
+        {
+          "value": "PUNBQ25022292726",
+          "count": 4,
+          "pct": 3.184764088600137e-05
+        },
+        {
+          "value": "PUNBQ25022292810",
+          "count": 4,
+          "pct": 3.184764088600137e-05
+        },
+        {
+          "value": "PUNBQ25022292852",
+          "count": 4,
+          "pct": 3.184764088600137e-05
+        },
+        {
+          "value": "PUNBQ25022292757",
+          "count": 4,
+          "pct": 3.184764088600137e-05
+        },
+        {
+          "value": "PUNBQ25025982977",
+          "count": 4,
+          "pct": 3.184764088600137e-05
+        },
+        {
+          "value": "HDFCH00023063051",
+          "count": 4,
+          "pct": 3.184764088600137e-05
+        }
+      ],
+      "dominance": 3.184764088600137e-05,
+      "is_constant": false,
+      "is_near_constant": false,
+      "entropy": 11.736768752913612,
+      "normalized_entropy": 0.9998853164169295,
+      "min": 368571.0,
+      "max": 2025090752443998.0,
+      "range": 2025090752075427.0,
+      "mean": 575528600842.0841,
+      "trimmed_mean_10": 474752520450.5998,
+      "median": 517571116801.0,
+      "std": 14188435844638.143,
+      "var": 2.0131171171741246e+26,
+      "sum": 7.032096209389003e+16,
+      "mad": 52496453951.0,
+      "iqr": 169134628373.0,
+      "cv": 24.652877066193316,
+      "skew": 142.648277142572,
+      "kurtosis": 20351.24234737615,
+      "percentiles": {
+        "p1": 14444474545.959995,
+        "p5": 101032493624.4,
+        "p10": 108486246151.8,
+        "p25": 388849258983.0,
+        "p50": 517571116801.0,
+        "p75": 557983887356.0,
+        "p90": 693517795415.8,
+        "p95": 831581822860.4,
+        "p99": 965683546975.3601
+      },
+      "n_zero": 0,
+      "n_negative": 0,
+      "zero_inflation": 0.0,
+      "all_positive": true,
+      "is_integer_valued": true,
+      "outliers": {
+        "fraction": 0.1906044113434546,
+        "count": 23289,
+        "lower": 135147316423.5,
+        "upper": 811685829915.5
+      },
+      "shape": "right_skewed",
+      "log_transform_candidate": true,
+      "is_monotonic": "none",
+      "histogram": {
+        "counts": [
+          122179,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          6
+        ],
+        "edges": [
+          368571.0,
+          67503025437751.9,
+          135006050506932.8,
+          202509075576113.7,
+          270012100645294.6,
+          337515125714475.5,
+          405018150783656.4,
+          472521175852837.3,
+          540024200922018.2,
+          607527225991199.1,
+          675030251060380.0,
+          742533276129560.9,
+          810036301198741.8,
+          877539326267922.6,
+          945042351337103.6,
+          1012545376406284.5,
+          1080048401475465.4,
+          1147551426544646.2,
+          1215054451613827.2,
+          1282557476683008.0,
+          1350060501752189.0,
+          1417563526821369.8,
+          1485066551890550.8,
+          1552569576959731.8,
+          1620072602028912.5,
+          1687575627098093.5,
+          1755078652167274.2,
+          1822581677236455.2,
+          1890084702305636.2,
+          1957587727374817.0,
+          2025090752443998.0
+        ]
+      }
+    },
+    "TRANSACTION_NARRATION": {
+      "_type": "free_text",
+      "_family": "text",
+      "count": 128048,
+      "n_present": 121343,
+      "n_missing": 6705,
+      "pct_missing": 0.052363,
+      "n_unique": 120476,
+      "cardinality_ratio": 0.992855,
+      "memory_bytes": 6938162,
+      "n_blank": 0,
+      "top_values": [
+        {
+          "value": "From:XXXX1611:ALAPAN DE",
+          "count": 206,
+          "pct": 0.0016976669441170896
+        },
+        {
+          "value": "To:XXXX9958:VINAY KUMAR SO MOHAN LAL",
+          "count": 136,
+          "pct": 0.001120789827184098
+        },
+        {
+          "value": "From:XXXX3129:CEID CONSULTANTS AND ENGINEE",
+          "count": 41,
+          "pct": 0.00033788516848932363
+        },
+        {
+          "value": "To:XXXX1644:SANJEEV SEHGAL SO KRISHAN BALD",
+          "count": 38,
+          "pct": 0.00031316186347790973
+        },
+        {
+          "value": "To:XXXX1 :ALAPAN DE",
+          "count": 36,
+          "pct": 0.0002966796601369671
+        },
+        {
+          "value": "To:XXXX1096:HARCHARAN SINGH SO BALWANT SIN",
+          "count": 35,
+          "pct": 0.0002884385584664958
+        },
+        {
+          "value": "To:XXXX8326:JASHAN GANDHI",
+          "count": 34,
+          "pct": 0.0002801974567960245
+        },
+        {
+          "value": "From:XXXX5637:SONU BULANI",
+          "count": 34,
+          "pct": 0.0002801974567960245
+        },
+        {
+          "value": "To:XXXX0263:VEETHIKA SINGH",
+          "count": 21,
+          "pct": 0.00017306313507989748
+        },
+        {
+          "value": "From:XXXX6634:JAGAN NATH KARYANA MERCHANTS",
+          "count": 21,
+          "pct": 0.00017306313507989748
+        },
+        {
+          "value": "To:XXXX8028:SANJNA GANDHI WO PRINCE GANDHI",
+          "count": 17,
+          "pct": 0.00014009872839801225
+        },
+        {
+          "value": "To:XXXX6777:RAJIV GANDHI S/O MADAN LAL GAN",
+          "count": 16,
+          "pct": 0.00013185762672754094
+        },
+        {
+          "value": "From:XXXX7674:URSHILA BHUYAN",
+          "count": 16,
+          "pct": 0.00013185762672754094
+        },
+        {
+          "value": "To:XXXX8334:CEID CONSULTANTS AND ENGINEERI",
+          "count": 15,
+          "pct": 0.00012361652505706963
+        },
+        {
+          "value": "To:XXXX3129:CEID CONSULTANTS AND ENGINEERI",
+          "count": 15,
+          "pct": 0.00012361652505706963
+        },
+        {
+          "value": "From:XXXX8223:GOVINDARAJAN SRINIVASAN",
+          "count": 14,
+          "pct": 0.00011537542338659832
+        },
+        {
+          "value": "To:XXXX1413:CREATIVE BIO WASTE SOLUTIONS P",
+          "count": 13,
+          "pct": 0.00010713432171612701
+        },
+        {
+          "value": "To:XXXX1781:DUGANAND YADAV, S/O- YOGENDRA",
+          "count": 11,
+          "pct": 9.06521183751844e-05
+        },
+        {
+          "value": "0001010297905 to 0083300017329",
+          "count": 11,
+          "pct": 9.06521183751844e-05
+        },
+        {
+          "value": "To:XXXX4348:JASWANT",
+          "count": 8,
+          "pct": 6.592881336377047e-05
+        }
+      ],
+      "dominance": 0.0016976669441170896,
+      "is_constant": false,
+      "is_near_constant": false,
+      "entropy": 11.679100003260654,
+      "normalized_entropy": 0.9982814355980802,
+      "char_len_mean": 48.60300965033006,
+      "char_len_max": 50,
+      "token_count_mean": 1.7149402932183975,
+      "whitespace_only_frac": 0.0,
+      "embedded_digit_frac": 1.0,
+      "note": "vectorization deferred (requires_human / later stage)"
+    },
+    "REMITTER_NAME": {
+      "_type": "free_text",
+      "_family": "text",
+      "count": 128048,
+      "n_present": 125535,
+      "n_missing": 2513,
+      "pct_missing": 0.019625,
+      "n_unique": 21921,
+      "cardinality_ratio": 0.174621,
+      "memory_bytes": 3045119,
+      "n_blank": 0,
+      "top_values": [
+        {
+          "value": "CEID CONSULTANTS AND ENGINEERING PVT LTD",
+          "count": 2399,
+          "pct": 0.019110208308439878
+        },
+        {
+          "value": "SH NARAYAN SINGH SO DAN SINGH",
+          "count": 2066,
+          "pct": 0.016457561636197077
+        },
+        {
+          "value": "JASPREET SINGH",
+          "count": 1881,
+          "pct": 0.014983869040506631
+        },
+        {
+          "value": "PAWAN KUMAR",
+          "count": 1829,
+          "pct": 0.014569641932528778
+        },
+        {
+          "value": "SANT RAM SO GUGAN RAM",
+          "count": 1800,
+          "pct": 0.014338630660771897
+        },
+        {
+          "value": "SHASHANK SINHA",
+          "count": 1790,
+          "pct": 0.014258971601545385
+        },
+        {
+          "value": "VISHAL KUMAR",
+          "count": 1683,
+          "pct": 0.013406619667821723
+        },
+        {
+          "value": "KULDIP",
+          "count": 1538,
+          "pct": 0.01225156330903732
+        },
+        {
+          "value": "DALPAT KUMAR",
+          "count": 1503,
+          "pct": 0.011972756601744534
+        },
+        {
+          "value": "VIRENDRA NATH CHOUHAN",
+          "count": 1433,
+          "pct": 0.01141514318715896
+        },
+        {
+          "value": "SUSHIL KUMAR PARIHAR",
+          "count": 1268,
+          "pct": 0.010100768709921536
+        },
+        {
+          "value": "RADHE SHAM",
+          "count": 1252,
+          "pct": 0.009973314215159118
+        },
+        {
+          "value": "LAXMAN SINGH",
+          "count": 1071,
+          "pct": 0.008531485243159278
+        },
+        {
+          "value": "RAJINDER KUMAR",
+          "count": 1067,
+          "pct": 0.008499621619468675
+        },
+        {
+          "value": "HARISH KUMAR S O SH JANG BAHADUR",
+          "count": 1052,
+          "pct": 0.008380133030628909
+        },
+        {
+          "value": "SUSHMA KUMARI",
+          "count": 1052,
+          "pct": 0.008380133030628909
+        },
+        {
+          "value": "SUNIL KUMAR",
+          "count": 1018,
+          "pct": 0.008109292229258772
+        },
+        {
+          "value": "MOHINI",
+          "count": 976,
+          "pct": 0.007774724180507428
+        },
+        {
+          "value": "VARUN",
+          "count": 976,
+          "pct": 0.007774724180507428
+        },
+        {
+          "value": "GURMAN SINGH",
+          "count": 930,
+          "pct": 0.00740829250806548
+        }
+      ],
+      "dominance": 0.019110208308439878,
+      "is_constant": false,
+      "is_near_constant": false,
+      "entropy": 7.215441227196047,
+      "normalized_entropy": 0.721890604188395,
+      "char_len_mean": 15.968391285298921,
+      "char_len_max": 55,
+      "token_count_mean": 2.765181025212092,
+      "whitespace_only_frac": 0.0,
+      "embedded_digit_frac": 0.008029633170032262,
+      "note": "vectorization deferred (requires_human / later stage)"
+    },
+    "REMITTER_ACCOUNT_NUMBER": {
+      "_type": "unknown",
+      "_family": "other",
+      "count": 128048,
+      "n_present": 128048,
+      "n_missing": 0,
+      "pct_missing": 0.0,
+      "n_unique": 27394,
+      "cardinality_ratio": 0.213935,
+      "memory_bytes": 9219588,
+      "n_blank": 0,
+      "top_values": [
+        {
+          "value": "C583C3EEC82DFEF1F5DB88B499233AD57B35123784E253DE1804FB07C3A79B73",
+          "count": 2348,
+          "pct": 0.01833687367237286
+        },
+        {
+          "value": "49C0744D5B6FB62A088EB39423547363D4963B69F4DCB9C5AC2EBD00DB9EAEF1",
+          "count": 2073,
+          "pct": 0.01618924153442459
+        },
+        {
+          "value": "746C86572DD84B19EE0F55A0B2DB318C8F25DEFA7E09B7F67A12C1C4049303AE",
+          "count": 1872,
+          "pct": 0.014619517680869673
+        },
+        {
+          "value": "B89489858614B2EA668CC845C1210478DC6903D6C4C252B62289E3C8E885C5E4",
+          "count": 1831,
+          "pct": 0.014299325253030114
+        },
+        {
+          "value": "1C8D82FADB27CEC01BA62559723498DA02C94E14E78922B2501FAA85554F5A30",
+          "count": 1821,
+          "pct": 0.014221229538922905
+        },
+        {
+          "value": "14015BEBED4570991634B845DE94DF1549BFE3E04C1D506B71D67E2EF05E3004",
+          "count": 1663,
+          "pct": 0.01298731725602899
+        },
+        {
+          "value": "73D07CB0EC0728EB10102E0D8CEE6B3CAC558873E15E113AD36F24DE9549D6D5",
+          "count": 1626,
+          "pct": 0.012698363113832312
+        },
+        {
+          "value": "03A8CB228E6ED0E3CBBA15B05D7E1ABA29A60AC9CA18583BAE2CEE0BF65A555E",
+          "count": 1559,
+          "pct": 0.012175121829314007
+        },
+        {
+          "value": "43F8A9E955FF957F1BAD8B4AF27757981C4BCE02F38F3E985D777E6F16F3AC3F",
+          "count": 1519,
+          "pct": 0.011862738972885168
+        },
+        {
+          "value": "9F0E0E33C0E945FC854A503AE4194901AB355DD1EADC65FC50AD44E2A50D4415",
+          "count": 1478,
+          "pct": 0.011542546545045608
+        },
+        {
+          "value": "FC6FFD34B200E460CE915F8E03903E14DCD22DAD039A947B70D5793598A5DE05",
+          "count": 1291,
+          "pct": 0.010082156691240785
+        },
+        {
+          "value": "CA8BD140E94BA230C49460E2DF3ABCA3EBAD551E15F2C98E4658A3990A8465FA",
+          "count": 1276,
+          "pct": 0.00996501312007997
+        },
+        {
+          "value": "C00E9FFD969F783A5FF252FF8F328001AB38F5096A12A174E4DAF6A1FD8912AB",
+          "count": 1184,
+          "pct": 0.00924653255029364
+        },
+        {
+          "value": "7303534511AE37A0FF80D6B1DFC5D12CD3CFC843E27862A9A37F8FAAD1F59C3B",
+          "count": 1122,
+          "pct": 0.008762339122828939
+        },
+        {
+          "value": "AC109A9CD2D3E1910C919CF27E73D64AEC47A4DCFEFE1A34E6590330BC18137B",
+          "count": 1071,
+          "pct": 0.008364050980882169
+        },
+        {
+          "value": "53B9A564E7E4841D3C9DC3DC6C7F4798EC3A611E808E9701B6900B1B00F3220E",
+          "count": 1070,
+          "pct": 0.008356241409471448
+        },
+        {
+          "value": "BFC74A3E453B8F7A29F32F2EFD6C82B6104684CEFC0F92D5D89F925CDBFEAC31",
+          "count": 1065,
+          "pct": 0.008317193552417843
+        },
+        {
+          "value": "1BFC62A7E2FF7025BAB33208F08C3DD2F62E8153D6C6739433376FFDDE78001C",
+          "count": 993,
+          "pct": 0.007754904410845933
+        },
+        {
+          "value": "F40567C09A4AF3283883DCDE69ABAC1061147E55DF38EC3061141F36846E5C8D",
+          "count": 980,
+          "pct": 0.00765337998250656
+        },
+        {
+          "value": "B10E3AEC1711A6D837A68C5A85745E91001D0BB9A3B774140676BD9AF332BCE6",
+          "count": 938,
+          "pct": 0.007325377983256279
+        }
+      ],
+      "dominance": 0.01833687367237286,
+      "is_constant": false,
+      "is_near_constant": false,
+      "entropy": 7.436423002440713,
+      "normalized_entropy": 0.7277711193241474
+    },
+    "REMITTER_IFSC": {
+      "_type": "bank_code",
+      "_family": "pattern",
+      "count": 128048,
+      "n_present": 120080,
+      "n_missing": 7968,
+      "pct_missing": 0.062227,
+      "n_unique": 11361,
+      "cardinality_ratio": 0.094612,
+      "memory_bytes": 2361407,
+      "n_blank": 0,
+      "top_values": [
+        {
+          "value": "PUNB0000100",
+          "count": 47439,
+          "pct": 0.3950616255829447
+        },
+        {
+          "value": "PUNB0000110",
+          "count": 5434,
+          "pct": 0.045253164556962024
+        },
+        {
+          "value": "PUNB0000130",
+          "count": 5146,
+          "pct": 0.042854763491006
+        },
+        {
+          "value": "PUNB0000200",
+          "count": 3674,
+          "pct": 0.0305962691538974
+        },
+        {
+          "value": "IPOS0000001",
+          "count": 2149,
+          "pct": 0.017896402398401064
+        },
+        {
+          "value": "PUNB0PGB003",
+          "count": 1881,
+          "pct": 0.015664556962025317
+        },
+        {
+          "value": "PUNB0466900",
+          "count": 1832,
+          "pct": 0.015256495669553631
+        },
+        {
+          "value": "PUNB0370900",
+          "count": 1790,
+          "pct": 0.014906728847435043
+        },
+        {
+          "value": "CNRB0000033",
+          "count": 1740,
+          "pct": 0.014490339773484344
+        },
+        {
+          "value": "AIRP0000001",
+          "count": 1633,
+          "pct": 0.013599267155229846
+        },
+        {
+          "value": "HDFC0003555",
+          "count": 1576,
+          "pct": 0.01312458361092605
+        },
+        {
+          "value": "SBIN0011900",
+          "count": 1275,
+          "pct": 0.010617921385742838
+        },
+        {
+          "value": "HDFC0001348",
+          "count": 1250,
+          "pct": 0.010409726848767488
+        },
+        {
+          "value": "SBIN0000600",
+          "count": 861,
+          "pct": 0.007170219853431046
+        },
+        {
+          "value": "PUNB0741100",
+          "count": 807,
+          "pct": 0.006720519653564291
+        },
+        {
+          "value": "PUNB0356200",
+          "count": 723,
+          "pct": 0.006020986009327115
+        },
+        {
+          "value": "SBIN0011899",
+          "count": 722,
+          "pct": 0.006012658227848101
+        },
+        {
+          "value": "KKBK0004058",
+          "count": 707,
+          "pct": 0.005887741505662891
+        },
+        {
+          "value": "PUNB0408400",
+          "count": 615,
+          "pct": 0.0051215856095936044
+        },
+        {
+          "value": "PUNB0012500",
+          "count": 585,
+          "pct": 0.004871752165223184
+        }
+      ],
+      "dominance": 0.3950616255829447,
+      "is_constant": false,
+      "is_near_constant": false,
+      "entropy": 4.263910248431123,
+      "normalized_entropy": 0.4566220670305683,
+      "length_min": 11,
+      "length_max": 11,
+      "length_mode": 11,
+      "validity_rate": 0.9945619586942038,
+      "invalid_examples": [
+        "utib0000022",
+        "utib0000022",
+        "utib0000022",
+        "utib0000022",
+        "utib0000022",
+        "utib0000022",
+        "utib0000022",
+        "utib0000022",
+        "utib0000022",
+        "utib0000022"
+      ],
+      "decomposition_stubs": [
+        "bank_prefix",
+        "branch_code"
+      ]
+    },
+    "REMITTER_BANK": {
+      "_type": "categorical",
+      "_family": "categorical",
+      "count": 128048,
+      "n_present": 7935,
+      "n_missing": 120113,
+      "pct_missing": 0.938031,
+      "n_unique": 87,
+      "cardinality_ratio": 0.010964,
+      "memory_bytes": 1136690,
+      "n_blank": 0,
+      "top_values": [
+        {
+          "value": "PNB",
+          "count": 3187,
+          "pct": 0.401638311279143
+        },
+        {
+          "value": "Axis Bank Limited",
+          "count": 1098,
+          "pct": 0.1383742911153119
+        },
+        {
+          "value": "The Ratnakar Bank Ltd.",
+          "count": 499,
+          "pct": 0.06288594833018274
+        },
+        {
+          "value": "ICICI Bank Limited",
+          "count": 315,
+          "pct": 0.03969754253308128
+        },
+        {
+          "value": "Punjab Gramin Bank",
+          "count": 294,
+          "pct": 0.03705103969754253
+        },
+        {
+          "value": "IDFC Bank",
+          "count": 280,
+          "pct": 0.03528670447385003
+        },
+        {
+          "value": "Punjab National Bank",
+          "count": 271,
+          "pct": 0.03415248897290485
+        },
+        {
+          "value": "AXIS BANK LTD",
+          "count": 263,
+          "pct": 0.033144297416509136
+        },
+        {
+          "value": "Karnataka Bank Limited",
+          "count": 197,
+          "pct": 0.024826717076244488
+        },
+        {
+          "value": "IndusInd Bank Limited",
+          "count": 157,
+          "pct": 0.01978575929426591
+        },
+        {
+          "value": "Yes Bank Limited",
+          "count": 136,
+          "pct": 0.01713925645872716
+        },
+        {
+          "value": "YES BANK LTD",
+          "count": 107,
+          "pct": 0.013484562066792691
+        },
+        {
+          "value": "Jammu and Kashmir Bank Ltd",
+          "count": 103,
+          "pct": 0.012980466288594833
+        },
+        {
+          "value": "Punjab and Sind Bank",
+          "count": 87,
+          "pct": 0.010964083175803403
+        },
+        {
+          "value": "Indian Overseas Bank",
+          "count": 66,
+          "pct": 0.00831758034026465
+        },
+        {
+          "value": "STATE BANK OF INDIA",
+          "count": 59,
+          "pct": 0.007435412728418399
+        },
+        {
+          "value": "Suryoday Small Finance Bank",
+          "count": 56,
+          "pct": 0.007057340894770006
+        },
+        {
+          "value": "State Bank of India",
+          "count": 49,
+          "pct": 0.0061751732829237556
+        },
+        {
+          "value": "Airtel Payments Bank",
+          "count": 44,
+          "pct": 0.005545053560176433
+        },
+        {
+          "value": "HDFC BANK LTD",
+          "count": 43,
+          "pct": 0.005419029615626969
+        }
+      ],
+      "dominance": 0.401638311279143,
+      "is_constant": false,
+      "is_near_constant": false,
+      "entropy": 2.5094432304510392,
+      "normalized_entropy": 0.5619110746969518,
+      "n_levels": 87,
+      "max_class_share": 0.401638311279143,
+      "imbalance_ratio": 3187.0,
+      "gini_impurity": 0.806898838189464,
+      "n_rare_levels": 73,
+      "rare_level_mass": 0.11858853182104599,
+      "case_whitespace_variants": 14,
+      "imbalanced": false
+    },
+    "REMITTER_VIRTUAL_ADDRESS": {
+      "_type": "vpa",
+      "_family": "pattern",
+      "count": 128048,
+      "n_present": 117022,
+      "n_missing": 11026,
+      "pct_missing": 0.086108,
+      "n_unique": 29705,
+      "cardinality_ratio": 0.253841,
+      "memory_bytes": 3178591,
+      "n_blank": 0,
+      "top_values": [
+        {
+          "value": "pk446284@okicici",
+          "count": 1495,
+          "pct": 0.012775375570405565
+        },
+        {
+          "value": "7508763457@ptyes",
+          "count": 1143,
+          "pct": 0.009767394165199707
+        },
+        {
+          "value": "7710585163@ybl",
+          "count": 959,
+          "pct": 0.008195040248842099
+        },
+        {
+          "value": "8054240436@ybl",
+          "count": 926,
+          "pct": 0.007913041992104049
+        },
+        {
+          "value": "vishalkumar011186@okhdfcbank",
+          "count": 925,
+          "pct": 0.007904496590384714
+        },
+        {
+          "value": "8010107688@ptyes",
+          "count": 864,
+          "pct": 0.0073832270855052895
+        },
+        {
+          "value": "7973037800@ptyes",
+          "count": 859,
+          "pct": 0.0073405000769086156
+        },
+        {
+          "value": "gurmxndhxwxn-3@okicici",
+          "count": 833,
+          "pct": 0.00711831963220591
+        },
+        {
+          "value": "9815072538@ptyes",
+          "count": 830,
+          "pct": 0.0070926834270479055
+        },
+        {
+          "value": "sunilkkumar045@ybl",
+          "count": 788,
+          "pct": 0.0067337765548358425
+        },
+        {
+          "value": "7976966717@axl",
+          "count": 722,
+          "pct": 0.006169780041359744
+        },
+        {
+          "value": "9781675586@superyes",
+          "count": 720,
+          "pct": 0.006152689237921075
+        },
+        {
+          "value": "7508763457@ptaxis",
+          "count": 713,
+          "pct": 0.006092871425885731
+        },
+        {
+          "value": "9815072538@ptaxis",
+          "count": 696,
+          "pct": 0.0059475995966570385
+        },
+        {
+          "value": "9166295332@ptaxis",
+          "count": 694,
+          "pct": 0.00593050879321837
+        },
+        {
+          "value": "8340605836@axl",
+          "count": 688,
+          "pct": 0.00587923638290236
+        },
+        {
+          "value": "jeeturajput762@okaxis",
+          "count": 667,
+          "pct": 0.005699782946796329
+        },
+        {
+          "value": "9982285079-2@ybl",
+          "count": 653,
+          "pct": 0.005580147322725641
+        },
+        {
+          "value": "9872363642@axl",
+          "count": 639,
+          "pct": 0.005460511698654954
+        },
+        {
+          "value": "8696769606@superyes",
+          "count": 605,
+          "pct": 0.00516996804019757
+        }
+      ],
+      "dominance": 0.012775375570405565,
+      "is_constant": false,
+      "is_near_constant": false,
+      "entropy": 8.097549598058642,
+      "normalized_entropy": 0.786240804122965,
+      "length_min": 8,
+      "length_max": 51,
+      "length_mode": 16,
+      "validity_rate": 1.0,
+      "invalid_examples": [],
+      "decomposition_stubs": [
+        "psp_handle",
+        "known_psp_flag"
+      ]
+    },
+    "INITIATOR_APPLICATION_NAME": {
+      "_type": "free_text",
+      "_family": "text",
+      "count": 128048,
+      "n_present": 121531,
+      "n_missing": 6517,
+      "pct_missing": 0.050895,
+      "n_unique": 131,
+      "cardinality_ratio": 0.001078,
+      "memory_bytes": 3785489,
+      "n_blank": 0,
+      "top_values": [
+        {
+          "value": "com.google.android.apps.nbu.paisa.user",
+          "count": 39468,
+          "pct": 0.3247566464523455
+        },
+        {
+          "value": "com.phonepe.app",
+          "count": 27997,
+          "pct": 0.23036920621076104
+        },
+        {
+          "value": "net.one97.paytm",
+          "count": 25193,
+          "pct": 0.2072969036706684
+        },
+        {
+          "value": "com.phonepe.PhonePeApp",
+          "count": 4408,
+          "pct": 0.03627058116859073
+        },
+        {
+          "value": "com.naviapp",
+          "count": 3716,
+          "pct": 0.030576560712904526
+        },
+        {
+          "value": "com.mobikwik_new",
+          "count": 2954,
+          "pct": 0.024306555529041974
+        },
+        {
+          "value": "INET",
+          "count": 2950,
+          "pct": 0.024273642116003323
+        },
+        {
+          "value": "com.freecharge.upi",
+          "count": 2424,
+          "pct": 0.019945528301421038
+        },
+        {
+          "value": "money.super.payments",
+          "count": 1933,
+          "pct": 0.015905406850926923
+        },
+        {
+          "value": "com.one97.paytm",
+          "count": 1785,
+          "pct": 0.014687610568496927
+        },
+        {
+          "value": "MOB",
+          "count": 1298,
+          "pct": 0.010680402531041463
+        },
+        {
+          "value": "in.amazon.mShop.android.shopping",
+          "count": 1071,
+          "pct": 0.008812566341098156
+        },
+        {
+          "value": "com.upi.axispay",
+          "count": 582,
+          "pct": 0.004788901597123368
+        },
+        {
+          "value": "com.whatsapp",
+          "count": 566,
+          "pct": 0.004657247944968773
+        },
+        {
+          "value": "com.fampay.in",
+          "count": 449,
+          "pct": 0.0036945306135883027
+        },
+        {
+          "value": "in.org.npci.upiapp",
+          "count": 412,
+          "pct": 0.003390081542980803
+        },
+        {
+          "value": "com.amazon.AmazonIN",
+          "count": 382,
+          "pct": 0.003143230945190939
+        },
+        {
+          "value": "com.mobikwik",
+          "count": 311,
+          "pct": 0.0025590178637549268
+        },
+        {
+          "value": "com.dreamplug.androidapp",
+          "count": 300,
+          "pct": 0.0024685059778986433
+        },
+        {
+          "value": "Mobile",
+          "count": 249,
+          "pct": 0.002048859961655874
+        }
+      ],
+      "dominance": 0.3247566464523455,
+      "is_constant": false,
+      "is_near_constant": false,
+      "entropy": 2.0717745448254816,
+      "normalized_entropy": 0.4249621928051752,
+      "char_len_mean": 22.58651702034872,
+      "char_len_max": 42,
+      "token_count_mean": 1.0012836231085074,
+      "whitespace_only_frac": 0.0,
+      "embedded_digit_frac": 0.22488089458656638,
+      "note": "vectorization deferred (requires_human / later stage)"
+    },
+    "TRANSACTION_INITIATOR_DETAILS": {
+      "_type": "categorical",
+      "_family": "categorical",
+      "count": 128048,
+      "n_present": 67184,
+      "n_missing": 60864,
+      "pct_missing": 0.475322,
+      "n_unique": 7,
+      "cardinality_ratio": 0.000104,
+      "memory_bytes": 1306450,
+      "n_blank": 0,
+      "top_values": [
+        {
+          "value": "QR",
+          "count": 51401,
+          "pct": 0.7650779947606573
+        },
+        {
+          "value": "ACCOUNT",
+          "count": 4695,
+          "pct": 0.06988271016908788
+        },
+        {
+          "value": "Using Account No.",
+          "count": 4512,
+          "pct": 0.06715884734460587
+        },
+        {
+          "value": "INTENT CALL",
+          "count": 3563,
+          "pct": 0.05303346034770184
+        },
+        {
+          "value": "VPA",
+          "count": 2253,
+          "pct": 0.03353477018337699
+        },
+        {
+          "value": "MOBILE NUM",
+          "count": 741,
+          "pct": 0.011029411764705883
+        },
+        {
+          "value": "Using MMID",
+          "count": 19,
+          "pct": 0.0002828054298642534
+        }
+      ],
+      "dominance": 0.7650779947606573,
+      "is_constant": false,
+      "is_near_constant": false,
+      "entropy": 0.89382878605481,
+      "normalized_entropy": 0.4593371315159334,
+      "n_levels": 7,
+      "max_class_share": 0.7650779947606573,
+      "imbalance_ratio": 2705.315789473684,
+      "gini_impurity": 0.401202901345289,
+      "n_rare_levels": 1,
+      "rare_level_mass": 0.0002828054298642534,
+      "case_whitespace_variants": 0,
+      "imbalanced": false
+    },
+    "INITIATOR_DEVICE_OS": {
+      "_type": "categorical",
+      "_family": "categorical",
+      "count": 128048,
+      "n_present": 116473,
+      "n_missing": 11575,
+      "pct_missing": 0.090396,
+      "n_unique": 324,
+      "cardinality_ratio": 0.002782,
+      "memory_bytes": 2170405,
+      "n_blank": 0,
+      "top_values": [
+        {
+          "value": "Android",
+          "count": 40009,
+          "pct": 0.3435045031895804
+        },
+        {
+          "value": "Android 8.0.0",
+          "count": 18792,
+          "pct": 0.16134211362289974
+        },
+        {
+          "value": "android",
+          "count": 7332,
+          "pct": 0.06295021163703175
+        },
+        {
+          "value": "android 15",
+          "count": 5903,
+          "pct": 0.05068127377160372
+        },
+        {
+          "value": "iOS",
+          "count": 4490,
+          "pct": 0.038549706799000626
+        },
+        {
+          "value": "android 8.0.0",
+          "count": 3962,
+          "pct": 0.034016467335777394
+        },
+        {
+          "value": "ANDROID 14",
+          "count": 3190,
+          "pct": 0.02738832175697372
+        },
+        {
+          "value": "android 14",
+          "count": 3132,
+          "pct": 0.026890352270483288
+        },
+        {
+          "value": "iPhoneOS 8.0.0",
+          "count": 2904,
+          "pct": 0.0249328170477278
+        },
+        {
+          "value": "Android 15",
+          "count": 2564,
+          "pct": 0.022013685575197686
+        },
+        {
+          "value": "iPhoneOS",
+          "count": 1338,
+          "pct": 0.011487640912486156
+        },
+        {
+          "value": "ANDROID 15",
+          "count": 1236,
+          "pct": 0.01061190147072712
+        },
+        {
+          "value": "ANDROID 35",
+          "count": 1026,
+          "pct": 0.008808908502399697
+        },
+        {
+          "value": "android 12",
+          "count": 969,
+          "pct": 0.008319524696710826
+        },
+        {
+          "value": "android 13",
+          "count": 853,
+          "pct": 0.007323585723729963
+        },
+        {
+          "value": "ANDROID 33",
+          "count": 781,
+          "pct": 0.006705416706017704
+        },
+        {
+          "value": "ANDROID 34",
+          "count": 764,
+          "pct": 0.006559460132391198
+        },
+        {
+          "value": "ANDROID 31",
+          "count": 716,
+          "pct": 0.0061473474539163585
+        },
+        {
+          "value": "Android 13",
+          "count": 711,
+          "pct": 0.006104419049908562
+        },
+        {
+          "value": "Android 11",
+          "count": 663,
+          "pct": 0.005692306371433723
+        }
+      ],
+      "dominance": 0.3435045031895804,
+      "is_constant": false,
+      "is_near_constant": false,
+      "entropy": 2.8173712271829197,
+      "normalized_entropy": 0.4873717748393756,
+      "n_levels": 324,
+      "max_class_share": 0.3435045031895804,
+      "imbalance_ratio": 40009.0,
+      "gini_impurity": 0.8432688451481396,
+      "n_rare_levels": 312,
+      "rare_level_mass": 0.1856310046105106,
+      "case_whitespace_variants": 89,
+      "imbalanced": false
+    },
+    "MOBILE_NUMBER": {
+      "_type": "phone",
+      "_family": "pattern",
+      "count": 128048,
+      "n_present": 121552,
+      "n_missing": 6496,
+      "pct_missing": 0.050731,
+      "n_unique": 25048,
+      "cardinality_ratio": 0.206068,
+      "memory_bytes": 1024516,
+      "n_blank": 0,
+      "top_values": [
+        {
+          "value": "919166295332.0",
+          "count": 2067,
+          "pct": 0.01700506778991707
+        },
+        {
+          "value": "917508763457.0",
+          "count": 1885,
+          "pct": 0.01550776622350928
+        },
+        {
+          "value": "917986870724.0",
+          "count": 1807,
+          "pct": 0.014866065552191655
+        },
+        {
+          "value": "918010107688.0",
+          "count": 1790,
+          "pct": 0.014726207713571146
+        },
+        {
+          "value": "919781675586.0",
+          "count": 1663,
+          "pct": 0.013681387389759115
+        },
+        {
+          "value": "919888128984.0",
+          "count": 1602,
+          "pct": 0.013179544557061999
+        },
+        {
+          "value": "919815072538.0",
+          "count": 1548,
+          "pct": 0.012735290246149797
+        },
+        {
+          "value": "919982285079.0",
+          "count": 1527,
+          "pct": 0.01256252468079505
+        },
+        {
+          "value": "917976966717.0",
+          "count": 1433,
+          "pct": 0.011789193102540476
+        },
+        {
+          "value": "917710585163.0",
+          "count": 1328,
+          "pct": 0.01092536527576675
+        },
+        {
+          "value": "918696769606.0",
+          "count": 1282,
+          "pct": 0.010546926418323022
+        },
+        {
+          "value": "917973037800.0",
+          "count": 1184,
+          "pct": 0.009740687113334211
+        },
+        {
+          "value": "910000000000.0",
+          "count": 1132,
+          "pct": 0.009312886665789128
+        },
+        {
+          "value": "919256623699.0",
+          "count": 1125,
+          "pct": 0.009255298144004212
+        },
+        {
+          "value": "919988663187.0",
+          "count": 1076,
+          "pct": 0.008852178491509807
+        },
+        {
+          "value": "918448432960.0",
+          "count": 1073,
+          "pct": 0.008827497696459128
+        },
+        {
+          "value": "916005249532.0",
+          "count": 1021,
+          "pct": 0.008399697248914045
+        },
+        {
+          "value": "917838335087.0",
+          "count": 976,
+          "pct": 0.008029485323153876
+        },
+        {
+          "value": "919872363642.0",
+          "count": 975,
+          "pct": 0.008021258391470318
+        },
+        {
+          "value": "919501640547.0",
+          "count": 944,
+          "pct": 0.007766223509279979
+        }
+      ],
+      "dominance": 0.01700506778991707,
+      "is_constant": false,
+      "is_near_constant": false,
+      "entropy": 7.298309463871257,
+      "normalized_entropy": 0.7205680966106152,
+      "length_min": 14,
+      "length_max": 14,
+      "length_mode": 14,
+      "validity_rate": 0.0,
+      "decomposition_stubs": [
+        "valid_flag"
+      ]
+    },
+    "INITIATOR_IP_ADDRESS": {
+      "_type": "ip_address",
+      "_family": "pattern",
+      "count": 128048,
+      "n_present": 114069,
+      "n_missing": 13979,
+      "pct_missing": 0.10917,
+      "n_unique": 24271,
+      "cardinality_ratio": 0.212775,
+      "memory_bytes": 3035648,
+      "n_blank": 0,
+      "top_values": [
+        {
+          "value": "192.168.20.21",
+          "count": 39531,
+          "pct": 0.3465534018883307
+        },
+        {
+          "value": "127.0.0.1",
+          "count": 19306,
+          "pct": 0.16924843734932365
+        },
+        {
+          "value": "172.16.11.66",
+          "count": 18095,
+          "pct": 0.15863205603625877
+        },
+        {
+          "value": "10.186.153.241",
+          "count": 439,
+          "pct": 0.003848547808782404
+        },
+        {
+          "value": "124.170.23.22",
+          "count": 208,
+          "pct": 0.0018234577317237813
+        },
+        {
+          "value": "10.123.10.45",
+          "count": 140,
+          "pct": 0.0012273273194294682
+        },
+        {
+          "value": "172.16.50.168",
+          "count": 98,
+          "pct": 0.0008591291236006277
+        },
+        {
+          "value": "192.0.0.2",
+          "count": 88,
+          "pct": 0.0007714628864985228
+        },
+        {
+          "value": "182.75.68.182",
+          "count": 82,
+          "pct": 0.0007188631442372599
+        },
+        {
+          "value": "49.47.128.90",
+          "count": 79,
+          "pct": 0.0006925632731066284
+        },
+        {
+          "value": "2401:4900:4707:50d3:0:3b:a748:d301",
+          "count": 64,
+          "pct": 0.0005610639174534712
+        },
+        {
+          "value": "100.73.26.110",
+          "count": 64,
+          "pct": 0.0005610639174534712
+        },
+        {
+          "value": "103.70.34.178",
+          "count": 62,
+          "pct": 0.0005435306700330502
+        },
+        {
+          "value": "2405:201:5c0b:e8c2:81a7:9902:f05f:3f17",
+          "count": 60,
+          "pct": 0.0005259974226126292
+        },
+        {
+          "value": "2401:4900:170f:8309:1:2:659d:e1b0",
+          "count": 52,
+          "pct": 0.0004558644329309453
+        },
+        {
+          "value": "183.83.153.48",
+          "count": 51,
+          "pct": 0.00044709780922073483
+        },
+        {
+          "value": "65.1.214.231",
+          "count": 49,
+          "pct": 0.00042956456180031385
+        },
+        {
+          "value": "103.61.195.254",
+          "count": 46,
+          "pct": 0.0004032646906696824
+        },
+        {
+          "value": "2409:4055:29a:414b::bd5:30ad",
+          "count": 44,
+          "pct": 0.0003857314432492614
+        },
+        {
+          "value": "192.168.2.121",
+          "count": 43,
+          "pct": 0.0003769648195390509
+        }
+      ],
+      "dominance": 0.3465534018883307,
+      "is_constant": false,
+      "is_near_constant": false,
+      "entropy": 4.475821696840403,
+      "normalized_entropy": 0.4432806846954543,
+      "length_min": 7,
+      "length_max": 39,
+      "length_mode": 13,
+      "validity_rate": 1.0,
+      "invalid_examples": [],
+      "decomposition_stubs": [
+        "subnet_24",
+        "is_private"
+      ]
+    },
+    "TRANSACTION_TIME": {
+      "_type": "datetime",
+      "_family": "datetime",
+      "count": 128048,
+      "n_present": 127823,
+      "n_missing": 225,
+      "pct_missing": 0.001757,
+      "n_unique": 57279,
+      "cardinality_ratio": 0.448112,
+      "memory_bytes": 2063111,
+      "n_blank": 0,
+      "top_values": [
+        {
+          "value": "20:13:56",
+          "count": 12,
+          "pct": 9.387981818608545e-05
+        },
+        {
+          "value": "17:30:28",
+          "count": 11,
+          "pct": 8.605650000391166e-05
+        },
+        {
+          "value": "20:12:44",
+          "count": 11,
+          "pct": 8.605650000391166e-05
+        },
+        {
+          "value": "15:31:06",
+          "count": 10,
+          "pct": 7.823318182173788e-05
+        },
+        {
+          "value": "18:56:10",
+          "count": 10,
+          "pct": 7.823318182173788e-05
+        },
+        {
+          "value": "19:52:05",
+          "count": 10,
+          "pct": 7.823318182173788e-05
+        },
+        {
+          "value": "19:22:58",
+          "count": 10,
+          "pct": 7.823318182173788e-05
+        },
+        {
+          "value": "20:13:03",
+          "count": 10,
+          "pct": 7.823318182173788e-05
+        },
+        {
+          "value": "18:07:54",
+          "count": 10,
+          "pct": 7.823318182173788e-05
+        },
+        {
+          "value": "17:31:25",
+          "count": 9,
+          "pct": 7.040986363956409e-05
+        },
+        {
+          "value": "18:03:16",
+          "count": 9,
+          "pct": 7.040986363956409e-05
+        },
+        {
+          "value": "19:38:38",
+          "count": 9,
+          "pct": 7.040986363956409e-05
+        },
+        {
+          "value": "15:40:04",
+          "count": 9,
+          "pct": 7.040986363956409e-05
+        },
+        {
+          "value": "19:51:12",
+          "count": 9,
+          "pct": 7.040986363956409e-05
+        },
+        {
+          "value": "19:11:37",
+          "count": 9,
+          "pct": 7.040986363956409e-05
+        },
+        {
+          "value": "19:34:05",
+          "count": 9,
+          "pct": 7.040986363956409e-05
+        },
+        {
+          "value": "18:11:17",
+          "count": 9,
+          "pct": 7.040986363956409e-05
+        },
+        {
+          "value": "19:09:46",
+          "count": 9,
+          "pct": 7.040986363956409e-05
+        },
+        {
+          "value": "14:47:22",
+          "count": 9,
+          "pct": 7.040986363956409e-05
+        },
+        {
+          "value": "19:37:36",
+          "count": 9,
+          "pct": 7.040986363956409e-05
+        }
+      ],
+      "dominance": 9.387981818608545e-05,
+      "is_constant": false,
+      "is_near_constant": false,
+      "entropy": 10.790116731348114,
+      "normalized_entropy": 0.984887065811748,
+      "parse_fail_rate": 0.0,
+      "min": "2026-06-12T00:00:08",
+      "max": "2026-06-12T23:59:58",
+      "span_days": 0,
+      "n_unique_days": 1,
+      "max_gap_days": 0,
+      "is_monotonic_increasing": false,
+      "has_time_component": true,
+      "n_future_dates": 75330,
+      "n_sentinel_dates": 0,
+      "by_year": {
+        "2026": 127823
+      },
+      "by_dow": {
+        "4": 127823
+      },
+      "by_hour": {
+        "0": 1977,
+        "1": 1312,
+        "2": 864,
+        "3": 676,
+        "4": 593,
+        "5": 891,
+        "6": 1678,
+        "7": 2892,
+        "8": 4397,
+        "9": 5695,
+        "10": 6950,
+        "11": 7528,
+        "12": 7848,
+        "13": 7793,
+        "14": 7941,
+        "15": 7771,
+        "16": 8232,
+        "17": 9364,
+        "18": 9706,
+        "19": 10478,
+        "20": 9459,
+        "21": 6276,
+        "22": 4408,
+        "23": 3094
+      },
+      "derived_feature_stubs": [
+        "recency_days",
+        "year",
+        "month",
+        "dayofweek",
+        "hour"
+      ]
+    },
+    "CUSTOMER_ID": {
+      "_type": "categorical",
+      "_family": "categorical",
+      "count": 128048,
+      "n_present": 82293,
+      "n_missing": 45755,
+      "pct_missing": 0.357327,
+      "n_unique": 2867,
+      "cardinality_ratio": 0.034839,
+      "memory_bytes": 1781164,
+      "n_blank": 0,
+      "top_values": [
+        {
+          "value": "AAB000099",
+          "count": 2281,
+          "pct": 0.027718031910369048
+        },
+        {
+          "value": "FCQ010645",
+          "count": 2201,
+          "pct": 0.026745895762701567
+        },
+        {
+          "value": "R49784114",
+          "count": 2094,
+          "pct": 0.02544566366519631
+        },
+        {
+          "value": "O22268725",
+          "count": 1842,
+          "pct": 0.022383434800043747
+        },
+        {
+          "value": "AAA023613",
+          "count": 1831,
+          "pct": 0.02224976607973947
+        },
+        {
+          "value": "R19707191",
+          "count": 1738,
+          "pct": 0.021119657808076023
+        },
+        {
+          "value": "R12827489",
+          "count": 1679,
+          "pct": 0.020402707399171254
+        },
+        {
+          "value": "R04489759",
+          "count": 1629,
+          "pct": 0.01979512230687908
+        },
+        {
+          "value": "R46855566",
+          "count": 1581,
+          "pct": 0.01921184061827859
+        },
+        {
+          "value": "R50210413",
+          "count": 1478,
+          "pct": 0.017960215328156708
+        },
+        {
+          "value": "509647430",
+          "count": 1476,
+          "pct": 0.01793591192446502
+        },
+        {
+          "value": "R20201628",
+          "count": 1292,
+          "pct": 0.015699998784829815
+        },
+        {
+          "value": "AAB006042",
+          "count": 1290,
+          "pct": 0.015675695381138128
+        },
+        {
+          "value": "AAA011801",
+          "count": 1219,
+          "pct": 0.01481292455008324
+        },
+        {
+          "value": "AAA018568",
+          "count": 1132,
+          "pct": 0.013755726489494854
+        },
+        {
+          "value": "AAA014528",
+          "count": 1131,
+          "pct": 0.01374357478764901
+        },
+        {
+          "value": "R26345386",
+          "count": 1108,
+          "pct": 0.01346408564519461
+        },
+        {
+          "value": "O39451044",
+          "count": 1108,
+          "pct": 0.01346408564519461
+        },
+        {
+          "value": "R26399290",
+          "count": 1048,
+          "pct": 0.012734983534444
+        },
+        {
+          "value": "R46950982",
+          "count": 1041,
+          "pct": 0.012649921621523095
+        }
+      ],
+      "dominance": 0.027718031910369048,
+      "is_constant": false,
+      "is_near_constant": false,
+      "entropy": 5.140546903092245,
+      "normalized_entropy": 0.6457144884135594,
+      "n_levels": 2867,
+      "max_class_share": 0.027718031910369048,
+      "imbalance_ratio": 2281.0,
+      "gini_impurity": 0.9893108438407394,
+      "n_rare_levels": 2837,
+      "rare_level_mass": 0.52337379850048,
+      "case_whitespace_variants": 0,
+      "imbalanced": false
+    }
+  },
+  "load_info": {
+    "total_rows": 128048,
+    "sampled": false,
+    "sample_rows": 128048
+  },
+  "quality_score": 86.2,
+  "entity_checks": {
+    "primary_key": [
+      "ACCOUNT_NUMBER"
+    ],
+    "primary_key_unique": false,
+    "full_row_duplicate_rate": 0.0006403848556791204,
+    "schema_conflicts": [],
+    "n_columns": 26,
+    "n_drop_suggested": 2,
+    "n_warn": 4
+  },
+  "relationships": {
+    "redundant_pairs": [],
+    "top_numeric_corr": [
+      {
+        "a": "TRANSACTION_AMOUNT",
+        "b": "TRANSACTION_ID",
+        "pearson": 0.0021
+      }
+    ],
+    "top_spearman_corr": [
+      {
+        "a": "TRANSACTION_AMOUNT",
+        "b": "TRANSACTION_ID",
+        "spearman": -0.0232
+      }
+    ],
+    "nonlinear_pairs": [],
+    "vif": [
+      {
+        "column": "TRANSACTION_AMOUNT",
+        "vif": 1.0
+      },
+      {
+        "column": "TRANSACTION_ID",
+        "vif": 1.0
+      }
+    ],
+    "numeric_categorical_assoc": [
+      {
+        "categorical": "MODE_OF_TRANSACTION",
+        "numeric": "TRANSACTION_ID",
+        "eta": 0.5473
+      },
+      {
+        "categorical": "MODE_OF_TRANSACTION",
+        "numeric": "TRANSACTION_AMOUNT",
+        "eta": 0.4071
+      },
+      {
+        "categorical": "TRANSACTION_TYPE",
+        "numeric": "TRANSACTION_AMOUNT",
+        "eta": 0.3246
+      }
+    ],
+    "categorical_associations": [
+      {
+        "a": "MODE_OF_TRANSACTION",
+        "b": "TRANSACTION_INITIATOR_DETAILS",
+        "cramers_v": 1.0
+      },
+      {
+        "a": "TRANSACTION_TYPE",
+        "b": "TRANSACTION_SUB_TYPE",
+        "cramers_v": 1.0
+      },
+      {
+        "a": "TRANSACTION_SUB_TYPE",
+        "b": "CREDIT_DEBIT_INDICATOR",
+        "cramers_v": 1.0
+      },
+      {
+        "a": "TRANSACTION_TYPE",
+        "b": "CREDIT_DEBIT_INDICATOR",
+        "cramers_v": 0.9999
+      },
+      {
+        "a": "MODE_OF_TRANSACTION",
+        "b": "TRANSACTION_TYPE",
+        "cramers_v": 0.82
+      },
+      {
+        "a": "MODE_OF_TRANSACTION",
+        "b": "TRANSACTION_SUB_TYPE",
+        "cramers_v": 0.7071
+      },
+      {
+        "a": "TRANSACTION_TYPE",
+        "b": "TRANSACTION_INITIATOR_DETAILS",
+        "cramers_v": 0.5779
+      }
+    ],
+    "directional_associations": [
+      {
+        "a": "MODE_OF_TRANSACTION",
+        "b": "TRANSACTION_TYPE",
+        "u_a_given_b": 0.9445,
+        "u_b_given_a": 0.8006
+      },
+      {
+        "a": "MODE_OF_TRANSACTION",
+        "b": "TRANSACTION_SUB_TYPE",
+        "u_a_given_b": 0.9204,
+        "u_b_given_a": 0.3038
+      },
+      {
+        "a": "MODE_OF_TRANSACTION",
+        "b": "TRANSACTION_INITIATOR_DETAILS",
+        "u_a_given_b": 1.0,
+        "u_b_given_a": 0.2763
+      },
+      {
+        "a": "TRANSACTION_TYPE",
+        "b": "TRANSACTION_SUB_TYPE",
+        "u_a_given_b": 0.9872,
+        "u_b_given_a": 1.0
+      },
+      {
+        "a": "TRANSACTION_TYPE",
+        "b": "CREDIT_DEBIT_INDICATOR",
+        "u_a_given_b": 0.5623,
+        "u_b_given_a": 1.0
+      },
+      {
+        "a": "TRANSACTION_TYPE",
+        "b": "TRANSACTION_INITIATOR_DETAILS",
+        "u_a_given_b": 0.924,
+        "u_b_given_a": 0.3615
+      },
+      {
+        "a": "TRANSACTION_SUB_TYPE",
+        "b": "CREDIT_DEBIT_INDICATOR",
+        "u_a_given_b": 0.3038,
+        "u_b_given_a": 1.0
+      }
+    ],
+    "functional_dependencies": [
+      {
+        "determinant": "BENEFICIARY_BANK",
+        "depends": "TRANSACTION_SUB_TYPE"
+      },
+      {
+        "determinant": "TRANSACTION_TYPE",
+        "depends": "TRANSACTION_SUB_TYPE"
+      },
+      {
+        "determinant": "TRANSACTION_TYPE",
+        "depends": "CREDIT_DEBIT_INDICATOR"
+      },
+      {
+        "determinant": "TRANSACTION_SUB_TYPE",
+        "depends": "BENEFICIARY_BANK"
+      },
+      {
+        "determinant": "TRANSACTION_SUB_TYPE",
+        "depends": "CREDIT_DEBIT_INDICATOR"
+      },
+      {
+        "determinant": "TRANSACTION_SUB_TYPE",
+        "depends": "REMITTER_BANK"
+      },
+      {
+        "determinant": "REMITTER_BANK",
+        "depends": "TRANSACTION_SUB_TYPE"
+      },
+      {
+        "determinant": "TRANSACTION_INITIATOR_DETAILS",
+        "depends": "MODE_OF_TRANSACTION"
+      },
+      {
+        "determinant": "INITIATOR_DEVICE_OS",
+        "depends": "MODE_OF_TRANSACTION"
+      },
+      {
+        "determinant": "INITIATOR_DEVICE_OS",
+        "depends": "BENEFICIARY_BANK"
+      },
+      {
+        "determinant": "INITIATOR_DEVICE_OS",
+        "depends": "REMITTER_BANK"
+      }
+    ],
+    "co_missing_pairs": [
+      {
+        "a": "INITIATOR_APPLICATION_NAME",
+        "b": "MOBILE_NUMBER",
+        "phi": 0.9983
+      },
+      {
+        "a": "CREDIT_DEBIT_INDICATOR",
+        "b": "TRANSACTION_ID",
+        "phi": 0.9923
+      },
+      {
+        "a": "CREDIT_DEBIT_INDICATOR",
+        "b": "REMITTER_NAME",
+        "phi": 0.9795
+      },
+      {
+        "a": "TRANSACTION_ID",
+        "b": "REMITTER_NAME",
+        "phi": 0.9736
+      },
+      {
+        "a": "BENEFICIARY_VIRTUAL_ADDRESS",
+        "b": "REMITTER_VIRTUAL_ADDRESS",
+        "phi": 0.9724
+      },
+      {
+        "a": "BENEFICIARY_NAME",
+        "b": "BENEFICIARY_ACCOUNT_NUMBER",
+        "phi": 0.9318
+      },
+      {
+        "a": "REMITTER_VIRTUAL_ADDRESS",
+        "b": "INITIATOR_DEVICE_OS",
+        "phi": 0.9143
+      },
+      {
+        "a": "BENEFICIARY_ACCOUNT_NUMBER",
+        "b": "CREDIT_DEBIT_INDICATOR",
+        "phi": 0.8957
+      },
+      {
+        "a": "BENEFICIARY_ACCOUNT_NUMBER",
+        "b": "TRANSACTION_ID",
+        "phi": 0.8887
+      },
+      {
+        "a": "BENEFICIARY_VIRTUAL_ADDRESS",
+        "b": "INITIATOR_DEVICE_OS",
+        "phi": 0.8887
+      },
+      {
+        "a": "TRANSACTION_TYPE",
+        "b": "TRANSACTION_SUB_TYPE",
+        "phi": 0.8878
+      },
+      {
+        "a": "BENEFICIARY_BANK",
+        "b": "REMITTER_BANK",
+        "phi": 0.8877
+      },
+      {
+        "a": "BENEFICIARY_IFSC",
+        "b": "BENEFICIARY_ACCOUNT_NUMBER",
+        "phi": 0.8821
+      },
+      {
+        "a": "BENEFICIARY_ACCOUNT_NUMBER",
+        "b": "REMITTER_NAME",
+        "phi": 0.8771
+      },
+      {
+        "a": "REMITTER_IFSC",
+        "b": "REMITTER_VIRTUAL_ADDRESS",
+        "phi": 0.8392
+      },
+      {
+        "a": "INITIATOR_DEVICE_OS",
+        "b": "INITIATOR_IP_ADDRESS",
+        "phi": 0.8389
+      },
+      {
+        "a": "REMITTER_BANK",
+        "b": "REMITTER_VIRTUAL_ADDRESS",
+        "phi": -0.8373
+      },
+      {
+        "a": "BENEFICIARY_NAME",
+        "b": "CREDIT_DEBIT_INDICATOR",
+        "phi": 0.8357
+      },
+      {
+        "a": "BENEFICIARY_NAME",
+        "b": "TRANSACTION_ID",
+        "phi": 0.8292
+      },
+      {
+        "a": "BENEFICIARY_NAME",
+        "b": "BENEFICIARY_IFSC",
+        "phi": 0.8211
+      },
+      {
+        "a": "BENEFICIARY_BANK",
+        "b": "REMITTER_VIRTUAL_ADDRESS",
+        "phi": -0.8209
+      },
+      {
+        "a": "BENEFICIARY_NAME",
+        "b": "REMITTER_NAME",
+        "phi": 0.8183
+      },
+      {
+        "a": "BENEFICIARY_VIRTUAL_ADDRESS",
+        "b": "REMITTER_IFSC",
+        "phi": 0.816
+      },
+      {
+        "a": "BENEFICIARY_VIRTUAL_ADDRESS",
+        "b": "REMITTER_BANK",
+        "phi": -0.8142
+      },
+      {
+        "a": "TRANSACTION_TYPE",
+        "b": "CUSTOMER_ID",
+        "phi": 0.8089
+      },
+      {
+        "a": "BENEFICIARY_IFSC",
+        "b": "REMITTER_NAME",
+        "phi": 0.7987
+      },
+      {
+        "a": "BENEFICIARY_BANK",
+        "b": "BENEFICIARY_VIRTUAL_ADDRESS",
+        "phi": -0.7983
+      },
+      {
+        "a": "BENEFICIARY_IFSC",
+        "b": "TRANSACTION_ID",
+        "phi": 0.7963
+      },
+      {
+        "a": "BENEFICIARY_IFSC",
+        "b": "CREDIT_DEBIT_INDICATOR",
+        "phi": 0.7901
+      },
+      {
+        "a": "BENEFICIARY_BANK",
+        "b": "INITIATOR_DEVICE_OS",
+        "phi": -0.772
+      },
+      {
+        "a": "REMITTER_VIRTUAL_ADDRESS",
+        "b": "INITIATOR_IP_ADDRESS",
+        "phi": 0.7663
+      },
+      {
+        "a": "REMITTER_VIRTUAL_ADDRESS",
+        "b": "MOBILE_NUMBER",
+        "phi": 0.753
+      },
+      {
+        "a": "REMITTER_VIRTUAL_ADDRESS",
+        "b": "INITIATOR_APPLICATION_NAME",
+        "phi": 0.7516
+      },
+      {
+        "a": "REMITTER_IFSC",
+        "b": "INITIATOR_DEVICE_OS",
+        "phi": 0.7481
+      },
+      {
+        "a": "REMITTER_BANK",
+        "b": "INITIATOR_DEVICE_OS",
+        "phi": -0.7462
+      },
+      {
+        "a": "BENEFICIARY_VIRTUAL_ADDRESS",
+        "b": "INITIATOR_IP_ADDRESS",
+        "phi": 0.7443
+      },
+      {
+        "a": "TRANSACTION_SUB_TYPE",
+        "b": "CUSTOMER_ID",
+        "phi": 0.7377
+      },
+      {
+        "a": "BENEFICIARY_VIRTUAL_ADDRESS",
+        "b": "MOBILE_NUMBER",
+        "phi": 0.7322
+      },
+      {
+        "a": "BENEFICIARY_VIRTUAL_ADDRESS",
+        "b": "INITIATOR_APPLICATION_NAME",
+        "phi": 0.7309
+      },
+      {
+        "a": "BENEFICIARY_BANK",
+        "b": "INITIATOR_IP_ADDRESS",
+        "phi": -0.6743
+      },
+      {
+        "a": "REMITTER_IFSC",
+        "b": "INITIATOR_IP_ADDRESS",
+        "phi": 0.6631
+      },
+      {
+        "a": "INITIATOR_APPLICATION_NAME",
+        "b": "INITIATOR_DEVICE_OS",
+        "phi": 0.6586
+      },
+      {
+        "a": "INITIATOR_DEVICE_OS",
+        "b": "MOBILE_NUMBER",
+        "phi": 0.6574
+      },
+      {
+        "a": "BENEFICIARY_BANK",
+        "b": "REMITTER_IFSC",
+        "phi": -0.6364
+      },
+      {
+        "a": "BENEFICIARY_IFSC",
+        "b": "MOBILE_NUMBER",
+        "phi": 0.6341
+      },
+      {
+        "a": "BENEFICIARY_IFSC",
+        "b": "INITIATOR_APPLICATION_NAME",
+        "phi": 0.633
+      },
+      {
+        "a": "REMITTER_IFSC",
+        "b": "REMITTER_BANK",
+        "phi": -0.6273
+      },
+      {
+        "a": "REMITTER_NAME",
+        "b": "MOBILE_NUMBER",
+        "phi": 0.61
+      },
+      {
+        "a": "REMITTER_NAME",
+        "b": "INITIATOR_APPLICATION_NAME",
+        "phi": 0.6089
+      },
+      {
+        "a": "REMITTER_BANK",
+        "b": "INITIATOR_IP_ADDRESS",
+        "phi": -0.6056
+      }
+    ],
+    "corr_matrix": {
+      "columns": [
+        "TRANSACTION_AMOUNT",
+        "TRANSACTION_ID"
+      ],
+      "pearson": [
+        [
+          1.0,
+          0.0021
+        ],
+        [
+          0.0021,
+          1.0
+        ]
+      ],
+      "spearman": [
+        [
+          1.0,
+          -0.0232
+        ],
+        [
+          -0.0232,
+          1.0
+        ]
+      ]
+    },
+    "cramers_matrix": {
+      "columns": [
+        "MODE_OF_TRANSACTION",
+        "TRANSACTION_TYPE",
+        "TRANSACTION_SUB_TYPE",
+        "CREDIT_DEBIT_INDICATOR",
+        "TRANSACTION_INITIATOR_DETAILS"
+      ],
+      "values": [
+        [
+          1.0,
+          0.82,
+          0.7071,
+          0.2028,
+          1.0
+        ],
+        [
+          0.82,
+          1.0,
+          1.0,
+          0.9999,
+          0.5779
+        ],
+        [
+          0.7071,
+          1.0,
+          1.0,
+          1.0,
+          0.0117
+        ],
+        [
+          0.2028,
+          0.9999,
+          1.0,
+          1.0,
+          0.4589
+        ],
+        [
+          1.0,
+          0.5779,
+          0.0117,
+          0.4589,
+          1.0
+        ]
+      ]
+    }
+  }
+}

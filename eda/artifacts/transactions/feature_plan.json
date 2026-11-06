@@ -1,0 +1,715 @@
+{
+  "ACCOUNT_NUMBER": {
+    "column": "ACCOUNT_NUMBER",
+    "semantic_type": "categorical",
+    "feature_role": "feature",
+    "recommended_ops": [
+      {
+        "op": "encode",
+        "method": "onehot"
+      },
+      {
+        "op": "rare_bucket",
+        "min_freq_frac": 0.01
+      }
+    ],
+    "requires_human": false,
+    "notes": [],
+    "quality_status": "OK",
+    "target_signal": null,
+    "leakage_suspect": false,
+    "exclude_from_model": false,
+    "priority": "unranked"
+  },
+  "MODE_OF_TRANSACTION": {
+    "column": "MODE_OF_TRANSACTION",
+    "semantic_type": "categorical",
+    "feature_role": "feature",
+    "recommended_ops": [
+      {
+        "op": "encode",
+        "method": "woe"
+      },
+      {
+        "op": "rare_bucket",
+        "min_freq_frac": 0.01
+      }
+    ],
+    "requires_human": false,
+    "notes": [],
+    "quality_status": "OK",
+    "target_signal": {
+      "iv": 0.14165429870201274,
+      "iv_band": "medium",
+      "predictive_rank": 8,
+      "predictive_score": 0.14165429870201274
+    },
+    "leakage_suspect": false,
+    "exclude_from_model": false,
+    "priority": "medium"
+  },
+  "BENEFICIARY_NAME": {
+    "column": "BENEFICIARY_NAME",
+    "semantic_type": "free_text",
+    "feature_role": "feature",
+    "recommended_ops": [
+      {
+        "op": "text_basic",
+        "features": [
+          "char_len",
+          "token_count",
+          "has_digit"
+        ]
+      },
+      {
+        "op": "vectorize",
+        "status": "deferred"
+      }
+    ],
+    "requires_human": true,
+    "notes": [
+      "text vectorization deferred to later/LLM stage"
+    ],
+    "quality_status": "OK",
+    "target_signal": null,
+    "leakage_suspect": false,
+    "exclude_from_model": false,
+    "priority": "unranked"
+  },
+  "BENEFICIARY_IFSC": {
+    "column": "BENEFICIARY_IFSC",
+    "semantic_type": "bank_code",
+    "feature_role": "feature",
+    "recommended_ops": [
+      {
+        "op": "extract",
+        "feature": "bank_prefix"
+      },
+      {
+        "op": "extract",
+        "feature": "branch_code"
+      }
+    ],
+    "requires_human": false,
+    "notes": [],
+    "quality_status": "OK",
+    "target_signal": {
+      "iv": 0.03396263585218139,
+      "iv_band": "weak",
+      "predictive_rank": 15,
+      "predictive_score": 0.03396263585218139
+    },
+    "leakage_suspect": false,
+    "exclude_from_model": false,
+    "priority": "low"
+  },
+  "BENEFICIARY_ACCOUNT_NUMBER": {
+    "column": "BENEFICIARY_ACCOUNT_NUMBER",
+    "semantic_type": "unknown",
+    "feature_role": "feature",
+    "recommended_ops": [],
+    "requires_human": false,
+    "notes": [],
+    "quality_status": "OK",
+    "target_signal": null,
+    "leakage_suspect": false,
+    "exclude_from_model": false,
+    "priority": "unranked"
+  },
+  "BENEFICIARY_BANK": {
+    "column": "BENEFICIARY_BANK",
+    "semantic_type": "categorical",
+    "feature_role": "feature",
+    "recommended_ops": [
+      {
+        "op": "drop",
+        "reason": "missing=0.94"
+      },
+      {
+        "op": "standardize_case_trim",
+        "reason": "12 collapsible variants"
+      },
+      {
+        "op": "encode",
+        "method": "woe"
+      },
+      {
+        "op": "rare_bucket",
+        "min_freq_frac": 0.01
+      }
+    ],
+    "requires_human": false,
+    "notes": [],
+    "quality_status": "DROP_SUGGESTED",
+    "target_signal": {
+      "iv": 0.09103045644674544,
+      "iv_band": "weak",
+      "predictive_rank": 10,
+      "predictive_score": 0.09103045644674544
+    },
+    "leakage_suspect": false,
+    "exclude_from_model": false,
+    "priority": "drop"
+  },
+  "BENEFICIARY_VIRTUAL_ADDRESS": {
+    "column": "BENEFICIARY_VIRTUAL_ADDRESS",
+    "semantic_type": "vpa",
+    "feature_role": "feature",
+    "recommended_ops": [
+      {
+        "op": "extract",
+        "feature": "psp_handle"
+      },
+      {
+        "op": "extract",
+        "feature": "known_psp_flag"
+      }
+    ],
+    "requires_human": false,
+    "notes": [],
+    "quality_status": "OK",
+    "target_signal": {
+      "iv": 1.4337992018424917,
+      "iv_band": "strong",
+      "predictive_rank": 2,
+      "predictive_score": 1.4337992018424917
+    },
+    "leakage_suspect": false,
+    "exclude_from_model": false,
+    "priority": "high"
+  },
+  "TRANSACTION_TYPE": {
+    "column": "TRANSACTION_TYPE",
+    "semantic_type": "categorical",
+    "feature_role": "feature",
+    "recommended_ops": [
+      {
+        "op": "impute",
+        "strategy": "median_or_mode",
+        "add_missing_flag": true,
+        "reason": "missing=0.45"
+      },
+      {
+        "op": "encode",
+        "method": "woe"
+      },
+      {
+        "op": "rare_bucket",
+        "min_freq_frac": 0.01
+      }
+    ],
+    "requires_human": false,
+    "notes": [],
+    "quality_status": "WARN",
+    "target_signal": {
+      "iv": 0.07317626890943373,
+      "iv_band": "weak",
+      "predictive_rank": 12,
+      "predictive_score": 0.07317626890943373
+    },
+    "leakage_suspect": false,
+    "exclude_from_model": false,
+    "priority": "low"
+  },
+  "TRANSACTION_SUB_TYPE": {
+    "column": "TRANSACTION_SUB_TYPE",
+    "semantic_type": "categorical",
+    "feature_role": "feature",
+    "recommended_ops": [
+      {
+        "op": "impute",
+        "strategy": "median_or_mode",
+        "add_missing_flag": true,
+        "reason": "missing=0.51"
+      },
+      {
+        "op": "encode",
+        "method": "woe"
+      },
+      {
+        "op": "rare_bucket",
+        "min_freq_frac": 0.01
+      }
+    ],
+    "requires_human": false,
+    "notes": [],
+    "quality_status": "WARN",
+    "target_signal": {
+      "iv": 0.024199645634268074,
+      "iv_band": "weak",
+      "predictive_rank": 16,
+      "predictive_score": 0.024199645634268074
+    },
+    "leakage_suspect": false,
+    "exclude_from_model": false,
+    "priority": "low"
+  },
+  "CREDIT_DEBIT_INDICATOR": {
+    "column": "CREDIT_DEBIT_INDICATOR",
+    "semantic_type": "binary",
+    "feature_role": "feature",
+    "recommended_ops": [
+      {
+        "op": "encode",
+        "method": "woe"
+      }
+    ],
+    "requires_human": false,
+    "notes": [],
+    "quality_status": "OK",
+    "target_signal": {
+      "iv": 0.04209408595675366,
+      "iv_band": "weak",
+      "predictive_rank": 13,
+      "predictive_score": 0.04209408595675366
+    },
+    "leakage_suspect": false,
+    "exclude_from_model": false,
+    "priority": "low"
+  },
+  "TRANSACTION_AMOUNT": {
+    "column": "TRANSACTION_AMOUNT",
+    "semantic_type": "amount",
+    "feature_role": "feature",
+    "recommended_ops": [
+      {
+        "op": "outlier_cap",
+        "at": "p99",
+        "reason": "outliers=0.154"
+      },
+      {
+        "op": "transform",
+        "fn": "log1p",
+        "reason": "skew=97.45261465872433, all_positive"
+      },
+      {
+        "op": "scale",
+        "method": "robust"
+      }
+    ],
+    "requires_human": false,
+    "notes": [],
+    "quality_status": "OK",
+    "target_signal": {
+      "iv": 0.048095102991935576,
+      "iv_band": "weak",
+      "auc": 0.5559664436294565,
+      "ks": 0.1076579633398203,
+      "predictive_rank": 9,
+      "predictive_score": 0.11193288725891293
+    },
+    "leakage_suspect": false,
+    "exclude_from_model": false,
+    "priority": "low"
+  },
+  "TRANSACTION_DATE": {
+    "column": "TRANSACTION_DATE",
+    "semantic_type": "datetime",
+    "feature_role": "feature",
+    "recommended_ops": [
+      {
+        "op": "datetime_decompose",
+        "parts": [
+          "recency_days",
+          "year",
+          "month",
+          "dayofweek"
+        ]
+      }
+    ],
+    "requires_human": false,
+    "notes": [],
+    "quality_status": "OK",
+    "target_signal": null,
+    "leakage_suspect": false,
+    "exclude_from_model": false,
+    "priority": "unranked"
+  },
+  "TRANSACTION_ID": {
+    "column": "TRANSACTION_ID",
+    "semantic_type": "amount_string",
+    "feature_role": "feature",
+    "recommended_ops": [
+      {
+        "op": "outlier_cap",
+        "at": "p99",
+        "reason": "outliers=0.191"
+      },
+      {
+        "op": "transform",
+        "fn": "log1p",
+        "reason": "skew=142.648277142572, all_positive"
+      },
+      {
+        "op": "scale",
+        "method": "robust"
+      }
+    ],
+    "requires_human": false,
+    "notes": [],
+    "quality_status": "OK",
+    "target_signal": {
+      "iv": 0.14260115163657602,
+      "iv_band": "medium",
+      "auc": 0.5177125153775918,
+      "ks": 0.11072916829458479,
+      "predictive_rank": 7,
+      "predictive_score": 0.14260115163657602
+    },
+    "leakage_suspect": false,
+    "exclude_from_model": false,
+    "priority": "medium"
+  },
+  "TRANSACTION_NARRATION": {
+    "column": "TRANSACTION_NARRATION",
+    "semantic_type": "free_text",
+    "feature_role": "feature",
+    "recommended_ops": [
+      {
+        "op": "text_basic",
+        "features": [
+          "char_len",
+          "token_count",
+          "has_digit"
+        ]
+      },
+      {
+        "op": "vectorize",
+        "status": "deferred"
+      }
+    ],
+    "requires_human": true,
+    "notes": [
+      "text vectorization deferred to later/LLM stage"
+    ],
+    "quality_status": "OK",
+    "target_signal": null,
+    "leakage_suspect": false,
+    "exclude_from_model": false,
+    "priority": "unranked"
+  },
+  "REMITTER_NAME": {
+    "column": "REMITTER_NAME",
+    "semantic_type": "free_text",
+    "feature_role": "feature",
+    "recommended_ops": [
+      {
+        "op": "text_basic",
+        "features": [
+          "char_len",
+          "token_count",
+          "has_digit"
+        ]
+      },
+      {
+        "op": "vectorize",
+        "status": "deferred"
+      }
+    ],
+    "requires_human": true,
+    "notes": [
+      "text vectorization deferred to later/LLM stage"
+    ],
+    "quality_status": "OK",
+    "target_signal": null,
+    "leakage_suspect": false,
+    "exclude_from_model": false,
+    "priority": "unranked"
+  },
+  "REMITTER_ACCOUNT_NUMBER": {
+    "column": "REMITTER_ACCOUNT_NUMBER",
+    "semantic_type": "unknown",
+    "feature_role": "feature",
+    "recommended_ops": [],
+    "requires_human": false,
+    "notes": [],
+    "quality_status": "OK",
+    "target_signal": null,
+    "leakage_suspect": false,
+    "exclude_from_model": false,
+    "priority": "unranked"
+  },
+  "REMITTER_IFSC": {
+    "column": "REMITTER_IFSC",
+    "semantic_type": "bank_code",
+    "feature_role": "feature",
+    "recommended_ops": [
+      {
+        "op": "extract",
+        "feature": "bank_prefix"
+      },
+      {
+        "op": "extract",
+        "feature": "branch_code"
+      }
+    ],
+    "requires_human": false,
+    "notes": [],
+    "quality_status": "OK",
+    "target_signal": {
+      "iv": 0.7210120387843296,
+      "iv_band": "strong",
+      "predictive_rank": 4,
+      "predictive_score": 0.7210120387843296
+    },
+    "leakage_suspect": false,
+    "exclude_from_model": false,
+    "priority": "high"
+  },
+  "REMITTER_BANK": {
+    "column": "REMITTER_BANK",
+    "semantic_type": "categorical",
+    "feature_role": "feature",
+    "recommended_ops": [
+      {
+        "op": "drop",
+        "reason": "missing=0.94"
+      },
+      {
+        "op": "standardize_case_trim",
+        "reason": "14 collapsible variants"
+      },
+      {
+        "op": "encode",
+        "method": "woe"
+      },
+      {
+        "op": "rare_bucket",
+        "min_freq_frac": 0.01
+      }
+    ],
+    "requires_human": false,
+    "notes": [],
+    "quality_status": "DROP_SUGGESTED",
+    "target_signal": {
+      "iv": 0.090652484865183,
+      "iv_band": "weak",
+      "predictive_rank": 11,
+      "predictive_score": 0.090652484865183
+    },
+    "leakage_suspect": false,
+    "exclude_from_model": false,
+    "priority": "drop"
+  },
+  "REMITTER_VIRTUAL_ADDRESS": {
+    "column": "REMITTER_VIRTUAL_ADDRESS",
+    "semantic_type": "vpa",
+    "feature_role": "feature",
+    "recommended_ops": [
+      {
+        "op": "extract",
+        "feature": "psp_handle"
+      },
+      {
+        "op": "extract",
+        "feature": "known_psp_flag"
+      }
+    ],
+    "requires_human": false,
+    "notes": [],
+    "quality_status": "OK",
+    "target_signal": {
+      "iv": 1.2867405258455704,
+      "iv_band": "strong",
+      "predictive_rank": 3,
+      "predictive_score": 1.2867405258455704
+    },
+    "leakage_suspect": false,
+    "exclude_from_model": false,
+    "priority": "high"
+  },
+  "INITIATOR_APPLICATION_NAME": {
+    "column": "INITIATOR_APPLICATION_NAME",
+    "semantic_type": "free_text",
+    "feature_role": "feature",
+    "recommended_ops": [
+      {
+        "op": "text_basic",
+        "features": [
+          "char_len",
+          "token_count",
+          "has_digit"
+        ]
+      },
+      {
+        "op": "vectorize",
+        "status": "deferred"
+      }
+    ],
+    "requires_human": true,
+    "notes": [
+      "text vectorization deferred to later/LLM stage"
+    ],
+    "quality_status": "OK",
+    "target_signal": null,
+    "leakage_suspect": false,
+    "exclude_from_model": false,
+    "priority": "unranked"
+  },
+  "TRANSACTION_INITIATOR_DETAILS": {
+    "column": "TRANSACTION_INITIATOR_DETAILS",
+    "semantic_type": "categorical",
+    "feature_role": "feature",
+    "recommended_ops": [
+      {
+        "op": "impute",
+        "strategy": "median_or_mode",
+        "add_missing_flag": true,
+        "reason": "missing=0.48"
+      },
+      {
+        "op": "encode",
+        "method": "woe"
+      },
+      {
+        "op": "rare_bucket",
+        "min_freq_frac": 0.01
+      }
+    ],
+    "requires_human": false,
+    "notes": [],
+    "quality_status": "WARN",
+    "target_signal": {
+      "iv": 0.17230980320000688,
+      "iv_band": "medium",
+      "predictive_rank": 6,
+      "predictive_score": 0.17230980320000688
+    },
+    "leakage_suspect": false,
+    "exclude_from_model": false,
+    "priority": "medium"
+  },
+  "INITIATOR_DEVICE_OS": {
+    "column": "INITIATOR_DEVICE_OS",
+    "semantic_type": "categorical",
+    "feature_role": "feature",
+    "recommended_ops": [
+      {
+        "op": "standardize_case_trim",
+        "reason": "89 collapsible variants"
+      },
+      {
+        "op": "encode",
+        "method": "woe"
+      },
+      {
+        "op": "rare_bucket",
+        "min_freq_frac": 0.01
+      }
+    ],
+    "requires_human": false,
+    "notes": [],
+    "quality_status": "OK",
+    "target_signal": {
+      "iv": 0.26219821932307646,
+      "iv_band": "medium",
+      "predictive_rank": 5,
+      "predictive_score": 0.26219821932307646
+    },
+    "leakage_suspect": false,
+    "exclude_from_model": false,
+    "priority": "medium"
+  },
+  "MOBILE_NUMBER": {
+    "column": "MOBILE_NUMBER",
+    "semantic_type": "phone",
+    "feature_role": "feature",
+    "recommended_ops": [
+      {
+        "op": "extract",
+        "feature": "valid_flag"
+      }
+    ],
+    "requires_human": false,
+    "notes": [],
+    "quality_status": "OK",
+    "target_signal": {
+      "iv": 1.449130278118256,
+      "iv_band": "strong",
+      "predictive_rank": 1,
+      "predictive_score": 1.449130278118256
+    },
+    "leakage_suspect": false,
+    "exclude_from_model": false,
+    "priority": "high"
+  },
+  "INITIATOR_IP_ADDRESS": {
+    "column": "INITIATOR_IP_ADDRESS",
+    "semantic_type": "ip_address",
+    "feature_role": "feature",
+    "recommended_ops": [
+      {
+        "op": "extract",
+        "feature": "subnet_24"
+      },
+      {
+        "op": "extract",
+        "feature": "is_private"
+      }
+    ],
+    "requires_human": false,
+    "notes": [],
+    "quality_status": "OK",
+    "target_signal": {
+      "iv": 0.03415691178909974,
+      "iv_band": "weak",
+      "predictive_rank": 14,
+      "predictive_score": 0.03415691178909974
+    },
+    "leakage_suspect": false,
+    "exclude_from_model": false,
+    "priority": "low"
+  },
+  "TRANSACTION_TIME": {
+    "column": "TRANSACTION_TIME",
+    "semantic_type": "datetime",
+    "feature_role": "feature",
+    "recommended_ops": [
+      {
+        "op": "datetime_decompose",
+        "parts": [
+          "recency_days",
+          "year",
+          "month",
+          "dayofweek",
+          "hour"
+        ]
+      }
+    ],
+    "requires_human": false,
+    "notes": [],
+    "quality_status": "OK",
+    "target_signal": null,
+    "leakage_suspect": false,
+    "exclude_from_model": false,
+    "priority": "unranked"
+  },
+  "CUSTOMER_ID": {
+    "column": "CUSTOMER_ID",
+    "semantic_type": "categorical",
+    "feature_role": "feature",
+    "recommended_ops": [
+      {
+        "op": "impute",
+        "strategy": "median_or_mode",
+        "add_missing_flag": true,
+        "reason": "missing=0.36"
+      },
+      {
+        "op": "encode",
+        "method": "onehot"
+      },
+      {
+        "op": "rare_bucket",
+        "min_freq_frac": 0.01
+      }
+    ],
+    "requires_human": false,
+    "notes": [],
+    "quality_status": "WARN",
+    "target_signal": null,
+    "leakage_suspect": false,
+    "exclude_from_model": false,
+    "priority": "unranked"
+  }
+}

@@ -1,0 +1,91 @@
+# ============================================================================
+# datasource.yaml  --  WHAT & WHERE the data is.
+# This is the ONLY place that names columns / entities. Code never does.
+# Point `root` at any folder + redeclare entities to run on different data.
+# ============================================================================
+
+root: /home/ai-centre-of-excellence/aditya/pnb_mapped
+engine: pandas
+output_dir: ./artifacts
+report_dir: ./report
+
+# Global sampling / perf knobs (Pandas -> cost matters at scale).
+sampling:
+  profile_row_cap: 2000000      # max rows loaded per entity for profiling
+  heavy_op_sample: 200000       # rows for O(n^2)/pattern/corr/MI ops
+  random_seed: 42
+  per_shard_stratify: true      # sample evenly across shards (fair drift)
+
+entities:
+
+  accounts:
+    glob: "accounts/*.parquet"
+    grain: "one bank account"
+    primary_key: [ACCOUNT_NUMBER]
+    foreign_keys:
+      CUSTOMER_ID: { references: customers.CUSTOMER_ID }
+    time_column: ACCOUNT_OPEN_DATE
+    column_overrides:
+      PINCODE:      { semantic_type: pincode }
+      BRANCH_CODE:  { semantic_type: categorical_id }
+      "*_FLAG":     { semantic_type: boolean_flag }
+      LIEN_AMOUNT:  { semantic_type: amount, currency: INR }
+      "*_DATE":     { semantic_type: datetime }
+      "NUM_*":      { semantic_type: count }
+
+  customers:
+    glob: "customers/*.parquet"
+    grain: "one customer"
+    primary_key: [CUSTOMER_ID]
+    time_column: CUSTOMER_OPEN_DATE
+    column_overrides:
+      "HASH_OF_*":      { semantic_type: hashed_pii }
+      DATE_OF_BIRTH:    { semantic_type: datetime, derive_age: true }
+      ANNUAL_INCOME:    { semantic_type: amount_string }
+      ADDRESS:          { semantic_type: free_text }
+      "*_BALANCE":      { semantic_type: amount, currency: INR }
+      "NUM_*":          { semantic_type: count }
+      "*_PIN_CODE":     { semantic_type: pincode }
+      "*_DATE":         { semantic_type: datetime }
+      "*_FLAG":         { semantic_type: boolean_flag }
+
+  transactions:
+    glob: "transactions/*.parquet"
+    grain: "one transaction"
+    primary_key: [ACCOUNT_NUMBER]   # account-level key (non-unique: many txns / account)
+    time_column: TRANSACTION_DATE
+    foreign_keys:
+      ACCOUNT_NUMBER: { references: accounts.ACCOUNT_NUMBER }
+      CUSTOMER_ID:    { references: customers.CUSTOMER_ID }
+    column_overrides:
+      TRANSACTION_DATE:     { semantic_type: datetime }
+      TRANSACTION_TIME:     { semantic_type: datetime }
+      TRANSACTION_AMOUNT:   { semantic_type: amount, currency: INR }
+      INITIATOR_IP_ADDRESS: { semantic_type: ip_address }
+      MOBILE_NUMBER:        { semantic_type: phone }
+      "*_IFSC":             { semantic_type: bank_code }
+      "*_VIRTUAL_ADDRESS":  { semantic_type: vpa }
+      "*_NAME":             { semantic_type: free_text }
+      TRANSACTION_NARRATION:{ semantic_type: free_text }
+
+  mha_l0:
+    glob: "mha_l0/*.parquet"
+    grain: "one cybercrime complaint"
+    primary_key: [ACCOUNT_NUMBER]   # account-level key (non-unique: many complaints / account)
+    optional: true              # if folder missing -> skip, no error
+    time_column: COMPLAINT_DATE
+    column_overrides:
+      COMPLAINT_DATE:  { semantic_type: datetime }
+      DISPUTED_AMOUNT: { semantic_type: amount, currency: INR }
+
+  mha_l1:
+    glob: "mha_l1/*.parquet"
+    grain: "one fraud transaction mapping"
+    primary_key: [ACCOUNT_NUMBER]   # account-level key (non-unique: many fraud txns / account)
+    optional: true
+    time_column: TXN_DATE
+    column_overrides:
+      FRAUD_LAYER:     { semantic_type: ordinal, order: [0, 1, 2, 3] }
+      TXN_DATE:        { semantic_type: datetime }
+      TXN_AMOUNT:      { semantic_type: amount_string }
+      DISPUTED_AMOUNT: { semantic_type: amount_string }

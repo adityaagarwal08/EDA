@@ -1,0 +1,2254 @@
+{
+  "primary_target": "is_fraudster_account",
+  "results": {
+    "is_fraudster_account": {
+      "supervised": true,
+      "positive_rate": 0.1231413220042484,
+      "n_pos": 15768,
+      "n_neg": 112280,
+      "columns": {
+        "MODE_OF_TRANSACTION": {
+          "iv": 0.14165429870201274,
+          "iv_band": "medium",
+          "cramers_v_target": 0.09751361569723906,
+          "lift": {
+            "max_lift": 2.4998105641420283,
+            "max_lift_category": "ATM",
+            "top_bad_rate": 0.30782997762863534
+          },
+          "target_rate_by_cat": {
+            "UPI": {
+              "rate": 0.12232742561227804,
+              "n": 117022
+            },
+            "IMPS": {
+              "rate": 0.12116530567203708,
+              "n": 4531
+            },
+            "ATM": {
+              "rate": 0.30782997762863534,
+              "n": 2235
+            },
+            "NEFT": {
+              "rate": 0.038129822968679075,
+              "n": 2203
+            },
+            "NRTGS": {
+              "rate": 0.0012437810945273632,
+              "n": 804
+            },
+            "IBS": {
+              "rate": 0.0,
+              "n": 641
+            },
+            "MBS": {
+              "rate": 0.11981566820276497,
+              "n": 434
+            },
+            "POS": {
+              "rate": 0.4438202247191011,
+              "n": 178
+            }
+          },
+          "predictive_rank": 8,
+          "predictive_score": 0.14165429870201274
+        },
+        "BENEFICIARY_IFSC": {
+          "iv": 0.03396263585218139,
+          "iv_band": "weak",
+          "cramers_v_target": 0.056617288542839296,
+          "lift": {
+            "max_lift": 1.5622906906891658,
+            "max_lift_category": "PUNB0000130",
+            "top_bad_rate": 0.1923825410063942
+          },
+          "target_rate_by_cat": {
+            "PUNB0000100": {
+              "rate": 0.12792511700468018,
+              "n": 47434
+            },
+            "YESB0PTMUPI": {
+              "rate": 0.10833622384090646,
+              "n": 8649
+            },
+            "YESB0YBLUPI": {
+              "rate": 0.10483024151207561,
+              "n": 5714
+            },
+            "PUNB0000130": {
+              "rate": 0.1923825410063942,
+              "n": 3597
+            },
+            "UTIB0000553": {
+              "rate": 0.12168719671519224,
+              "n": 2679
+            },
+            "PUNB0000110": {
+              "rate": 0.05299806576402321,
+              "n": 2585
+            },
+            "YESB0MCHUPI": {
+              "rate": 0.08180300500834725,
+              "n": 1797
+            },
+            "AIRP0000001": {
+              "rate": 0.05898681471200555,
+              "n": 1441
+            },
+            "ICIC0DC0099": {
+              "rate": 0.13458856345885634,
+              "n": 1434
+            },
+            "IPOS0000001": {
+              "rate": 0.0935374149659864,
+              "n": 1176
+            },
+            "HDFC0MERUPI": {
+              "rate": 0.11597938144329897,
+              "n": 1164
+            },
+            "PUNB0044010": {
+              "rate": 0.0,
+              "n": 1090
+            },
+            "PUNB0000200": {
+              "rate": 0.0,
+              "n": 968
+            },
+            "CNRB0000033": {
+              "rate": 0.13542795232936078,
+              "n": 923
+            },
+            "SBIN0000600": {
+              "rate": 0.10268378063010501,
+              "n": 857
+            },
+            "PUNB0466900": {
+              "rate": 0.2476303317535545,
+              "n": 844
+            },
+            "punb0000100": {
+              "rate": 0.2078720787207872,
+              "n": 813
+            },
+            "HDFC0001348": {
+              "rate": 0.11273792093704246,
+              "n": 683
+            },
+            "FDRL0001382": {
+              "rate": 0.10236220472440945,
+              "n": 635
+            },
+            "KKBK0004058": {
+              "rate": 0.14874551971326164,
+              "n": 558
+            }
+          },
+          "high_cardinality_capped": {
+            "n_distinct": 9729,
+            "kept_top": 10
+          },
+          "predictive_rank": 15,
+          "predictive_score": 0.03396263585218139
+        },
+        "BENEFICIARY_BANK": {
+          "iv": 0.09103045644674544,
+          "iv_band": "weak",
+          "cramers_v_target": 0.04085870423740601,
+          "lift": {
+            "max_lift": 1.0195521767978935,
+            "max_lift_category": "__other__",
+            "top_bad_rate": 0.12554900290320178
+          },
+          "target_rate_by_cat": {
+            "PUNJAB NATIONAL BANK": {
+              "rate": 0.10680257035231554,
+              "n": 4513
+            },
+            "PNB": {
+              "rate": 0.080999242997729,
+              "n": 1321
+            },
+            "HDFC BANK LTD": {
+              "rate": 0.0,
+              "n": 355
+            },
+            "AXIS BANK LTD": {
+              "rate": 0.0,
+              "n": 269
+            },
+            "STATE BANK OF INDIA": {
+              "rate": 0.0,
+              "n": 261
+            },
+            "KOTAK MAHINDRA BANK LTD": {
+              "rate": 0.0,
+              "n": 157
+            },
+            "ICICI BANK LTD": {
+              "rate": 0.0,
+              "n": 100
+            },
+            "UNION BANK OF INDIA": {
+              "rate": 0.0,
+              "n": 84
+            },
+            "CANARA BANK": {
+              "rate": 0.0,
+              "n": 46
+            },
+            "CENTRAL BANK OF INDIA": {
+              "rate": 0.0,
+              "n": 41
+            },
+            "State Bank of India": {
+              "rate": 0.12195121951219512,
+              "n": 41
+            },
+            "BANK OF INDIA": {
+              "rate": 0.0,
+              "n": 40
+            },
+            "ICICI Bank Limited": {
+              "rate": 0.02564102564102564,
+              "n": 39
+            },
+            "BANK OF BARODA": {
+              "rate": 0.0,
+              "n": 37
+            },
+            "Karnataka Bank Limited": {
+              "rate": 0.4230769230769231,
+              "n": 26
+            },
+            "Punjab and Sind Bank": {
+              "rate": 0.15384615384615385,
+              "n": 26
+            },
+            "Punjab Gramin Bank": {
+              "rate": 0.5789473684210527,
+              "n": 19
+            },
+            "UJJIVAN SMALL FINANCE BANK LIMITED": {
+              "rate": 0.0,
+              "n": 17
+            },
+            "FEDERAL BANK LTD": {
+              "rate": 0.07142857142857142,
+              "n": 14
+            },
+            "YES BANK LTD": {
+              "rate": 0.0,
+              "n": 14
+            }
+          },
+          "high_cardinality_capped": {
+            "n_distinct": 66,
+            "kept_top": 10
+          },
+          "predictive_rank": 10,
+          "predictive_score": 0.09103045644674544
+        },
+        "BENEFICIARY_VIRTUAL_ADDRESS": {
+          "iv": 1.4337992018424917,
+          "iv_band": "strong",
+          "cramers_v_target": 0.14261400288080744,
+          "lift": {
+            "max_lift": 1.145382172726866,
+            "max_lift_category": "__other__",
+            "top_bad_rate": 0.14104387494968468
+          },
+          "target_rate_by_cat": {
+            "amzn0010756375@apl": {
+              "rate": 0.0,
+              "n": 3672
+            },
+            "AMZN0010756375@apl": {
+              "rate": 0.0,
+              "n": 2948
+            },
+            "9417142797m1@pnb": {
+              "rate": 0.0,
+              "n": 2638
+            },
+            "kashyapasha778@okaxis": {
+              "rate": 0.0,
+              "n": 1376
+            },
+            "ramsinghgodara42@okhdfcbank": {
+              "rate": 0.0,
+              "n": 1165
+            },
+            "8728976661m@pnb": {
+              "rate": 0.0,
+              "n": 991
+            },
+            "9814076870m@pnb": {
+              "rate": 0.0,
+              "n": 981
+            },
+            "6284618075@ikwik": {
+              "rate": 0.0,
+              "n": 863
+            },
+            "pk446284@okaxis": {
+              "rate": 0.0,
+              "n": 831
+            },
+            "7878768725-u575@ybl": {
+              "rate": 0.0,
+              "n": 788
+            },
+            "premshakya10@oksbi": {
+              "rate": 1.0,
+              "n": 727
+            },
+            "kirank44758@okhdfcbank": {
+              "rate": 0.0,
+              "n": 665
+            },
+            "9351525905m@pnb": {
+              "rate": 1.0,
+              "n": 655
+            },
+            "vishalkumarcharan519@okicici": {
+              "rate": 0.0,
+              "n": 622
+            },
+            "sunilkkumar045@ibl": {
+              "rate": 0.0,
+              "n": 620
+            },
+            "jeeturajput762@okaxis": {
+              "rate": 0.0,
+              "n": 613
+            },
+            "7508763457@ptyes": {
+              "rate": 0.0,
+              "n": 540
+            },
+            "rakesh95016-3@okhdfcbank": {
+              "rate": 0.0,
+              "n": 513
+            },
+            "7976966717@axl": {
+              "rate": 0.0,
+              "n": 482
+            },
+            "7976966717@ybl": {
+              "rate": 0.0,
+              "n": 476
+            }
+          },
+          "high_cardinality_capped": {
+            "n_distinct": 31690,
+            "kept_top": 10
+          },
+          "predictive_rank": 2,
+          "predictive_score": 1.4337992018424917
+        },
+        "TRANSACTION_TYPE": {
+          "iv": 0.07317626890943373,
+          "iv_band": "weak",
+          "cramers_v_target": 0.09264385192049443,
+          "lift": {
+            "max_lift": 2.5375444887549876,
+            "max_lift_category": "DEBIT",
+            "top_bad_rate": 0.31247658298988384
+          },
+          "target_rate_by_cat": {
+            "PIN": {
+              "rate": 0.11463699096122072,
+              "n": 61734
+            },
+            "CREDIT": {
+              "rate": 0.1127485380116959,
+              "n": 4275
+            },
+            "DEBIT": {
+              "rate": 0.31247658298988384,
+              "n": 2669
+            },
+            "UPI_MANDATE": {
+              "rate": 0.024200518582541054,
+              "n": 1157
+            },
+            "PMT": {
+              "rate": 0.05947136563876652,
+              "n": 454
+            },
+            "T": {
+              "rate": 0.056338028169014086,
+              "n": 426
+            },
+            "XFR": {
+              "rate": 0.012658227848101266,
+              "n": 79
+            },
+            "SHP": {
+              "rate": 0.0,
+              "n": 57
+            },
+            "TXP": {
+              "rate": 0.0,
+              "n": 48
+            },
+            "BIOAUTH": {
+              "rate": 0.0,
+              "n": 22
+            },
+            "CCP": {
+              "rate": 0.0,
+              "n": 5
+            },
+            "SSA": {
+              "rate": 0.0,
+              "n": 4
+            },
+            "PPF": {
+              "rate": 0.0,
+              "n": 2
+            }
+          },
+          "high_cardinality_capped": {
+            "n_distinct": 13,
+            "kept_top": 10
+          },
+          "predictive_rank": 12,
+          "predictive_score": 0.07317626890943373
+        },
+        "TRANSACTION_SUB_TYPE": {
+          "iv": 0.024199645634268074,
+          "iv_band": "weak",
+          "cramers_v_target": 0.0411490685692826,
+          "lift": {
+            "max_lift": 1.0185148506793043,
+            "max_lift_category": "MPIN",
+            "top_bad_rate": 0.11463699096122072
+          },
+          "target_rate_by_cat": {
+            "MPIN": {
+              "rate": 0.11463699096122072,
+              "n": 61734
+            },
+            "DS": {
+              "rate": 0.02374893977947413,
+              "n": 1179
+            },
+            "CI": {
+              "rate": 0.056338028169014086,
+              "n": 426
+            }
+          },
+          "predictive_rank": 16,
+          "predictive_score": 0.024199645634268074
+        },
+        "CREDIT_DEBIT_INDICATOR": {
+          "iv": 0.04209408595675366,
+          "iv_band": "weak",
+          "cramers_v_target": 0.002733164406868562,
+          "lift": {
+            "max_lift": 1.00976831051194,
+            "max_lift_category": "DEBIT",
+            "top_bad_rate": 0.12056779102948709
+          },
+          "target_rate_by_cat": {
+            "DEBIT": {
+              "rate": 0.12056779102948709,
+              "n": 68335
+            },
+            "CREDIT": {
+              "rate": 0.11801047120418848,
+              "n": 57300
+            }
+          },
+          "predictive_rank": 13,
+          "predictive_score": 0.04209408595675366
+        },
+        "TRANSACTION_AMOUNT": {
+          "iv": 0.048095102991935576,
+          "iv_band": "weak",
+          "auc": 0.5559664436294565,
+          "ks": 0.1076579633398203,
+          "point_biserial": -0.014262256072340255,
+          "lift": {
+            "max_lift": 1.3462298309252088,
+            "top_bin_rate": 0.16577652110168603,
+            "top_bin_capture": 0.10039320142059868
+          },
+          "predictive_rank": 9,
+          "predictive_score": 0.11193288725891293
+        },
+        "TRANSACTION_ID": {
+          "iv": 0.14260115163657602,
+          "iv_band": "medium",
+          "auc": 0.5177125153775918,
+          "ks": 0.11072916829458479,
+          "point_biserial": 0.0011300947127026654,
+          "lift": {
+            "max_lift": 1.6364061840506916,
+            "top_bin_rate": 0.1994598133900802,
+            "top_bin_capture": 0.1636339219767676
+          },
+          "predictive_rank": 7,
+          "predictive_score": 0.14260115163657602
+        },
+        "REMITTER_IFSC": {
+          "iv": 0.7210120387843296,
+          "iv_band": "strong",
+          "cramers_v_target": 0.1465548243583655,
+          "lift": {
+            "max_lift": 2.0567840676711886,
+            "max_lift_category": "PUNB0466900",
+            "top_bad_rate": 0.25327510917030566
+          },
+          "target_rate_by_cat": {
+            "PUNB0000100": {
+              "rate": 0.15731781867240036,
+              "n": 47439
+            },
+            "PUNB0000110": {
+              "rate": 0.027603974972396025,
+              "n": 5434
+            },
+            "PUNB0000130": {
+              "rate": 0.011270890011659542,
+              "n": 5146
+            },
+            "PUNB0000200": {
+              "rate": 0.0,
+              "n": 3674
+            },
+            "IPOS0000001": {
+              "rate": 0.09167054443927408,
+              "n": 2149
+            },
+            "PUNB0PGB003": {
+              "rate": 0.04837852206273259,
+              "n": 1881
+            },
+            "PUNB0466900": {
+              "rate": 0.25327510917030566,
+              "n": 1832
+            },
+            "PUNB0370900": {
+              "rate": 0.0,
+              "n": 1790
+            },
+            "CNRB0000033": {
+              "rate": 0.14310344827586208,
+              "n": 1740
+            },
+            "AIRP0000001": {
+              "rate": 0.09675443968156766,
+              "n": 1633
+            },
+            "HDFC0003555": {
+              "rate": 0.007614213197969543,
+              "n": 1576
+            },
+            "SBIN0011900": {
+              "rate": 0.03372549019607843,
+              "n": 1275
+            },
+            "HDFC0001348": {
+              "rate": 0.0544,
+              "n": 1250
+            },
+            "SBIN0000600": {
+              "rate": 0.09639953542392567,
+              "n": 861
+            },
+            "PUNB0741100": {
+              "rate": 0.0037174721189591076,
+              "n": 807
+            },
+            "PUNB0356200": {
+              "rate": 0.0,
+              "n": 723
+            },
+            "SBIN0011899": {
+              "rate": 0.13573407202216067,
+              "n": 722
+            },
+            "KKBK0004058": {
+              "rate": 0.06789250353606789,
+              "n": 707
+            },
+            "PUNB0408400": {
+              "rate": 0.0,
+              "n": 615
+            },
+            "PUNB0012500": {
+              "rate": 0.0,
+              "n": 585
+            }
+          },
+          "high_cardinality_capped": {
+            "n_distinct": 11361,
+            "kept_top": 10
+          },
+          "predictive_rank": 4,
+          "predictive_score": 0.7210120387843296
+        },
+        "REMITTER_BANK": {
+          "iv": 0.090652484865183,
+          "iv_band": "weak",
+          "cramers_v_target": 0.08668229250085979,
+          "lift": {
+            "max_lift": 1.0224551234364452,
+            "max_lift_category": "__other__",
+            "top_bad_rate": 0.12590647558998083
+          },
+          "target_rate_by_cat": {
+            "PNB": {
+              "rate": 0.016943834326953247,
+              "n": 3187
+            },
+            "Axis Bank Limited": {
+              "rate": 0.07012750455373407,
+              "n": 1098
+            },
+            "The Ratnakar Bank Ltd.": {
+              "rate": 0.04008016032064128,
+              "n": 499
+            },
+            "ICICI Bank Limited": {
+              "rate": 0.03492063492063492,
+              "n": 315
+            },
+            "Punjab Gramin Bank": {
+              "rate": 0.5034013605442177,
+              "n": 294
+            },
+            "IDFC Bank": {
+              "rate": 0.04642857142857143,
+              "n": 280
+            },
+            "Punjab National Bank": {
+              "rate": 0.24723247232472326,
+              "n": 271
+            },
+            "AXIS BANK LTD": {
+              "rate": 0.28517110266159695,
+              "n": 263
+            },
+            "Karnataka Bank Limited": {
+              "rate": 0.005076142131979695,
+              "n": 197
+            },
+            "IndusInd Bank Limited": {
+              "rate": 0.03821656050955414,
+              "n": 157
+            },
+            "Yes Bank Limited": {
+              "rate": 0.051470588235294115,
+              "n": 136
+            },
+            "YES BANK LTD": {
+              "rate": 0.0,
+              "n": 107
+            },
+            "Jammu and Kashmir Bank Ltd": {
+              "rate": 0.019417475728155338,
+              "n": 103
+            },
+            "Punjab and Sind Bank": {
+              "rate": 0.45977011494252873,
+              "n": 87
+            },
+            "Indian Overseas Bank": {
+              "rate": 0.24242424242424243,
+              "n": 66
+            },
+            "STATE BANK OF INDIA": {
+              "rate": 0.03389830508474576,
+              "n": 59
+            },
+            "Suryoday Small Finance Bank": {
+              "rate": 0.0,
+              "n": 56
+            },
+            "State Bank of India": {
+              "rate": 0.3673469387755102,
+              "n": 49
+            },
+            "Airtel Payments Bank": {
+              "rate": 0.022727272727272728,
+              "n": 44
+            },
+            "HDFC BANK LTD": {
+              "rate": 0.0,
+              "n": 43
+            }
+          },
+          "high_cardinality_capped": {
+            "n_distinct": 87,
+            "kept_top": 10
+          },
+          "predictive_rank": 11,
+          "predictive_score": 0.090652484865183
+        },
+        "REMITTER_VIRTUAL_ADDRESS": {
+          "iv": 1.2867405258455704,
+          "iv_band": "strong",
+          "cramers_v_target": 0.23655927857842252,
+          "lift": {
+            "max_lift": 1.0241282700623242,
+            "max_lift_category": "__other__",
+            "top_bad_rate": 0.12611250907739854
+          },
+          "target_rate_by_cat": {
+            "pk446284@okicici": {
+              "rate": 0.0,
+              "n": 1495
+            },
+            "7508763457@ptyes": {
+              "rate": 0.0,
+              "n": 1143
+            },
+            "7710585163@ybl": {
+              "rate": 0.0,
+              "n": 959
+            },
+            "8054240436@ybl": {
+              "rate": 0.0,
+              "n": 926
+            },
+            "vishalkumar011186@okhdfcbank": {
+              "rate": 0.0,
+              "n": 925
+            },
+            "8010107688@ptyes": {
+              "rate": 0.0,
+              "n": 864
+            },
+            "7973037800@ptyes": {
+              "rate": 0.0,
+              "n": 859
+            },
+            "gurmxndhxwxn-3@okicici": {
+              "rate": 1.0,
+              "n": 833
+            },
+            "9815072538@ptyes": {
+              "rate": 0.0,
+              "n": 830
+            },
+            "sunilkkumar045@ybl": {
+              "rate": 0.0,
+              "n": 788
+            },
+            "7976966717@axl": {
+              "rate": 0.0,
+              "n": 722
+            },
+            "9781675586@superyes": {
+              "rate": 0.0,
+              "n": 720
+            },
+            "7508763457@ptaxis": {
+              "rate": 0.0,
+              "n": 713
+            },
+            "9815072538@ptaxis": {
+              "rate": 0.0,
+              "n": 696
+            },
+            "9166295332@ptaxis": {
+              "rate": 0.0,
+              "n": 694
+            },
+            "8340605836@axl": {
+              "rate": 0.0,
+              "n": 688
+            },
+            "jeeturajput762@okaxis": {
+              "rate": 0.0,
+              "n": 667
+            },
+            "9982285079-2@ybl": {
+              "rate": 0.0,
+              "n": 653
+            },
+            "9872363642@axl": {
+              "rate": 0.0,
+              "n": 639
+            },
+            "8696769606@superyes": {
+              "rate": 0.0,
+              "n": 605
+            }
+          },
+          "high_cardinality_capped": {
+            "n_distinct": 29705,
+            "kept_top": 10
+          },
+          "predictive_rank": 3,
+          "predictive_score": 1.2867405258455704
+        },
+        "TRANSACTION_INITIATOR_DETAILS": {
+          "iv": 0.17230980320000688,
+          "iv_band": "medium",
+          "cramers_v_target": 0.22866222912076065,
+          "lift": {
+            "max_lift": 3.71966391935395,
+            "max_lift_category": "VPA",
+            "top_bad_rate": 0.44917887261429207
+          },
+          "target_rate_by_cat": {
+            "QR": {
+              "rate": 0.09455068967529814,
+              "n": 51401
+            },
+            "ACCOUNT": {
+              "rate": 0.2536741214057508,
+              "n": 4695
+            },
+            "Using Account No.": {
+              "rate": 0.12167553191489362,
+              "n": 4512
+            },
+            "INTENT CALL": {
+              "rate": 0.09233791748526522,
+              "n": 3563
+            },
+            "VPA": {
+              "rate": 0.44917887261429207,
+              "n": 2253
+            },
+            "MOBILE NUM": {
+              "rate": 0.2321187584345479,
+              "n": 741
+            },
+            "Using MMID": {
+              "rate": 0.0,
+              "n": 19
+            }
+          },
+          "predictive_rank": 6,
+          "predictive_score": 0.17230980320000688
+        },
+        "INITIATOR_DEVICE_OS": {
+          "iv": 0.26219821932307646,
+          "iv_band": "medium",
+          "cramers_v_target": 0.16209829071520965,
+          "lift": {
+            "max_lift": 2.821569437281351,
+            "max_lift_category": "iPhoneOS 8.0.0",
+            "top_bad_rate": 0.3474517906336088
+          },
+          "target_rate_by_cat": {
+            "Android": {
+              "rate": 0.09770301682121522,
+              "n": 40009
+            },
+            "Android 8.0.0": {
+              "rate": 0.11201575138356748,
+              "n": 18792
+            },
+            "android": {
+              "rate": 0.1992635024549918,
+              "n": 7332
+            },
+            "android 15": {
+              "rate": 0.032356428934440115,
+              "n": 5903
+            },
+            "iOS": {
+              "rate": 0.16926503340757237,
+              "n": 4490
+            },
+            "android 8.0.0": {
+              "rate": 0.11862695608278648,
+              "n": 3962
+            },
+            "ANDROID 14": {
+              "rate": 0.038557993730407525,
+              "n": 3190
+            },
+            "android 14": {
+              "rate": 0.08205619412515965,
+              "n": 3132
+            },
+            "iPhoneOS 8.0.0": {
+              "rate": 0.3474517906336088,
+              "n": 2904
+            },
+            "Android 15": {
+              "rate": 0.013650546021840874,
+              "n": 2564
+            },
+            "iPhoneOS": {
+              "rate": 0.1711509715994021,
+              "n": 1338
+            },
+            "ANDROID 15": {
+              "rate": 0.22006472491909385,
+              "n": 1236
+            },
+            "ANDROID 35": {
+              "rate": 0.19200779727095516,
+              "n": 1026
+            },
+            "android 12": {
+              "rate": 0.12074303405572756,
+              "n": 969
+            },
+            "android 13": {
+              "rate": 0.11137162954279015,
+              "n": 853
+            },
+            "ANDROID 33": {
+              "rate": 0.25480153649167736,
+              "n": 781
+            },
+            "ANDROID 34": {
+              "rate": 0.22905759162303665,
+              "n": 764
+            },
+            "ANDROID 31": {
+              "rate": 0.40502793296089384,
+              "n": 716
+            },
+            "Android 13": {
+              "rate": 0.040787623066104076,
+              "n": 711
+            },
+            "Android 11": {
+              "rate": 0.35294117647058826,
+              "n": 663
+            }
+          },
+          "high_cardinality_capped": {
+            "n_distinct": 324,
+            "kept_top": 10
+          },
+          "predictive_rank": 5,
+          "predictive_score": 0.26219821932307646
+        },
+        "MOBILE_NUMBER": {
+          "iv": 1.449130278118256,
+          "iv_band": "strong",
+          "cramers_v_target": 0.1446098196784675,
+          "lift": {
+            "max_lift": 1.1494640837357941,
+            "max_lift_category": "__other__",
+            "top_bad_rate": 0.14154652686762778
+          },
+          "target_rate_by_cat": {
+            "919166295332.0": {
+              "rate": 0.0,
+              "n": 2067
+            },
+            "917508763457.0": {
+              "rate": 0.0,
+              "n": 1885
+            },
+            "917986870724.0": {
+              "rate": 0.0,
+              "n": 1807
+            },
+            "918010107688.0": {
+              "rate": 0.0,
+              "n": 1790
+            },
+            "919781675586.0": {
+              "rate": 0.0,
+              "n": 1663
+            },
+            "919888128984.0": {
+              "rate": 0.0,
+              "n": 1602
+            },
+            "919815072538.0": {
+              "rate": 0.0,
+              "n": 1548
+            },
+            "919982285079.0": {
+              "rate": 0.0,
+              "n": 1527
+            },
+            "917976966717.0": {
+              "rate": 0.0,
+              "n": 1433
+            },
+            "917710585163.0": {
+              "rate": 0.0,
+              "n": 1328
+            },
+            "918696769606.0": {
+              "rate": 0.0,
+              "n": 1282
+            },
+            "917973037800.0": {
+              "rate": 0.0,
+              "n": 1184
+            },
+            "910000000000.0": {
+              "rate": 0.03975265017667844,
+              "n": 1132
+            },
+            "919256623699.0": {
+              "rate": 0.0,
+              "n": 1125
+            },
+            "919988663187.0": {
+              "rate": 0.0,
+              "n": 1076
+            },
+            "918448432960.0": {
+              "rate": 0.0,
+              "n": 1073
+            },
+            "916005249532.0": {
+              "rate": 0.0,
+              "n": 1021
+            },
+            "917838335087.0": {
+              "rate": 0.0,
+              "n": 976
+            },
+            "919872363642.0": {
+              "rate": 0.0,
+              "n": 975
+            },
+            "919501640547.0": {
+              "rate": 0.0,
+              "n": 944
+            }
+          },
+          "high_cardinality_capped": {
+            "n_distinct": 25048,
+            "kept_top": 10
+          },
+          "predictive_rank": 1,
+          "predictive_score": 1.449130278118256
+        },
+        "INITIATOR_IP_ADDRESS": {
+          "iv": 0.03415691178909974,
+          "iv_band": "weak",
+          "cramers_v_target": 0.04971448739908031,
+          "lift": {
+            "max_lift": 1.0761846161438118,
+            "max_lift_category": "172.16.11.66",
+            "top_bad_rate": 0.1325227963525836
+          },
+          "target_rate_by_cat": {
+            "192.168.20.21": {
+              "rate": 0.13053046975791152,
+              "n": 39531
+            },
+            "127.0.0.1": {
+              "rate": 0.08960944784004972,
+              "n": 19306
+            },
+            "172.16.11.66": {
+              "rate": 0.1325227963525836,
+              "n": 18095
+            },
+            "10.186.153.241": {
+              "rate": 0.01366742596810934,
+              "n": 439
+            },
+            "124.170.23.22": {
+              "rate": 0.07692307692307693,
+              "n": 208
+            },
+            "10.123.10.45": {
+              "rate": 0.17857142857142858,
+              "n": 140
+            },
+            "172.16.50.168": {
+              "rate": 0.04081632653061224,
+              "n": 98
+            },
+            "192.0.0.2": {
+              "rate": 0.20454545454545456,
+              "n": 88
+            },
+            "182.75.68.182": {
+              "rate": 0.12195121951219512,
+              "n": 82
+            },
+            "49.47.128.90": {
+              "rate": 0.0,
+              "n": 79
+            },
+            "2401:4900:4707:50d3:0:3b:a748:d301": {
+              "rate": 0.0,
+              "n": 64
+            },
+            "100.73.26.110": {
+              "rate": 0.984375,
+              "n": 64
+            },
+            "103.70.34.178": {
+              "rate": 0.0,
+              "n": 62
+            },
+            "2405:201:5c0b:e8c2:81a7:9902:f05f:3f17": {
+              "rate": 0.0,
+              "n": 60
+            },
+            "2401:4900:170f:8309:1:2:659d:e1b0": {
+              "rate": 0.0,
+              "n": 52
+            },
+            "183.83.153.48": {
+              "rate": 0.0,
+              "n": 51
+            },
+            "65.1.214.231": {
+              "rate": 0.0,
+              "n": 49
+            },
+            "103.61.195.254": {
+              "rate": 0.0,
+              "n": 46
+            },
+            "2409:4055:29a:414b::bd5:30ad": {
+              "rate": 0.0,
+              "n": 44
+            },
+            "192.168.2.121": {
+              "rate": 0.37209302325581395,
+              "n": 43
+            }
+          },
+          "high_cardinality_capped": {
+            "n_distinct": 24271,
+            "kept_top": 10
+          },
+          "predictive_rank": 14,
+          "predictive_score": 0.03415691178909974
+        }
+      }
+    },
+    "is_victim_account": {
+      "supervised": true,
+      "positive_rate": 0.14097838310633512,
+      "n_pos": 18052,
+      "n_neg": 109996,
+      "columns": {
+        "MODE_OF_TRANSACTION": {
+          "iv": 0.8679051574846457,
+          "iv_band": "strong",
+          "cramers_v_target": 0.384681472254938,
+          "lift": {
+            "max_lift": 6.043621397769636,
+            "max_lift_category": "NEFT",
+            "top_bad_rate": 0.8520199727644122
+          },
+          "target_rate_by_cat": {
+            "UPI": {
+              "rate": 0.11838799541966467,
+              "n": 117022
+            },
+            "IMPS": {
+              "rate": 0.07856985212977267,
+              "n": 4531
+            },
+            "ATM": {
+              "rate": 0.1087248322147651,
+              "n": 2235
+            },
+            "NEFT": {
+              "rate": 0.8520199727644122,
+              "n": 2203
+            },
+            "NRTGS": {
+              "rate": 0.9900497512437811,
+              "n": 804
+            },
+            "IBS": {
+              "rate": 0.9235569422776911,
+              "n": 641
+            },
+            "MBS": {
+              "rate": 0.6866359447004609,
+              "n": 434
+            },
+            "POS": {
+              "rate": 0.20224719101123595,
+              "n": 178
+            }
+          },
+          "predictive_rank": 6,
+          "predictive_score": 0.8679051574846457
+        },
+        "BENEFICIARY_IFSC": {
+          "iv": 1.1382937119209742,
+          "iv_band": "strong",
+          "cramers_v_target": 0.28871660355508405,
+          "lift": {
+            "max_lift": 2.615048981643831,
+            "max_lift_category": "PUNB0000110",
+            "top_bad_rate": 0.3686653771760155
+          },
+          "target_rate_by_cat": {
+            "PUNB0000100": {
+              "rate": 0.03242399966268921,
+              "n": 47434
+            },
+            "YESB0PTMUPI": {
+              "rate": 0.3120591975950977,
+              "n": 8649
+            },
+            "YESB0YBLUPI": {
+              "rate": 0.2495624781239062,
+              "n": 5714
+            },
+            "PUNB0000130": {
+              "rate": 0.0,
+              "n": 3597
+            },
+            "UTIB0000553": {
+              "rate": 0.23852183650615902,
+              "n": 2679
+            },
+            "PUNB0000110": {
+              "rate": 0.3686653771760155,
+              "n": 2585
+            },
+            "YESB0MCHUPI": {
+              "rate": 0.29938786867000555,
+              "n": 1797
+            },
+            "AIRP0000001": {
+              "rate": 0.10617626648161,
+              "n": 1441
+            },
+            "ICIC0DC0099": {
+              "rate": 0.17852161785216178,
+              "n": 1434
+            },
+            "IPOS0000001": {
+              "rate": 0.0467687074829932,
+              "n": 1176
+            },
+            "HDFC0MERUPI": {
+              "rate": 0.3024054982817869,
+              "n": 1164
+            },
+            "PUNB0044010": {
+              "rate": 0.0,
+              "n": 1090
+            },
+            "PUNB0000200": {
+              "rate": 0.22004132231404958,
+              "n": 968
+            },
+            "CNRB0000033": {
+              "rate": 0.09317443120260022,
+              "n": 923
+            },
+            "SBIN0000600": {
+              "rate": 0.057176196032672114,
+              "n": 857
+            },
+            "PUNB0466900": {
+              "rate": 0.5082938388625592,
+              "n": 844
+            },
+            "punb0000100": {
+              "rate": 0.08610086100861009,
+              "n": 813
+            },
+            "HDFC0001348": {
+              "rate": 0.14641288433382138,
+              "n": 683
+            },
+            "FDRL0001382": {
+              "rate": 0.17795275590551182,
+              "n": 635
+            },
+            "KKBK0004058": {
+              "rate": 0.17383512544802868,
+              "n": 558
+            }
+          },
+          "high_cardinality_capped": {
+            "n_distinct": 9729,
+            "kept_top": 10
+          },
+          "predictive_rank": 5,
+          "predictive_score": 1.1382937119209742
+        },
+        "BENEFICIARY_BANK": {
+          "iv": 0.5704266519659867,
+          "iv_band": "strong",
+          "cramers_v_target": 0.29553700843750036,
+          "lift": {
+            "max_lift": 4.993759302128781,
+            "max_lift_category": "PNB",
+            "top_bad_rate": 0.7040121120363361
+          },
+          "target_rate_by_cat": {
+            "PUNJAB NATIONAL BANK": {
+              "rate": 0.11234212275648128,
+              "n": 4513
+            },
+            "PNB": {
+              "rate": 0.7040121120363361,
+              "n": 1321
+            },
+            "HDFC BANK LTD": {
+              "rate": 0.9746478873239437,
+              "n": 355
+            },
+            "AXIS BANK LTD": {
+              "rate": 0.9925650557620818,
+              "n": 269
+            },
+            "STATE BANK OF INDIA": {
+              "rate": 0.9770114942528736,
+              "n": 261
+            },
+            "KOTAK MAHINDRA BANK LTD": {
+              "rate": 1.0,
+              "n": 157
+            },
+            "ICICI BANK LTD": {
+              "rate": 0.93,
+              "n": 100
+            },
+            "UNION BANK OF INDIA": {
+              "rate": 0.8928571428571429,
+              "n": 84
+            },
+            "CANARA BANK": {
+              "rate": 0.9347826086956522,
+              "n": 46
+            },
+            "CENTRAL BANK OF INDIA": {
+              "rate": 1.0,
+              "n": 41
+            },
+            "State Bank of India": {
+              "rate": 0.8292682926829268,
+              "n": 41
+            },
+            "BANK OF INDIA": {
+              "rate": 1.0,
+              "n": 40
+            },
+            "ICICI Bank Limited": {
+              "rate": 0.9743589743589743,
+              "n": 39
+            },
+            "BANK OF BARODA": {
+              "rate": 1.0,
+              "n": 37
+            },
+            "Karnataka Bank Limited": {
+              "rate": 0.0,
+              "n": 26
+            },
+            "Punjab and Sind Bank": {
+              "rate": 0.0,
+              "n": 26
+            },
+            "Punjab Gramin Bank": {
+              "rate": 0.0,
+              "n": 19
+            },
+            "UJJIVAN SMALL FINANCE BANK LIMITED": {
+              "rate": 1.0,
+              "n": 17
+            },
+            "FEDERAL BANK LTD": {
+              "rate": 0.9285714285714286,
+              "n": 14
+            },
+            "YES BANK LTD": {
+              "rate": 1.0,
+              "n": 14
+            }
+          },
+          "high_cardinality_capped": {
+            "n_distinct": 66,
+            "kept_top": 10
+          },
+          "predictive_rank": 8,
+          "predictive_score": 0.5704266519659867
+        },
+        "BENEFICIARY_VIRTUAL_ADDRESS": {
+          "iv": 1.4671298563977624,
+          "iv_band": "strong",
+          "cramers_v_target": 0.15421249370914325,
+          "lift": {
+            "max_lift": 1.1453821727268663,
+            "max_lift_category": "__other__",
+            "top_bad_rate": 0.16147412674985465
+          },
+          "target_rate_by_cat": {
+            "amzn0010756375@apl": {
+              "rate": 0.0,
+              "n": 3672
+            },
+            "AMZN0010756375@apl": {
+              "rate": 0.0,
+              "n": 2948
+            },
+            "9417142797m1@pnb": {
+              "rate": 0.0,
+              "n": 2638
+            },
+            "kashyapasha778@okaxis": {
+              "rate": 0.0,
+              "n": 1376
+            },
+            "ramsinghgodara42@okhdfcbank": {
+              "rate": 0.0,
+              "n": 1165
+            },
+            "8728976661m@pnb": {
+              "rate": 0.0,
+              "n": 991
+            },
+            "9814076870m@pnb": {
+              "rate": 0.0,
+              "n": 981
+            },
+            "6284618075@ikwik": {
+              "rate": 0.0,
+              "n": 863
+            },
+            "pk446284@okaxis": {
+              "rate": 0.0,
+              "n": 831
+            },
+            "7878768725-u575@ybl": {
+              "rate": 0.0,
+              "n": 788
+            },
+            "premshakya10@oksbi": {
+              "rate": 0.0,
+              "n": 727
+            },
+            "kirank44758@okhdfcbank": {
+              "rate": 0.0,
+              "n": 665
+            },
+            "9351525905m@pnb": {
+              "rate": 0.0,
+              "n": 655
+            },
+            "vishalkumarcharan519@okicici": {
+              "rate": 0.0,
+              "n": 622
+            },
+            "sunilkkumar045@ibl": {
+              "rate": 0.0,
+              "n": 620
+            },
+            "jeeturajput762@okaxis": {
+              "rate": 0.0,
+              "n": 613
+            },
+            "7508763457@ptyes": {
+              "rate": 0.0,
+              "n": 540
+            },
+            "rakesh95016-3@okhdfcbank": {
+              "rate": 0.0,
+              "n": 513
+            },
+            "7976966717@axl": {
+              "rate": 0.0,
+              "n": 482
+            },
+            "7976966717@ybl": {
+              "rate": 0.0,
+              "n": 476
+            }
+          },
+          "high_cardinality_capped": {
+            "n_distinct": 31690,
+            "kept_top": 10
+          },
+          "predictive_rank": 4,
+          "predictive_score": 1.4671298563977624
+        },
+        "TRANSACTION_TYPE": {
+          "iv": 0.2711200757443641,
+          "iv_band": "medium",
+          "cramers_v_target": 0.2076827951454604,
+          "lift": {
+            "max_lift": 1.2037007935757429,
+            "max_lift_category": "PIN",
+            "top_bad_rate": 0.1696957916221207
+          },
+          "target_rate_by_cat": {
+            "PIN": {
+              "rate": 0.1696957916221207,
+              "n": 61734
+            },
+            "CREDIT": {
+              "rate": 0.064093567251462,
+              "n": 4275
+            },
+            "DEBIT": {
+              "rate": 0.13525665043087298,
+              "n": 2669
+            },
+            "UPI_MANDATE": {
+              "rate": 0.12964563526361278,
+              "n": 1157
+            },
+            "PMT": {
+              "rate": 0.9118942731277533,
+              "n": 454
+            },
+            "T": {
+              "rate": 0.7629107981220657,
+              "n": 426
+            },
+            "XFR": {
+              "rate": 0.9873417721518988,
+              "n": 79
+            },
+            "SHP": {
+              "rate": 0.5263157894736842,
+              "n": 57
+            },
+            "TXP": {
+              "rate": 0.6666666666666666,
+              "n": 48
+            },
+            "BIOAUTH": {
+              "rate": 0.0,
+              "n": 22
+            },
+            "CCP": {
+              "rate": 1.0,
+              "n": 5
+            },
+            "SSA": {
+              "rate": 1.0,
+              "n": 4
+            },
+            "PPF": {
+              "rate": 1.0,
+              "n": 2
+            }
+          },
+          "high_cardinality_capped": {
+            "n_distinct": 13,
+            "kept_top": 10
+          },
+          "predictive_rank": 11,
+          "predictive_score": 0.2711200757443641
+        },
+        "TRANSACTION_SUB_TYPE": {
+          "iv": 0.11336650204610108,
+          "iv_band": "medium",
+          "cramers_v_target": 0.1291615441494686,
+          "lift": {
+            "max_lift": 0.9814959132091593,
+            "max_lift_category": "MPIN",
+            "top_bad_rate": 0.1696957916221207
+          },
+          "target_rate_by_cat": {
+            "MPIN": {
+              "rate": 0.1696957916221207,
+              "n": 61734
+            },
+            "DS": {
+              "rate": 0.1272264631043257,
+              "n": 1179
+            },
+            "CI": {
+              "rate": 0.7629107981220657,
+              "n": 426
+            }
+          },
+          "predictive_rank": 14,
+          "predictive_score": 0.11336650204610108
+        },
+        "CREDIT_DEBIT_INDICATOR": {
+          "iv": 0.2661456063793392,
+          "iv_band": "medium",
+          "cramers_v_target": 0.17267010816110626,
+          "lift": {
+            "max_lift": 1.3895677277163019,
+            "max_lift_category": "DEBIT",
+            "top_bad_rate": 0.19657569327577376
+          },
+          "target_rate_by_cat": {
+            "DEBIT": {
+              "rate": 0.19657569327577376,
+              "n": 68335
+            },
+            "CREDIT": {
+              "rate": 0.07574171029668413,
+              "n": 57300
+            }
+          },
+          "predictive_rank": 12,
+          "predictive_score": 0.2661456063793392
+        },
+        "TRANSACTION_AMOUNT": {
+          "iv": 0.28909441230136007,
+          "iv_band": "medium",
+          "auc": 0.5475504716296634,
+          "ks": 0.1569896218533403,
+          "point_biserial": 0.09707119282225023,
+          "lift": {
+            "max_lift": 2.389425875620789,
+            "top_bin_rate": 0.33685739649745783,
+            "top_bin_capture": 0.23122091734987812
+          },
+          "predictive_rank": 10,
+          "predictive_score": 0.28909441230136007
+        },
+        "TRANSACTION_ID": {
+          "iv": 0.06290877769934233,
+          "iv_band": "weak",
+          "auc": 0.5407225535704253,
+          "ks": 0.08408801642830732,
+          "point_biserial": 0.014734205248810849,
+          "lift": {
+            "max_lift": 1.4960281417774348,
+            "top_bin_rate": 0.180635128498936,
+            "top_bin_capture": 0.149596692198197
+          },
+          "predictive_rank": 15,
+          "predictive_score": 0.08144510714085063
+        },
+        "REMITTER_IFSC": {
+          "iv": 2.154061924637756,
+          "iv_band": "strong",
+          "cramers_v_target": 0.4071070088606561,
+          "lift": {
+            "max_lift": 7.093286062486151,
+            "max_lift_category": "PUNB0370900",
+            "top_bad_rate": 1.0
+          },
+          "target_rate_by_cat": {
+            "PUNB0000100": {
+              "rate": 0.09443706654862033,
+              "n": 47439
+            },
+            "PUNB0000110": {
+              "rate": 0.37964666912035333,
+              "n": 5434
+            },
+            "PUNB0000130": {
+              "rate": 0.0,
+              "n": 5146
+            },
+            "PUNB0000200": {
+              "rate": 0.4281437125748503,
+              "n": 3674
+            },
+            "IPOS0000001": {
+              "rate": 0.008841321544904607,
+              "n": 2149
+            },
+            "PUNB0PGB003": {
+              "rate": 0.01063264221158958,
+              "n": 1881
+            },
+            "PUNB0466900": {
+              "rate": 0.5573144104803494,
+              "n": 1832
+            },
+            "PUNB0370900": {
+              "rate": 1.0,
+              "n": 1790
+            },
+            "CNRB0000033": {
+              "rate": 0.05172413793103448,
+              "n": 1740
+            },
+            "AIRP0000001": {
+              "rate": 0.034292712798530314,
+              "n": 1633
+            },
+            "HDFC0003555": {
+              "rate": 0.004441624365482234,
+              "n": 1576
+            },
+            "SBIN0011900": {
+              "rate": 0.004705882352941176,
+              "n": 1275
+            },
+            "HDFC0001348": {
+              "rate": 0.0448,
+              "n": 1250
+            },
+            "SBIN0000600": {
+              "rate": 0.024390243902439025,
+              "n": 861
+            },
+            "PUNB0741100": {
+              "rate": 0.0024783147459727386,
+              "n": 807
+            },
+            "PUNB0356200": {
+              "rate": 0.0,
+              "n": 723
+            },
+            "SBIN0011899": {
+              "rate": 0.10526315789473684,
+              "n": 722
+            },
+            "KKBK0004058": {
+              "rate": 0.06789250353606789,
+              "n": 707
+            },
+            "PUNB0408400": {
+              "rate": 0.0,
+              "n": 615
+            },
+            "PUNB0012500": {
+              "rate": 1.0,
+              "n": 585
+            }
+          },
+          "high_cardinality_capped": {
+            "n_distinct": 11361,
+            "kept_top": 10
+          },
+          "predictive_rank": 2,
+          "predictive_score": 2.154061924637756
+        },
+        "REMITTER_BANK": {
+          "iv": 0.8002334888689899,
+          "iv_band": "strong",
+          "cramers_v_target": 0.37041139163862713,
+          "lift": {
+            "max_lift": 6.583602187898976,
+            "max_lift_category": "PNB",
+            "top_bad_rate": 0.9281455914653279
+          },
+          "target_rate_by_cat": {
+            "PNB": {
+              "rate": 0.9281455914653279,
+              "n": 3187
+            },
+            "Axis Bank Limited": {
+              "rate": 0.02185792349726776,
+              "n": 1098
+            },
+            "The Ratnakar Bank Ltd.": {
+              "rate": 0.014028056112224449,
+              "n": 499
+            },
+            "ICICI Bank Limited": {
+              "rate": 0.2507936507936508,
+              "n": 315
+            },
+            "Punjab Gramin Bank": {
+              "rate": 0.003401360544217687,
+              "n": 294
+            },
+            "IDFC Bank": {
+              "rate": 0.03571428571428571,
+              "n": 280
+            },
+            "Punjab National Bank": {
+              "rate": 0.3025830258302583,
+              "n": 271
+            },
+            "AXIS BANK LTD": {
+              "rate": 0.6045627376425855,
+              "n": 263
+            },
+            "Karnataka Bank Limited": {
+              "rate": 0.25380710659898476,
+              "n": 197
+            },
+            "IndusInd Bank Limited": {
+              "rate": 0.012738853503184714,
+              "n": 157
+            },
+            "Yes Bank Limited": {
+              "rate": 0.014705882352941176,
+              "n": 136
+            },
+            "YES BANK LTD": {
+              "rate": 0.7102803738317757,
+              "n": 107
+            },
+            "Jammu and Kashmir Bank Ltd": {
+              "rate": 0.0,
+              "n": 103
+            },
+            "Punjab and Sind Bank": {
+              "rate": 0.04597701149425287,
+              "n": 87
+            },
+            "Indian Overseas Bank": {
+              "rate": 0.0,
+              "n": 66
+            },
+            "STATE BANK OF INDIA": {
+              "rate": 0.3220338983050847,
+              "n": 59
+            },
+            "Suryoday Small Finance Bank": {
+              "rate": 0.0,
+              "n": 56
+            },
+            "State Bank of India": {
+              "rate": 0.12244897959183673,
+              "n": 49
+            },
+            "Airtel Payments Bank": {
+              "rate": 0.0,
+              "n": 44
+            },
+            "HDFC BANK LTD": {
+              "rate": 0.7441860465116279,
+              "n": 43
+            }
+          },
+          "high_cardinality_capped": {
+            "n_distinct": 87,
+            "kept_top": 10
+          },
+          "predictive_rank": 7,
+          "predictive_score": 0.8002334888689899
+        },
+        "REMITTER_VIRTUAL_ADDRESS": {
+          "iv": 1.7214463113079983,
+          "iv_band": "strong",
+          "cramers_v_target": 0.30853700734583966,
+          "lift": {
+            "max_lift": 0.9740944660312117,
+            "max_lift_category": "__other__",
+            "top_bad_rate": 0.1373262628139091
+          },
+          "target_rate_by_cat": {
+            "pk446284@okicici": {
+              "rate": 0.0,
+              "n": 1495
+            },
+            "7508763457@ptyes": {
+              "rate": 0.0,
+              "n": 1143
+            },
+            "7710585163@ybl": {
+              "rate": 0.0,
+              "n": 959
+            },
+            "8054240436@ybl": {
+              "rate": 0.0,
+              "n": 926
+            },
+            "vishalkumar011186@okhdfcbank": {
+              "rate": 1.0,
+              "n": 925
+            },
+            "8010107688@ptyes": {
+              "rate": 1.0,
+              "n": 864
+            },
+            "7973037800@ptyes": {
+              "rate": 0.0,
+              "n": 859
+            },
+            "gurmxndhxwxn-3@okicici": {
+              "rate": 0.0,
+              "n": 833
+            },
+            "9815072538@ptyes": {
+              "rate": 0.0,
+              "n": 830
+            },
+            "sunilkkumar045@ybl": {
+              "rate": 0.0,
+              "n": 788
+            },
+            "7976966717@axl": {
+              "rate": 0.0,
+              "n": 722
+            },
+            "9781675586@superyes": {
+              "rate": 0.0,
+              "n": 720
+            },
+            "7508763457@ptaxis": {
+              "rate": 0.0,
+              "n": 713
+            },
+            "9815072538@ptaxis": {
+              "rate": 0.0,
+              "n": 696
+            },
+            "9166295332@ptaxis": {
+              "rate": 0.0,
+              "n": 694
+            },
+            "8340605836@axl": {
+              "rate": 0.0,
+              "n": 688
+            },
+            "jeeturajput762@okaxis": {
+              "rate": 0.0,
+              "n": 667
+            },
+            "9982285079-2@ybl": {
+              "rate": 0.0,
+              "n": 653
+            },
+            "9872363642@axl": {
+              "rate": 0.0,
+              "n": 639
+            },
+            "8696769606@superyes": {
+              "rate": 1.0,
+              "n": 605
+            }
+          },
+          "high_cardinality_capped": {
+            "n_distinct": 29705,
+            "kept_top": 10
+          },
+          "predictive_rank": 3,
+          "predictive_score": 1.7214463113079983
+        },
+        "TRANSACTION_INITIATOR_DETAILS": {
+          "iv": 0.14782997771618642,
+          "iv_band": "medium",
+          "cramers_v_target": 0.11727432774041252,
+          "lift": {
+            "max_lift": 1.2881195697961125,
+            "max_lift_category": "INTENT CALL",
+            "top_bad_rate": 0.16222284591636263
+          },
+          "target_rate_by_cat": {
+            "QR": {
+              "rate": 0.14168985039201573,
+              "n": 51401
+            },
+            "ACCOUNT": {
+              "rate": 0.03237486687965921,
+              "n": 4695
+            },
+            "Using Account No.": {
+              "rate": 0.0786790780141844,
+              "n": 4512
+            },
+            "INTENT CALL": {
+              "rate": 0.16222284591636263,
+              "n": 3563
+            },
+            "VPA": {
+              "rate": 0.0039946737683089215,
+              "n": 2253
+            },
+            "MOBILE NUM": {
+              "rate": 0.11201079622132254,
+              "n": 741
+            },
+            "Using MMID": {
+              "rate": 0.05263157894736842,
+              "n": 19
+            }
+          },
+          "predictive_rank": 13,
+          "predictive_score": 0.14782997771618642
+        },
+        "INITIATOR_DEVICE_OS": {
+          "iv": 0.4197993625268318,
+          "iv_band": "strong",
+          "cramers_v_target": 0.2221801116577007,
+          "lift": {
+            "max_lift": 1.9125492379224025,
+            "max_lift_category": "iPhoneOS 8.0.0",
+            "top_bad_rate": 0.26962809917355374
+          },
+          "target_rate_by_cat": {
+            "Android": {
+              "rate": 0.09172936089379889,
+              "n": 40009
+            },
+            "Android 8.0.0": {
+              "rate": 0.07242443593018305,
+              "n": 18792
+            },
+            "android": {
+              "rate": 0.10638297872340426,
+              "n": 7332
+            },
+            "android 15": {
+              "rate": 0.1546671184143656,
+              "n": 5903
+            },
+            "iOS": {
+              "rate": 0.08730512249443208,
+              "n": 4490
+            },
+            "android 8.0.0": {
+              "rate": 0.048712771327612314,
+              "n": 3962
+            },
+            "ANDROID 14": {
+              "rate": 0.018495297805642633,
+              "n": 3190
+            },
+            "android 14": {
+              "rate": 0.1420817369093231,
+              "n": 3132
+            },
+            "iPhoneOS 8.0.0": {
+              "rate": 0.26962809917355374,
+              "n": 2904
+            },
+            "Android 15": {
+              "rate": 0.26170046801872077,
+              "n": 2564
+            },
+            "iPhoneOS": {
+              "rate": 0.10014947683109118,
+              "n": 1338
+            },
+            "ANDROID 15": {
+              "rate": 0.29692556634304207,
+              "n": 1236
+            },
+            "ANDROID 35": {
+              "rate": 0.1101364522417154,
+              "n": 1026
+            },
+            "android 12": {
+              "rate": 0.5118679050567595,
+              "n": 969
+            },
+            "android 13": {
+              "rate": 0.03751465416178194,
+              "n": 853
+            },
+            "ANDROID 33": {
+              "rate": 0.005121638924455826,
+              "n": 781
+            },
+            "ANDROID 34": {
+              "rate": 0.005235602094240838,
+              "n": 764
+            },
+            "ANDROID 31": {
+              "rate": 0.0013966480446927375,
+              "n": 716
+            },
+            "Android 13": {
+              "rate": 0.0014064697609001407,
+              "n": 711
+            },
+            "Android 11": {
+              "rate": 0.007541478129713424,
+              "n": 663
+            }
+          },
+          "high_cardinality_capped": {
+            "n_distinct": 324,
+            "kept_top": 10
+          },
+          "predictive_rank": 9,
+          "predictive_score": 0.4197993625268318
+        },
+        "MOBILE_NUMBER": {
+          "iv": 2.4424515046174884,
+          "iv_band": "strong",
+          "cramers_v_target": 0.3229968267943851,
+          "lift": {
+            "max_lift": 7.093286062486151,
+            "max_lift_category": "918010107688.0",
+            "top_bad_rate": 1.0
+          },
+          "target_rate_by_cat": {
+            "919166295332.0": {
+              "rate": 0.0,
+              "n": 2067
+            },
+            "917508763457.0": {
+              "rate": 0.0,
+              "n": 1885
+            },
+            "917986870724.0": {
+              "rate": 0.0,
+              "n": 1807
+            },
+            "918010107688.0": {
+              "rate": 1.0,
+              "n": 1790
+            },
+            "919781675586.0": {
+              "rate": 0.0,
+              "n": 1663
+            },
+            "919888128984.0": {
+              "rate": 0.0,
+              "n": 1602
+            },
+            "919815072538.0": {
+              "rate": 0.0,
+              "n": 1548
+            },
+            "919982285079.0": {
+              "rate": 0.0,
+              "n": 1527
+            },
+            "917976966717.0": {
+              "rate": 0.0,
+              "n": 1433
+            },
+            "917710585163.0": {
+              "rate": 0.0,
+              "n": 1328
+            },
+            "918696769606.0": {
+              "rate": 1.0,
+              "n": 1282
+            },
+            "917973037800.0": {
+              "rate": 0.0,
+              "n": 1184
+            },
+            "910000000000.0": {
+              "rate": 0.04328621908127209,
+              "n": 1132
+            },
+            "919256623699.0": {
+              "rate": 0.0,
+              "n": 1125
+            },
+            "919988663187.0": {
+              "rate": 0.0,
+              "n": 1076
+            },
+            "918448432960.0": {
+              "rate": 0.0,
+              "n": 1073
+            },
+            "916005249532.0": {
+              "rate": 1.0,
+              "n": 1021
+            },
+            "917838335087.0": {
+              "rate": 1.0,
+              "n": 976
+            },
+            "919872363642.0": {
+              "rate": 0.0,
+              "n": 975
+            },
+            "919501640547.0": {
+              "rate": 0.0,
+              "n": 944
+            }
+          },
+          "high_cardinality_capped": {
+            "n_distinct": 25048,
+            "kept_top": 10
+          },
+          "predictive_rank": 1,
+          "predictive_score": 2.4424515046174884
+        },
+        "INITIATOR_IP_ADDRESS": {
+          "iv": 0.03635838682882645,
+          "iv_band": "weak",
+          "cramers_v_target": 0.06304704403662797,
+          "lift": {
+            "max_lift": 1.2433274648012604,
+            "max_lift_category": "127.0.0.1",
+            "top_bad_rate": 0.1752822956593805
+          },
+          "target_rate_by_cat": {
+            "192.168.20.21": {
+              "rate": 0.13733525587513598,
+              "n": 39531
+            },
+            "127.0.0.1": {
+              "rate": 0.1752822956593805,
+              "n": 19306
+            },
+            "172.16.11.66": {
+              "rate": 0.12102790826195081,
+              "n": 18095
+            },
+            "10.186.153.241": {
+              "rate": 0.015945330296127564,
+              "n": 439
+            },
+            "124.170.23.22": {
+              "rate": 0.08173076923076923,
+              "n": 208
+            },
+            "10.123.10.45": {
+              "rate": 0.5428571428571428,
+              "n": 140
+            },
+            "172.16.50.168": {
+              "rate": 0.15306122448979592,
+              "n": 98
+            },
+            "192.0.0.2": {
+              "rate": 0.125,
+              "n": 88
+            },
+            "182.75.68.182": {
+              "rate": 0.08536585365853659,
+              "n": 82
+            },
+            "49.47.128.90": {
+              "rate": 0.0,
+              "n": 79
+            },
+            "2401:4900:4707:50d3:0:3b:a748:d301": {
+              "rate": 0.0,
+              "n": 64
+            },
+            "100.73.26.110": {
+              "rate": 0.0,
+              "n": 64
+            },
+            "103.70.34.178": {
+              "rate": 0.0,
+              "n": 62
+            },
+            "2405:201:5c0b:e8c2:81a7:9902:f05f:3f17": {
+              "rate": 0.0,
+              "n": 60
+            },
+            "2401:4900:170f:8309:1:2:659d:e1b0": {
+              "rate": 0.0,
+              "n": 52
+            },
+            "183.83.153.48": {
+              "rate": 1.0,
+              "n": 51
+            },
+            "65.1.214.231": {
+              "rate": 0.0,
+              "n": 49
+            },
+            "103.61.195.254": {
+              "rate": 0.0,
+              "n": 46
+            },
+            "2409:4055:29a:414b::bd5:30ad": {
+              "rate": 0.0,
+              "n": 44
+            },
+            "192.168.2.121": {
+              "rate": 0.023255813953488372,
+              "n": 43
+            }
+          },
+          "high_cardinality_capped": {
+            "n_distinct": 24271,
+            "kept_top": 10
+          },
+          "predictive_rank": 16,
+          "predictive_score": 0.03635838682882645
+        }
+      }
+    }
+  },
+  "supervised": true
+}

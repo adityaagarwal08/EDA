@@ -1,0 +1,40 @@
+# ============================================================================
+# thresholds.yaml  --  decision cutoffs (knobs, not data). Tune without code.
+# ============================================================================
+
+quality:
+  missing_warn: 0.20            # flag column if >20% missing
+  missing_drop_suggest: 0.60   # suggest drop if >60% missing
+  near_constant_dominance: 0.99 # top value covers >=99% -> near constant
+  high_cardinality_ratio: 0.90  # unique/non-null >=0.9 -> likely ID/free text
+  id_uniqueness_min: 0.98       # candidate primary key
+  outlier_method: iqr           # iqr | zscore | mad
+  outlier_iqr_k: 1.5
+  outlier_zscore: 3.0
+
+type_inference:
+  categorical_max_unique: 50    # <=50 distinct -> categorical
+  categorical_max_ratio: 0.05   # or unique/non-null <= this -> categorical
+  datetime_parse_success_min: 0.90
+  numeric_parse_success_min: 0.90
+  boolean_max_unique: 3
+  sample_for_inference: 50000
+
+target:
+  iv_weak: 0.02                 # IV bands (standard credit-risk convention)
+  iv_medium: 0.1
+  iv_strong: 0.3
+  woe_min_bin_frac: 0.05        # each WoE bin >=5% of rows
+  max_woe_bins: 10
+  leakage_auc: 0.995            # single-feature AUC above this -> leakage suspect
+
+correlation:
+  redundant_abs: 0.95           # |corr| >= 0.95 -> redundant pair
+  top_pairs: 50                 # cap reported pairs
+  max_numeric_cols: 200         # safety cap for corr matrix
+  heatmap_max_cols: 40          # cap rows/cols in the heatmap matrices
+
+report:
+  top_k_values: 20              # top categories shown per column
+  hist_bins: 30
+  max_invalid_examples: 10

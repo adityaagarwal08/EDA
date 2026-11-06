@@ -1,0 +1,2817 @@
+{
+  "relationships": [
+    {
+      "from": "accounts.CUSTOMER_ID",
+      "to": "customers.CUSTOMER_ID",
+      "cardinality": "N:1",
+      "orphan_rate": 6.578121168991932e-05,
+      "parent_without_children_rate": 0.012963504256130475,
+      "fanout_stats": {
+        "mean": 1.0054233130309826,
+        "median": 1.0,
+        "p95": 1.0,
+        "max": 43
+      },
+      "aggregation_candidates": [
+        {
+          "column": "*",
+          "semantic_type": "count",
+          "ops": [
+            "count"
+          ]
+        },
+        {
+          "column": "ACCOUNT_OPEN_MODE",
+          "semantic_type": "categorical",
+          "ops": [
+            "nunique",
+            "mode",
+            "entropy"
+          ]
+        },
+        {
+          "column": "HAS_NOMINATION",
+          "semantic_type": "boolean_flag",
+          "ops": [
+            "nunique",
+            "mode",
+            "entropy"
+          ]
+        },
+        {
+          "column": "BRANCH_CODE",
+          "semantic_type": "categorical_id",
+          "ops": [
+            "nunique",
+            "mode",
+            "entropy"
+          ]
+        },
+        {
+          "column": "PMJDY_FLAG",
+          "semantic_type": "boolean_flag",
+          "ops": [
+            "nunique",
+            "mode",
+            "entropy"
+          ]
+        },
+        {
+          "column": "SCSS_FLAG",
+          "semantic_type": "boolean_flag",
+          "ops": [
+            "nunique",
+            "mode",
+            "entropy"
+          ]
+        },
+        {
+          "column": "PMJJBY_FLAG",
+          "semantic_type": "boolean_flag",
+          "ops": [
+            "nunique",
+            "mode",
+            "entropy"
+          ]
+        },
+        {
+          "column": "CHEQUE_ALLOWED_FLAG",
+          "semantic_type": "boolean_flag",
+          "ops": [
+            "nunique",
+            "mode",
+            "entropy"
+          ]
+        },
+        {
+          "column": "CHEQUE_BOOK_AVAILED_FLAG",
+          "semantic_type": "boolean_flag",
+          "ops": [
+            "nunique",
+            "mode",
+            "entropy"
+          ]
+        },
+        {
+          "column": "NUM_CHEQUE_BOOKS",
+          "semantic_type": "count",
+          "ops": [
+            "sum",
+            "mean",
+            "max",
+            "min",
+            "std"
+          ]
+        },
+        {
+          "column": "LAST_MOBILE_UPDATE_DATE",
+          "semantic_type": "datetime",
+          "ops": [
+            "min",
+            "max",
+            "recency_days",
+            "span_days"
+          ]
+        },
+        {
+          "column": "PAN_FLAG",
+          "semantic_type": "boolean_flag",
+          "ops": [
+            "nunique",
+            "mode",
+            "entropy"
+          ]
+        },
+        {
+          "column": "AADHAR_FLAG",
+          "semantic_type": "boolean_flag",
+          "ops": [
+            "nunique",
+            "mode",
+            "entropy"
+          ]
+        },
+        {
+          "column": "GSTN_FLAG",
+          "semantic_type": "boolean_flag",
+          "ops": [
+            "nunique",
+            "mode",
+            "entropy"
+          ]
+        },
+        {
+          "column": "PASSPORT_FLAG",
+          "semantic_type": "boolean_flag",
+          "ops": [
+            "nunique",
+            "mode",
+            "entropy"
+          ]
+        },
+        {
+          "column": "VOTER_ID_FLAG",
+          "semantic_type": "boolean_flag",
+          "ops": [
+            "nunique",
+            "mode",
+            "entropy"
+          ]
+        },
+        {
+          "column": "KYC_RATING",
+          "semantic_type": "categorical",
+          "ops": [
+            "nunique",
+            "mode",
+            "entropy"
+          ]
+        },
+        {
+          "column": "INTERNET_BANKING_FLAG",
+          "semantic_type": "boolean_flag",
+          "ops": [
+            "nunique",
+            "mode",
+            "entropy"
+          ]
+        },
+        {
+          "column": "MOBILE_BANKING_FLAG",
+          "semantic_type": "boolean_flag",
+          "ops": [
+            "nunique",
+            "mode",
+            "entropy"
+          ]
+        },
+        {
+          "column": "UPI_FLAG",
+          "semantic_type": "boolean_flag",
+          "ops": [
+            "nunique",
+            "mode",
+            "entropy"
+          ]
+        },
+        {
+          "column": "DEMAT_FLAG",
+          "semantic_type": "boolean_flag",
+          "ops": [
+            "nunique",
+            "mode",
+            "entropy"
+          ]
+        },
+        {
+          "column": "MUTUAL_FUND_FLAG",
+          "semantic_type": "boolean_flag",
+          "ops": [
+            "nunique",
+            "mode",
+            "entropy"
+          ]
+        },
+        {
+          "column": "MPASSBOOK_FLAG",
+          "semantic_type": "boolean_flag",
+          "ops": [
+            "nunique",
+            "mode",
+            "entropy"
+          ]
+        },
+        {
+          "column": "FAST_TAG_FLAG",
+          "semantic_type": "boolean_flag",
+          "ops": [
+            "nunique",
+            "mode",
+            "entropy"
+          ]
+        },
+        {
+          "column": "SSA_FLAG",
+          "semantic_type": "boolean_flag",
+          "ops": [
+            "nunique",
+            "mode",
+            "entropy"
+          ]
+        },
+        {
+          "column": "PPF_FLAG",
+          "semantic_type": "boolean_flag",
+          "ops": [
+            "nunique",
+            "mode",
+            "entropy"
+          ]
+        },
+        {
+          "column": "LOCKER_FLAG",
+          "semantic_type": "boolean_flag",
+          "ops": [
+            "nunique",
+            "mode",
+            "entropy"
+          ]
+        },
+        {
+          "column": "ATM_ISSUED_FLAG",
+          "semantic_type": "boolean_flag",
+          "ops": [
+            "nunique",
+            "mode",
+            "entropy"
+          ]
+        },
+        {
+          "column": "CREDIT_CARD_FLAG",
+          "semantic_type": "boolean_flag",
+          "ops": [
+            "nunique",
+            "mode",
+            "entropy"
+          ]
+        },
+        {
+          "column": "NUM_CREDIT_CARDS",
+          "semantic_type": "count",
+          "ops": [
+            "sum",
+            "mean",
+            "max",
+            "min",
+            "std"
+          ]
+        },
+        {
+          "column": "ACCOUNT_STATUS",
+          "semantic_type": "binary",
+          "ops": [
+            "nunique",
+            "mode",
+            "entropy"
+          ]
+        },
+        {
+          "column": "FREEZE_CODES",
+          "semantic_type": "categorical",
+          "ops": [
+            "nunique",
+            "mode",
+            "entropy"
+          ]
+        },
+        {
+          "column": "KYC_COMPLIANT_FLAG",
+          "semantic_type": "boolean_flag",
+          "ops": [
+            "nunique",
+            "mode",
+            "entropy"
+          ]
+        },
+        {
+          "column": "KYC_REVIEW_DATE",
+          "semantic_type": "datetime",
+          "ops": [
+            "min",
+            "max",
+            "recency_days",
+            "span_days"
+          ]
+        },
+        {
+          "column": "LAST_FREEZE_DATE",
+          "semantic_type": "datetime",
+          "ops": [
+            "min",
+            "max",
+            "recency_days",
+            "span_days"
+          ]
+        },
+        {
+          "column": "LAST_UNFREEZE_DATE",
+          "semantic_type": "datetime",
+          "ops": [
+            "min",
+            "max",
+            "recency_days",
+            "span_days"
+          ]
+        },
+        {
+          "column": "PINCODE",
+          "semantic_type": "pincode",
+          "ops": [
+            "nunique"
+          ]
+        },
+        {
+          "column": "AREA_CATEGORY",
+          "semantic_type": "boolean_flag",
+          "ops": [
+            "nunique",
+            "mode",
+            "entropy"
+          ]
+        },
+        {
+          "column": "BRANCH_CATEGORY",
+          "semantic_type": "categorical",
+          "ops": [
+            "nunique",
+            "mode",
+            "entropy"
+          ]
+        },
+        {
+          "column": "SCHEME_TYPE",
+          "semantic_type": "categorical",
+          "ops": [
+            "nunique",
+            "mode",
+            "entropy"
+          ]
+        },
+        {
+          "column": "ACCOUNT_TYPE",
+          "semantic_type": "categorical",
+          "ops": [
+            "nunique",
+            "mode",
+            "entropy"
+          ]
+        },
+        {
+          "column": "APY_FLAG",
+          "semantic_type": "boolean_flag",
+          "ops": [
+            "nunique",
+            "mode",
+            "entropy"
+          ]
+        },
+        {
+          "column": "UDHYAM_FLAG",
+          "semantic_type": "boolean_flag",
+          "ops": [
+            "nunique",
+            "mode",
+            "entropy"
+          ]
+        },
+        {
+          "column": "ACCOUNT_OPEN_DATE",
+          "semantic_type": "datetime",
+          "ops": [
+            "min",
+            "max",
+            "recency_days",
+            "span_days"
+          ]
+        },
+        {
+          "column": "LIEN_AMOUNT",
+          "semantic_type": "amount",
+          "ops": [
+            "sum",
+            "mean",
+            "max",
+            "min",
+            "std"
+          ]
+        },
+        {
+          "column": "LAST_TRANSACTION_DATE",
+          "semantic_type": "datetime",
+          "ops": [
+            "min",
+            "max",
+            "recency_days",
+            "span_days"
+          ]
+        }
+      ]
+    },
+    {
+      "from": "transactions.ACCOUNT_NUMBER",
+      "to": "accounts.ACCOUNT_NUMBER",
+      "cardinality": "N:1",
+      "orphan_rate": 0.005091840559790079,
+      "parent_without_children_rate": 0.9997054795749337,
+      "fanout_stats": {
+        "mean": 640.24,
+        "median": 305.0,
+        "p95": 2461.7499999999995,
+        "max": 8369
+      },
+      "aggregation_candidates": [
+        {
+          "column": "*",
+          "semantic_type": "count",
+          "ops": [
+            "count"
+          ]
+        },
+        {
+          "column": "MODE_OF_TRANSACTION",
+          "semantic_type": "categorical",
+          "ops": [
+            "nunique",
+            "mode",
+            "entropy"
+          ]
+        },
+        {
+          "column": "BENEFICIARY_IFSC",
+          "semantic_type": "bank_code",
+          "ops": [
+            "nunique"
+          ]
+        },
+        {
+          "column": "BENEFICIARY_BANK",
+          "semantic_type": "categorical",
+          "ops": [
+            "nunique",
+            "mode",
+            "entropy"
+          ]
+        },
+        {
+          "column": "BENEFICIARY_VIRTUAL_ADDRESS",
+          "semantic_type": "vpa",
+          "ops": [
+            "nunique"
+          ]
+        },
+        {
+          "column": "TRANSACTION_TYPE",
+          "semantic_type": "categorical",
+          "ops": [
+            "nunique",
+            "mode",
+            "entropy"
+          ]
+        },
+        {
+          "column": "TRANSACTION_SUB_TYPE",
+          "semantic_type": "categorical",
+          "ops": [
+            "nunique",
+            "mode",
+            "entropy"
+          ]
+        },
+        {
+          "column": "CREDIT_DEBIT_INDICATOR",
+          "semantic_type": "binary",
+          "ops": [
+            "nunique",
+            "mode",
+            "entropy"
+          ]
+        },
+        {
+          "column": "TRANSACTION_AMOUNT",
+          "semantic_type": "amount",
+          "ops": [
+            "sum",
+            "mean",
+            "max",
+            "min",
+            "std"
+          ]
+        },
+        {
+          "column": "TRANSACTION_DATE",
+          "semantic_type": "datetime",
+          "ops": [
+            "min",
+            "max",
+            "recency_days",
+            "span_days"
+          ]
+        },
+        {
+          "column": "TRANSACTION_ID",
+          "semantic_type": "amount_string",
+          "ops": [
+            "sum",
+            "mean",
+            "max",
+            "min",
+            "std"
+          ]
+        },
+        {
+          "column": "REMITTER_IFSC",
+          "semantic_type": "bank_code",
+          "ops": [
+            "nunique"
+          ]
+        },
+        {
+          "column": "REMITTER_BANK",
+          "semantic_type": "categorical",
+          "ops": [
+            "nunique",
+            "mode",
+            "entropy"
+          ]
+        },
+        {
+          "column": "REMITTER_VIRTUAL_ADDRESS",
+          "semantic_type": "vpa",
+          "ops": [
+            "nunique"
+          ]
+        },
+        {
+          "column": "TRANSACTION_INITIATOR_DETAILS",
+          "semantic_type": "categorical",
+          "ops": [
+            "nunique",
+            "mode",
+            "entropy"
+          ]
+        },
+        {
+          "column": "INITIATOR_DEVICE_OS",
+          "semantic_type": "categorical",
+          "ops": [
+            "nunique",
+            "mode",
+            "entropy"
+          ]
+        },
+        {
+          "column": "MOBILE_NUMBER",
+          "semantic_type": "phone",
+          "ops": [
+            "nunique"
+          ]
+        },
+        {
+          "column": "INITIATOR_IP_ADDRESS",
+          "semantic_type": "ip_address",
+          "ops": [
+            "nunique"
+          ]
+        },
+        {
+          "column": "TRANSACTION_TIME",
+          "semantic_type": "datetime",
+          "ops": [
+            "min",
+            "max",
+            "recency_days",
+            "span_days"
+          ]
+        }
+      ]
+    },
+    {
+      "from": "transactions.CUSTOMER_ID",
+      "to": "customers.CUSTOMER_ID",
+      "cardinality": "N:1",
+      "orphan_rate": 0.07113606260556792,
+      "parent_without_children_rate": 0.9992239999169101,
+      "fanout_stats": {
+        "mean": 28.703522846180675,
+        "median": 1.0,
+        "p95": 70.39999999999964,
+        "max": 2281
+      },
+      "aggregation_candidates": [
+        {
+          "column": "*",
+          "semantic_type": "count",
+          "ops": [
+            "count"
+          ]
+        },
+        {
+          "column": "MODE_OF_TRANSACTION",
+          "semantic_type": "categorical",
+          "ops": [
+            "nunique",
+            "mode",
+            "entropy"
+          ]
+        },
+        {
+          "column": "BENEFICIARY_IFSC",
+          "semantic_type": "bank_code",
+          "ops": [
+            "nunique"
+          ]
+        },
+        {
+          "column": "BENEFICIARY_BANK",
+          "semantic_type": "categorical",
+          "ops": [
+            "nunique",
+            "mode",
+            "entropy"
+          ]
+        },
+        {
+          "column": "BENEFICIARY_VIRTUAL_ADDRESS",
+          "semantic_type": "vpa",
+          "ops": [
+            "nunique"
+          ]
+        },
+        {
+          "column": "TRANSACTION_TYPE",
+          "semantic_type": "categorical",
+          "ops": [
+            "nunique",
+            "mode",
+            "entropy"
+          ]
+        },
+        {
+          "column": "TRANSACTION_SUB_TYPE",
+          "semantic_type": "categorical",
+          "ops": [
+            "nunique",
+            "mode",
+            "entropy"
+          ]
+        },
+        {
+          "column": "CREDIT_DEBIT_INDICATOR",
+          "semantic_type": "binary",
+          "ops": [
+            "nunique",
+            "mode",
+            "entropy"
+          ]
+        },
+        {
+          "column": "TRANSACTION_AMOUNT",
+          "semantic_type": "amount",
+          "ops": [
+            "sum",
+            "mean",
+            "max",
+            "min",
+            "std"
+          ]
+        },
+        {
+          "column": "TRANSACTION_DATE",
+          "semantic_type": "datetime",
+          "ops": [
+            "min",
+            "max",
+            "recency_days",
+            "span_days"
+          ]
+        },
+        {
+          "column": "TRANSACTION_ID",
+          "semantic_type": "amount_string",
+          "ops": [
+            "sum",
+            "mean",
+            "max",
+            "min",
+            "std"
+          ]
+        },
+        {
+          "column": "REMITTER_IFSC",
+          "semantic_type": "bank_code",
+          "ops": [
+            "nunique"
+          ]
+        },
+        {
+          "column": "REMITTER_BANK",
+          "semantic_type": "categorical",
+          "ops": [
+            "nunique",
+            "mode",
+            "entropy"
+          ]
+        },
+        {
+          "column": "REMITTER_VIRTUAL_ADDRESS",
+          "semantic_type": "vpa",
+          "ops": [
+            "nunique"
+          ]
+        },
+        {
+          "column": "TRANSACTION_INITIATOR_DETAILS",
+          "semantic_type": "categorical",
+          "ops": [
+            "nunique",
+            "mode",
+            "entropy"
+          ]
+        },
+        {
+          "column": "INITIATOR_DEVICE_OS",
+          "semantic_type": "categorical",
+          "ops": [
+            "nunique",
+            "mode",
+            "entropy"
+          ]
+        },
+        {
+          "column": "MOBILE_NUMBER",
+          "semantic_type": "phone",
+          "ops": [
+            "nunique"
+          ]
+        },
+        {
+          "column": "INITIATOR_IP_ADDRESS",
+          "semantic_type": "ip_address",
+          "ops": [
+            "nunique"
+          ]
+        },
+        {
+          "column": "TRANSACTION_TIME",
+          "semantic_type": "datetime",
+          "ops": [
+            "min",
+            "max",
+            "recency_days",
+            "span_days"
+          ]
+        }
+      ]
+    }
+  ],
+  "key_overlap": [
+    {
+      "space": "ACCOUNT_NUMBER",
+      "hub": "accounts",
+      "entities": [
+        "accounts",
+        "customers",
+        "transactions",
+        "mha_l0",
+        "mha_l1"
+      ],
+      "bridged": {
+        "accounts": false,
+        "customers": true,
+        "transactions": false,
+        "mha_l0": false,
+        "mha_l1": false
+      },
+      "distinct_counts": {
+        "accounts": 668884,
+        "customers": 668840,
+        "transactions": 200,
+        "mha_l0": 111710,
+        "mha_l1": 92026
+      },
+      "pairwise_overlap": [
+        [
+          668884,
+          668840,
+          197,
+          96422,
+          84530
+        ],
+        [
+          668840,
+          668840,
+          197,
+          96420,
+          84519
+        ],
+        [
+          197,
+          197,
+          200,
+          29,
+          63
+        ],
+        [
+          96422,
+          96420,
+          29,
+          111710,
+          1307
+        ],
+        [
+          84530,
+          84519,
+          63,
+          1307,
+          92026
+        ]
+      ],
+      "common_all": 1,
+      "union_all": 691649
+    }
+  ],
+  "aggregate_feature_suggestions": [
+    {
+      "parent_entity": "customers",
+      "child_entity": "accounts",
+      "join": "accounts.CUSTOMER_ID -> customers.CUSTOMER_ID",
+      "feature": "accounts__*__count",
+      "op": "count",
+      "source_column": "*"
+    },
+    {
+      "parent_entity": "customers",
+      "child_entity": "accounts",
+      "join": "accounts.CUSTOMER_ID -> customers.CUSTOMER_ID",
+      "feature": "accounts__ACCOUNT_OPEN_MODE__nunique",
+      "op": "nunique",
+      "source_column": "ACCOUNT_OPEN_MODE"
+    },
+    {
+      "parent_entity": "customers",
+      "child_entity": "accounts",
+      "join": "accounts.CUSTOMER_ID -> customers.CUSTOMER_ID",
+      "feature": "accounts__ACCOUNT_OPEN_MODE__mode",
+      "op": "mode",
+      "source_column": "ACCOUNT_OPEN_MODE"
+    },
+    {
+      "parent_entity": "customers",
+      "child_entity": "accounts",
+      "join": "accounts.CUSTOMER_ID -> customers.CUSTOMER_ID",
+      "feature": "accounts__ACCOUNT_OPEN_MODE__entropy",
+      "op": "entropy",
+      "source_column": "ACCOUNT_OPEN_MODE"
+    },
+    {
+      "parent_entity": "customers",
+      "child_entity": "accounts",
+      "join": "accounts.CUSTOMER_ID -> customers.CUSTOMER_ID",
+      "feature": "accounts__HAS_NOMINATION__nunique",
+      "op": "nunique",
+      "source_column": "HAS_NOMINATION"
+    },
+    {
+      "parent_entity": "customers",
+      "child_entity": "accounts",
+      "join": "accounts.CUSTOMER_ID -> customers.CUSTOMER_ID",
+      "feature": "accounts__HAS_NOMINATION__mode",
+      "op": "mode",
+      "source_column": "HAS_NOMINATION"
+    },
+    {
+      "parent_entity": "customers",
+      "child_entity": "accounts",
+      "join": "accounts.CUSTOMER_ID -> customers.CUSTOMER_ID",
+      "feature": "accounts__HAS_NOMINATION__entropy",
+      "op": "entropy",
+      "source_column": "HAS_NOMINATION"
+    },
+    {
+      "parent_entity": "customers",
+      "child_entity": "accounts",
+      "join": "accounts.CUSTOMER_ID -> customers.CUSTOMER_ID",
+      "feature": "accounts__BRANCH_CODE__nunique",
+      "op": "nunique",
+      "source_column": "BRANCH_CODE"
+    },
+    {
+      "parent_entity": "customers",
+      "child_entity": "accounts",
+      "join": "accounts.CUSTOMER_ID -> customers.CUSTOMER_ID",
+      "feature": "accounts__BRANCH_CODE__mode",
+      "op": "mode",
+      "source_column": "BRANCH_CODE"
+    },
+    {
+      "parent_entity": "customers",
+      "child_entity": "accounts",
+      "join": "accounts.CUSTOMER_ID -> customers.CUSTOMER_ID",
+      "feature": "accounts__BRANCH_CODE__entropy",
+      "op": "entropy",
+      "source_column": "BRANCH_CODE"
+    },
+    {
+      "parent_entity": "customers",
+      "child_entity": "accounts",
+      "join": "accounts.CUSTOMER_ID -> customers.CUSTOMER_ID",
+      "feature": "accounts__PMJDY_FLAG__nunique",
+      "op": "nunique",
+      "source_column": "PMJDY_FLAG"
+    },
+    {
+      "parent_entity": "customers",
+      "child_entity": "accounts",
+      "join": "accounts.CUSTOMER_ID -> customers.CUSTOMER_ID",
+      "feature": "accounts__PMJDY_FLAG__mode",
+      "op": "mode",
+      "source_column": "PMJDY_FLAG"
+    },
+    {
+      "parent_entity": "customers",
+      "child_entity": "accounts",
+      "join": "accounts.CUSTOMER_ID -> customers.CUSTOMER_ID",
+      "feature": "accounts__PMJDY_FLAG__entropy",
+      "op": "entropy",
+      "source_column": "PMJDY_FLAG"
+    },
+    {
+      "parent_entity": "customers",
+      "child_entity": "accounts",
+      "join": "accounts.CUSTOMER_ID -> customers.CUSTOMER_ID",
+      "feature": "accounts__SCSS_FLAG__nunique",
+      "op": "nunique",
+      "source_column": "SCSS_FLAG"
+    },
+    {
+      "parent_entity": "customers",
+      "child_entity": "accounts",
+      "join": "accounts.CUSTOMER_ID -> customers.CUSTOMER_ID",
+      "feature": "accounts__SCSS_FLAG__mode",
+      "op": "mode",
+      "source_column": "SCSS_FLAG"
+    },
+    {
+      "parent_entity": "customers",
+      "child_entity": "accounts",
+      "join": "accounts.CUSTOMER_ID -> customers.CUSTOMER_ID",
+      "feature": "accounts__SCSS_FLAG__entropy",
+      "op": "entropy",
+      "source_column": "SCSS_FLAG"
+    },
+    {
+      "parent_entity": "customers",
+      "child_entity": "accounts",
+      "join": "accounts.CUSTOMER_ID -> customers.CUSTOMER_ID",
+      "feature": "accounts__PMJJBY_FLAG__nunique",
+      "op": "nunique",
+      "source_column": "PMJJBY_FLAG"
+    },
+    {
+      "parent_entity": "customers",
+      "child_entity": "accounts",
+      "join": "accounts.CUSTOMER_ID -> customers.CUSTOMER_ID",
+      "feature": "accounts__PMJJBY_FLAG__mode",
+      "op": "mode",
+      "source_column": "PMJJBY_FLAG"
+    },
+    {
+      "parent_entity": "customers",
+      "child_entity": "accounts",
+      "join": "accounts.CUSTOMER_ID -> customers.CUSTOMER_ID",
+      "feature": "accounts__PMJJBY_FLAG__entropy",
+      "op": "entropy",
+      "source_column": "PMJJBY_FLAG"
+    },
+    {
+      "parent_entity": "customers",
+      "child_entity": "accounts",
+      "join": "accounts.CUSTOMER_ID -> customers.CUSTOMER_ID",
+      "feature": "accounts__CHEQUE_ALLOWED_FLAG__nunique",
+      "op": "nunique",
+      "source_column": "CHEQUE_ALLOWED_FLAG"
+    },
+    {
+      "parent_entity": "customers",
+      "child_entity": "accounts",
+      "join": "accounts.CUSTOMER_ID -> customers.CUSTOMER_ID",
+      "feature": "accounts__CHEQUE_ALLOWED_FLAG__mode",
+      "op": "mode",
+      "source_column": "CHEQUE_ALLOWED_FLAG"
+    },
+    {
+      "parent_entity": "customers",
+      "child_entity": "accounts",
+      "join": "accounts.CUSTOMER_ID -> customers.CUSTOMER_ID",
+      "feature": "accounts__CHEQUE_ALLOWED_FLAG__entropy",
+      "op": "entropy",
+      "source_column": "CHEQUE_ALLOWED_FLAG"
+    },
+    {
+      "parent_entity": "customers",
+      "child_entity": "accounts",
+      "join": "accounts.CUSTOMER_ID -> customers.CUSTOMER_ID",
+      "feature": "accounts__CHEQUE_BOOK_AVAILED_FLAG__nunique",
+      "op": "nunique",
+      "source_column": "CHEQUE_BOOK_AVAILED_FLAG"
+    },
+    {
+      "parent_entity": "customers",
+      "child_entity": "accounts",
+      "join": "accounts.CUSTOMER_ID -> customers.CUSTOMER_ID",
+      "feature": "accounts__CHEQUE_BOOK_AVAILED_FLAG__mode",
+      "op": "mode",
+      "source_column": "CHEQUE_BOOK_AVAILED_FLAG"
+    },
+    {
+      "parent_entity": "customers",
+      "child_entity": "accounts",
+      "join": "accounts.CUSTOMER_ID -> customers.CUSTOMER_ID",
+      "feature": "accounts__CHEQUE_BOOK_AVAILED_FLAG__entropy",
+      "op": "entropy",
+      "source_column": "CHEQUE_BOOK_AVAILED_FLAG"
+    },
+    {
+      "parent_entity": "customers",
+      "child_entity": "accounts",
+      "join": "accounts.CUSTOMER_ID -> customers.CUSTOMER_ID",
+      "feature": "accounts__NUM_CHEQUE_BOOKS__sum",
+      "op": "sum",
+      "source_column": "NUM_CHEQUE_BOOKS"
+    },
+    {
+      "parent_entity": "customers",
+      "child_entity": "accounts",
+      "join": "accounts.CUSTOMER_ID -> customers.CUSTOMER_ID",
+      "feature": "accounts__NUM_CHEQUE_BOOKS__mean",
+      "op": "mean",
+      "source_column": "NUM_CHEQUE_BOOKS"
+    },
+    {
+      "parent_entity": "customers",
+      "child_entity": "accounts",
+      "join": "accounts.CUSTOMER_ID -> customers.CUSTOMER_ID",
+      "feature": "accounts__NUM_CHEQUE_BOOKS__max",
+      "op": "max",
+      "source_column": "NUM_CHEQUE_BOOKS"
+    },
+    {
+      "parent_entity": "customers",
+      "child_entity": "accounts",
+      "join": "accounts.CUSTOMER_ID -> customers.CUSTOMER_ID",
+      "feature": "accounts__NUM_CHEQUE_BOOKS__min",
+      "op": "min",
+      "source_column": "NUM_CHEQUE_BOOKS"
+    },
+    {
+      "parent_entity": "customers",
+      "child_entity": "accounts",
+      "join": "accounts.CUSTOMER_ID -> customers.CUSTOMER_ID",
+      "feature": "accounts__NUM_CHEQUE_BOOKS__std",
+      "op": "std",
+      "source_column": "NUM_CHEQUE_BOOKS"
+    },
+    {
+      "parent_entity": "customers",
+      "child_entity": "accounts",
+      "join": "accounts.CUSTOMER_ID -> customers.CUSTOMER_ID",
+      "feature": "accounts__LAST_MOBILE_UPDATE_DATE__min",
+      "op": "min",
+      "source_column": "LAST_MOBILE_UPDATE_DATE"
+    },
+    {
+      "parent_entity": "customers",
+      "child_entity": "accounts",
+      "join": "accounts.CUSTOMER_ID -> customers.CUSTOMER_ID",
+      "feature": "accounts__LAST_MOBILE_UPDATE_DATE__max",
+      "op": "max",
+      "source_column": "LAST_MOBILE_UPDATE_DATE"
+    },
+    {
+      "parent_entity": "customers",
+      "child_entity": "accounts",
+      "join": "accounts.CUSTOMER_ID -> customers.CUSTOMER_ID",
+      "feature": "accounts__LAST_MOBILE_UPDATE_DATE__recency_days",
+      "op": "recency_days",
+      "source_column": "LAST_MOBILE_UPDATE_DATE"
+    },
+    {
+      "parent_entity": "customers",
+      "child_entity": "accounts",
+      "join": "accounts.CUSTOMER_ID -> customers.CUSTOMER_ID",
+      "feature": "accounts__LAST_MOBILE_UPDATE_DATE__span_days",
+      "op": "span_days",
+      "source_column": "LAST_MOBILE_UPDATE_DATE"
+    },
+    {
+      "parent_entity": "customers",
+      "child_entity": "accounts",
+      "join": "accounts.CUSTOMER_ID -> customers.CUSTOMER_ID",
+      "feature": "accounts__PAN_FLAG__nunique",
+      "op": "nunique",
+      "source_column": "PAN_FLAG"
+    },
+    {
+      "parent_entity": "customers",
+      "child_entity": "accounts",
+      "join": "accounts.CUSTOMER_ID -> customers.CUSTOMER_ID",
+      "feature": "accounts__PAN_FLAG__mode",
+      "op": "mode",
+      "source_column": "PAN_FLAG"
+    },
+    {
+      "parent_entity": "customers",
+      "child_entity": "accounts",
+      "join": "accounts.CUSTOMER_ID -> customers.CUSTOMER_ID",
+      "feature": "accounts__PAN_FLAG__entropy",
+      "op": "entropy",
+      "source_column": "PAN_FLAG"
+    },
+    {
+      "parent_entity": "customers",
+      "child_entity": "accounts",
+      "join": "accounts.CUSTOMER_ID -> customers.CUSTOMER_ID",
+      "feature": "accounts__AADHAR_FLAG__nunique",
+      "op": "nunique",
+      "source_column": "AADHAR_FLAG"
+    },
+    {
+      "parent_entity": "customers",
+      "child_entity": "accounts",
+      "join": "accounts.CUSTOMER_ID -> customers.CUSTOMER_ID",
+      "feature": "accounts__AADHAR_FLAG__mode",
+      "op": "mode",
+      "source_column": "AADHAR_FLAG"
+    },
+    {
+      "parent_entity": "customers",
+      "child_entity": "accounts",
+      "join": "accounts.CUSTOMER_ID -> customers.CUSTOMER_ID",
+      "feature": "accounts__AADHAR_FLAG__entropy",
+      "op": "entropy",
+      "source_column": "AADHAR_FLAG"
+    },
+    {
+      "parent_entity": "customers",
+      "child_entity": "accounts",
+      "join": "accounts.CUSTOMER_ID -> customers.CUSTOMER_ID",
+      "feature": "accounts__GSTN_FLAG__nunique",
+      "op": "nunique",
+      "source_column": "GSTN_FLAG"
+    },
+    {
+      "parent_entity": "customers",
+      "child_entity": "accounts",
+      "join": "accounts.CUSTOMER_ID -> customers.CUSTOMER_ID",
+      "feature": "accounts__GSTN_FLAG__mode",
+      "op": "mode",
+      "source_column": "GSTN_FLAG"
+    },
+    {
+      "parent_entity": "customers",
+      "child_entity": "accounts",
+      "join": "accounts.CUSTOMER_ID -> customers.CUSTOMER_ID",
+      "feature": "accounts__GSTN_FLAG__entropy",
+      "op": "entropy",
+      "source_column": "GSTN_FLAG"
+    },
+    {
+      "parent_entity": "customers",
+      "child_entity": "accounts",
+      "join": "accounts.CUSTOMER_ID -> customers.CUSTOMER_ID",
+      "feature": "accounts__PASSPORT_FLAG__nunique",
+      "op": "nunique",
+      "source_column": "PASSPORT_FLAG"
+    },
+    {
+      "parent_entity": "customers",
+      "child_entity": "accounts",
+      "join": "accounts.CUSTOMER_ID -> customers.CUSTOMER_ID",
+      "feature": "accounts__PASSPORT_FLAG__mode",
+      "op": "mode",
+      "source_column": "PASSPORT_FLAG"
+    },
+    {
+      "parent_entity": "customers",
+      "child_entity": "accounts",
+      "join": "accounts.CUSTOMER_ID -> customers.CUSTOMER_ID",
+      "feature": "accounts__PASSPORT_FLAG__entropy",
+      "op": "entropy",
+      "source_column": "PASSPORT_FLAG"
+    },
+    {
+      "parent_entity": "customers",
+      "child_entity": "accounts",
+      "join": "accounts.CUSTOMER_ID -> customers.CUSTOMER_ID",
+      "feature": "accounts__VOTER_ID_FLAG__nunique",
+      "op": "nunique",
+      "source_column": "VOTER_ID_FLAG"
+    },
+    {
+      "parent_entity": "customers",
+      "child_entity": "accounts",
+      "join": "accounts.CUSTOMER_ID -> customers.CUSTOMER_ID",
+      "feature": "accounts__VOTER_ID_FLAG__mode",
+      "op": "mode",
+      "source_column": "VOTER_ID_FLAG"
+    },
+    {
+      "parent_entity": "customers",
+      "child_entity": "accounts",
+      "join": "accounts.CUSTOMER_ID -> customers.CUSTOMER_ID",
+      "feature": "accounts__VOTER_ID_FLAG__entropy",
+      "op": "entropy",
+      "source_column": "VOTER_ID_FLAG"
+    },
+    {
+      "parent_entity": "customers",
+      "child_entity": "accounts",
+      "join": "accounts.CUSTOMER_ID -> customers.CUSTOMER_ID",
+      "feature": "accounts__KYC_RATING__nunique",
+      "op": "nunique",
+      "source_column": "KYC_RATING"
+    },
+    {
+      "parent_entity": "customers",
+      "child_entity": "accounts",
+      "join": "accounts.CUSTOMER_ID -> customers.CUSTOMER_ID",
+      "feature": "accounts__KYC_RATING__mode",
+      "op": "mode",
+      "source_column": "KYC_RATING"
+    },
+    {
+      "parent_entity": "customers",
+      "child_entity": "accounts",
+      "join": "accounts.CUSTOMER_ID -> customers.CUSTOMER_ID",
+      "feature": "accounts__KYC_RATING__entropy",
+      "op": "entropy",
+      "source_column": "KYC_RATING"
+    },
+    {
+      "parent_entity": "customers",
+      "child_entity": "accounts",
+      "join": "accounts.CUSTOMER_ID -> customers.CUSTOMER_ID",
+      "feature": "accounts__INTERNET_BANKING_FLAG__nunique",
+      "op": "nunique",
+      "source_column": "INTERNET_BANKING_FLAG"
+    },
+    {
+      "parent_entity": "customers",
+      "child_entity": "accounts",
+      "join": "accounts.CUSTOMER_ID -> customers.CUSTOMER_ID",
+      "feature": "accounts__INTERNET_BANKING_FLAG__mode",
+      "op": "mode",
+      "source_column": "INTERNET_BANKING_FLAG"
+    },
+    {
+      "parent_entity": "customers",
+      "child_entity": "accounts",
+      "join": "accounts.CUSTOMER_ID -> customers.CUSTOMER_ID",
+      "feature": "accounts__INTERNET_BANKING_FLAG__entropy",
+      "op": "entropy",
+      "source_column": "INTERNET_BANKING_FLAG"
+    },
+    {
+      "parent_entity": "customers",
+      "child_entity": "accounts",
+      "join": "accounts.CUSTOMER_ID -> customers.CUSTOMER_ID",
+      "feature": "accounts__MOBILE_BANKING_FLAG__nunique",
+      "op": "nunique",
+      "source_column": "MOBILE_BANKING_FLAG"
+    },
+    {
+      "parent_entity": "customers",
+      "child_entity": "accounts",
+      "join": "accounts.CUSTOMER_ID -> customers.CUSTOMER_ID",
+      "feature": "accounts__MOBILE_BANKING_FLAG__mode",
+      "op": "mode",
+      "source_column": "MOBILE_BANKING_FLAG"
+    },
+    {
+      "parent_entity": "customers",
+      "child_entity": "accounts",
+      "join": "accounts.CUSTOMER_ID -> customers.CUSTOMER_ID",
+      "feature": "accounts__MOBILE_BANKING_FLAG__entropy",
+      "op": "entropy",
+      "source_column": "MOBILE_BANKING_FLAG"
+    },
+    {
+      "parent_entity": "customers",
+      "child_entity": "accounts",
+      "join": "accounts.CUSTOMER_ID -> customers.CUSTOMER_ID",
+      "feature": "accounts__UPI_FLAG__nunique",
+      "op": "nunique",
+      "source_column": "UPI_FLAG"
+    },
+    {
+      "parent_entity": "customers",
+      "child_entity": "accounts",
+      "join": "accounts.CUSTOMER_ID -> customers.CUSTOMER_ID",
+      "feature": "accounts__UPI_FLAG__mode",
+      "op": "mode",
+      "source_column": "UPI_FLAG"
+    },
+    {
+      "parent_entity": "customers",
+      "child_entity": "accounts",
+      "join": "accounts.CUSTOMER_ID -> customers.CUSTOMER_ID",
+      "feature": "accounts__UPI_FLAG__entropy",
+      "op": "entropy",
+      "source_column": "UPI_FLAG"
+    },
+    {
+      "parent_entity": "customers",
+      "child_entity": "accounts",
+      "join": "accounts.CUSTOMER_ID -> customers.CUSTOMER_ID",
+      "feature": "accounts__DEMAT_FLAG__nunique",
+      "op": "nunique",
+      "source_column": "DEMAT_FLAG"
+    },
+    {
+      "parent_entity": "customers",
+      "child_entity": "accounts",
+      "join": "accounts.CUSTOMER_ID -> customers.CUSTOMER_ID",
+      "feature": "accounts__DEMAT_FLAG__mode",
+      "op": "mode",
+      "source_column": "DEMAT_FLAG"
+    },
+    {
+      "parent_entity": "customers",
+      "child_entity": "accounts",
+      "join": "accounts.CUSTOMER_ID -> customers.CUSTOMER_ID",
+      "feature": "accounts__DEMAT_FLAG__entropy",
+      "op": "entropy",
+      "source_column": "DEMAT_FLAG"
+    },
+    {
+      "parent_entity": "customers",
+      "child_entity": "accounts",
+      "join": "accounts.CUSTOMER_ID -> customers.CUSTOMER_ID",
+      "feature": "accounts__MUTUAL_FUND_FLAG__nunique",
+      "op": "nunique",
+      "source_column": "MUTUAL_FUND_FLAG"
+    },
+    {
+      "parent_entity": "customers",
+      "child_entity": "accounts",
+      "join": "accounts.CUSTOMER_ID -> customers.CUSTOMER_ID",
+      "feature": "accounts__MUTUAL_FUND_FLAG__mode",
+      "op": "mode",
+      "source_column": "MUTUAL_FUND_FLAG"
+    },
+    {
+      "parent_entity": "customers",
+      "child_entity": "accounts",
+      "join": "accounts.CUSTOMER_ID -> customers.CUSTOMER_ID",
+      "feature": "accounts__MUTUAL_FUND_FLAG__entropy",
+      "op": "entropy",
+      "source_column": "MUTUAL_FUND_FLAG"
+    },
+    {
+      "parent_entity": "customers",
+      "child_entity": "accounts",
+      "join": "accounts.CUSTOMER_ID -> customers.CUSTOMER_ID",
+      "feature": "accounts__MPASSBOOK_FLAG__nunique",
+      "op": "nunique",
+      "source_column": "MPASSBOOK_FLAG"
+    },
+    {
+      "parent_entity": "customers",
+      "child_entity": "accounts",
+      "join": "accounts.CUSTOMER_ID -> customers.CUSTOMER_ID",
+      "feature": "accounts__MPASSBOOK_FLAG__mode",
+      "op": "mode",
+      "source_column": "MPASSBOOK_FLAG"
+    },
+    {
+      "parent_entity": "customers",
+      "child_entity": "accounts",
+      "join": "accounts.CUSTOMER_ID -> customers.CUSTOMER_ID",
+      "feature": "accounts__MPASSBOOK_FLAG__entropy",
+      "op": "entropy",
+      "source_column": "MPASSBOOK_FLAG"
+    },
+    {
+      "parent_entity": "customers",
+      "child_entity": "accounts",
+      "join": "accounts.CUSTOMER_ID -> customers.CUSTOMER_ID",
+      "feature": "accounts__FAST_TAG_FLAG__nunique",
+      "op": "nunique",
+      "source_column": "FAST_TAG_FLAG"
+    },
+    {
+      "parent_entity": "customers",
+      "child_entity": "accounts",
+      "join": "accounts.CUSTOMER_ID -> customers.CUSTOMER_ID",
+      "feature": "accounts__FAST_TAG_FLAG__mode",
+      "op": "mode",
+      "source_column": "FAST_TAG_FLAG"
+    },
+    {
+      "parent_entity": "customers",
+      "child_entity": "accounts",
+      "join": "accounts.CUSTOMER_ID -> customers.CUSTOMER_ID",
+      "feature": "accounts__FAST_TAG_FLAG__entropy",
+      "op": "entropy",
+      "source_column": "FAST_TAG_FLAG"
+    },
+    {
+      "parent_entity": "customers",
+      "child_entity": "accounts",
+      "join": "accounts.CUSTOMER_ID -> customers.CUSTOMER_ID",
+      "feature": "accounts__SSA_FLAG__nunique",
+      "op": "nunique",
+      "source_column": "SSA_FLAG"
+    },
+    {
+      "parent_entity": "customers",
+      "child_entity": "accounts",
+      "join": "accounts.CUSTOMER_ID -> customers.CUSTOMER_ID",
+      "feature": "accounts__SSA_FLAG__mode",
+      "op": "mode",
+      "source_column": "SSA_FLAG"
+    },
+    {
+      "parent_entity": "customers",
+      "child_entity": "accounts",
+      "join": "accounts.CUSTOMER_ID -> customers.CUSTOMER_ID",
+      "feature": "accounts__SSA_FLAG__entropy",
+      "op": "entropy",
+      "source_column": "SSA_FLAG"
+    },
+    {
+      "parent_entity": "customers",
+      "child_entity": "accounts",
+      "join": "accounts.CUSTOMER_ID -> customers.CUSTOMER_ID",
+      "feature": "accounts__PPF_FLAG__nunique",
+      "op": "nunique",
+      "source_column": "PPF_FLAG"
+    },
+    {
+      "parent_entity": "customers",
+      "child_entity": "accounts",
+      "join": "accounts.CUSTOMER_ID -> customers.CUSTOMER_ID",
+      "feature": "accounts__PPF_FLAG__mode",
+      "op": "mode",
+      "source_column": "PPF_FLAG"
+    },
+    {
+      "parent_entity": "customers",
+      "child_entity": "accounts",
+      "join": "accounts.CUSTOMER_ID -> customers.CUSTOMER_ID",
+      "feature": "accounts__PPF_FLAG__entropy",
+      "op": "entropy",
+      "source_column": "PPF_FLAG"
+    },
+    {
+      "parent_entity": "customers",
+      "child_entity": "accounts",
+      "join": "accounts.CUSTOMER_ID -> customers.CUSTOMER_ID",
+      "feature": "accounts__LOCKER_FLAG__nunique",
+      "op": "nunique",
+      "source_column": "LOCKER_FLAG"
+    },
+    {
+      "parent_entity": "customers",
+      "child_entity": "accounts",
+      "join": "accounts.CUSTOMER_ID -> customers.CUSTOMER_ID",
+      "feature": "accounts__LOCKER_FLAG__mode",
+      "op": "mode",
+      "source_column": "LOCKER_FLAG"
+    },
+    {
+      "parent_entity": "customers",
+      "child_entity": "accounts",
+      "join": "accounts.CUSTOMER_ID -> customers.CUSTOMER_ID",
+      "feature": "accounts__LOCKER_FLAG__entropy",
+      "op": "entropy",
+      "source_column": "LOCKER_FLAG"
+    },
+    {
+      "parent_entity": "customers",
+      "child_entity": "accounts",
+      "join": "accounts.CUSTOMER_ID -> customers.CUSTOMER_ID",
+      "feature": "accounts__ATM_ISSUED_FLAG__nunique",
+      "op": "nunique",
+      "source_column": "ATM_ISSUED_FLAG"
+    },
+    {
+      "parent_entity": "customers",
+      "child_entity": "accounts",
+      "join": "accounts.CUSTOMER_ID -> customers.CUSTOMER_ID",
+      "feature": "accounts__ATM_ISSUED_FLAG__mode",
+      "op": "mode",
+      "source_column": "ATM_ISSUED_FLAG"
+    },
+    {
+      "parent_entity": "customers",
+      "child_entity": "accounts",
+      "join": "accounts.CUSTOMER_ID -> customers.CUSTOMER_ID",
+      "feature": "accounts__ATM_ISSUED_FLAG__entropy",
+      "op": "entropy",
+      "source_column": "ATM_ISSUED_FLAG"
+    },
+    {
+      "parent_entity": "customers",
+      "child_entity": "accounts",
+      "join": "accounts.CUSTOMER_ID -> customers.CUSTOMER_ID",
+      "feature": "accounts__CREDIT_CARD_FLAG__nunique",
+      "op": "nunique",
+      "source_column": "CREDIT_CARD_FLAG"
+    },
+    {
+      "parent_entity": "customers",
+      "child_entity": "accounts",
+      "join": "accounts.CUSTOMER_ID -> customers.CUSTOMER_ID",
+      "feature": "accounts__CREDIT_CARD_FLAG__mode",
+      "op": "mode",
+      "source_column": "CREDIT_CARD_FLAG"
+    },
+    {
+      "parent_entity": "customers",
+      "child_entity": "accounts",
+      "join": "accounts.CUSTOMER_ID -> customers.CUSTOMER_ID",
+      "feature": "accounts__CREDIT_CARD_FLAG__entropy",
+      "op": "entropy",
+      "source_column": "CREDIT_CARD_FLAG"
+    },
+    {
+      "parent_entity": "customers",
+      "child_entity": "accounts",
+      "join": "accounts.CUSTOMER_ID -> customers.CUSTOMER_ID",
+      "feature": "accounts__NUM_CREDIT_CARDS__sum",
+      "op": "sum",
+      "source_column": "NUM_CREDIT_CARDS"
+    },
+    {
+      "parent_entity": "customers",
+      "child_entity": "accounts",
+      "join": "accounts.CUSTOMER_ID -> customers.CUSTOMER_ID",
+      "feature": "accounts__NUM_CREDIT_CARDS__mean",
+      "op": "mean",
+      "source_column": "NUM_CREDIT_CARDS"
+    },
+    {
+      "parent_entity": "customers",
+      "child_entity": "accounts",
+      "join": "accounts.CUSTOMER_ID -> customers.CUSTOMER_ID",
+      "feature": "accounts__NUM_CREDIT_CARDS__max",
+      "op": "max",
+      "source_column": "NUM_CREDIT_CARDS"
+    },
+    {
+      "parent_entity": "customers",
+      "child_entity": "accounts",
+      "join": "accounts.CUSTOMER_ID -> customers.CUSTOMER_ID",
+      "feature": "accounts__NUM_CREDIT_CARDS__min",
+      "op": "min",
+      "source_column": "NUM_CREDIT_CARDS"
+    },
+    {
+      "parent_entity": "customers",
+      "child_entity": "accounts",
+      "join": "accounts.CUSTOMER_ID -> customers.CUSTOMER_ID",
+      "feature": "accounts__NUM_CREDIT_CARDS__std",
+      "op": "std",
+      "source_column": "NUM_CREDIT_CARDS"
+    },
+    {
+      "parent_entity": "customers",
+      "child_entity": "accounts",
+      "join": "accounts.CUSTOMER_ID -> customers.CUSTOMER_ID",
+      "feature": "accounts__ACCOUNT_STATUS__nunique",
+      "op": "nunique",
+      "source_column": "ACCOUNT_STATUS"
+    },
+    {
+      "parent_entity": "customers",
+      "child_entity": "accounts",
+      "join": "accounts.CUSTOMER_ID -> customers.CUSTOMER_ID",
+      "feature": "accounts__ACCOUNT_STATUS__mode",
+      "op": "mode",
+      "source_column": "ACCOUNT_STATUS"
+    },
+    {
+      "parent_entity": "customers",
+      "child_entity": "accounts",
+      "join": "accounts.CUSTOMER_ID -> customers.CUSTOMER_ID",
+      "feature": "accounts__ACCOUNT_STATUS__entropy",
+      "op": "entropy",
+      "source_column": "ACCOUNT_STATUS"
+    },
+    {
+      "parent_entity": "customers",
+      "child_entity": "accounts",
+      "join": "accounts.CUSTOMER_ID -> customers.CUSTOMER_ID",
+      "feature": "accounts__FREEZE_CODES__nunique",
+      "op": "nunique",
+      "source_column": "FREEZE_CODES"
+    },
+    {
+      "parent_entity": "customers",
+      "child_entity": "accounts",
+      "join": "accounts.CUSTOMER_ID -> customers.CUSTOMER_ID",
+      "feature": "accounts__FREEZE_CODES__mode",
+      "op": "mode",
+      "source_column": "FREEZE_CODES"
+    },
+    {
+      "parent_entity": "customers",
+      "child_entity": "accounts",
+      "join": "accounts.CUSTOMER_ID -> customers.CUSTOMER_ID",
+      "feature": "accounts__FREEZE_CODES__entropy",
+      "op": "entropy",
+      "source_column": "FREEZE_CODES"
+    },
+    {
+      "parent_entity": "customers",
+      "child_entity": "accounts",
+      "join": "accounts.CUSTOMER_ID -> customers.CUSTOMER_ID",
+      "feature": "accounts__KYC_COMPLIANT_FLAG__nunique",
+      "op": "nunique",
+      "source_column": "KYC_COMPLIANT_FLAG"
+    },
+    {
+      "parent_entity": "customers",
+      "child_entity": "accounts",
+      "join": "accounts.CUSTOMER_ID -> customers.CUSTOMER_ID",
+      "feature": "accounts__KYC_COMPLIANT_FLAG__mode",
+      "op": "mode",
+      "source_column": "KYC_COMPLIANT_FLAG"
+    },
+    {
+      "parent_entity": "customers",
+      "child_entity": "accounts",
+      "join": "accounts.CUSTOMER_ID -> customers.CUSTOMER_ID",
+      "feature": "accounts__KYC_COMPLIANT_FLAG__entropy",
+      "op": "entropy",
+      "source_column": "KYC_COMPLIANT_FLAG"
+    },
+    {
+      "parent_entity": "customers",
+      "child_entity": "accounts",
+      "join": "accounts.CUSTOMER_ID -> customers.CUSTOMER_ID",
+      "feature": "accounts__KYC_REVIEW_DATE__min",
+      "op": "min",
+      "source_column": "KYC_REVIEW_DATE"
+    },
+    {
+      "parent_entity": "customers",
+      "child_entity": "accounts",
+      "join": "accounts.CUSTOMER_ID -> customers.CUSTOMER_ID",
+      "feature": "accounts__KYC_REVIEW_DATE__max",
+      "op": "max",
+      "source_column": "KYC_REVIEW_DATE"
+    },
+    {
+      "parent_entity": "customers",
+      "child_entity": "accounts",
+      "join": "accounts.CUSTOMER_ID -> customers.CUSTOMER_ID",
+      "feature": "accounts__KYC_REVIEW_DATE__recency_days",
+      "op": "recency_days",
+      "source_column": "KYC_REVIEW_DATE"
+    },
+    {
+      "parent_entity": "customers",
+      "child_entity": "accounts",
+      "join": "accounts.CUSTOMER_ID -> customers.CUSTOMER_ID",
+      "feature": "accounts__KYC_REVIEW_DATE__span_days",
+      "op": "span_days",
+      "source_column": "KYC_REVIEW_DATE"
+    },
+    {
+      "parent_entity": "customers",
+      "child_entity": "accounts",
+      "join": "accounts.CUSTOMER_ID -> customers.CUSTOMER_ID",
+      "feature": "accounts__LAST_FREEZE_DATE__min",
+      "op": "min",
+      "source_column": "LAST_FREEZE_DATE"
+    },
+    {
+      "parent_entity": "customers",
+      "child_entity": "accounts",
+      "join": "accounts.CUSTOMER_ID -> customers.CUSTOMER_ID",
+      "feature": "accounts__LAST_FREEZE_DATE__max",
+      "op": "max",
+      "source_column": "LAST_FREEZE_DATE"
+    },
+    {
+      "parent_entity": "customers",
+      "child_entity": "accounts",
+      "join": "accounts.CUSTOMER_ID -> customers.CUSTOMER_ID",
+      "feature": "accounts__LAST_FREEZE_DATE__recency_days",
+      "op": "recency_days",
+      "source_column": "LAST_FREEZE_DATE"
+    },
+    {
+      "parent_entity": "customers",
+      "child_entity": "accounts",
+      "join": "accounts.CUSTOMER_ID -> customers.CUSTOMER_ID",
+      "feature": "accounts__LAST_FREEZE_DATE__span_days",
+      "op": "span_days",
+      "source_column": "LAST_FREEZE_DATE"
+    },
+    {
+      "parent_entity": "customers",
+      "child_entity": "accounts",
+      "join": "accounts.CUSTOMER_ID -> customers.CUSTOMER_ID",
+      "feature": "accounts__LAST_UNFREEZE_DATE__min",
+      "op": "min",
+      "source_column": "LAST_UNFREEZE_DATE"
+    },
+    {
+      "parent_entity": "customers",
+      "child_entity": "accounts",
+      "join": "accounts.CUSTOMER_ID -> customers.CUSTOMER_ID",
+      "feature": "accounts__LAST_UNFREEZE_DATE__max",
+      "op": "max",
+      "source_column": "LAST_UNFREEZE_DATE"
+    },
+    {
+      "parent_entity": "customers",
+      "child_entity": "accounts",
+      "join": "accounts.CUSTOMER_ID -> customers.CUSTOMER_ID",
+      "feature": "accounts__LAST_UNFREEZE_DATE__recency_days",
+      "op": "recency_days",
+      "source_column": "LAST_UNFREEZE_DATE"
+    },
+    {
+      "parent_entity": "customers",
+      "child_entity": "accounts",
+      "join": "accounts.CUSTOMER_ID -> customers.CUSTOMER_ID",
+      "feature": "accounts__LAST_UNFREEZE_DATE__span_days",
+      "op": "span_days",
+      "source_column": "LAST_UNFREEZE_DATE"
+    },
+    {
+      "parent_entity": "customers",
+      "child_entity": "accounts",
+      "join": "accounts.CUSTOMER_ID -> customers.CUSTOMER_ID",
+      "feature": "accounts__PINCODE__nunique",
+      "op": "nunique",
+      "source_column": "PINCODE"
+    },
+    {
+      "parent_entity": "customers",
+      "child_entity": "accounts",
+      "join": "accounts.CUSTOMER_ID -> customers.CUSTOMER_ID",
+      "feature": "accounts__AREA_CATEGORY__nunique",
+      "op": "nunique",
+      "source_column": "AREA_CATEGORY"
+    },
+    {
+      "parent_entity": "customers",
+      "child_entity": "accounts",
+      "join": "accounts.CUSTOMER_ID -> customers.CUSTOMER_ID",
+      "feature": "accounts__AREA_CATEGORY__mode",
+      "op": "mode",
+      "source_column": "AREA_CATEGORY"
+    },
+    {
+      "parent_entity": "customers",
+      "child_entity": "accounts",
+      "join": "accounts.CUSTOMER_ID -> customers.CUSTOMER_ID",
+      "feature": "accounts__AREA_CATEGORY__entropy",
+      "op": "entropy",
+      "source_column": "AREA_CATEGORY"
+    },
+    {
+      "parent_entity": "customers",
+      "child_entity": "accounts",
+      "join": "accounts.CUSTOMER_ID -> customers.CUSTOMER_ID",
+      "feature": "accounts__BRANCH_CATEGORY__nunique",
+      "op": "nunique",
+      "source_column": "BRANCH_CATEGORY"
+    },
+    {
+      "parent_entity": "customers",
+      "child_entity": "accounts",
+      "join": "accounts.CUSTOMER_ID -> customers.CUSTOMER_ID",
+      "feature": "accounts__BRANCH_CATEGORY__mode",
+      "op": "mode",
+      "source_column": "BRANCH_CATEGORY"
+    },
+    {
+      "parent_entity": "customers",
+      "child_entity": "accounts",
+      "join": "accounts.CUSTOMER_ID -> customers.CUSTOMER_ID",
+      "feature": "accounts__BRANCH_CATEGORY__entropy",
+      "op": "entropy",
+      "source_column": "BRANCH_CATEGORY"
+    },
+    {
+      "parent_entity": "customers",
+      "child_entity": "accounts",
+      "join": "accounts.CUSTOMER_ID -> customers.CUSTOMER_ID",
+      "feature": "accounts__SCHEME_TYPE__nunique",
+      "op": "nunique",
+      "source_column": "SCHEME_TYPE"
+    },
+    {
+      "parent_entity": "customers",
+      "child_entity": "accounts",
+      "join": "accounts.CUSTOMER_ID -> customers.CUSTOMER_ID",
+      "feature": "accounts__SCHEME_TYPE__mode",
+      "op": "mode",
+      "source_column": "SCHEME_TYPE"
+    },
+    {
+      "parent_entity": "customers",
+      "child_entity": "accounts",
+      "join": "accounts.CUSTOMER_ID -> customers.CUSTOMER_ID",
+      "feature": "accounts__SCHEME_TYPE__entropy",
+      "op": "entropy",
+      "source_column": "SCHEME_TYPE"
+    },
+    {
+      "parent_entity": "customers",
+      "child_entity": "accounts",
+      "join": "accounts.CUSTOMER_ID -> customers.CUSTOMER_ID",
+      "feature": "accounts__ACCOUNT_TYPE__nunique",
+      "op": "nunique",
+      "source_column": "ACCOUNT_TYPE"
+    },
+    {
+      "parent_entity": "customers",
+      "child_entity": "accounts",
+      "join": "accounts.CUSTOMER_ID -> customers.CUSTOMER_ID",
+      "feature": "accounts__ACCOUNT_TYPE__mode",
+      "op": "mode",
+      "source_column": "ACCOUNT_TYPE"
+    },
+    {
+      "parent_entity": "customers",
+      "child_entity": "accounts",
+      "join": "accounts.CUSTOMER_ID -> customers.CUSTOMER_ID",
+      "feature": "accounts__ACCOUNT_TYPE__entropy",
+      "op": "entropy",
+      "source_column": "ACCOUNT_TYPE"
+    },
+    {
+      "parent_entity": "customers",
+      "child_entity": "accounts",
+      "join": "accounts.CUSTOMER_ID -> customers.CUSTOMER_ID",
+      "feature": "accounts__APY_FLAG__nunique",
+      "op": "nunique",
+      "source_column": "APY_FLAG"
+    },
+    {
+      "parent_entity": "customers",
+      "child_entity": "accounts",
+      "join": "accounts.CUSTOMER_ID -> customers.CUSTOMER_ID",
+      "feature": "accounts__APY_FLAG__mode",
+      "op": "mode",
+      "source_column": "APY_FLAG"
+    },
+    {
+      "parent_entity": "customers",
+      "child_entity": "accounts",
+      "join": "accounts.CUSTOMER_ID -> customers.CUSTOMER_ID",
+      "feature": "accounts__APY_FLAG__entropy",
+      "op": "entropy",
+      "source_column": "APY_FLAG"
+    },
+    {
+      "parent_entity": "customers",
+      "child_entity": "accounts",
+      "join": "accounts.CUSTOMER_ID -> customers.CUSTOMER_ID",
+      "feature": "accounts__UDHYAM_FLAG__nunique",
+      "op": "nunique",
+      "source_column": "UDHYAM_FLAG"
+    },
+    {
+      "parent_entity": "customers",
+      "child_entity": "accounts",
+      "join": "accounts.CUSTOMER_ID -> customers.CUSTOMER_ID",
+      "feature": "accounts__UDHYAM_FLAG__mode",
+      "op": "mode",
+      "source_column": "UDHYAM_FLAG"
+    },
+    {
+      "parent_entity": "customers",
+      "child_entity": "accounts",
+      "join": "accounts.CUSTOMER_ID -> customers.CUSTOMER_ID",
+      "feature": "accounts__UDHYAM_FLAG__entropy",
+      "op": "entropy",
+      "source_column": "UDHYAM_FLAG"
+    },
+    {
+      "parent_entity": "customers",
+      "child_entity": "accounts",
+      "join": "accounts.CUSTOMER_ID -> customers.CUSTOMER_ID",
+      "feature": "accounts__ACCOUNT_OPEN_DATE__min",
+      "op": "min",
+      "source_column": "ACCOUNT_OPEN_DATE"
+    },
+    {
+      "parent_entity": "customers",
+      "child_entity": "accounts",
+      "join": "accounts.CUSTOMER_ID -> customers.CUSTOMER_ID",
+      "feature": "accounts__ACCOUNT_OPEN_DATE__max",
+      "op": "max",
+      "source_column": "ACCOUNT_OPEN_DATE"
+    },
+    {
+      "parent_entity": "customers",
+      "child_entity": "accounts",
+      "join": "accounts.CUSTOMER_ID -> customers.CUSTOMER_ID",
+      "feature": "accounts__ACCOUNT_OPEN_DATE__recency_days",
+      "op": "recency_days",
+      "source_column": "ACCOUNT_OPEN_DATE"
+    },
+    {
+      "parent_entity": "customers",
+      "child_entity": "accounts",
+      "join": "accounts.CUSTOMER_ID -> customers.CUSTOMER_ID",
+      "feature": "accounts__ACCOUNT_OPEN_DATE__span_days",
+      "op": "span_days",
+      "source_column": "ACCOUNT_OPEN_DATE"
+    },
+    {
+      "parent_entity": "customers",
+      "child_entity": "accounts",
+      "join": "accounts.CUSTOMER_ID -> customers.CUSTOMER_ID",
+      "feature": "accounts__LIEN_AMOUNT__sum",
+      "op": "sum",
+      "source_column": "LIEN_AMOUNT"
+    },
+    {
+      "parent_entity": "customers",
+      "child_entity": "accounts",
+      "join": "accounts.CUSTOMER_ID -> customers.CUSTOMER_ID",
+      "feature": "accounts__LIEN_AMOUNT__mean",
+      "op": "mean",
+      "source_column": "LIEN_AMOUNT"
+    },
+    {
+      "parent_entity": "customers",
+      "child_entity": "accounts",
+      "join": "accounts.CUSTOMER_ID -> customers.CUSTOMER_ID",
+      "feature": "accounts__LIEN_AMOUNT__max",
+      "op": "max",
+      "source_column": "LIEN_AMOUNT"
+    },
+    {
+      "parent_entity": "customers",
+      "child_entity": "accounts",
+      "join": "accounts.CUSTOMER_ID -> customers.CUSTOMER_ID",
+      "feature": "accounts__LIEN_AMOUNT__min",
+      "op": "min",
+      "source_column": "LIEN_AMOUNT"
+    },
+    {
+      "parent_entity": "customers",
+      "child_entity": "accounts",
+      "join": "accounts.CUSTOMER_ID -> customers.CUSTOMER_ID",
+      "feature": "accounts__LIEN_AMOUNT__std",
+      "op": "std",
+      "source_column": "LIEN_AMOUNT"
+    },
+    {
+      "parent_entity": "customers",
+      "child_entity": "accounts",
+      "join": "accounts.CUSTOMER_ID -> customers.CUSTOMER_ID",
+      "feature": "accounts__LAST_TRANSACTION_DATE__min",
+      "op": "min",
+      "source_column": "LAST_TRANSACTION_DATE"
+    },
+    {
+      "parent_entity": "customers",
+      "child_entity": "accounts",
+      "join": "accounts.CUSTOMER_ID -> customers.CUSTOMER_ID",
+      "feature": "accounts__LAST_TRANSACTION_DATE__max",
+      "op": "max",
+      "source_column": "LAST_TRANSACTION_DATE"
+    },
+    {
+      "parent_entity": "customers",
+      "child_entity": "accounts",
+      "join": "accounts.CUSTOMER_ID -> customers.CUSTOMER_ID",
+      "feature": "accounts__LAST_TRANSACTION_DATE__recency_days",
+      "op": "recency_days",
+      "source_column": "LAST_TRANSACTION_DATE"
+    },
+    {
+      "parent_entity": "customers",
+      "child_entity": "accounts",
+      "join": "accounts.CUSTOMER_ID -> customers.CUSTOMER_ID",
+      "feature": "accounts__LAST_TRANSACTION_DATE__span_days",
+      "op": "span_days",
+      "source_column": "LAST_TRANSACTION_DATE"
+    },
+    {
+      "parent_entity": "accounts",
+      "child_entity": "transactions",
+      "join": "transactions.ACCOUNT_NUMBER -> accounts.ACCOUNT_NUMBER",
+      "feature": "transactions__*__count",
+      "op": "count",
+      "source_column": "*"
+    },
+    {
+      "parent_entity": "accounts",
+      "child_entity": "transactions",
+      "join": "transactions.ACCOUNT_NUMBER -> accounts.ACCOUNT_NUMBER",
+      "feature": "transactions__MODE_OF_TRANSACTION__nunique",
+      "op": "nunique",
+      "source_column": "MODE_OF_TRANSACTION"
+    },
+    {
+      "parent_entity": "accounts",
+      "child_entity": "transactions",
+      "join": "transactions.ACCOUNT_NUMBER -> accounts.ACCOUNT_NUMBER",
+      "feature": "transactions__MODE_OF_TRANSACTION__mode",
+      "op": "mode",
+      "source_column": "MODE_OF_TRANSACTION"
+    },
+    {
+      "parent_entity": "accounts",
+      "child_entity": "transactions",
+      "join": "transactions.ACCOUNT_NUMBER -> accounts.ACCOUNT_NUMBER",
+      "feature": "transactions__MODE_OF_TRANSACTION__entropy",
+      "op": "entropy",
+      "source_column": "MODE_OF_TRANSACTION"
+    },
+    {
+      "parent_entity": "accounts",
+      "child_entity": "transactions",
+      "join": "transactions.ACCOUNT_NUMBER -> accounts.ACCOUNT_NUMBER",
+      "feature": "transactions__BENEFICIARY_IFSC__nunique",
+      "op": "nunique",
+      "source_column": "BENEFICIARY_IFSC"
+    },
+    {
+      "parent_entity": "accounts",
+      "child_entity": "transactions",
+      "join": "transactions.ACCOUNT_NUMBER -> accounts.ACCOUNT_NUMBER",
+      "feature": "transactions__BENEFICIARY_BANK__nunique",
+      "op": "nunique",
+      "source_column": "BENEFICIARY_BANK"
+    },
+    {
+      "parent_entity": "accounts",
+      "child_entity": "transactions",
+      "join": "transactions.ACCOUNT_NUMBER -> accounts.ACCOUNT_NUMBER",
+      "feature": "transactions__BENEFICIARY_BANK__mode",
+      "op": "mode",
+      "source_column": "BENEFICIARY_BANK"
+    },
+    {
+      "parent_entity": "accounts",
+      "child_entity": "transactions",
+      "join": "transactions.ACCOUNT_NUMBER -> accounts.ACCOUNT_NUMBER",
+      "feature": "transactions__BENEFICIARY_BANK__entropy",
+      "op": "entropy",
+      "source_column": "BENEFICIARY_BANK"
+    },
+    {
+      "parent_entity": "accounts",
+      "child_entity": "transactions",
+      "join": "transactions.ACCOUNT_NUMBER -> accounts.ACCOUNT_NUMBER",
+      "feature": "transactions__BENEFICIARY_VIRTUAL_ADDRESS__nunique",
+      "op": "nunique",
+      "source_column": "BENEFICIARY_VIRTUAL_ADDRESS"
+    },
+    {
+      "parent_entity": "accounts",
+      "child_entity": "transactions",
+      "join": "transactions.ACCOUNT_NUMBER -> accounts.ACCOUNT_NUMBER",
+      "feature": "transactions__TRANSACTION_TYPE__nunique",
+      "op": "nunique",
+      "source_column": "TRANSACTION_TYPE"
+    },
+    {
+      "parent_entity": "accounts",
+      "child_entity": "transactions",
+      "join": "transactions.ACCOUNT_NUMBER -> accounts.ACCOUNT_NUMBER",
+      "feature": "transactions__TRANSACTION_TYPE__mode",
+      "op": "mode",
+      "source_column": "TRANSACTION_TYPE"
+    },
+    {
+      "parent_entity": "accounts",
+      "child_entity": "transactions",
+      "join": "transactions.ACCOUNT_NUMBER -> accounts.ACCOUNT_NUMBER",
+      "feature": "transactions__TRANSACTION_TYPE__entropy",
+      "op": "entropy",
+      "source_column": "TRANSACTION_TYPE"
+    },
+    {
+      "parent_entity": "accounts",
+      "child_entity": "transactions",
+      "join": "transactions.ACCOUNT_NUMBER -> accounts.ACCOUNT_NUMBER",
+      "feature": "transactions__TRANSACTION_SUB_TYPE__nunique",
+      "op": "nunique",
+      "source_column": "TRANSACTION_SUB_TYPE"
+    },
+    {
+      "parent_entity": "accounts",
+      "child_entity": "transactions",
+      "join": "transactions.ACCOUNT_NUMBER -> accounts.ACCOUNT_NUMBER",
+      "feature": "transactions__TRANSACTION_SUB_TYPE__mode",
+      "op": "mode",
+      "source_column": "TRANSACTION_SUB_TYPE"
+    },
+    {
+      "parent_entity": "accounts",
+      "child_entity": "transactions",
+      "join": "transactions.ACCOUNT_NUMBER -> accounts.ACCOUNT_NUMBER",
+      "feature": "transactions__TRANSACTION_SUB_TYPE__entropy",
+      "op": "entropy",
+      "source_column": "TRANSACTION_SUB_TYPE"
+    },
+    {
+      "parent_entity": "accounts",
+      "child_entity": "transactions",
+      "join": "transactions.ACCOUNT_NUMBER -> accounts.ACCOUNT_NUMBER",
+      "feature": "transactions__CREDIT_DEBIT_INDICATOR__nunique",
+      "op": "nunique",
+      "source_column": "CREDIT_DEBIT_INDICATOR"
+    },
+    {
+      "parent_entity": "accounts",
+      "child_entity": "transactions",
+      "join": "transactions.ACCOUNT_NUMBER -> accounts.ACCOUNT_NUMBER",
+      "feature": "transactions__CREDIT_DEBIT_INDICATOR__mode",
+      "op": "mode",
+      "source_column": "CREDIT_DEBIT_INDICATOR"
+    },
+    {
+      "parent_entity": "accounts",
+      "child_entity": "transactions",
+      "join": "transactions.ACCOUNT_NUMBER -> accounts.ACCOUNT_NUMBER",
+      "feature": "transactions__CREDIT_DEBIT_INDICATOR__entropy",
+      "op": "entropy",
+      "source_column": "CREDIT_DEBIT_INDICATOR"
+    },
+    {
+      "parent_entity": "accounts",
+      "child_entity": "transactions",
+      "join": "transactions.ACCOUNT_NUMBER -> accounts.ACCOUNT_NUMBER",
+      "feature": "transactions__TRANSACTION_AMOUNT__sum",
+      "op": "sum",
+      "source_column": "TRANSACTION_AMOUNT"
+    },
+    {
+      "parent_entity": "accounts",
+      "child_entity": "transactions",
+      "join": "transactions.ACCOUNT_NUMBER -> accounts.ACCOUNT_NUMBER",
+      "feature": "transactions__TRANSACTION_AMOUNT__mean",
+      "op": "mean",
+      "source_column": "TRANSACTION_AMOUNT"
+    },
+    {
+      "parent_entity": "accounts",
+      "child_entity": "transactions",
+      "join": "transactions.ACCOUNT_NUMBER -> accounts.ACCOUNT_NUMBER",
+      "feature": "transactions__TRANSACTION_AMOUNT__max",
+      "op": "max",
+      "source_column": "TRANSACTION_AMOUNT"
+    },
+    {
+      "parent_entity": "accounts",
+      "child_entity": "transactions",
+      "join": "transactions.ACCOUNT_NUMBER -> accounts.ACCOUNT_NUMBER",
+      "feature": "transactions__TRANSACTION_AMOUNT__min",
+      "op": "min",
+      "source_column": "TRANSACTION_AMOUNT"
+    },
+    {
+      "parent_entity": "accounts",
+      "child_entity": "transactions",
+      "join": "transactions.ACCOUNT_NUMBER -> accounts.ACCOUNT_NUMBER",
+      "feature": "transactions__TRANSACTION_AMOUNT__std",
+      "op": "std",
+      "source_column": "TRANSACTION_AMOUNT"
+    },
+    {
+      "parent_entity": "accounts",
+      "child_entity": "transactions",
+      "join": "transactions.ACCOUNT_NUMBER -> accounts.ACCOUNT_NUMBER",
+      "feature": "transactions__TRANSACTION_DATE__min",
+      "op": "min",
+      "source_column": "TRANSACTION_DATE"
+    },
+    {
+      "parent_entity": "accounts",
+      "child_entity": "transactions",
+      "join": "transactions.ACCOUNT_NUMBER -> accounts.ACCOUNT_NUMBER",
+      "feature": "transactions__TRANSACTION_DATE__max",
+      "op": "max",
+      "source_column": "TRANSACTION_DATE"
+    },
+    {
+      "parent_entity": "accounts",
+      "child_entity": "transactions",
+      "join": "transactions.ACCOUNT_NUMBER -> accounts.ACCOUNT_NUMBER",
+      "feature": "transactions__TRANSACTION_DATE__recency_days",
+      "op": "recency_days",
+      "source_column": "TRANSACTION_DATE"
+    },
+    {
+      "parent_entity": "accounts",
+      "child_entity": "transactions",
+      "join": "transactions.ACCOUNT_NUMBER -> accounts.ACCOUNT_NUMBER",
+      "feature": "transactions__TRANSACTION_DATE__span_days",
+      "op": "span_days",
+      "source_column": "TRANSACTION_DATE"
+    },
+    {
+      "parent_entity": "accounts",
+      "child_entity": "transactions",
+      "join": "transactions.ACCOUNT_NUMBER -> accounts.ACCOUNT_NUMBER",
+      "feature": "transactions__TRANSACTION_ID__sum",
+      "op": "sum",
+      "source_column": "TRANSACTION_ID"
+    },
+    {
+      "parent_entity": "accounts",
+      "child_entity": "transactions",
+      "join": "transactions.ACCOUNT_NUMBER -> accounts.ACCOUNT_NUMBER",
+      "feature": "transactions__TRANSACTION_ID__mean",
+      "op": "mean",
+      "source_column": "TRANSACTION_ID"
+    },
+    {
+      "parent_entity": "accounts",
+      "child_entity": "transactions",
+      "join": "transactions.ACCOUNT_NUMBER -> accounts.ACCOUNT_NUMBER",
+      "feature": "transactions__TRANSACTION_ID__max",
+      "op": "max",
+      "source_column": "TRANSACTION_ID"
+    },
+    {
+      "parent_entity": "accounts",
+      "child_entity": "transactions",
+      "join": "transactions.ACCOUNT_NUMBER -> accounts.ACCOUNT_NUMBER",
+      "feature": "transactions__TRANSACTION_ID__min",
+      "op": "min",
+      "source_column": "TRANSACTION_ID"
+    },
+    {
+      "parent_entity": "accounts",
+      "child_entity": "transactions",
+      "join": "transactions.ACCOUNT_NUMBER -> accounts.ACCOUNT_NUMBER",
+      "feature": "transactions__TRANSACTION_ID__std",
+      "op": "std",
+      "source_column": "TRANSACTION_ID"
+    },
+    {
+      "parent_entity": "accounts",
+      "child_entity": "transactions",
+      "join": "transactions.ACCOUNT_NUMBER -> accounts.ACCOUNT_NUMBER",
+      "feature": "transactions__REMITTER_IFSC__nunique",
+      "op": "nunique",
+      "source_column": "REMITTER_IFSC"
+    },
+    {
+      "parent_entity": "accounts",
+      "child_entity": "transactions",
+      "join": "transactions.ACCOUNT_NUMBER -> accounts.ACCOUNT_NUMBER",
+      "feature": "transactions__REMITTER_BANK__nunique",
+      "op": "nunique",
+      "source_column": "REMITTER_BANK"
+    },
+    {
+      "parent_entity": "accounts",
+      "child_entity": "transactions",
+      "join": "transactions.ACCOUNT_NUMBER -> accounts.ACCOUNT_NUMBER",
+      "feature": "transactions__REMITTER_BANK__mode",
+      "op": "mode",
+      "source_column": "REMITTER_BANK"
+    },
+    {
+      "parent_entity": "accounts",
+      "child_entity": "transactions",
+      "join": "transactions.ACCOUNT_NUMBER -> accounts.ACCOUNT_NUMBER",
+      "feature": "transactions__REMITTER_BANK__entropy",
+      "op": "entropy",
+      "source_column": "REMITTER_BANK"
+    },
+    {
+      "parent_entity": "accounts",
+      "child_entity": "transactions",
+      "join": "transactions.ACCOUNT_NUMBER -> accounts.ACCOUNT_NUMBER",
+      "feature": "transactions__REMITTER_VIRTUAL_ADDRESS__nunique",
+      "op": "nunique",
+      "source_column": "REMITTER_VIRTUAL_ADDRESS"
+    },
+    {
+      "parent_entity": "accounts",
+      "child_entity": "transactions",
+      "join": "transactions.ACCOUNT_NUMBER -> accounts.ACCOUNT_NUMBER",
+      "feature": "transactions__TRANSACTION_INITIATOR_DETAILS__nunique",
+      "op": "nunique",
+      "source_column": "TRANSACTION_INITIATOR_DETAILS"
+    },
+    {
+      "parent_entity": "accounts",
+      "child_entity": "transactions",
+      "join": "transactions.ACCOUNT_NUMBER -> accounts.ACCOUNT_NUMBER",
+      "feature": "transactions__TRANSACTION_INITIATOR_DETAILS__mode",
+      "op": "mode",
+      "source_column": "TRANSACTION_INITIATOR_DETAILS"
+    },
+    {
+      "parent_entity": "accounts",
+      "child_entity": "transactions",
+      "join": "transactions.ACCOUNT_NUMBER -> accounts.ACCOUNT_NUMBER",
+      "feature": "transactions__TRANSACTION_INITIATOR_DETAILS__entropy",
+      "op": "entropy",
+      "source_column": "TRANSACTION_INITIATOR_DETAILS"
+    },
+    {
+      "parent_entity": "accounts",
+      "child_entity": "transactions",
+      "join": "transactions.ACCOUNT_NUMBER -> accounts.ACCOUNT_NUMBER",
+      "feature": "transactions__INITIATOR_DEVICE_OS__nunique",
+      "op": "nunique",
+      "source_column": "INITIATOR_DEVICE_OS"
+    },
+    {
+      "parent_entity": "accounts",
+      "child_entity": "transactions",
+      "join": "transactions.ACCOUNT_NUMBER -> accounts.ACCOUNT_NUMBER",
+      "feature": "transactions__INITIATOR_DEVICE_OS__mode",
+      "op": "mode",
+      "source_column": "INITIATOR_DEVICE_OS"
+    },
+    {
+      "parent_entity": "accounts",
+      "child_entity": "transactions",
+      "join": "transactions.ACCOUNT_NUMBER -> accounts.ACCOUNT_NUMBER",
+      "feature": "transactions__INITIATOR_DEVICE_OS__entropy",
+      "op": "entropy",
+      "source_column": "INITIATOR_DEVICE_OS"
+    },
+    {
+      "parent_entity": "accounts",
+      "child_entity": "transactions",
+      "join": "transactions.ACCOUNT_NUMBER -> accounts.ACCOUNT_NUMBER",
+      "feature": "transactions__MOBILE_NUMBER__nunique",
+      "op": "nunique",
+      "source_column": "MOBILE_NUMBER"
+    },
+    {
+      "parent_entity": "accounts",
+      "child_entity": "transactions",
+      "join": "transactions.ACCOUNT_NUMBER -> accounts.ACCOUNT_NUMBER",
+      "feature": "transactions__INITIATOR_IP_ADDRESS__nunique",
+      "op": "nunique",
+      "source_column": "INITIATOR_IP_ADDRESS"
+    },
+    {
+      "parent_entity": "accounts",
+      "child_entity": "transactions",
+      "join": "transactions.ACCOUNT_NUMBER -> accounts.ACCOUNT_NUMBER",
+      "feature": "transactions__TRANSACTION_TIME__min",
+      "op": "min",
+      "source_column": "TRANSACTION_TIME"
+    },
+    {
+      "parent_entity": "accounts",
+      "child_entity": "transactions",
+      "join": "transactions.ACCOUNT_NUMBER -> accounts.ACCOUNT_NUMBER",
+      "feature": "transactions__TRANSACTION_TIME__max",
+      "op": "max",
+      "source_column": "TRANSACTION_TIME"
+    },
+    {
+      "parent_entity": "accounts",
+      "child_entity": "transactions",
+      "join": "transactions.ACCOUNT_NUMBER -> accounts.ACCOUNT_NUMBER",
+      "feature": "transactions__TRANSACTION_TIME__recency_days",
+      "op": "recency_days",
+      "source_column": "TRANSACTION_TIME"
+    },
+    {
+      "parent_entity": "accounts",
+      "child_entity": "transactions",
+      "join": "transactions.ACCOUNT_NUMBER -> accounts.ACCOUNT_NUMBER",
+      "feature": "transactions__TRANSACTION_TIME__span_days",
+      "op": "span_days",
+      "source_column": "TRANSACTION_TIME"
+    },
+    {
+      "parent_entity": "customers",
+      "child_entity": "transactions",
+      "join": "transactions.CUSTOMER_ID -> customers.CUSTOMER_ID",
+      "feature": "transactions__*__count",
+      "op": "count",
+      "source_column": "*"
+    },
+    {
+      "parent_entity": "customers",
+      "child_entity": "transactions",
+      "join": "transactions.CUSTOMER_ID -> customers.CUSTOMER_ID",
+      "feature": "transactions__MODE_OF_TRANSACTION__nunique",
+      "op": "nunique",
+      "source_column": "MODE_OF_TRANSACTION"
+    },
+    {
+      "parent_entity": "customers",
+      "child_entity": "transactions",
+      "join": "transactions.CUSTOMER_ID -> customers.CUSTOMER_ID",
+      "feature": "transactions__MODE_OF_TRANSACTION__mode",
+      "op": "mode",
+      "source_column": "MODE_OF_TRANSACTION"
+    },
+    {
+      "parent_entity": "customers",
+      "child_entity": "transactions",
+      "join": "transactions.CUSTOMER_ID -> customers.CUSTOMER_ID",
+      "feature": "transactions__MODE_OF_TRANSACTION__entropy",
+      "op": "entropy",
+      "source_column": "MODE_OF_TRANSACTION"
+    },
+    {
+      "parent_entity": "customers",
+      "child_entity": "transactions",
+      "join": "transactions.CUSTOMER_ID -> customers.CUSTOMER_ID",
+      "feature": "transactions__BENEFICIARY_IFSC__nunique",
+      "op": "nunique",
+      "source_column": "BENEFICIARY_IFSC"
+    },
+    {
+      "parent_entity": "customers",
+      "child_entity": "transactions",
+      "join": "transactions.CUSTOMER_ID -> customers.CUSTOMER_ID",
+      "feature": "transactions__BENEFICIARY_BANK__nunique",
+      "op": "nunique",
+      "source_column": "BENEFICIARY_BANK"
+    },
+    {
+      "parent_entity": "customers",
+      "child_entity": "transactions",
+      "join": "transactions.CUSTOMER_ID -> customers.CUSTOMER_ID",
+      "feature": "transactions__BENEFICIARY_BANK__mode",
+      "op": "mode",
+      "source_column": "BENEFICIARY_BANK"
+    },
+    {
+      "parent_entity": "customers",
+      "child_entity": "transactions",
+      "join": "transactions.CUSTOMER_ID -> customers.CUSTOMER_ID",
+      "feature": "transactions__BENEFICIARY_BANK__entropy",
+      "op": "entropy",
+      "source_column": "BENEFICIARY_BANK"
+    },
+    {
+      "parent_entity": "customers",
+      "child_entity": "transactions",
+      "join": "transactions.CUSTOMER_ID -> customers.CUSTOMER_ID",
+      "feature": "transactions__BENEFICIARY_VIRTUAL_ADDRESS__nunique",
+      "op": "nunique",
+      "source_column": "BENEFICIARY_VIRTUAL_ADDRESS"
+    },
+    {
+      "parent_entity": "customers",
+      "child_entity": "transactions",
+      "join": "transactions.CUSTOMER_ID -> customers.CUSTOMER_ID",
+      "feature": "transactions__TRANSACTION_TYPE__nunique",
+      "op": "nunique",
+      "source_column": "TRANSACTION_TYPE"
+    },
+    {
+      "parent_entity": "customers",
+      "child_entity": "transactions",
+      "join": "transactions.CUSTOMER_ID -> customers.CUSTOMER_ID",
+      "feature": "transactions__TRANSACTION_TYPE__mode",
+      "op": "mode",
+      "source_column": "TRANSACTION_TYPE"
+    },
+    {
+      "parent_entity": "customers",
+      "child_entity": "transactions",
+      "join": "transactions.CUSTOMER_ID -> customers.CUSTOMER_ID",
+      "feature": "transactions__TRANSACTION_TYPE__entropy",
+      "op": "entropy",
+      "source_column": "TRANSACTION_TYPE"
+    },
+    {
+      "parent_entity": "customers",
+      "child_entity": "transactions",
+      "join": "transactions.CUSTOMER_ID -> customers.CUSTOMER_ID",
+      "feature": "transactions__TRANSACTION_SUB_TYPE__nunique",
+      "op": "nunique",
+      "source_column": "TRANSACTION_SUB_TYPE"
+    },
+    {
+      "parent_entity": "customers",
+      "child_entity": "transactions",
+      "join": "transactions.CUSTOMER_ID -> customers.CUSTOMER_ID",
+      "feature": "transactions__TRANSACTION_SUB_TYPE__mode",
+      "op": "mode",
+      "source_column": "TRANSACTION_SUB_TYPE"
+    },
+    {
+      "parent_entity": "customers",
+      "child_entity": "transactions",
+      "join": "transactions.CUSTOMER_ID -> customers.CUSTOMER_ID",
+      "feature": "transactions__TRANSACTION_SUB_TYPE__entropy",
+      "op": "entropy",
+      "source_column": "TRANSACTION_SUB_TYPE"
+    },
+    {
+      "parent_entity": "customers",
+      "child_entity": "transactions",
+      "join": "transactions.CUSTOMER_ID -> customers.CUSTOMER_ID",
+      "feature": "transactions__CREDIT_DEBIT_INDICATOR__nunique",
+      "op": "nunique",
+      "source_column": "CREDIT_DEBIT_INDICATOR"
+    },
+    {
+      "parent_entity": "customers",
+      "child_entity": "transactions",
+      "join": "transactions.CUSTOMER_ID -> customers.CUSTOMER_ID",
+      "feature": "transactions__CREDIT_DEBIT_INDICATOR__mode",
+      "op": "mode",
+      "source_column": "CREDIT_DEBIT_INDICATOR"
+    },
+    {
+      "parent_entity": "customers",
+      "child_entity": "transactions",
+      "join": "transactions.CUSTOMER_ID -> customers.CUSTOMER_ID",
+      "feature": "transactions__CREDIT_DEBIT_INDICATOR__entropy",
+      "op": "entropy",
+      "source_column": "CREDIT_DEBIT_INDICATOR"
+    },
+    {
+      "parent_entity": "customers",
+      "child_entity": "transactions",
+      "join": "transactions.CUSTOMER_ID -> customers.CUSTOMER_ID",
+      "feature": "transactions__TRANSACTION_AMOUNT__sum",
+      "op": "sum",
+      "source_column": "TRANSACTION_AMOUNT"
+    },
+    {
+      "parent_entity": "customers",
+      "child_entity": "transactions",
+      "join": "transactions.CUSTOMER_ID -> customers.CUSTOMER_ID",
+      "feature": "transactions__TRANSACTION_AMOUNT__mean",
+      "op": "mean",
+      "source_column": "TRANSACTION_AMOUNT"
+    },
+    {
+      "parent_entity": "customers",
+      "child_entity": "transactions",
+      "join": "transactions.CUSTOMER_ID -> customers.CUSTOMER_ID",
+      "feature": "transactions__TRANSACTION_AMOUNT__max",
+      "op": "max",
+      "source_column": "TRANSACTION_AMOUNT"
+    },
+    {
+      "parent_entity": "customers",
+      "child_entity": "transactions",
+      "join": "transactions.CUSTOMER_ID -> customers.CUSTOMER_ID",
+      "feature": "transactions__TRANSACTION_AMOUNT__min",
+      "op": "min",
+      "source_column": "TRANSACTION_AMOUNT"
+    },
+    {
+      "parent_entity": "customers",
+      "child_entity": "transactions",
+      "join": "transactions.CUSTOMER_ID -> customers.CUSTOMER_ID",
+      "feature": "transactions__TRANSACTION_AMOUNT__std",
+      "op": "std",
+      "source_column": "TRANSACTION_AMOUNT"
+    },
+    {
+      "parent_entity": "customers",
+      "child_entity": "transactions",
+      "join": "transactions.CUSTOMER_ID -> customers.CUSTOMER_ID",
+      "feature": "transactions__TRANSACTION_DATE__min",
+      "op": "min",
+      "source_column": "TRANSACTION_DATE"
+    },
+    {
+      "parent_entity": "customers",
+      "child_entity": "transactions",
+      "join": "transactions.CUSTOMER_ID -> customers.CUSTOMER_ID",
+      "feature": "transactions__TRANSACTION_DATE__max",
+      "op": "max",
+      "source_column": "TRANSACTION_DATE"
+    },
+    {
+      "parent_entity": "customers",
+      "child_entity": "transactions",
+      "join": "transactions.CUSTOMER_ID -> customers.CUSTOMER_ID",
+      "feature": "transactions__TRANSACTION_DATE__recency_days",
+      "op": "recency_days",
+      "source_column": "TRANSACTION_DATE"
+    },
+    {
+      "parent_entity": "customers",
+      "child_entity": "transactions",
+      "join": "transactions.CUSTOMER_ID -> customers.CUSTOMER_ID",
+      "feature": "transactions__TRANSACTION_DATE__span_days",
+      "op": "span_days",
+      "source_column": "TRANSACTION_DATE"
+    },
+    {
+      "parent_entity": "customers",
+      "child_entity": "transactions",
+      "join": "transactions.CUSTOMER_ID -> customers.CUSTOMER_ID",
+      "feature": "transactions__TRANSACTION_ID__sum",
+      "op": "sum",
+      "source_column": "TRANSACTION_ID"
+    },
+    {
+      "parent_entity": "customers",
+      "child_entity": "transactions",
+      "join": "transactions.CUSTOMER_ID -> customers.CUSTOMER_ID",
+      "feature": "transactions__TRANSACTION_ID__mean",
+      "op": "mean",
+      "source_column": "TRANSACTION_ID"
+    },
+    {
+      "parent_entity": "customers",
+      "child_entity": "transactions",
+      "join": "transactions.CUSTOMER_ID -> customers.CUSTOMER_ID",
+      "feature": "transactions__TRANSACTION_ID__max",
+      "op": "max",
+      "source_column": "TRANSACTION_ID"
+    },
+    {
+      "parent_entity": "customers",
+      "child_entity": "transactions",
+      "join": "transactions.CUSTOMER_ID -> customers.CUSTOMER_ID",
+      "feature": "transactions__TRANSACTION_ID__min",
+      "op": "min",
+      "source_column": "TRANSACTION_ID"
+    },
+    {
+      "parent_entity": "customers",
+      "child_entity": "transactions",
+      "join": "transactions.CUSTOMER_ID -> customers.CUSTOMER_ID",
+      "feature": "transactions__TRANSACTION_ID__std",
+      "op": "std",
+      "source_column": "TRANSACTION_ID"
+    },
+    {
+      "parent_entity": "customers",
+      "child_entity": "transactions",
+      "join": "transactions.CUSTOMER_ID -> customers.CUSTOMER_ID",
+      "feature": "transactions__REMITTER_IFSC__nunique",
+      "op": "nunique",
+      "source_column": "REMITTER_IFSC"
+    },
+    {
+      "parent_entity": "customers",
+      "child_entity": "transactions",
+      "join": "transactions.CUSTOMER_ID -> customers.CUSTOMER_ID",
+      "feature": "transactions__REMITTER_BANK__nunique",
+      "op": "nunique",
+      "source_column": "REMITTER_BANK"
+    },
+    {
+      "parent_entity": "customers",
+      "child_entity": "transactions",
+      "join": "transactions.CUSTOMER_ID -> customers.CUSTOMER_ID",
+      "feature": "transactions__REMITTER_BANK__mode",
+      "op": "mode",
+      "source_column": "REMITTER_BANK"
+    },
+    {
+      "parent_entity": "customers",
+      "child_entity": "transactions",
+      "join": "transactions.CUSTOMER_ID -> customers.CUSTOMER_ID",
+      "feature": "transactions__REMITTER_BANK__entropy",
+      "op": "entropy",
+      "source_column": "REMITTER_BANK"
+    },
+    {
+      "parent_entity": "customers",
+      "child_entity": "transactions",
+      "join": "transactions.CUSTOMER_ID -> customers.CUSTOMER_ID",
+      "feature": "transactions__REMITTER_VIRTUAL_ADDRESS__nunique",
+      "op": "nunique",
+      "source_column": "REMITTER_VIRTUAL_ADDRESS"
+    },
+    {
+      "parent_entity": "customers",
+      "child_entity": "transactions",
+      "join": "transactions.CUSTOMER_ID -> customers.CUSTOMER_ID",
+      "feature": "transactions__TRANSACTION_INITIATOR_DETAILS__nunique",
+      "op": "nunique",
+      "source_column": "TRANSACTION_INITIATOR_DETAILS"
+    },
+    {
+      "parent_entity": "customers",
+      "child_entity": "transactions",
+      "join": "transactions.CUSTOMER_ID -> customers.CUSTOMER_ID",
+      "feature": "transactions__TRANSACTION_INITIATOR_DETAILS__mode",
+      "op": "mode",
+      "source_column": "TRANSACTION_INITIATOR_DETAILS"
+    },
+    {
+      "parent_entity": "customers",
+      "child_entity": "transactions",
+      "join": "transactions.CUSTOMER_ID -> customers.CUSTOMER_ID",
+      "feature": "transactions__TRANSACTION_INITIATOR_DETAILS__entropy",
+      "op": "entropy",
+      "source_column": "TRANSACTION_INITIATOR_DETAILS"
+    },
+    {
+      "parent_entity": "customers",
+      "child_entity": "transactions",
+      "join": "transactions.CUSTOMER_ID -> customers.CUSTOMER_ID",
+      "feature": "transactions__INITIATOR_DEVICE_OS__nunique",
+      "op": "nunique",
+      "source_column": "INITIATOR_DEVICE_OS"
+    },
+    {
+      "parent_entity": "customers",
+      "child_entity": "transactions",
+      "join": "transactions.CUSTOMER_ID -> customers.CUSTOMER_ID",
+      "feature": "transactions__INITIATOR_DEVICE_OS__mode",
+      "op": "mode",
+      "source_column": "INITIATOR_DEVICE_OS"
+    },
+    {
+      "parent_entity": "customers",
+      "child_entity": "transactions",
+      "join": "transactions.CUSTOMER_ID -> customers.CUSTOMER_ID",
+      "feature": "transactions__INITIATOR_DEVICE_OS__entropy",
+      "op": "entropy",
+      "source_column": "INITIATOR_DEVICE_OS"
+    },
+    {
+      "parent_entity": "customers",
+      "child_entity": "transactions",
+      "join": "transactions.CUSTOMER_ID -> customers.CUSTOMER_ID",
+      "feature": "transactions__MOBILE_NUMBER__nunique",
+      "op": "nunique",
+      "source_column": "MOBILE_NUMBER"
+    },
+    {
+      "parent_entity": "customers",
+      "child_entity": "transactions",
+      "join": "transactions.CUSTOMER_ID -> customers.CUSTOMER_ID",
+      "feature": "transactions__INITIATOR_IP_ADDRESS__nunique",
+      "op": "nunique",
+      "source_column": "INITIATOR_IP_ADDRESS"
+    },
+    {
+      "parent_entity": "customers",
+      "child_entity": "transactions",
+      "join": "transactions.CUSTOMER_ID -> customers.CUSTOMER_ID",
+      "feature": "transactions__TRANSACTION_TIME__min",
+      "op": "min",
+      "source_column": "TRANSACTION_TIME"
+    },
+    {
+      "parent_entity": "customers",
+      "child_entity": "transactions",
+      "join": "transactions.CUSTOMER_ID -> customers.CUSTOMER_ID",
+      "feature": "transactions__TRANSACTION_TIME__max",
+      "op": "max",
+      "source_column": "TRANSACTION_TIME"
+    },
+    {
+      "parent_entity": "customers",
+      "child_entity": "transactions",
+      "join": "transactions.CUSTOMER_ID -> customers.CUSTOMER_ID",
+      "feature": "transactions__TRANSACTION_TIME__recency_days",
+      "op": "recency_days",
+      "source_column": "TRANSACTION_TIME"
+    },
+    {
+      "parent_entity": "customers",
+      "child_entity": "transactions",
+      "join": "transactions.CUSTOMER_ID -> customers.CUSTOMER_ID",
+      "feature": "transactions__TRANSACTION_TIME__span_days",
+      "op": "span_days",
+      "source_column": "TRANSACTION_TIME"
+    }
+  ]
+}

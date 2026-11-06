@@ -1,0 +1,466 @@
+{
+  "accounts": {
+    "entity": "accounts",
+    "grain": "one bank account",
+    "n_shards": 3,
+    "total_rows": 668884,
+    "total_bytes": 68837506,
+    "unified_columns": [
+      "ACCOUNT_NUMBER",
+      "CUSTOMER_ID",
+      "ACCOUNT_OPEN_MODE",
+      "HAS_NOMINATION",
+      "BRANCH_CODE",
+      "PMJDY_FLAG",
+      "SCSS_FLAG",
+      "PMJJBY_FLAG",
+      "CHEQUE_ALLOWED_FLAG",
+      "CHEQUE_BOOK_AVAILED_FLAG",
+      "NUM_CHEQUE_BOOKS",
+      "LAST_MOBILE_UPDATE_DATE",
+      "PAN_FLAG",
+      "AADHAR_FLAG",
+      "GSTN_FLAG",
+      "PASSPORT_FLAG",
+      "VOTER_ID_FLAG",
+      "KYC_RATING",
+      "INTERNET_BANKING_FLAG",
+      "MOBILE_BANKING_FLAG",
+      "UPI_FLAG",
+      "DEMAT_FLAG",
+      "MUTUAL_FUND_FLAG",
+      "MPASSBOOK_FLAG",
+      "FAST_TAG_FLAG",
+      "SSA_FLAG",
+      "PPF_FLAG",
+      "LOCKER_FLAG",
+      "ATM_ISSUED_FLAG",
+      "CREDIT_CARD_FLAG",
+      "NUM_CREDIT_CARDS",
+      "ACCOUNT_STATUS",
+      "FREEZE_CODES",
+      "CURRENCY_CODE",
+      "KYC_COMPLIANT_FLAG",
+      "KYC_REVIEW_DATE",
+      "LAST_FREEZE_DATE",
+      "LAST_UNFREEZE_DATE",
+      "PINCODE",
+      "AREA_CATEGORY",
+      "BRANCH_CATEGORY",
+      "SCHEME_TYPE",
+      "ACCOUNT_TYPE",
+      "APY_FLAG",
+      "UDHYAM_FLAG",
+      "ACCOUNT_OPEN_DATE",
+      "LIEN_AMOUNT",
+      "LAST_TRANSACTION_DATE"
+    ],
+    "n_columns": 48,
+    "arrow_types": {
+      "ACCOUNT_NUMBER": "large_string",
+      "CUSTOMER_ID": "large_string",
+      "ACCOUNT_OPEN_MODE": "large_string",
+      "HAS_NOMINATION": "large_string",
+      "BRANCH_CODE": "int64",
+      "PMJDY_FLAG": "large_string",
+      "SCSS_FLAG": "large_string",
+      "PMJJBY_FLAG": "large_string",
+      "CHEQUE_ALLOWED_FLAG": "large_string",
+      "CHEQUE_BOOK_AVAILED_FLAG": "large_string",
+      "NUM_CHEQUE_BOOKS": "int64",
+      "LAST_MOBILE_UPDATE_DATE": "timestamp[us]",
+      "PAN_FLAG": "large_string",
+      "AADHAR_FLAG": "large_string",
+      "GSTN_FLAG": "large_string",
+      "PASSPORT_FLAG": "large_string",
+      "VOTER_ID_FLAG": "large_string",
+      "KYC_RATING": "large_string",
+      "INTERNET_BANKING_FLAG": "large_string",
+      "MOBILE_BANKING_FLAG": "large_string",
+      "UPI_FLAG": "large_string",
+      "DEMAT_FLAG": "large_string",
+      "MUTUAL_FUND_FLAG": "large_string",
+      "MPASSBOOK_FLAG": "large_string",
+      "FAST_TAG_FLAG": "large_string",
+      "SSA_FLAG": "large_string",
+      "PPF_FLAG": "large_string",
+      "LOCKER_FLAG": "large_string",
+      "ATM_ISSUED_FLAG": "large_string",
+      "CREDIT_CARD_FLAG": "large_string",
+      "NUM_CREDIT_CARDS": "int64",
+      "ACCOUNT_STATUS": "large_string",
+      "FREEZE_CODES": "large_string",
+      "CURRENCY_CODE": "large_string",
+      "KYC_COMPLIANT_FLAG": "large_string",
+      "KYC_REVIEW_DATE": "timestamp[us]",
+      "LAST_FREEZE_DATE": "timestamp[us]",
+      "LAST_UNFREEZE_DATE": "timestamp[us]",
+      "PINCODE": "double",
+      "AREA_CATEGORY": "large_string",
+      "BRANCH_CATEGORY": "large_string",
+      "SCHEME_TYPE": "large_string",
+      "ACCOUNT_TYPE": "large_string",
+      "APY_FLAG": "large_string",
+      "UDHYAM_FLAG": "large_string",
+      "ACCOUNT_OPEN_DATE": "timestamp[us]",
+      "LIEN_AMOUNT": "double",
+      "LAST_TRANSACTION_DATE": "timestamp[us]"
+    },
+    "schema_conflicts": [
+      {
+        "column": "PINCODE",
+        "type": "dtype_mismatch",
+        "types": [
+          "double",
+          "int64"
+        ]
+      }
+    ],
+    "primary_key": [
+      "ACCOUNT_NUMBER"
+    ],
+    "foreign_keys": {
+      "CUSTOMER_ID": {
+        "references": "customers.CUSTOMER_ID"
+      }
+    },
+    "time_column": "ACCOUNT_OPEN_DATE",
+    "load_plan": "full",
+    "shards": [
+      {
+        "path": "/home/ai-centre-of-excellence/aditya/pnb_mapped/accounts/ACCOUNT_DATA_part_1.parquet",
+        "rows": 232652
+      },
+      {
+        "path": "/home/ai-centre-of-excellence/aditya/pnb_mapped/accounts/ACCOUNT_DATA_part_2.parquet",
+        "rows": 232652
+      },
+      {
+        "path": "/home/ai-centre-of-excellence/aditya/pnb_mapped/accounts/ACCOUNT_DATA_part_3.parquet",
+        "rows": 203580
+      }
+    ]
+  },
+  "customers": {
+    "entity": "customers",
+    "grain": "one customer",
+    "n_shards": 3,
+    "total_rows": 673969,
+    "total_bytes": 119207073,
+    "unified_columns": [
+      "CUSTOMER_ID",
+      "DATE_OF_BIRTH",
+      "NUM_LOAN_ACCOUNT",
+      "LOAN_ACCOUNT_BALANCE",
+      "NUM_OVER_DRAFT_ACCOUNT",
+      "OVER_DRAFT_ACCOUNT_BALANCE",
+      "NUM_CURRENT_ACCOUNT",
+      "CURRENT_ACCOUNT_BALANCE",
+      "NUM_SAVING_ACCOUNT",
+      "SAVING_ACCOUNT_BALANCE",
+      "NUM_TERM_DEPOSIT_ACCOUNT",
+      "TERM_DEPOSIT_ACCOUNT_BALANCE",
+      "CUSTOMER_PIN_CODE",
+      "PERMANENT_PIN_CODE",
+      "GENDER",
+      "OCCUPATION",
+      "NATIONALITY",
+      "HASH_OF_AADHAR",
+      "HASH_OF_PAN",
+      "HASH_OF_VOTER_ID",
+      "HASH_OF_PASSPORT",
+      "HASH_OF_DRIVING_LICENCE",
+      "HASH_OF_NREGA",
+      "KYC_VERIFIED_FLAG",
+      "KYC_REVIEW_DATE",
+      "CUSTOMER_OPEN_DATE",
+      "CUSTOMER_SPECIAL_STATUS",
+      "ANNUAL_INCOME",
+      "ADDRESS",
+      "NUM_CREDIT_CARDS",
+      "CREDIT_CARD_OUTSTANDING_AMOUNT",
+      "MAX_SANCTIONED_LIMIT"
+    ],
+    "n_columns": 32,
+    "arrow_types": {
+      "CUSTOMER_ID": "large_string",
+      "DATE_OF_BIRTH": "timestamp[us]",
+      "NUM_LOAN_ACCOUNT": "int64",
+      "LOAN_ACCOUNT_BALANCE": "double",
+      "NUM_OVER_DRAFT_ACCOUNT": "int64",
+      "OVER_DRAFT_ACCOUNT_BALANCE": "double",
+      "NUM_CURRENT_ACCOUNT": "int64",
+      "CURRENT_ACCOUNT_BALANCE": "double",
+      "NUM_SAVING_ACCOUNT": "int64",
+      "SAVING_ACCOUNT_BALANCE": "double",
+      "NUM_TERM_DEPOSIT_ACCOUNT": "int64",
+      "TERM_DEPOSIT_ACCOUNT_BALANCE": "double",
+      "CUSTOMER_PIN_CODE": "double",
+      "PERMANENT_PIN_CODE": "double",
+      "GENDER": "large_string",
+      "OCCUPATION": "large_string",
+      "NATIONALITY": "large_string",
+      "HASH_OF_AADHAR": "large_string",
+      "HASH_OF_PAN": "large_string",
+      "HASH_OF_VOTER_ID": "large_string",
+      "HASH_OF_PASSPORT": "large_string",
+      "HASH_OF_DRIVING_LICENCE": "large_string",
+      "HASH_OF_NREGA": "large_string",
+      "KYC_VERIFIED_FLAG": "large_string",
+      "KYC_REVIEW_DATE": "timestamp[us]",
+      "CUSTOMER_OPEN_DATE": "timestamp[us]",
+      "CUSTOMER_SPECIAL_STATUS": "large_string",
+      "ANNUAL_INCOME": "large_string",
+      "ADDRESS": "large_string",
+      "NUM_CREDIT_CARDS": "int64",
+      "CREDIT_CARD_OUTSTANDING_AMOUNT": "double",
+      "MAX_SANCTIONED_LIMIT": "int64"
+    },
+    "schema_conflicts": [
+      {
+        "column": "CURRENT_ACCOUNT_BALANCE",
+        "type": "dtype_mismatch",
+        "types": [
+          "double",
+          "int64"
+        ]
+      },
+      {
+        "column": "CUSTOMER_PIN_CODE",
+        "type": "dtype_mismatch",
+        "types": [
+          "double",
+          "large_string"
+        ]
+      },
+      {
+        "column": "PERMANENT_PIN_CODE",
+        "type": "dtype_mismatch",
+        "types": [
+          "double",
+          "large_string"
+        ]
+      },
+      {
+        "column": "CREDIT_CARD_OUTSTANDING_AMOUNT",
+        "type": "dtype_mismatch",
+        "types": [
+          "double",
+          "int64"
+        ]
+      }
+    ],
+    "primary_key": [
+      "CUSTOMER_ID"
+    ],
+    "foreign_keys": {},
+    "time_column": "CUSTOMER_OPEN_DATE",
+    "load_plan": "full",
+    "shards": [
+      {
+        "path": "/home/ai-centre-of-excellence/aditya/pnb_mapped/customers/CUST_DATA_part_1.parquet",
+        "rows": 253663
+      },
+      {
+        "path": "/home/ai-centre-of-excellence/aditya/pnb_mapped/customers/CUST_DATA_part_2.parquet",
+        "rows": 253663
+      },
+      {
+        "path": "/home/ai-centre-of-excellence/aditya/pnb_mapped/customers/CUST_DATA_part_3.parquet",
+        "rows": 166643
+      }
+    ]
+  },
+  "transactions": {
+    "entity": "transactions",
+    "grain": "one transaction",
+    "n_shards": 10,
+    "total_rows": 128048,
+    "total_bytes": 14241293,
+    "unified_columns": [
+      "ACCOUNT_NUMBER",
+      "MODE_OF_TRANSACTION",
+      "BENEFICIARY_NAME",
+      "BENEFICIARY_IFSC",
+      "BENEFICIARY_ACCOUNT_NUMBER",
+      "BENEFICIARY_BANK",
+      "BENEFICIARY_VIRTUAL_ADDRESS",
+      "TRANSACTION_TYPE",
+      "TRANSACTION_SUB_TYPE",
+      "CREDIT_DEBIT_INDICATOR",
+      "TRANSACTION_AMOUNT",
+      "TRANSACTION_DATE",
+      "TRANSACTION_ID",
+      "TRANSACTION_NARRATION",
+      "REMITTER_NAME",
+      "REMITTER_ACCOUNT_NUMBER",
+      "REMITTER_IFSC",
+      "REMITTER_BANK",
+      "REMITTER_VIRTUAL_ADDRESS",
+      "INITIATOR_APPLICATION_NAME",
+      "TRANSACTION_INITIATOR_DETAILS",
+      "INITIATOR_DEVICE_OS",
+      "MOBILE_NUMBER",
+      "INITIATOR_IP_ADDRESS",
+      "TRANSACTION_TIME",
+      "CUSTOMER_ID"
+    ],
+    "n_columns": 26,
+    "arrow_types": {
+      "ACCOUNT_NUMBER": "large_string",
+      "MODE_OF_TRANSACTION": "large_string",
+      "BENEFICIARY_NAME": "large_string",
+      "BENEFICIARY_IFSC": "large_string",
+      "BENEFICIARY_ACCOUNT_NUMBER": "large_string",
+      "BENEFICIARY_BANK": "large_string",
+      "BENEFICIARY_VIRTUAL_ADDRESS": "large_string",
+      "TRANSACTION_TYPE": "large_string",
+      "TRANSACTION_SUB_TYPE": "large_string",
+      "CREDIT_DEBIT_INDICATOR": "large_string",
+      "TRANSACTION_AMOUNT": "double",
+      "TRANSACTION_DATE": "large_string",
+      "TRANSACTION_ID": "large_string",
+      "TRANSACTION_NARRATION": "large_string",
+      "REMITTER_NAME": "large_string",
+      "REMITTER_ACCOUNT_NUMBER": "large_string",
+      "REMITTER_IFSC": "large_string",
+      "REMITTER_BANK": "large_string",
+      "REMITTER_VIRTUAL_ADDRESS": "large_string",
+      "INITIATOR_APPLICATION_NAME": "large_string",
+      "TRANSACTION_INITIATOR_DETAILS": "large_string",
+      "INITIATOR_DEVICE_OS": "large_string",
+      "MOBILE_NUMBER": "double",
+      "INITIATOR_IP_ADDRESS": "large_string",
+      "TRANSACTION_TIME": "large_string",
+      "CUSTOMER_ID": "large_string"
+    },
+    "schema_conflicts": [],
+    "primary_key": [
+      "ACCOUNT_NUMBER"
+    ],
+    "foreign_keys": {
+      "ACCOUNT_NUMBER": {
+        "references": "accounts.ACCOUNT_NUMBER"
+      },
+      "CUSTOMER_ID": {
+        "references": "customers.CUSTOMER_ID"
+      }
+    },
+    "time_column": "TRANSACTION_DATE",
+    "load_plan": "full",
+    "shards": [
+      {
+        "path": "/home/ai-centre-of-excellence/aditya/pnb_mapped/transactions/1_RBIH_DATA.parquet",
+        "rows": 13882
+      },
+      {
+        "path": "/home/ai-centre-of-excellence/aditya/pnb_mapped/transactions/2_RBIH_DATA.parquet",
+        "rows": 13856
+      },
+      {
+        "path": "/home/ai-centre-of-excellence/aditya/pnb_mapped/transactions/3_RBIH_DATA.parquet",
+        "rows": 7082
+      },
+      {
+        "path": "/home/ai-centre-of-excellence/aditya/pnb_mapped/transactions/4_RBIH_DATA.parquet",
+        "rows": 2641
+      },
+      {
+        "path": "/home/ai-centre-of-excellence/aditya/pnb_mapped/transactions/5_RBIH_DATA.parquet",
+        "rows": 12111
+      },
+      {
+        "path": "/home/ai-centre-of-excellence/aditya/pnb_mapped/transactions/6_RBIH_DATA.parquet",
+        "rows": 25172
+      },
+      {
+        "path": "/home/ai-centre-of-excellence/aditya/pnb_mapped/transactions/7_RBIH_DATA.parquet",
+        "rows": 14106
+      },
+      {
+        "path": "/home/ai-centre-of-excellence/aditya/pnb_mapped/transactions/8_RBIH_DATA.parquet",
+        "rows": 14926
+      },
+      {
+        "path": "/home/ai-centre-of-excellence/aditya/pnb_mapped/transactions/9_RBIH_DATA.parquet",
+        "rows": 7735
+      },
+      {
+        "path": "/home/ai-centre-of-excellence/aditya/pnb_mapped/transactions/10_RBIH_DATA.parquet",
+        "rows": 16537
+      }
+    ]
+  },
+  "mha_l0": {
+    "entity": "mha_l0",
+    "grain": "one cybercrime complaint",
+    "n_shards": 1,
+    "total_rows": 119843,
+    "total_bytes": 8812429,
+    "unified_columns": [
+      "ACKNOWLEDGEMENT_NUMBER",
+      "COMPLAINT_DATE",
+      "ACCOUNT_NUMBER",
+      "DISPUTED_AMOUNT"
+    ],
+    "n_columns": 4,
+    "arrow_types": {
+      "ACKNOWLEDGEMENT_NUMBER": "int64",
+      "COMPLAINT_DATE": "large_string",
+      "ACCOUNT_NUMBER": "large_string",
+      "DISPUTED_AMOUNT": "double"
+    },
+    "schema_conflicts": [],
+    "primary_key": [
+      "ACCOUNT_NUMBER"
+    ],
+    "foreign_keys": {},
+    "time_column": "COMPLAINT_DATE",
+    "load_plan": "full",
+    "shards": [
+      {
+        "path": "/home/ai-centre-of-excellence/aditya/pnb_mapped/mha_l0/L0.parquet",
+        "rows": 119843
+      }
+    ]
+  },
+  "mha_l1": {
+    "entity": "mha_l1",
+    "grain": "one fraud transaction mapping",
+    "n_shards": 1,
+    "total_rows": 208572,
+    "total_bytes": 11608871,
+    "unified_columns": [
+      "ACKNOWLEDGEMENT_NUMBER",
+      "ACCOUNT_NUMBER",
+      "FRAUD_LAYER",
+      "TXN_ID",
+      "TXN_DATE",
+      "TXN_AMOUNT",
+      "DISPUTED_AMOUNT"
+    ],
+    "n_columns": 7,
+    "arrow_types": {
+      "ACKNOWLEDGEMENT_NUMBER": "int64",
+      "ACCOUNT_NUMBER": "large_string",
+      "FRAUD_LAYER": "int64",
+      "TXN_ID": "large_string",
+      "TXN_DATE": "large_string",
+      "TXN_AMOUNT": "large_string",
+      "DISPUTED_AMOUNT": "large_string"
+    },
+    "schema_conflicts": [],
+    "primary_key": [
+      "ACCOUNT_NUMBER"
+    ],
+    "foreign_keys": {},
+    "time_column": "TXN_DATE",
+    "load_plan": "full",
+    "shards": [
+      {
+        "path": "/home/ai-centre-of-excellence/aditya/pnb_mapped/mha_l1/L1.parquet",
+        "rows": 208572
+      }
+    ]
+  }
+}

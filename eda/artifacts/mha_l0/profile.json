@@ -1,0 +1,852 @@
+{
+  "types": {
+    "ACKNOWLEDGEMENT_NUMBER": {
+      "semantic_type": "count",
+      "confidence": 0.6,
+      "evidence": "non-negative integers",
+      "source": "inferred",
+      "physical_dtype": "int64",
+      "family": "numeric",
+      "parse_fail_rate": 0.0,
+      "is_primary_key": false,
+      "is_foreign_key": false,
+      "feature_role": "feature"
+    },
+    "COMPLAINT_DATE": {
+      "semantic_type": "datetime",
+      "confidence": 1.0,
+      "evidence": "config override",
+      "source": "override",
+      "physical_dtype": "string",
+      "family": "datetime",
+      "parse_fail_rate": 0.0,
+      "is_primary_key": false,
+      "is_foreign_key": false,
+      "feature_role": "feature"
+    },
+    "ACCOUNT_NUMBER": {
+      "semantic_type": "hashed_pii",
+      "confidence": 0.8,
+      "evidence": "hex hash",
+      "source": "inferred",
+      "physical_dtype": "string",
+      "family": "keylike",
+      "parse_fail_rate": 0.0,
+      "is_primary_key": true,
+      "is_foreign_key": false,
+      "feature_role": "key"
+    },
+    "DISPUTED_AMOUNT": {
+      "semantic_type": "amount",
+      "confidence": 1.0,
+      "evidence": "config override",
+      "source": "override",
+      "physical_dtype": "float64",
+      "family": "numeric",
+      "parse_fail_rate": 0.0,
+      "is_primary_key": false,
+      "is_foreign_key": false,
+      "feature_role": "feature"
+    }
+  },
+  "profiles": {
+    "ACKNOWLEDGEMENT_NUMBER": {
+      "_type": "count",
+      "_family": "numeric",
+      "count": 119843,
+      "n_present": 119843,
+      "n_missing": 0,
+      "pct_missing": 0.0,
+      "n_unique": 119843,
+      "cardinality_ratio": 1.0,
+      "memory_bytes": 958876,
+      "n_blank": 0,
+      "top_values": [
+        {
+          "value": "31301260008286",
+          "count": 1,
+          "pct": 8.344250394265831e-06
+        },
+        {
+          "value": "33201260007956",
+          "count": 1,
+          "pct": 8.344250394265831e-06
+        },
+        {
+          "value": "23501260001650",
+          "count": 1,
+          "pct": 8.344250394265831e-06
+        },
+        {
+          "value": "33001260000204",
+          "count": 1,
+          "pct": 8.344250394265831e-06
+        },
+        {
+          "value": "32501260003627",
+          "count": 1,
+          "pct": 8.344250394265831e-06
+        },
+        {
+          "value": "31201260000905",
+          "count": 1,
+          "pct": 8.344250394265831e-06
+        },
+        {
+          "value": "30801260007578",
+          "count": 1,
+          "pct": 8.344250394265831e-06
+        },
+        {
+          "value": "31301260008281",
+          "count": 1,
+          "pct": 8.344250394265831e-06
+        },
+        {
+          "value": "32701260010259",
+          "count": 1,
+          "pct": 8.344250394265831e-06
+        },
+        {
+          "value": "33201260007945",
+          "count": 1,
+          "pct": 8.344250394265831e-06
+        },
+        {
+          "value": "20801260009289",
+          "count": 1,
+          "pct": 8.344250394265831e-06
+        },
+        {
+          "value": "32701260010256",
+          "count": 1,
+          "pct": 8.344250394265831e-06
+        },
+        {
+          "value": "20801260009290",
+          "count": 1,
+          "pct": 8.344250394265831e-06
+        },
+        {
+          "value": "31201260000903",
+          "count": 1,
+          "pct": 8.344250394265831e-06
+        },
+        {
+          "value": "33101260023918",
+          "count": 1,
+          "pct": 8.344250394265831e-06
+        },
+        {
+          "value": "21301260006692",
+          "count": 1,
+          "pct": 8.344250394265831e-06
+        },
+        {
+          "value": "31101260024320",
+          "count": 1,
+          "pct": 8.344250394265831e-06
+        },
+        {
+          "value": "32701260010255",
+          "count": 1,
+          "pct": 8.344250394265831e-06
+        },
+        {
+          "value": "30501260009878",
+          "count": 1,
+          "pct": 8.344250394265831e-06
+        },
+        {
+          "value": "30501260009876",
+          "count": 1,
+          "pct": 8.344250394265831e-06
+        }
+      ],
+      "dominance": 8.344250394265831e-06,
+      "is_constant": false,
+      "is_near_constant": false,
+      "entropy": 11.693937831815553,
+      "normalized_entropy": 1.0,
+      "min": 20104250000175.0,
+      "max": 33810250000192.0,
+      "range": 13706000000017.0,
+      "mean": 30095134005879.113,
+      "trimmed_mean_10": 30430100476503.047,
+      "median": 31406250004880.0,
+      "std": 4108384999595.988,
+      "var": 1.6878827304905325e+25,
+      "sum": 3.60669114466657e+18,
+      "mad": 1306000107340.0,
+      "iqr": 2598000011999.0,
+      "cv": 0.1365132648618016,
+      "skew": -1.3187003835999282,
+      "kurtosis": 0.09560984711474063,
+      "percentiles": {
+        "p1": 20505250019630.94,
+        "p5": 21305250021088.2,
+        "p10": 22911250089048.4,
+        "p25": 30507250045406.5,
+        "p50": 31406250004880.0,
+        "p75": 33105250057405.5,
+        "p90": 33207250058638.2,
+        "p95": 33307250017596.7,
+        "p99": 33511250020918.16
+      },
+      "n_zero": 0,
+      "n_negative": 0,
+      "zero_inflation": 0.0,
+      "all_positive": true,
+      "is_integer_valued": true,
+      "outliers": {
+        "fraction": 0.20719608154001484,
+        "count": 24831,
+        "lower": 26610250027408.0,
+        "upper": 37002250075404.0
+      },
+      "shape": "left_skewed",
+      "log_transform_candidate": false,
+      "is_monotonic": "none",
+      "histogram": {
+        "counts": [
+          3398,
+          1792,
+          2157,
+          883,
+          791,
+          2738,
+          11715,
+          1353,
+          4,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          10,
+          10787,
+          8303,
+          16780,
+          6452,
+          3836,
+          13854,
+          30117,
+          4873
+        ],
+        "edges": [
+          20104250000175.0,
+          20561116666842.234,
+          21017983333509.465,
+          21474850000176.7,
+          21931716666843.934,
+          22388583333511.168,
+          22845450000178.4,
+          23302316666845.633,
+          23759183333512.867,
+          24216050000180.1,
+          24672916666847.332,
+          25129783333514.566,
+          25586650000181.8,
+          26043516666849.03,
+          26500383333516.266,
+          26957250000183.5,
+          27414116666850.734,
+          27870983333517.97,
+          28327850000185.2,
+          28784716666852.434,
+          29241583333519.664,
+          29698450000186.9,
+          30155316666854.133,
+          30612183333521.367,
+          31069050000188.6,
+          31525916666855.836,
+          31982783333523.066,
+          32439650000190.3,
+          32896516666857.53,
+          33353383333524.766,
+          33810250000192.0
+        ]
+      }
+    },
+    "COMPLAINT_DATE": {
+      "_type": "datetime",
+      "_family": "datetime",
+      "count": 119843,
+      "n_present": 119843,
+      "n_missing": 0,
+      "pct_missing": 0.0,
+      "n_unique": 306,
+      "cardinality_ratio": 0.002553,
+      "memory_bytes": 2157306,
+      "n_blank": 0,
+      "top_values": [
+        {
+          "value": "10/09/2025",
+          "count": 541,
+          "pct": 0.004514239463297815
+        },
+        {
+          "value": "08/10/2025",
+          "count": 532,
+          "pct": 0.0044391412097494224
+        },
+        {
+          "value": "04/09/2025",
+          "count": 531,
+          "pct": 0.004430796959355156
+        },
+        {
+          "value": "02/09/2025",
+          "count": 531,
+          "pct": 0.004430796959355156
+        },
+        {
+          "value": "30/12/2025",
+          "count": 516,
+          "pct": 0.004305633203441169
+        },
+        {
+          "value": "12/09/2025",
+          "count": 515,
+          "pct": 0.004297288953046903
+        },
+        {
+          "value": "01/09/2025",
+          "count": 508,
+          "pct": 0.004238879200287042
+        },
+        {
+          "value": "11/09/2025",
+          "count": 503,
+          "pct": 0.004197157948315713
+        },
+        {
+          "value": "07/01/2026",
+          "count": 501,
+          "pct": 0.004180469447527181
+        },
+        {
+          "value": "16/10/2025",
+          "count": 501,
+          "pct": 0.004180469447527181
+        },
+        {
+          "value": "11/10/2025",
+          "count": 501,
+          "pct": 0.004180469447527181
+        },
+        {
+          "value": "04/11/2025",
+          "count": 499,
+          "pct": 0.00416378094673865
+        },
+        {
+          "value": "15/10/2025",
+          "count": 498,
+          "pct": 0.004155436696344384
+        },
+        {
+          "value": "11/12/2025",
+          "count": 497,
+          "pct": 0.004147092445950118
+        },
+        {
+          "value": "06/09/2025",
+          "count": 496,
+          "pct": 0.004138748195555852
+        },
+        {
+          "value": "05/09/2025",
+          "count": 496,
+          "pct": 0.004138748195555852
+        },
+        {
+          "value": "11/11/2025",
+          "count": 495,
+          "pct": 0.0041304039451615865
+        },
+        {
+          "value": "14/10/2025",
+          "count": 494,
+          "pct": 0.004122059694767321
+        },
+        {
+          "value": "03/09/2025",
+          "count": 493,
+          "pct": 0.004113715444373054
+        },
+        {
+          "value": "16/12/2025",
+          "count": 486,
+          "pct": 0.004055305691613194
+        }
+      ],
+      "dominance": 0.004514239463297815,
+      "is_constant": false,
+      "is_near_constant": false,
+      "entropy": 5.710241544354304,
+      "normalized_entropy": 0.997668671407799,
+      "parse_fail_rate": 0.0,
+      "min": "2025-04-01T00:00:00",
+      "max": "2026-01-31T00:00:00",
+      "span_days": 305,
+      "n_unique_days": 306,
+      "max_gap_days": 1,
+      "is_monotonic_increasing": false,
+      "has_time_component": false,
+      "n_future_dates": 0,
+      "n_sentinel_dates": 0,
+      "by_year": {
+        "2025": 107051,
+        "2026": 12792
+      },
+      "by_dow": {
+        "0": 16656,
+        "1": 18235,
+        "2": 18110,
+        "3": 18058,
+        "4": 17793,
+        "5": 17204,
+        "6": 13787
+      },
+      "derived_feature_stubs": [
+        "recency_days",
+        "year",
+        "month",
+        "dayofweek"
+      ]
+    },
+    "ACCOUNT_NUMBER": {
+      "_type": "hashed_pii",
+      "_family": "keylike",
+      "count": 119843,
+      "n_present": 119117,
+      "n_missing": 726,
+      "pct_missing": 0.006058,
+      "n_unique": 111710,
+      "cardinality_ratio": 0.937817,
+      "memory_bytes": 8597345,
+      "n_blank": 0,
+      "top_values": [
+        {
+          "value": "0B8F8BA2FC25744F63301E2A7287AC8C7EBA1F269B011C0FA47D9EB15E8BBB51",
+          "count": 30,
+          "pct": 0.00025185321994341696
+        },
+        {
+          "value": "382BCAD967C50B772B92E67690ED8978D577620C4345430CAE9EEC4864A8D601",
+          "count": 22,
+          "pct": 0.0001846923612918391
+        },
+        {
+          "value": "D5805E4C726128CD6C981940C9DB26C5AF2C018B83C3003B07F1BE51F31C0540",
+          "count": 17,
+          "pct": 0.00014271682463460296
+        },
+        {
+          "value": "C76A4FD7A3A81E3C2AB0B230EACE53CFF8385A6F6153C772FAC32CBF7E711055",
+          "count": 16,
+          "pct": 0.00013432171730315572
+        },
+        {
+          "value": "57C829E3BFC5B1DC9BAE7A5EFBC371A9335B06EF1D7CC9259E7C25A42E7BEA53",
+          "count": 15,
+          "pct": 0.00012592660997170848
+        },
+        {
+          "value": "388B7459AC96259887EBAA1C796173BB1168403004495C08B1A380C8FA7F4D61",
+          "count": 15,
+          "pct": 0.00012592660997170848
+        },
+        {
+          "value": "A58E8218902A276607E9FFD24EA94096AE912272DB78EB541A3DBD12E7D08AE2",
+          "count": 13,
+          "pct": 0.00010913639530881402
+        },
+        {
+          "value": "984CEE12AB29668F1EAE140B6DC2D25E18743A367C931BCA67A7AE79FFE1697B",
+          "count": 11,
+          "pct": 9.234618064591956e-05
+        },
+        {
+          "value": "DCB491CEC35456A60D9816B79AFAA5CD352C54D4AE31A2C625A6E57190A337EC",
+          "count": 11,
+          "pct": 9.234618064591956e-05
+        },
+        {
+          "value": "F21B8940508CE0C5E352DE8620808C5B668B1D442357DD6030B3274DDA19D29C",
+          "count": 11,
+          "pct": 9.234618064591956e-05
+        },
+        {
+          "value": "3128832CC621C4BCE8E05F0DDE823A3F6192455C47DAE43D63DCA9E2366B5316",
+          "count": 11,
+          "pct": 9.234618064591956e-05
+        },
+        {
+          "value": "F7400996138A4E4E6FAEB7A72353C69EFFD44F6DADBC88B649B5138237A6B345",
+          "count": 10,
+          "pct": 8.395107331447233e-05
+        },
+        {
+          "value": "A7B646BD071308E6933462644435D6635873FFD55C150D295A14D5C0B64C427B",
+          "count": 10,
+          "pct": 8.395107331447233e-05
+        },
+        {
+          "value": "9E6489F02FE77641C8AD432B495D843A27BF144973031F97BD1F391F8F3FFF4B",
+          "count": 10,
+          "pct": 8.395107331447233e-05
+        },
+        {
+          "value": "FE7B0715B09AF942D14060164EE0596EBFBC4197CF970DA3BD6D3B1A69052160",
+          "count": 9,
+          "pct": 7.555596598302509e-05
+        },
+        {
+          "value": "A1A161A854FBC70778DFC93207D44BF29E7F9E16DAEA25BA2502DE710F1D6B3C",
+          "count": 9,
+          "pct": 7.555596598302509e-05
+        },
+        {
+          "value": "D53BD1307F73AE6474400C6D0A957718C0D64D5E334669728A7415CE389972F2",
+          "count": 9,
+          "pct": 7.555596598302509e-05
+        },
+        {
+          "value": "06A9D33F5BF0FABF23F6617821B6747A154F65D1375D23914D426FF8CB2044BB",
+          "count": 8,
+          "pct": 6.716085865157786e-05
+        },
+        {
+          "value": "F8470D8809141C031B43DE1C9CEB53700E84A3E7C279DC5749C3821EDEC8C875",
+          "count": 8,
+          "pct": 6.716085865157786e-05
+        },
+        {
+          "value": "54BCEABB08B74B9E3F730610020DA0FE9FA0999D09178C2E7FDFB9B40D16915B",
+          "count": 8,
+          "pct": 6.716085865157786e-05
+        }
+      ],
+      "dominance": 0.00025185321994341696,
+      "is_constant": false,
+      "is_near_constant": false,
+      "entropy": 11.593395869356957,
+      "normalized_entropy": 0.9973962045272187,
+      "n_duplicates": 7407,
+      "uniqueness_ratio": 0.9378174399959703,
+      "length_consistent": true,
+      "length_min": 64,
+      "length_max": 64
+    },
+    "DISPUTED_AMOUNT": {
+      "_type": "amount",
+      "_family": "numeric",
+      "count": 119843,
+      "n_present": 119843,
+      "n_missing": 0,
+      "pct_missing": 0.0,
+      "n_unique": 27060,
+      "cardinality_ratio": 0.225795,
+      "memory_bytes": 958876,
+      "n_blank": 0,
+      "top_values": [
+        {
+          "value": "5000.0",
+          "count": 4429,
+          "pct": 0.036956684996203366
+        },
+        {
+          "value": "10000.0",
+          "count": 4264,
+          "pct": 0.035579883681149505
+        },
+        {
+          "value": "2000.0",
+          "count": 3520,
+          "pct": 0.029371761387815727
+        },
+        {
+          "value": "1000.0",
+          "count": 2207,
+          "pct": 0.01841576062014469
+        },
+        {
+          "value": "20000.0",
+          "count": 2203,
+          "pct": 0.018382383618567626
+        },
+        {
+          "value": "3000.0",
+          "count": 2041,
+          "pct": 0.017030615054696562
+        },
+        {
+          "value": "50000.0",
+          "count": 1858,
+          "pct": 0.015503617232545914
+        },
+        {
+          "value": "15000.0",
+          "count": 1630,
+          "pct": 0.013601128142653305
+        },
+        {
+          "value": "4000.0",
+          "count": 1598,
+          "pct": 0.013334112130036798
+        },
+        {
+          "value": "25000.0",
+          "count": 1325,
+          "pct": 0.011056131772402226
+        },
+        {
+          "value": "30000.0",
+          "count": 1287,
+          "pct": 0.010739050257420125
+        },
+        {
+          "value": "8000.0",
+          "count": 1052,
+          "pct": 0.008778151414767654
+        },
+        {
+          "value": "500.0",
+          "count": 1028,
+          "pct": 0.008577889405305274
+        },
+        {
+          "value": "7000.0",
+          "count": 1009,
+          "pct": 0.008419348647814224
+        },
+        {
+          "value": "6000.0",
+          "count": 1001,
+          "pct": 0.008352594644660098
+        },
+        {
+          "value": "40000.0",
+          "count": 937,
+          "pct": 0.007818562619427084
+        },
+        {
+          "value": "100000.0",
+          "count": 897,
+          "pct": 0.007484792603656451
+        },
+        {
+          "value": "1500.0",
+          "count": 849,
+          "pct": 0.0070842685847316905
+        },
+        {
+          "value": "9000.0",
+          "count": 702,
+          "pct": 0.005857663776774613
+        },
+        {
+          "value": "12000.0",
+          "count": 666,
+          "pct": 0.005557270762581044
+        }
+      ],
+      "dominance": 0.036956684996203366,
+      "is_constant": false,
+      "is_near_constant": false,
+      "entropy": 7.503597845891444,
+      "normalized_entropy": 0.7352279189687337,
+      "min": 0.0,
+      "max": 91000000.0,
+      "range": 91000000.0,
+      "mean": 59771.43043223217,
+      "trimmed_mean_10": 24064.330441039023,
+      "median": 11000.0,
+      "std": 517854.7040202782,
+      "var": 268173494475.9299,
+      "sum": 7163187537.29,
+      "mad": 9170.0,
+      "iqr": 34085.0,
+      "cv": 8.663916862545443,
+      "skew": 75.03818717395374,
+      "kurtosis": 9743.278905224664,
+      "percentiles": {
+        "p1": 222.6800000000003,
+        "p5": 700.0,
+        "p10": 1250.0,
+        "p25": 3915.0,
+        "p50": 11000.0,
+        "p75": 38000.0,
+        "p90": 92000.0,
+        "p95": 150591.2999999995,
+        "p99": 804605.2000000016
+      },
+      "n_zero": 113,
+      "n_negative": 0,
+      "zero_inflation": 0.0009429002945520389,
+      "all_positive": false,
+      "is_integer_valued": false,
+      "outliers": {
+        "fraction": 0.10692322455212236,
+        "count": 12814,
+        "lower": -47212.5,
+        "upper": 89127.5
+      },
+      "shape": "right_skewed",
+      "log_transform_candidate": false,
+      "is_monotonic": "none",
+      "histogram": {
+        "counts": [
+          119632,
+          134,
+          35,
+          12,
+          8,
+          6,
+          3,
+          1,
+          4,
+          4,
+          1,
+          0,
+          0,
+          1,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "edges": [
+          0.0,
+          3033333.3333333335,
+          6066666.666666667,
+          9100000.0,
+          12133333.333333334,
+          15166666.666666668,
+          18200000.0,
+          21233333.333333336,
+          24266666.666666668,
+          27300000.0,
+          30333333.333333336,
+          33366666.666666668,
+          36400000.0,
+          39433333.333333336,
+          42466666.66666667,
+          45500000.0,
+          48533333.333333336,
+          51566666.66666667,
+          54600000.0,
+          57633333.333333336,
+          60666666.66666667,
+          63700000.0,
+          66733333.333333336,
+          69766666.66666667,
+          72800000.0,
+          75833333.33333334,
+          78866666.66666667,
+          81900000.0,
+          84933333.33333334,
+          87966666.66666667,
+          91000000.0
+        ]
+      }
+    }
+  },
+  "load_info": {
+    "total_rows": 119843,
+    "sampled": false,
+    "sample_rows": 119843
+  },
+  "quality_score": 100.0,
+  "entity_checks": {
+    "primary_key": [
+      "ACCOUNT_NUMBER"
+    ],
+    "primary_key_unique": false,
+    "full_row_duplicate_rate": 0.0,
+    "schema_conflicts": [],
+    "n_columns": 4,
+    "n_drop_suggested": 0,
+    "n_warn": 0
+  },
+  "relationships": {
+    "redundant_pairs": [],
+    "top_numeric_corr": [
+      {
+        "a": "ACKNOWLEDGEMENT_NUMBER",
+        "b": "DISPUTED_AMOUNT",
+        "pearson": -0.016
+      }
+    ],
+    "top_spearman_corr": [
+      {
+        "a": "ACKNOWLEDGEMENT_NUMBER",
+        "b": "DISPUTED_AMOUNT",
+        "spearman": -0.0214
+      }
+    ],
+    "nonlinear_pairs": [],
+    "vif": [
+      {
+        "column": "ACKNOWLEDGEMENT_NUMBER",
+        "vif": 1.0
+      },
+      {
+        "column": "DISPUTED_AMOUNT",
+        "vif": 1.0
+      }
+    ],
+    "numeric_categorical_assoc": [],
+    "categorical_associations": [],
+    "directional_associations": [],
+    "functional_dependencies": [],
+    "co_missing_pairs": [],
+    "corr_matrix": {
+      "columns": [
+        "ACKNOWLEDGEMENT_NUMBER",
+        "DISPUTED_AMOUNT"
+      ],
+      "pearson": [
+        [
+          1.0,
+          -0.016
+        ],
+        [
+          -0.016,
+          1.0
+        ]
+      ],
+      "spearman": [
+        [
+          1.0,
+          -0.0214
+        ],
+        [
+          -0.0214,
+          1.0
+        ]
+      ]
+    }
+  }
+}

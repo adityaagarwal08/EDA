@@ -1,0 +1,15 @@
+{
+  "primary_target": "is_fraudster_account",
+  "results": {
+    "is_fraudster_account": {
+      "supervised": false,
+      "reason": "target not applicable to entity"
+    },
+    "is_victim_account": {
+      "supervised": false,
+      "reason": "target not applicable to entity"
+    }
+  },
+  "supervised": false,
+  "reason": "target not applicable to entity"
+}

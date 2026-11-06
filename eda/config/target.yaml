@@ -1,0 +1,43 @@
+# ============================================================================
+# target.yaml  --  LABEL definitions (optional; drives the Score stage).
+# If this file is absent, or a label entity is missing/empty, that target is
+# skipped and the run falls back to unsupervised -- no error.
+#
+# DOMAIN NOTE (from data owner):
+#   mha_l0 = VICTIM accounts      (accounts that were defrauded / complained)
+#   mha_l1 = FRAUDSTER accounts   (mule / fraudster accounts in the fraud layers)
+#   These are DIFFERENT labels and must NOT be merged.
+# ============================================================================
+
+targets:
+
+  # Primary detection goal: is this a fraudster / mule account?
+  is_fraudster_account:
+    type: binary
+    positive_if_present_in:
+      - entity: mha_l1
+        join: { left: ACCOUNT_NUMBER, right: ACCOUNT_NUMBER }
+        # FRAUD_LAYER encodes layering depth; presence already means fraudster.
+        # Add a filter here (e.g. "FRAUD_LAYER >= 1") only to narrow the definition.
+    applies_to:
+      accounts:     { key: ACCOUNT_NUMBER }
+      transactions: { key: ACCOUNT_NUMBER }
+      customers:    { key: CUSTOMER_ID, via: accounts }
+    default_negative: true
+
+  # Secondary: was this account a victim of fraud?
+  is_victim_account:
+    type: binary
+    positive_if_present_in:
+      - entity: mha_l0
+        join: { left: ACCOUNT_NUMBER, right: ACCOUNT_NUMBER }
+    applies_to:
+      accounts:     { key: ACCOUNT_NUMBER }
+      transactions: { key: ACCOUNT_NUMBER }
+      customers:    { key: CUSTOMER_ID, via: accounts }
+    default_negative: true
+
+# Targets to analyze in the Score stage (each column is ranked against each one).
+active_targets: [is_fraudster_account, is_victim_account]
+# Which target drives feature-plan priority / report ordering.
+primary_target: is_fraudster_account

@@ -1,0 +1,814 @@
+{
+  "CUSTOMER_ID": {
+    "column": "CUSTOMER_ID",
+    "semantic_type": "identifier",
+    "feature_role": "key",
+    "recommended_ops": [],
+    "requires_human": false,
+    "notes": [
+      "used for joins/aggregation only"
+    ],
+    "quality_status": "OK",
+    "target_signal": null,
+    "leakage_suspect": false,
+    "exclude_from_model": false,
+    "priority": "unranked"
+  },
+  "DATE_OF_BIRTH": {
+    "column": "DATE_OF_BIRTH",
+    "semantic_type": "datetime",
+    "feature_role": "feature",
+    "recommended_ops": [
+      {
+        "op": "datetime_decompose",
+        "parts": [
+          "recency_days",
+          "year",
+          "month",
+          "dayofweek",
+          "hour",
+          "age_years"
+        ]
+      }
+    ],
+    "requires_human": false,
+    "notes": [],
+    "quality_status": "OK",
+    "target_signal": null,
+    "leakage_suspect": false,
+    "exclude_from_model": false,
+    "priority": "unranked"
+  },
+  "NUM_LOAN_ACCOUNT": {
+    "column": "NUM_LOAN_ACCOUNT",
+    "semantic_type": "count",
+    "feature_role": "feature",
+    "recommended_ops": [
+      {
+        "op": "outlier_cap",
+        "at": "p99",
+        "reason": "outliers=0.039"
+      },
+      {
+        "op": "add_flag",
+        "name": "NUM_LOAN_ACCOUNT__is_zero"
+      },
+      {
+        "op": "scale",
+        "method": "robust"
+      }
+    ],
+    "requires_human": false,
+    "notes": [],
+    "quality_status": "OK",
+    "target_signal": {
+      "iv": 0.0,
+      "iv_band": "useless",
+      "auc": 0.5103581454436723,
+      "ks": 0.02067286125887735,
+      "predictive_rank": 3,
+      "predictive_score": 0.033206253610613384
+    },
+    "leakage_suspect": false,
+    "exclude_from_model": false,
+    "priority": "low"
+  },
+  "LOAN_ACCOUNT_BALANCE": {
+    "column": "LOAN_ACCOUNT_BALANCE",
+    "semantic_type": "amount",
+    "feature_role": "feature",
+    "recommended_ops": [
+      {
+        "op": "outlier_cap",
+        "at": "p99",
+        "reason": "outliers=0.038"
+      },
+      {
+        "op": "add_flag",
+        "name": "LOAN_ACCOUNT_BALANCE__is_zero"
+      },
+      {
+        "op": "scale",
+        "method": "robust"
+      }
+    ],
+    "requires_human": false,
+    "notes": [],
+    "quality_status": "OK",
+    "target_signal": {
+      "iv": 0.0,
+      "iv_band": "useless",
+      "auc": 0.5101192603453819,
+      "ks": 0.020213251791541542,
+      "predictive_rank": 8,
+      "predictive_score": 0.020238520690763817
+    },
+    "leakage_suspect": false,
+    "exclude_from_model": false,
+    "priority": "low"
+  },
+  "NUM_OVER_DRAFT_ACCOUNT": {
+    "column": "NUM_OVER_DRAFT_ACCOUNT",
+    "semantic_type": "count",
+    "feature_role": "feature",
+    "recommended_ops": [
+      {
+        "op": "add_flag",
+        "name": "NUM_OVER_DRAFT_ACCOUNT__is_zero"
+      },
+      {
+        "op": "scale",
+        "method": "robust"
+      }
+    ],
+    "requires_human": false,
+    "notes": [],
+    "quality_status": "WARN",
+    "target_signal": {
+      "iv": 0.0,
+      "iv_band": "useless",
+      "auc": 0.5010853667877354,
+      "ks": 0.002170722052739049,
+      "predictive_rank": 14,
+      "predictive_score": 0.01061667175235497
+    },
+    "leakage_suspect": false,
+    "exclude_from_model": false,
+    "priority": "low"
+  },
+  "OVER_DRAFT_ACCOUNT_BALANCE": {
+    "column": "OVER_DRAFT_ACCOUNT_BALANCE",
+    "semantic_type": "amount",
+    "feature_role": "feature",
+    "recommended_ops": [
+      {
+        "op": "add_flag",
+        "name": "OVER_DRAFT_ACCOUNT_BALANCE__is_zero"
+      },
+      {
+        "op": "scale",
+        "method": "robust"
+      }
+    ],
+    "requires_human": false,
+    "notes": [],
+    "quality_status": "WARN",
+    "target_signal": {
+      "iv": 0.0,
+      "iv_band": "useless",
+      "auc": 0.500962549716174,
+      "ks": 0.0019247063038473344,
+      "predictive_rank": 19,
+      "predictive_score": 0.0019250994323480874
+    },
+    "leakage_suspect": false,
+    "exclude_from_model": false,
+    "priority": "low"
+  },
+  "NUM_CURRENT_ACCOUNT": {
+    "column": "NUM_CURRENT_ACCOUNT",
+    "semantic_type": "count",
+    "feature_role": "feature",
+    "recommended_ops": [
+      {
+        "op": "outlier_cap",
+        "at": "p99",
+        "reason": "outliers=0.021"
+      },
+      {
+        "op": "add_flag",
+        "name": "NUM_CURRENT_ACCOUNT__is_zero"
+      },
+      {
+        "op": "scale",
+        "method": "robust"
+      }
+    ],
+    "requires_human": false,
+    "notes": [],
+    "quality_status": "OK",
+    "target_signal": {
+      "iv": 0.0,
+      "iv_band": "useless",
+      "auc": 0.5067704871680848,
+      "ks": 0.013541127294787403,
+      "predictive_rank": 11,
+      "predictive_score": 0.01807067004271137
+    },
+    "leakage_suspect": false,
+    "exclude_from_model": false,
+    "priority": "low"
+  },
+  "CURRENT_ACCOUNT_BALANCE": {
+    "column": "CURRENT_ACCOUNT_BALANCE",
+    "semantic_type": "amount",
+    "feature_role": "feature",
+    "recommended_ops": [
+      {
+        "op": "add_flag",
+        "name": "CURRENT_ACCOUNT_BALANCE__is_zero"
+      },
+      {
+        "op": "scale",
+        "method": "robust"
+      }
+    ],
+    "requires_human": false,
+    "notes": [],
+    "quality_status": "OK",
+    "target_signal": {
+      "iv": 0.0,
+      "iv_band": "useless",
+      "auc": 0.5060135485153994,
+      "ks": 0.012110189710012098,
+      "predictive_rank": 13,
+      "predictive_score": 0.012027097030798739
+    },
+    "leakage_suspect": false,
+    "exclude_from_model": false,
+    "priority": "low"
+  },
+  "NUM_SAVING_ACCOUNT": {
+    "column": "NUM_SAVING_ACCOUNT",
+    "semantic_type": "count",
+    "feature_role": "feature",
+    "recommended_ops": [
+      {
+        "op": "outlier_cap",
+        "at": "p99",
+        "reason": "outliers=0.050"
+      },
+      {
+        "op": "scale",
+        "method": "robust"
+      }
+    ],
+    "requires_human": false,
+    "notes": [],
+    "quality_status": "OK",
+    "target_signal": {
+      "iv": 0.001512264177375579,
+      "iv_band": "useless",
+      "auc": 0.5076661886587854,
+      "ks": 0.009455515176114728,
+      "predictive_rank": 6,
+      "predictive_score": 0.0217364895511567
+    },
+    "leakage_suspect": false,
+    "exclude_from_model": false,
+    "priority": "low"
+  },
+  "SAVING_ACCOUNT_BALANCE": {
+    "column": "SAVING_ACCOUNT_BALANCE",
+    "semantic_type": "amount",
+    "feature_role": "feature",
+    "recommended_ops": [
+      {
+        "op": "outlier_cap",
+        "at": "p99",
+        "reason": "outliers=0.135"
+      },
+      {
+        "op": "scale",
+        "method": "robust"
+      }
+    ],
+    "requires_human": false,
+    "notes": [],
+    "quality_status": "OK",
+    "target_signal": {
+      "iv": 0.06688164777684111,
+      "iv_band": "weak",
+      "auc": 0.517694669533086,
+      "ks": 0.06837003516285223,
+      "predictive_rank": 1,
+      "predictive_score": 0.06688164777684111
+    },
+    "leakage_suspect": false,
+    "exclude_from_model": false,
+    "priority": "low"
+  },
+  "NUM_TERM_DEPOSIT_ACCOUNT": {
+    "column": "NUM_TERM_DEPOSIT_ACCOUNT",
+    "semantic_type": "count",
+    "feature_role": "feature",
+    "recommended_ops": [
+      {
+        "op": "outlier_cap",
+        "at": "p99",
+        "reason": "outliers=0.032"
+      },
+      {
+        "op": "add_flag",
+        "name": "NUM_TERM_DEPOSIT_ACCOUNT__is_zero"
+      },
+      {
+        "op": "scale",
+        "method": "robust"
+      }
+    ],
+    "requires_human": false,
+    "notes": [],
+    "quality_status": "OK",
+    "target_signal": {
+      "iv": 0.0,
+      "iv_band": "useless",
+      "auc": 0.5097307940323895,
+      "ks": 0.019446689172410214,
+      "predictive_rank": 9,
+      "predictive_score": 0.019461588064779045
+    },
+    "leakage_suspect": false,
+    "exclude_from_model": false,
+    "priority": "low"
+  },
+  "TERM_DEPOSIT_ACCOUNT_BALANCE": {
+    "column": "TERM_DEPOSIT_ACCOUNT_BALANCE",
+    "semantic_type": "amount",
+    "feature_role": "feature",
+    "recommended_ops": [
+      {
+        "op": "outlier_cap",
+        "at": "p99",
+        "reason": "outliers=0.031"
+      },
+      {
+        "op": "add_flag",
+        "name": "TERM_DEPOSIT_ACCOUNT_BALANCE__is_zero"
+      },
+      {
+        "op": "scale",
+        "method": "robust"
+      }
+    ],
+    "requires_human": false,
+    "notes": [],
+    "quality_status": "OK",
+    "target_signal": {
+      "iv": 0.0,
+      "iv_band": "useless",
+      "auc": 0.5095223600125491,
+      "ks": 0.019031991925048453,
+      "predictive_rank": 10,
+      "predictive_score": 0.019044720025098272
+    },
+    "leakage_suspect": false,
+    "exclude_from_model": false,
+    "priority": "low"
+  },
+  "CUSTOMER_PIN_CODE": {
+    "column": "CUSTOMER_PIN_CODE",
+    "semantic_type": "pincode",
+    "feature_role": "feature",
+    "recommended_ops": [],
+    "requires_human": true,
+    "notes": [
+      "region_lookup(requires_human)"
+    ],
+    "quality_status": "OK",
+    "target_signal": {
+      "iv": 0.024744730553866445,
+      "iv_band": "weak",
+      "predictive_rank": 5,
+      "predictive_score": 0.024744730553866445
+    },
+    "leakage_suspect": false,
+    "exclude_from_model": false,
+    "priority": "low"
+  },
+  "PERMANENT_PIN_CODE": {
+    "column": "PERMANENT_PIN_CODE",
+    "semantic_type": "pincode",
+    "feature_role": "feature",
+    "recommended_ops": [],
+    "requires_human": true,
+    "notes": [
+      "region_lookup(requires_human)"
+    ],
+    "quality_status": "OK",
+    "target_signal": {
+      "iv": 0.02545056233634955,
+      "iv_band": "weak",
+      "predictive_rank": 4,
+      "predictive_score": 0.02545056233634955
+    },
+    "leakage_suspect": false,
+    "exclude_from_model": false,
+    "priority": "low"
+  },
+  "GENDER": {
+    "column": "GENDER",
+    "semantic_type": "categorical",
+    "feature_role": "feature",
+    "recommended_ops": [
+      {
+        "op": "encode",
+        "method": "woe"
+      },
+      {
+        "op": "rare_bucket",
+        "min_freq_frac": 0.01
+      }
+    ],
+    "requires_human": false,
+    "notes": [],
+    "quality_status": "OK",
+    "target_signal": {
+      "iv": 0.008824495915991512,
+      "iv_band": "useless",
+      "predictive_rank": 15,
+      "predictive_score": 0.008824495915991512
+    },
+    "leakage_suspect": false,
+    "exclude_from_model": false,
+    "priority": "low"
+  },
+  "OCCUPATION": {
+    "column": "OCCUPATION",
+    "semantic_type": "categorical",
+    "feature_role": "feature",
+    "recommended_ops": [
+      {
+        "op": "encode",
+        "method": "woe"
+      },
+      {
+        "op": "rare_bucket",
+        "min_freq_frac": 0.01
+      }
+    ],
+    "requires_human": false,
+    "notes": [],
+    "quality_status": "OK",
+    "target_signal": {
+      "iv": 0.036561758295641934,
+      "iv_band": "weak",
+      "predictive_rank": 2,
+      "predictive_score": 0.036561758295641934
+    },
+    "leakage_suspect": false,
+    "exclude_from_model": false,
+    "priority": "low"
+  },
+  "NATIONALITY": {
+    "column": "NATIONALITY",
+    "semantic_type": "categorical",
+    "feature_role": "feature",
+    "recommended_ops": [
+      {
+        "op": "encode",
+        "method": "woe"
+      },
+      {
+        "op": "rare_bucket",
+        "min_freq_frac": 0.01
+      }
+    ],
+    "requires_human": false,
+    "notes": [],
+    "quality_status": "WARN",
+    "target_signal": {
+      "iv": 0.007149672216833127,
+      "iv_band": "useless",
+      "predictive_rank": 16,
+      "predictive_score": 0.007149672216833127
+    },
+    "leakage_suspect": false,
+    "exclude_from_model": false,
+    "priority": "low"
+  },
+  "HASH_OF_AADHAR": {
+    "column": "HASH_OF_AADHAR",
+    "semantic_type": "hashed_pii",
+    "feature_role": "key",
+    "recommended_ops": [],
+    "requires_human": false,
+    "notes": [
+      "used for joins/aggregation only"
+    ],
+    "quality_status": "OK",
+    "target_signal": null,
+    "leakage_suspect": false,
+    "exclude_from_model": false,
+    "priority": "unranked"
+  },
+  "HASH_OF_PAN": {
+    "column": "HASH_OF_PAN",
+    "semantic_type": "hashed_pii",
+    "feature_role": "key",
+    "recommended_ops": [],
+    "requires_human": false,
+    "notes": [
+      "used for joins/aggregation only"
+    ],
+    "quality_status": "WARN",
+    "target_signal": null,
+    "leakage_suspect": false,
+    "exclude_from_model": false,
+    "priority": "unranked"
+  },
+  "HASH_OF_VOTER_ID": {
+    "column": "HASH_OF_VOTER_ID",
+    "semantic_type": "hashed_pii",
+    "feature_role": "key",
+    "recommended_ops": [],
+    "requires_human": false,
+    "notes": [
+      "used for joins/aggregation only"
+    ],
+    "quality_status": "DROP_SUGGESTED",
+    "target_signal": null,
+    "leakage_suspect": false,
+    "exclude_from_model": false,
+    "priority": "drop"
+  },
+  "HASH_OF_PASSPORT": {
+    "column": "HASH_OF_PASSPORT",
+    "semantic_type": "hashed_pii",
+    "feature_role": "key",
+    "recommended_ops": [],
+    "requires_human": false,
+    "notes": [
+      "used for joins/aggregation only"
+    ],
+    "quality_status": "DROP_SUGGESTED",
+    "target_signal": null,
+    "leakage_suspect": false,
+    "exclude_from_model": false,
+    "priority": "drop"
+  },
+  "HASH_OF_DRIVING_LICENCE": {
+    "column": "HASH_OF_DRIVING_LICENCE",
+    "semantic_type": "hashed_pii",
+    "feature_role": "key",
+    "recommended_ops": [],
+    "requires_human": false,
+    "notes": [
+      "used for joins/aggregation only"
+    ],
+    "quality_status": "DROP_SUGGESTED",
+    "target_signal": null,
+    "leakage_suspect": false,
+    "exclude_from_model": false,
+    "priority": "drop"
+  },
+  "HASH_OF_NREGA": {
+    "column": "HASH_OF_NREGA",
+    "semantic_type": "hashed_pii",
+    "feature_role": "key",
+    "recommended_ops": [],
+    "requires_human": false,
+    "notes": [
+      "used for joins/aggregation only"
+    ],
+    "quality_status": "DROP_SUGGESTED",
+    "target_signal": null,
+    "leakage_suspect": false,
+    "exclude_from_model": false,
+    "priority": "drop"
+  },
+  "KYC_VERIFIED_FLAG": {
+    "column": "KYC_VERIFIED_FLAG",
+    "semantic_type": "boolean_flag",
+    "feature_role": "feature",
+    "recommended_ops": [
+      {
+        "op": "map_binary",
+        "to": [
+          0,
+          1
+        ]
+      }
+    ],
+    "requires_human": false,
+    "notes": [],
+    "quality_status": "OK",
+    "target_signal": {
+      "iv": 0.004908978676142586,
+      "iv_band": "useless",
+      "predictive_rank": 18,
+      "predictive_score": 0.004908978676142586
+    },
+    "leakage_suspect": false,
+    "exclude_from_model": false,
+    "priority": "low"
+  },
+  "KYC_REVIEW_DATE": {
+    "column": "KYC_REVIEW_DATE",
+    "semantic_type": "datetime",
+    "feature_role": "feature",
+    "recommended_ops": [
+      {
+        "op": "datetime_decompose",
+        "parts": [
+          "recency_days",
+          "year",
+          "month",
+          "dayofweek"
+        ]
+      }
+    ],
+    "requires_human": false,
+    "notes": [],
+    "quality_status": "OK",
+    "target_signal": null,
+    "leakage_suspect": false,
+    "exclude_from_model": false,
+    "priority": "unranked"
+  },
+  "CUSTOMER_OPEN_DATE": {
+    "column": "CUSTOMER_OPEN_DATE",
+    "semantic_type": "datetime",
+    "feature_role": "feature",
+    "recommended_ops": [
+      {
+        "op": "datetime_decompose",
+        "parts": [
+          "recency_days",
+          "year",
+          "month",
+          "dayofweek"
+        ]
+      }
+    ],
+    "requires_human": false,
+    "notes": [],
+    "quality_status": "OK",
+    "target_signal": null,
+    "leakage_suspect": false,
+    "exclude_from_model": false,
+    "priority": "unranked"
+  },
+  "CUSTOMER_SPECIAL_STATUS": {
+    "column": "CUSTOMER_SPECIAL_STATUS",
+    "semantic_type": "categorical",
+    "feature_role": "feature",
+    "recommended_ops": [
+      {
+        "op": "encode",
+        "method": "woe"
+      },
+      {
+        "op": "rare_bucket",
+        "min_freq_frac": 0.01
+      }
+    ],
+    "requires_human": false,
+    "notes": [],
+    "quality_status": "WARN",
+    "target_signal": {
+      "iv": 0.001594149984939675,
+      "iv_band": "useless",
+      "predictive_rank": 20,
+      "predictive_score": 0.001594149984939675
+    },
+    "leakage_suspect": false,
+    "exclude_from_model": false,
+    "priority": "low"
+  },
+  "ANNUAL_INCOME": {
+    "column": "ANNUAL_INCOME",
+    "semantic_type": "amount_string",
+    "feature_role": "feature",
+    "recommended_ops": [
+      {
+        "op": "cast",
+        "to": "amount_string",
+        "reason": "parse_fail=1.00"
+      },
+      {
+        "op": "scale",
+        "method": "robust"
+      }
+    ],
+    "requires_human": false,
+    "notes": [],
+    "quality_status": "WARN",
+    "target_signal": {
+      "iv": null,
+      "iv_band": null,
+      "auc": null,
+      "ks": null,
+      "predictive_rank": 21,
+      "predictive_score": 0.0
+    },
+    "leakage_suspect": false,
+    "exclude_from_model": false,
+    "priority": "low"
+  },
+  "ADDRESS": {
+    "column": "ADDRESS",
+    "semantic_type": "free_text",
+    "feature_role": "feature",
+    "recommended_ops": [
+      {
+        "op": "text_basic",
+        "features": [
+          "char_len",
+          "token_count",
+          "has_digit"
+        ]
+      },
+      {
+        "op": "vectorize",
+        "status": "deferred"
+      }
+    ],
+    "requires_human": true,
+    "notes": [
+      "text vectorization deferred to later/LLM stage"
+    ],
+    "quality_status": "OK",
+    "target_signal": null,
+    "leakage_suspect": false,
+    "exclude_from_model": false,
+    "priority": "unranked"
+  },
+  "NUM_CREDIT_CARDS": {
+    "column": "NUM_CREDIT_CARDS",
+    "semantic_type": "count",
+    "feature_role": "feature",
+    "recommended_ops": [
+      {
+        "op": "add_flag",
+        "name": "NUM_CREDIT_CARDS__is_zero"
+      },
+      {
+        "op": "scale",
+        "method": "robust"
+      }
+    ],
+    "requires_human": false,
+    "notes": [],
+    "quality_status": "OK",
+    "target_signal": {
+      "iv": 0.0,
+      "iv_band": "useless",
+      "auc": 0.5034341394496729,
+      "ks": 0.006867856625111357,
+      "predictive_rank": 7,
+      "predictive_score": 0.020627054950132135
+    },
+    "leakage_suspect": false,
+    "exclude_from_model": false,
+    "priority": "low"
+  },
+  "CREDIT_CARD_OUTSTANDING_AMOUNT": {
+    "column": "CREDIT_CARD_OUTSTANDING_AMOUNT",
+    "semantic_type": "continuous",
+    "feature_role": "feature",
+    "recommended_ops": [
+      {
+        "op": "add_flag",
+        "name": "CREDIT_CARD_OUTSTANDING_AMOUNT__is_zero"
+      },
+      {
+        "op": "scale",
+        "method": "robust"
+      }
+    ],
+    "requires_human": false,
+    "notes": [],
+    "quality_status": "WARN",
+    "target_signal": {
+      "iv": 0.0037448200205654016,
+      "iv_band": "useless",
+      "auc": 0.502275453405781,
+      "ks": 0.004879197577572714,
+      "predictive_rank": 12,
+      "predictive_score": 0.01438688567993868
+    },
+    "leakage_suspect": false,
+    "exclude_from_model": false,
+    "priority": "low"
+  },
+  "MAX_SANCTIONED_LIMIT": {
+    "column": "MAX_SANCTIONED_LIMIT",
+    "semantic_type": "count",
+    "feature_role": "feature",
+    "recommended_ops": [
+      {
+        "op": "add_flag",
+        "name": "MAX_SANCTIONED_LIMIT__is_zero"
+      },
+      {
+        "op": "scale",
+        "method": "robust"
+      }
+    ],
+    "requires_human": false,
+    "notes": [],
+    "quality_status": "OK",
+    "target_signal": {
+      "iv": 0.0,
+      "iv_band": "useless",
+      "auc": 0.5034287359662115,
+      "ks": 0.006856405740816807,
+      "predictive_rank": 17,
+      "predictive_score": 0.0068574719324230315
+    },
+    "leakage_suspect": false,
+    "exclude_from_model": false,
+    "priority": "low"
+  }
+}

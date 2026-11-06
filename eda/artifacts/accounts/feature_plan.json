@@ -1,0 +1,1237 @@
+{
+  "ACCOUNT_NUMBER": {
+    "column": "ACCOUNT_NUMBER",
+    "semantic_type": "identifier",
+    "feature_role": "key",
+    "recommended_ops": [],
+    "requires_human": false,
+    "notes": [
+      "used for joins/aggregation only"
+    ],
+    "quality_status": "OK",
+    "target_signal": null,
+    "leakage_suspect": false,
+    "exclude_from_model": false,
+    "priority": "unranked"
+  },
+  "CUSTOMER_ID": {
+    "column": "CUSTOMER_ID",
+    "semantic_type": "identifier",
+    "feature_role": "key",
+    "recommended_ops": [],
+    "requires_human": false,
+    "notes": [
+      "used for joins/aggregation only"
+    ],
+    "quality_status": "OK",
+    "target_signal": null,
+    "leakage_suspect": false,
+    "exclude_from_model": false,
+    "priority": "unranked"
+  },
+  "ACCOUNT_OPEN_MODE": {
+    "column": "ACCOUNT_OPEN_MODE",
+    "semantic_type": "categorical",
+    "feature_role": "feature",
+    "recommended_ops": [
+      {
+        "op": "encode",
+        "method": "woe"
+      },
+      {
+        "op": "rare_bucket",
+        "min_freq_frac": 0.01
+      }
+    ],
+    "requires_human": false,
+    "notes": [],
+    "quality_status": "OK",
+    "target_signal": {
+      "iv": 0.2809857865709171,
+      "iv_band": "medium",
+      "predictive_rank": 3,
+      "predictive_score": 0.2809857865709171
+    },
+    "leakage_suspect": false,
+    "exclude_from_model": false,
+    "priority": "medium"
+  },
+  "HAS_NOMINATION": {
+    "column": "HAS_NOMINATION",
+    "semantic_type": "boolean_flag",
+    "feature_role": "feature",
+    "recommended_ops": [
+      {
+        "op": "map_binary",
+        "to": [
+          0,
+          1
+        ]
+      }
+    ],
+    "requires_human": false,
+    "notes": [],
+    "quality_status": "OK",
+    "target_signal": {
+      "iv": 0.011297392593698063,
+      "iv_band": "useless",
+      "predictive_rank": 15,
+      "predictive_score": 0.011297392593698063
+    },
+    "leakage_suspect": false,
+    "exclude_from_model": false,
+    "priority": "low"
+  },
+  "BRANCH_CODE": {
+    "column": "BRANCH_CODE",
+    "semantic_type": "categorical_id",
+    "feature_role": "feature",
+    "recommended_ops": [
+      {
+        "op": "encode",
+        "method": "woe"
+      },
+      {
+        "op": "rare_bucket",
+        "min_freq_frac": 0.01
+      }
+    ],
+    "requires_human": false,
+    "notes": [],
+    "quality_status": "OK",
+    "target_signal": {
+      "iv": 0.02004307145978975,
+      "iv_band": "weak",
+      "predictive_rank": 10,
+      "predictive_score": 0.02004307145978975
+    },
+    "leakage_suspect": false,
+    "exclude_from_model": false,
+    "priority": "low"
+  },
+  "PMJDY_FLAG": {
+    "column": "PMJDY_FLAG",
+    "semantic_type": "boolean_flag",
+    "feature_role": "feature",
+    "recommended_ops": [
+      {
+        "op": "map_binary",
+        "to": [
+          0,
+          1
+        ]
+      }
+    ],
+    "requires_human": false,
+    "notes": [],
+    "quality_status": "OK",
+    "target_signal": {
+      "iv": 0.00010646951064292382,
+      "iv_band": "useless",
+      "predictive_rank": 34,
+      "predictive_score": 0.00010646951064292382
+    },
+    "leakage_suspect": false,
+    "exclude_from_model": false,
+    "priority": "low"
+  },
+  "SCSS_FLAG": {
+    "column": "SCSS_FLAG",
+    "semantic_type": "boolean_flag",
+    "feature_role": "feature",
+    "recommended_ops": [
+      {
+        "op": "map_binary",
+        "to": [
+          0,
+          1
+        ]
+      }
+    ],
+    "requires_human": false,
+    "notes": [],
+    "quality_status": "WARN",
+    "target_signal": {
+      "iv": 0.0007579214427315593,
+      "iv_band": "useless",
+      "predictive_rank": 26,
+      "predictive_score": 0.0007579214427315593
+    },
+    "leakage_suspect": false,
+    "exclude_from_model": false,
+    "priority": "low"
+  },
+  "PMJJBY_FLAG": {
+    "column": "PMJJBY_FLAG",
+    "semantic_type": "boolean_flag",
+    "feature_role": "feature",
+    "recommended_ops": [
+      {
+        "op": "map_binary",
+        "to": [
+          0,
+          1
+        ]
+      }
+    ],
+    "requires_human": false,
+    "notes": [],
+    "quality_status": "OK",
+    "target_signal": {
+      "iv": 0.005861321939911081,
+      "iv_band": "useless",
+      "predictive_rank": 20,
+      "predictive_score": 0.005861321939911081
+    },
+    "leakage_suspect": false,
+    "exclude_from_model": false,
+    "priority": "low"
+  },
+  "CHEQUE_ALLOWED_FLAG": {
+    "column": "CHEQUE_ALLOWED_FLAG",
+    "semantic_type": "boolean_flag",
+    "feature_role": "feature",
+    "recommended_ops": [
+      {
+        "op": "map_binary",
+        "to": [
+          0,
+          1
+        ]
+      }
+    ],
+    "requires_human": false,
+    "notes": [],
+    "quality_status": "OK",
+    "target_signal": {
+      "iv": 0.0007312025615492489,
+      "iv_band": "useless",
+      "predictive_rank": 27,
+      "predictive_score": 0.0007312025615492489
+    },
+    "leakage_suspect": false,
+    "exclude_from_model": false,
+    "priority": "low"
+  },
+  "CHEQUE_BOOK_AVAILED_FLAG": {
+    "column": "CHEQUE_BOOK_AVAILED_FLAG",
+    "semantic_type": "boolean_flag",
+    "feature_role": "feature",
+    "recommended_ops": [
+      {
+        "op": "map_binary",
+        "to": [
+          0,
+          1
+        ]
+      }
+    ],
+    "requires_human": false,
+    "notes": [],
+    "quality_status": "OK",
+    "target_signal": {
+      "iv": 0.014912569923570682,
+      "iv_band": "useless",
+      "predictive_rank": 14,
+      "predictive_score": 0.014912569923570682
+    },
+    "leakage_suspect": false,
+    "exclude_from_model": false,
+    "priority": "low"
+  },
+  "NUM_CHEQUE_BOOKS": {
+    "column": "NUM_CHEQUE_BOOKS",
+    "semantic_type": "count",
+    "feature_role": "feature",
+    "recommended_ops": [
+      {
+        "op": "outlier_cap",
+        "at": "p99",
+        "reason": "outliers=0.072"
+      },
+      {
+        "op": "add_flag",
+        "name": "NUM_CHEQUE_BOOKS__is_zero"
+      },
+      {
+        "op": "scale",
+        "method": "robust"
+      }
+    ],
+    "requires_human": false,
+    "notes": [],
+    "quality_status": "OK",
+    "target_signal": {
+      "iv": 0.04075373987269741,
+      "iv_band": "weak",
+      "auc": 0.5117397519734519,
+      "ks": 0.06253483867551912,
+      "predictive_rank": 6,
+      "predictive_score": 0.04075373987269741
+    },
+    "leakage_suspect": false,
+    "exclude_from_model": false,
+    "priority": "low"
+  },
+  "LAST_MOBILE_UPDATE_DATE": {
+    "column": "LAST_MOBILE_UPDATE_DATE",
+    "semantic_type": "datetime",
+    "feature_role": "feature",
+    "recommended_ops": [
+      {
+        "op": "datetime_decompose",
+        "parts": [
+          "recency_days",
+          "year",
+          "month",
+          "dayofweek"
+        ]
+      }
+    ],
+    "requires_human": false,
+    "notes": [],
+    "quality_status": "OK",
+    "target_signal": null,
+    "leakage_suspect": false,
+    "exclude_from_model": false,
+    "priority": "unranked"
+  },
+  "PAN_FLAG": {
+    "column": "PAN_FLAG",
+    "semantic_type": "boolean_flag",
+    "feature_role": "feature",
+    "recommended_ops": [
+      {
+        "op": "map_binary",
+        "to": [
+          0,
+          1
+        ]
+      }
+    ],
+    "requires_human": false,
+    "notes": [],
+    "quality_status": "OK",
+    "target_signal": {
+      "iv": 0.010118976583885848,
+      "iv_band": "useless",
+      "predictive_rank": 16,
+      "predictive_score": 0.010118976583885848
+    },
+    "leakage_suspect": false,
+    "exclude_from_model": false,
+    "priority": "low"
+  },
+  "AADHAR_FLAG": {
+    "column": "AADHAR_FLAG",
+    "semantic_type": "boolean_flag",
+    "feature_role": "feature",
+    "recommended_ops": [
+      {
+        "op": "map_binary",
+        "to": [
+          0,
+          1
+        ]
+      }
+    ],
+    "requires_human": false,
+    "notes": [],
+    "quality_status": "OK",
+    "target_signal": {
+      "iv": 2.1978243425271397e-05,
+      "iv_band": "useless",
+      "predictive_rank": 37,
+      "predictive_score": 2.1978243425271397e-05
+    },
+    "leakage_suspect": false,
+    "exclude_from_model": false,
+    "priority": "low"
+  },
+  "GSTN_FLAG": {
+    "column": "GSTN_FLAG",
+    "semantic_type": "boolean_flag",
+    "feature_role": "feature",
+    "recommended_ops": [
+      {
+        "op": "map_binary",
+        "to": [
+          0,
+          1
+        ]
+      }
+    ],
+    "requires_human": false,
+    "notes": [],
+    "quality_status": "WARN",
+    "target_signal": {
+      "iv": 0.0003763701653869284,
+      "iv_band": "useless",
+      "predictive_rank": 30,
+      "predictive_score": 0.0003763701653869284
+    },
+    "leakage_suspect": false,
+    "exclude_from_model": false,
+    "priority": "low"
+  },
+  "PASSPORT_FLAG": {
+    "column": "PASSPORT_FLAG",
+    "semantic_type": "boolean_flag",
+    "feature_role": "feature",
+    "recommended_ops": [
+      {
+        "op": "map_binary",
+        "to": [
+          0,
+          1
+        ]
+      }
+    ],
+    "requires_human": false,
+    "notes": [],
+    "quality_status": "WARN",
+    "target_signal": {
+      "iv": 0.0003631747348687361,
+      "iv_band": "useless",
+      "predictive_rank": 31,
+      "predictive_score": 0.0003631747348687361
+    },
+    "leakage_suspect": false,
+    "exclude_from_model": false,
+    "priority": "low"
+  },
+  "VOTER_ID_FLAG": {
+    "column": "VOTER_ID_FLAG",
+    "semantic_type": "boolean_flag",
+    "feature_role": "feature",
+    "recommended_ops": [
+      {
+        "op": "map_binary",
+        "to": [
+          0,
+          1
+        ]
+      }
+    ],
+    "requires_human": false,
+    "notes": [],
+    "quality_status": "OK",
+    "target_signal": {
+      "iv": 0.018514241971109006,
+      "iv_band": "useless",
+      "predictive_rank": 12,
+      "predictive_score": 0.018514241971109006
+    },
+    "leakage_suspect": false,
+    "exclude_from_model": false,
+    "priority": "low"
+  },
+  "KYC_RATING": {
+    "column": "KYC_RATING",
+    "semantic_type": "categorical",
+    "feature_role": "feature",
+    "recommended_ops": [
+      {
+        "op": "encode",
+        "method": "woe"
+      }
+    ],
+    "requires_human": false,
+    "notes": [],
+    "quality_status": "OK",
+    "target_signal": {
+      "iv": 0.03920678920986614,
+      "iv_band": "weak",
+      "predictive_rank": 7,
+      "predictive_score": 0.03920678920986614
+    },
+    "leakage_suspect": false,
+    "exclude_from_model": false,
+    "priority": "low"
+  },
+  "INTERNET_BANKING_FLAG": {
+    "column": "INTERNET_BANKING_FLAG",
+    "semantic_type": "boolean_flag",
+    "feature_role": "feature",
+    "recommended_ops": [
+      {
+        "op": "map_binary",
+        "to": [
+          0,
+          1
+        ]
+      }
+    ],
+    "requires_human": false,
+    "notes": [],
+    "quality_status": "OK",
+    "target_signal": {
+      "iv": 0.0016408594030499146,
+      "iv_band": "useless",
+      "predictive_rank": 25,
+      "predictive_score": 0.0016408594030499146
+    },
+    "leakage_suspect": false,
+    "exclude_from_model": false,
+    "priority": "low"
+  },
+  "MOBILE_BANKING_FLAG": {
+    "column": "MOBILE_BANKING_FLAG",
+    "semantic_type": "boolean_flag",
+    "feature_role": "feature",
+    "recommended_ops": [
+      {
+        "op": "map_binary",
+        "to": [
+          0,
+          1
+        ]
+      }
+    ],
+    "requires_human": false,
+    "notes": [],
+    "quality_status": "OK",
+    "target_signal": {
+      "iv": 0.0080735249117542,
+      "iv_band": "useless",
+      "predictive_rank": 18,
+      "predictive_score": 0.0080735249117542
+    },
+    "leakage_suspect": false,
+    "exclude_from_model": false,
+    "priority": "low"
+  },
+  "UPI_FLAG": {
+    "column": "UPI_FLAG",
+    "semantic_type": "boolean_flag",
+    "feature_role": "feature",
+    "recommended_ops": [
+      {
+        "op": "map_binary",
+        "to": [
+          0,
+          1
+        ]
+      }
+    ],
+    "requires_human": false,
+    "notes": [],
+    "quality_status": "OK",
+    "target_signal": {
+      "iv": 0.0006892749295503548,
+      "iv_band": "useless",
+      "predictive_rank": 28,
+      "predictive_score": 0.0006892749295503548
+    },
+    "leakage_suspect": false,
+    "exclude_from_model": false,
+    "priority": "low"
+  },
+  "DEMAT_FLAG": {
+    "column": "DEMAT_FLAG",
+    "semantic_type": "boolean_flag",
+    "feature_role": "feature",
+    "recommended_ops": [
+      {
+        "op": "map_binary",
+        "to": [
+          0,
+          1
+        ]
+      }
+    ],
+    "requires_human": false,
+    "notes": [],
+    "quality_status": "WARN",
+    "target_signal": {
+      "iv": 3.170446984354759e-05,
+      "iv_band": "useless",
+      "predictive_rank": 35,
+      "predictive_score": 3.170446984354759e-05
+    },
+    "leakage_suspect": false,
+    "exclude_from_model": false,
+    "priority": "low"
+  },
+  "MUTUAL_FUND_FLAG": {
+    "column": "MUTUAL_FUND_FLAG",
+    "semantic_type": "boolean_flag",
+    "feature_role": "feature",
+    "recommended_ops": [
+      {
+        "op": "map_binary",
+        "to": [
+          0,
+          1
+        ]
+      }
+    ],
+    "requires_human": false,
+    "notes": [],
+    "quality_status": "WARN",
+    "target_signal": {
+      "iv": 3.5974688549062796e-07,
+      "iv_band": "useless",
+      "predictive_rank": 39,
+      "predictive_score": 3.5974688549062796e-07
+    },
+    "leakage_suspect": false,
+    "exclude_from_model": false,
+    "priority": "low"
+  },
+  "MPASSBOOK_FLAG": {
+    "column": "MPASSBOOK_FLAG",
+    "semantic_type": "boolean_flag",
+    "feature_role": "feature",
+    "recommended_ops": [
+      {
+        "op": "map_binary",
+        "to": [
+          0,
+          1
+        ]
+      }
+    ],
+    "requires_human": false,
+    "notes": [],
+    "quality_status": "OK",
+    "target_signal": {
+      "iv": 0.0585551549146229,
+      "iv_band": "weak",
+      "predictive_rank": 5,
+      "predictive_score": 0.0585551549146229
+    },
+    "leakage_suspect": false,
+    "exclude_from_model": false,
+    "priority": "low"
+  },
+  "FAST_TAG_FLAG": {
+    "column": "FAST_TAG_FLAG",
+    "semantic_type": "boolean_flag",
+    "feature_role": "feature",
+    "recommended_ops": [
+      {
+        "op": "map_binary",
+        "to": [
+          0,
+          1
+        ]
+      }
+    ],
+    "requires_human": false,
+    "notes": [],
+    "quality_status": "WARN",
+    "target_signal": {
+      "iv": 1.3142969930017132e-05,
+      "iv_band": "useless",
+      "predictive_rank": 38,
+      "predictive_score": 1.3142969930017132e-05
+    },
+    "leakage_suspect": false,
+    "exclude_from_model": false,
+    "priority": "low"
+  },
+  "SSA_FLAG": {
+    "column": "SSA_FLAG",
+    "semantic_type": "boolean_flag",
+    "feature_role": "feature",
+    "recommended_ops": [
+      {
+        "op": "map_binary",
+        "to": [
+          0,
+          1
+        ]
+      }
+    ],
+    "requires_human": false,
+    "notes": [],
+    "quality_status": "WARN",
+    "target_signal": {
+      "iv": 0.004015557622983218,
+      "iv_band": "useless",
+      "predictive_rank": 22,
+      "predictive_score": 0.004015557622983218
+    },
+    "leakage_suspect": false,
+    "exclude_from_model": false,
+    "priority": "low"
+  },
+  "PPF_FLAG": {
+    "column": "PPF_FLAG",
+    "semantic_type": "boolean_flag",
+    "feature_role": "feature",
+    "recommended_ops": [
+      {
+        "op": "map_binary",
+        "to": [
+          0,
+          1
+        ]
+      }
+    ],
+    "requires_human": false,
+    "notes": [],
+    "quality_status": "WARN",
+    "target_signal": {
+      "iv": 0.002852710692671544,
+      "iv_band": "useless",
+      "predictive_rank": 23,
+      "predictive_score": 0.002852710692671544
+    },
+    "leakage_suspect": false,
+    "exclude_from_model": false,
+    "priority": "low"
+  },
+  "LOCKER_FLAG": {
+    "column": "LOCKER_FLAG",
+    "semantic_type": "boolean_flag",
+    "feature_role": "feature",
+    "recommended_ops": [
+      {
+        "op": "map_binary",
+        "to": [
+          0,
+          1
+        ]
+      }
+    ],
+    "requires_human": false,
+    "notes": [],
+    "quality_status": "WARN",
+    "target_signal": {
+      "iv": 0.002545149154710167,
+      "iv_band": "useless",
+      "predictive_rank": 24,
+      "predictive_score": 0.002545149154710167
+    },
+    "leakage_suspect": false,
+    "exclude_from_model": false,
+    "priority": "low"
+  },
+  "ATM_ISSUED_FLAG": {
+    "column": "ATM_ISSUED_FLAG",
+    "semantic_type": "boolean_flag",
+    "feature_role": "feature",
+    "recommended_ops": [
+      {
+        "op": "map_binary",
+        "to": [
+          0,
+          1
+        ]
+      }
+    ],
+    "requires_human": false,
+    "notes": [],
+    "quality_status": "OK",
+    "target_signal": {
+      "iv": 0.00018012206787115505,
+      "iv_band": "useless",
+      "predictive_rank": 33,
+      "predictive_score": 0.00018012206787115505
+    },
+    "leakage_suspect": false,
+    "exclude_from_model": false,
+    "priority": "low"
+  },
+  "CREDIT_CARD_FLAG": {
+    "column": "CREDIT_CARD_FLAG",
+    "semantic_type": "boolean_flag",
+    "feature_role": "feature",
+    "recommended_ops": [
+      {
+        "op": "map_binary",
+        "to": [
+          0,
+          1
+        ]
+      }
+    ],
+    "requires_human": false,
+    "notes": [],
+    "quality_status": "OK",
+    "target_signal": {
+      "iv": 0.005365800485636797,
+      "iv_band": "useless",
+      "predictive_rank": 21,
+      "predictive_score": 0.005365800485636797
+    },
+    "leakage_suspect": false,
+    "exclude_from_model": false,
+    "priority": "low"
+  },
+  "NUM_CREDIT_CARDS": {
+    "column": "NUM_CREDIT_CARDS",
+    "semantic_type": "count",
+    "feature_role": "feature",
+    "recommended_ops": [
+      {
+        "op": "add_flag",
+        "name": "NUM_CREDIT_CARDS__is_zero"
+      },
+      {
+        "op": "scale",
+        "method": "robust"
+      }
+    ],
+    "requires_human": false,
+    "notes": [],
+    "quality_status": "OK",
+    "target_signal": {
+      "iv": 0.0,
+      "iv_band": "useless",
+      "auc": 0.5034658134584584,
+      "ks": 0.006936095519784802,
+      "predictive_rank": 13,
+      "predictive_score": 0.018218895363664465
+    },
+    "leakage_suspect": false,
+    "exclude_from_model": false,
+    "priority": "low"
+  },
+  "ACCOUNT_STATUS": {
+    "column": "ACCOUNT_STATUS",
+    "semantic_type": "binary",
+    "feature_role": "feature",
+    "recommended_ops": [
+      {
+        "op": "encode",
+        "method": "woe"
+      },
+      {
+        "op": "rare_bucket",
+        "min_freq_frac": 0.01
+      }
+    ],
+    "requires_human": false,
+    "notes": [],
+    "quality_status": "WARN",
+    "target_signal": {
+      "iv": 0.01010158504737551,
+      "iv_band": "useless",
+      "predictive_rank": 17,
+      "predictive_score": 0.01010158504737551
+    },
+    "leakage_suspect": false,
+    "exclude_from_model": false,
+    "priority": "low"
+  },
+  "FREEZE_CODES": {
+    "column": "FREEZE_CODES",
+    "semantic_type": "categorical",
+    "feature_role": "feature",
+    "recommended_ops": [
+      {
+        "op": "encode",
+        "method": "woe"
+      },
+      {
+        "op": "rare_bucket",
+        "min_freq_frac": 0.01
+      }
+    ],
+    "requires_human": false,
+    "notes": [],
+    "quality_status": "OK",
+    "target_signal": {
+      "iv": 2.949497934296431,
+      "iv_band": "strong",
+      "predictive_rank": 1,
+      "predictive_score": 2.949497934296431
+    },
+    "leakage_suspect": false,
+    "exclude_from_model": false,
+    "priority": "high"
+  },
+  "CURRENCY_CODE": {
+    "column": "CURRENCY_CODE",
+    "semantic_type": "constant",
+    "feature_role": "feature",
+    "recommended_ops": [
+      {
+        "op": "drop",
+        "reason": "single value"
+      }
+    ],
+    "requires_human": false,
+    "notes": [],
+    "quality_status": "DROP_SUGGESTED",
+    "target_signal": null,
+    "leakage_suspect": false,
+    "exclude_from_model": false,
+    "priority": "drop"
+  },
+  "KYC_COMPLIANT_FLAG": {
+    "column": "KYC_COMPLIANT_FLAG",
+    "semantic_type": "boolean_flag",
+    "feature_role": "feature",
+    "recommended_ops": [
+      {
+        "op": "map_binary",
+        "to": [
+          0,
+          1
+        ]
+      }
+    ],
+    "requires_human": false,
+    "notes": [],
+    "quality_status": "OK",
+    "target_signal": {
+      "iv": 0.0002229277378001749,
+      "iv_band": "useless",
+      "predictive_rank": 32,
+      "predictive_score": 0.0002229277378001749
+    },
+    "leakage_suspect": false,
+    "exclude_from_model": false,
+    "priority": "low"
+  },
+  "KYC_REVIEW_DATE": {
+    "column": "KYC_REVIEW_DATE",
+    "semantic_type": "datetime",
+    "feature_role": "feature",
+    "recommended_ops": [
+      {
+        "op": "datetime_decompose",
+        "parts": [
+          "recency_days",
+          "year",
+          "month",
+          "dayofweek"
+        ]
+      }
+    ],
+    "requires_human": false,
+    "notes": [],
+    "quality_status": "OK",
+    "target_signal": null,
+    "leakage_suspect": false,
+    "exclude_from_model": false,
+    "priority": "unranked"
+  },
+  "LAST_FREEZE_DATE": {
+    "column": "LAST_FREEZE_DATE",
+    "semantic_type": "datetime",
+    "feature_role": "feature",
+    "recommended_ops": [
+      {
+        "op": "impute",
+        "strategy": "median_or_mode",
+        "add_missing_flag": true,
+        "reason": "missing=0.44"
+      },
+      {
+        "op": "datetime_decompose",
+        "parts": [
+          "recency_days",
+          "year",
+          "month",
+          "dayofweek",
+          "hour"
+        ]
+      }
+    ],
+    "requires_human": false,
+    "notes": [],
+    "quality_status": "WARN",
+    "target_signal": null,
+    "leakage_suspect": false,
+    "exclude_from_model": false,
+    "priority": "unranked"
+  },
+  "LAST_UNFREEZE_DATE": {
+    "column": "LAST_UNFREEZE_DATE",
+    "semantic_type": "datetime",
+    "feature_role": "feature",
+    "recommended_ops": [
+      {
+        "op": "impute",
+        "strategy": "median_or_mode",
+        "add_missing_flag": true,
+        "reason": "missing=0.52"
+      },
+      {
+        "op": "datetime_decompose",
+        "parts": [
+          "recency_days",
+          "year",
+          "month",
+          "dayofweek",
+          "hour"
+        ]
+      }
+    ],
+    "requires_human": false,
+    "notes": [],
+    "quality_status": "WARN",
+    "target_signal": null,
+    "leakage_suspect": false,
+    "exclude_from_model": false,
+    "priority": "unranked"
+  },
+  "PINCODE": {
+    "column": "PINCODE",
+    "semantic_type": "pincode",
+    "feature_role": "feature",
+    "recommended_ops": [],
+    "requires_human": true,
+    "notes": [
+      "region_lookup(requires_human)"
+    ],
+    "quality_status": "OK",
+    "target_signal": {
+      "iv": 0.019154975204680253,
+      "iv_band": "useless",
+      "predictive_rank": 11,
+      "predictive_score": 0.019154975204680253
+    },
+    "leakage_suspect": false,
+    "exclude_from_model": false,
+    "priority": "low"
+  },
+  "AREA_CATEGORY": {
+    "column": "AREA_CATEGORY",
+    "semantic_type": "boolean_flag",
+    "feature_role": "feature",
+    "recommended_ops": [
+      {
+        "op": "map_binary",
+        "to": [
+          0,
+          1
+        ]
+      }
+    ],
+    "requires_human": false,
+    "notes": [],
+    "quality_status": "OK",
+    "target_signal": {
+      "iv": 0.03527122076739705,
+      "iv_band": "weak",
+      "predictive_rank": 8,
+      "predictive_score": 0.03527122076739705
+    },
+    "leakage_suspect": false,
+    "exclude_from_model": false,
+    "priority": "low"
+  },
+  "BRANCH_CATEGORY": {
+    "column": "BRANCH_CATEGORY",
+    "semantic_type": "categorical",
+    "feature_role": "feature",
+    "recommended_ops": [
+      {
+        "op": "encode",
+        "method": "woe"
+      },
+      {
+        "op": "rare_bucket",
+        "min_freq_frac": 0.01
+      }
+    ],
+    "requires_human": false,
+    "notes": [],
+    "quality_status": "OK",
+    "target_signal": {
+      "iv": 0.006166056208286759,
+      "iv_band": "useless",
+      "predictive_rank": 19,
+      "predictive_score": 0.006166056208286759
+    },
+    "leakage_suspect": false,
+    "exclude_from_model": false,
+    "priority": "low"
+  },
+  "SCHEME_TYPE": {
+    "column": "SCHEME_TYPE",
+    "semantic_type": "categorical",
+    "feature_role": "feature",
+    "recommended_ops": [
+      {
+        "op": "encode",
+        "method": "woe"
+      },
+      {
+        "op": "rare_bucket",
+        "min_freq_frac": 0.01
+      }
+    ],
+    "requires_human": false,
+    "notes": [],
+    "quality_status": "OK",
+    "target_signal": {
+      "iv": 0.025628815931920276,
+      "iv_band": "weak",
+      "predictive_rank": 9,
+      "predictive_score": 0.025628815931920276
+    },
+    "leakage_suspect": false,
+    "exclude_from_model": false,
+    "priority": "low"
+  },
+  "ACCOUNT_TYPE": {
+    "column": "ACCOUNT_TYPE",
+    "semantic_type": "categorical",
+    "feature_role": "feature",
+    "recommended_ops": [
+      {
+        "op": "encode",
+        "method": "woe"
+      },
+      {
+        "op": "rare_bucket",
+        "min_freq_frac": 0.01
+      }
+    ],
+    "requires_human": false,
+    "notes": [],
+    "quality_status": "OK",
+    "target_signal": {
+      "iv": 0.16663918190187757,
+      "iv_band": "medium",
+      "predictive_rank": 4,
+      "predictive_score": 0.16663918190187757
+    },
+    "leakage_suspect": false,
+    "exclude_from_model": false,
+    "priority": "medium"
+  },
+  "APY_FLAG": {
+    "column": "APY_FLAG",
+    "semantic_type": "boolean_flag",
+    "feature_role": "feature",
+    "recommended_ops": [
+      {
+        "op": "map_binary",
+        "to": [
+          0,
+          1
+        ]
+      }
+    ],
+    "requires_human": false,
+    "notes": [],
+    "quality_status": "OK",
+    "target_signal": {
+      "iv": 2.3628470984469204e-05,
+      "iv_band": "useless",
+      "predictive_rank": 36,
+      "predictive_score": 2.3628470984469204e-05
+    },
+    "leakage_suspect": false,
+    "exclude_from_model": false,
+    "priority": "low"
+  },
+  "UDHYAM_FLAG": {
+    "column": "UDHYAM_FLAG",
+    "semantic_type": "boolean_flag",
+    "feature_role": "feature",
+    "recommended_ops": [
+      {
+        "op": "drop",
+        "reason": "missing=1.00"
+      },
+      {
+        "op": "map_binary",
+        "to": [
+          0,
+          1
+        ]
+      }
+    ],
+    "requires_human": false,
+    "notes": [],
+    "quality_status": "DROP_SUGGESTED",
+    "target_signal": {
+      "iv": 0.0006032818691344673,
+      "iv_band": "useless",
+      "predictive_rank": 29,
+      "predictive_score": 0.0006032818691344673
+    },
+    "leakage_suspect": false,
+    "exclude_from_model": false,
+    "priority": "drop"
+  },
+  "ACCOUNT_OPEN_DATE": {
+    "column": "ACCOUNT_OPEN_DATE",
+    "semantic_type": "datetime",
+    "feature_role": "feature",
+    "recommended_ops": [
+      {
+        "op": "datetime_decompose",
+        "parts": [
+          "recency_days",
+          "year",
+          "month",
+          "dayofweek"
+        ]
+      }
+    ],
+    "requires_human": false,
+    "notes": [],
+    "quality_status": "OK",
+    "target_signal": null,
+    "leakage_suspect": false,
+    "exclude_from_model": false,
+    "priority": "unranked"
+  },
+  "LIEN_AMOUNT": {
+    "column": "LIEN_AMOUNT",
+    "semantic_type": "amount",
+    "feature_role": "feature",
+    "recommended_ops": [
+      {
+        "op": "outlier_cap",
+        "at": "p99",
+        "reason": "outliers=0.141"
+      },
+      {
+        "op": "add_flag",
+        "name": "LIEN_AMOUNT__is_zero"
+      },
+      {
+        "op": "scale",
+        "method": "robust"
+      }
+    ],
+    "requires_human": false,
+    "notes": [],
+    "quality_status": "OK",
+    "target_signal": {
+      "iv": 0.42126146895928174,
+      "iv_band": "strong",
+      "auc": 0.6203448737527595,
+      "ks": 0.2516108271580588,
+      "predictive_rank": 2,
+      "predictive_score": 0.42126146895928174
+    },
+    "leakage_suspect": false,
+    "exclude_from_model": false,
+    "priority": "high"
+  },
+  "LAST_TRANSACTION_DATE": {
+    "column": "LAST_TRANSACTION_DATE",
+    "semantic_type": "datetime",
+    "feature_role": "feature",
+    "recommended_ops": [
+      {
+        "op": "datetime_decompose",
+        "parts": [
+          "recency_days",
+          "year",
+          "month",
+          "dayofweek"
+        ]
+      }
+    ],
+    "requires_human": false,
+    "notes": [],
+    "quality_status": "OK",
+    "target_signal": null,
+    "leakage_suspect": false,
+    "exclude_from_model": false,
+    "priority": "unranked"
+  }
+}

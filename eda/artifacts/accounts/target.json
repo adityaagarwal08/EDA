@@ -1,0 +1,2498 @@
+{
+  "primary_target": "is_fraudster_account",
+  "results": {
+    "is_fraudster_account": {
+      "supervised": true,
+      "positive_rate": 0.125955,
+      "n_pos": 25191,
+      "n_neg": 174809,
+      "columns": {
+        "ACCOUNT_OPEN_MODE": {
+          "iv": 0.2809857865709171,
+          "iv_band": "medium",
+          "cramers_v_target": 0.18138107266435616,
+          "lift": {
+            "max_lift": 1.955621938329462,
+            "max_lift_category": "TAB_EKYC",
+            "top_bad_rate": 0.2463203612422874
+          },
+          "target_rate_by_cat": {
+            "BRANCH": {
+              "rate": 0.07439785445355614,
+              "n": 77556
+            },
+            "BCA": {
+              "rate": 0.12050895036041247,
+              "n": 70891
+            },
+            "TAB_EKYC": {
+              "rate": 0.2463203612422874,
+              "n": 29011
+            },
+            "TAB_OTHER": {
+              "rate": 0.1981273739068987,
+              "n": 11321
+            },
+            "OOSA": {
+              "rate": 0.09075342465753425,
+              "n": 2336
+            },
+            "EVEDA": {
+              "rate": 0.1231696813092162,
+              "n": 2322
+            },
+            "DMS_OTHER": {
+              "rate": 0.18018967334035826,
+              "n": 1898
+            },
+            "KYC-VIDEO": {
+              "rate": 0.2241472658364916,
+              "n": 1847
+            },
+            "KYC-BRANCH": {
+              "rate": 0.10758965804837364,
+              "n": 1199
+            },
+            "ONLINE FDR - MB": {
+              "rate": 0.003989361702127659,
+              "n": 752
+            },
+            "KIT": {
+              "rate": 0.06418219461697723,
+              "n": 483
+            },
+            "TAB_ETB": {
+              "rate": 0.1952662721893491,
+              "n": 338
+            },
+            "KYC-AADHR OTP": {
+              "rate": 0.1875,
+              "n": 16
+            },
+            "DMS_EKYC": {
+              "rate": 0.3,
+              "n": 10
+            },
+            "ONLINE-LOANS": {
+              "rate": 0.0,
+              "n": 8
+            },
+            "ONLINE OD - MB": {
+              "rate": 0.0,
+              "n": 7
+            },
+            "DMS_NRE_NRO": {
+              "rate": 0.0,
+              "n": 5
+            }
+          },
+          "high_cardinality_capped": {
+            "n_distinct": 17,
+            "kept_top": 10
+          },
+          "predictive_rank": 3,
+          "predictive_score": 0.2809857865709171
+        },
+        "HAS_NOMINATION": {
+          "iv": 0.011297392593698063,
+          "iv_band": "useless",
+          "cramers_v_target": 0.03054655770047336,
+          "lift": {
+            "max_lift": 1.0360417696436193,
+            "max_lift_category": "Y",
+            "top_bad_rate": 0.13023685980589988
+          },
+          "target_rate_by_cat": {
+            "Y": {
+              "rate": 0.13023685980589988,
+              "n": 166512
+            },
+            "N": {
+              "rate": 0.10295004826254826,
+              "n": 33152
+            }
+          },
+          "predictive_rank": 15,
+          "predictive_score": 0.011297392593698063
+        },
+        "BRANCH_CODE": {
+          "iv": 0.02004307145978975,
+          "iv_band": "weak",
+          "cramers_v_target": 0.05494568770319935,
+          "lift": {
+            "max_lift": 0.9808624909421703,
+            "max_lift_category": "__other__",
+            "top_bad_rate": 0.12354453504662107
+          },
+          "target_rate_by_cat": {
+            "5310": {
+              "rate": 0.2647831800262812,
+              "n": 1522
+            },
+            "235500": {
+              "rate": 0.13215859030837004,
+              "n": 454
+            },
+            "236400": {
+              "rate": 0.20353982300884957,
+              "n": 452
+            },
+            "79200": {
+              "rate": 0.2058165548098434,
+              "n": 447
+            },
+            "90000": {
+              "rate": 0.167816091954023,
+              "n": 435
+            },
+            "233300": {
+              "rate": 0.21241050119331742,
+              "n": 419
+            },
+            "267600": {
+              "rate": 0.18652849740932642,
+              "n": 386
+            },
+            "110220": {
+              "rate": 0.08732394366197183,
+              "n": 355
+            },
+            "118220": {
+              "rate": 0.38011695906432746,
+              "n": 342
+            },
+            "331900": {
+              "rate": 0.23197492163009403,
+              "n": 319
+            },
+            "82700": {
+              "rate": 0.23270440251572327,
+              "n": 318
+            },
+            "874800": {
+              "rate": 0.20766773162939298,
+              "n": 313
+            },
+            "787100": {
+              "rate": 0.27184466019417475,
+              "n": 309
+            },
+            "195910": {
+              "rate": 0.17229729729729729,
+              "n": 296
+            },
+            "108620": {
+              "rate": 0.08362369337979095,
+              "n": 287
+            },
+            "603100": {
+              "rate": 0.2087912087912088,
+              "n": 273
+            },
+            "630300": {
+              "rate": 0.1568627450980392,
+              "n": 255
+            },
+            "694300": {
+              "rate": 0.2627450980392157,
+              "n": 255
+            },
+            "355800": {
+              "rate": 0.16929133858267717,
+              "n": 254
+            },
+            "116410": {
+              "rate": 0.13253012048192772,
+              "n": 249
+            }
+          },
+          "high_cardinality_capped": {
+            "n_distinct": 10048,
+            "kept_top": 10
+          },
+          "predictive_rank": 10,
+          "predictive_score": 0.02004307145978975
+        },
+        "PMJDY_FLAG": {
+          "iv": 0.00010646951064292382,
+          "iv_band": "useless",
+          "cramers_v_target": 0.002579836948151766,
+          "lift": {
+            "max_lift": 1.004596139482824,
+            "max_lift_category": "N",
+            "top_bad_rate": 0.1265339067485591
+          },
+          "target_rate_by_cat": {
+            "N": {
+              "rate": 0.1265339067485591,
+              "n": 158582
+            },
+            "Y": {
+              "rate": 0.12373847119609832,
+              "n": 41418
+            }
+          },
+          "predictive_rank": 34,
+          "predictive_score": 0.00010646951064292382
+        },
+        "SCSS_FLAG": {
+          "iv": 0.0007579214427315593,
+          "iv_band": "useless",
+          "cramers_v_target": 0.007321485257762323,
+          "lift": {
+            "max_lift": 1.0007048025370355,
+            "max_lift_category": "N",
+            "top_bad_rate": 0.12604377340355233
+          },
+          "target_rate_by_cat": {
+            "N": {
+              "rate": 0.12604377340355233,
+              "n": 199756
+            },
+            "Y": {
+              "rate": 0.05327868852459016,
+              "n": 244
+            }
+          },
+          "predictive_rank": 26,
+          "predictive_score": 0.0007579214427315593
+        },
+        "PMJJBY_FLAG": {
+          "iv": 0.005861321939911081,
+          "iv_band": "useless",
+          "cramers_v_target": 0.023631412253554387,
+          "lift": {
+            "max_lift": 1.0137031555089628,
+            "max_lift_category": "N",
+            "top_bad_rate": 0.12768098095213143
+          },
+          "target_rate_by_cat": {
+            "N": {
+              "rate": 0.12768098095213143,
+              "n": 190835
+            },
+            "Y": {
+              "rate": 0.09001636661211129,
+              "n": 9165
+            }
+          },
+          "predictive_rank": 20,
+          "predictive_score": 0.005861321939911081
+        },
+        "CHEQUE_ALLOWED_FLAG": {
+          "iv": 0.0007312025615492489,
+          "iv_band": "useless",
+          "cramers_v_target": 0.007215989051143255,
+          "lift": {
+            "max_lift": 1.012377443399749,
+            "max_lift_category": "Y",
+            "top_bad_rate": 0.1275370763446678
+          },
+          "target_rate_by_cat": {
+            "Y": {
+              "rate": 0.1275370763446678,
+              "n": 144162
+            },
+            "N": {
+              "rate": 0.12194772132381942,
+              "n": 55778
+            }
+          },
+          "predictive_rank": 27,
+          "predictive_score": 0.0007312025615492489
+        },
+        "CHEQUE_BOOK_AVAILED_FLAG": {
+          "iv": 0.014912569923570682,
+          "iv_band": "useless",
+          "cramers_v_target": 0.0405722775603928,
+          "lift": {
+            "max_lift": 1.1181628027126893,
+            "max_lift_category": "Y",
+            "top_bad_rate": 0.1408381958156768
+          },
+          "target_rate_by_cat": {
+            "N": {
+              "rate": 0.11374187558031569,
+              "n": 109854
+            },
+            "Y": {
+              "rate": 0.1408381958156768,
+              "n": 90146
+            }
+          },
+          "predictive_rank": 14,
+          "predictive_score": 0.014912569923570682
+        },
+        "NUM_CHEQUE_BOOKS": {
+          "iv": 0.04075373987269741,
+          "iv_band": "weak",
+          "auc": 0.5117397519734519,
+          "ks": 0.06253483867551912,
+          "point_biserial": -0.010056366756251411,
+          "lift": {
+            "max_lift": 1.0634716140372922,
+            "top_bin_rate": 0.13394956714606715,
+            "top_bin_capture": 0.9158032630701441
+          },
+          "predictive_rank": 6,
+          "predictive_score": 0.04075373987269741
+        },
+        "PAN_FLAG": {
+          "iv": 0.010118976583885848,
+          "iv_band": "useless",
+          "cramers_v_target": 0.032783063480203184,
+          "lift": {
+            "max_lift": 1.0598226599411815,
+            "max_lift_category": "Y",
+            "top_bad_rate": 0.13348996313289152
+          },
+          "target_rate_by_cat": {
+            "Y": {
+              "rate": 0.13348996313289152,
+              "n": 135351
+            },
+            "N": {
+              "rate": 0.11017958514439512,
+              "n": 64649
+            }
+          },
+          "predictive_rank": 16,
+          "predictive_score": 0.010118976583885848
+        },
+        "AADHAR_FLAG": {
+          "iv": 2.1978243425271397e-05,
+          "iv_band": "useless",
+          "cramers_v_target": 0.0,
+          "lift": {
+            "max_lift": 1.0007458522653534,
+            "max_lift_category": "Y",
+            "top_bad_rate": 0.1260489438220826
+          },
+          "target_rate_by_cat": {
+            "Y": {
+              "rate": 0.1260489438220826,
+              "n": 193528
+            },
+            "N": {
+              "rate": 0.12314585908529048,
+              "n": 6472
+            }
+          },
+          "predictive_rank": 37,
+          "predictive_score": 2.1978243425271397e-05
+        },
+        "GSTN_FLAG": {
+          "iv": 0.0003763701653869284,
+          "iv_band": "useless",
+          "cramers_v_target": 0.005111838709237391,
+          "lift": {
+            "max_lift": 1.0004337134427987,
+            "max_lift_category": "N",
+            "top_bad_rate": 0.12600962837668772
+          },
+          "target_rate_by_cat": {
+            "N": {
+              "rate": 0.12600962837668772,
+              "n": 199826
+            },
+            "Y": {
+              "rate": 0.06321839080459771,
+              "n": 174
+            }
+          },
+          "predictive_rank": 30,
+          "predictive_score": 0.0003763701653869284
+        },
+        "PASSPORT_FLAG": {
+          "iv": 0.0003631747348687361,
+          "iv_band": "useless",
+          "cramers_v_target": 0.004982791053448718,
+          "lift": {
+            "max_lift": 1.0004083615602408,
+            "max_lift_category": "N",
+            "top_bad_rate": 0.12600643518032015
+          },
+          "target_rate_by_cat": {
+            "N": {
+              "rate": 0.12600643518032015,
+              "n": 199839
+            },
+            "Y": {
+              "rate": 0.062111801242236024,
+              "n": 161
+            }
+          },
+          "predictive_rank": 31,
+          "predictive_score": 0.0003631747348687361
+        },
+        "VOTER_ID_FLAG": {
+          "iv": 0.018514241971109006,
+          "iv_band": "useless",
+          "cramers_v_target": 0.039161461455473334,
+          "lift": {
+            "max_lift": 1.0211414064534703,
+            "max_lift_category": "N",
+            "top_bad_rate": 0.12861786584984686
+          },
+          "target_rate_by_cat": {
+            "N": {
+              "rate": 0.12861786584984686,
+              "n": 191964
+            },
+            "Y": {
+              "rate": 0.062344449975111994,
+              "n": 8036
+            }
+          },
+          "predictive_rank": 12,
+          "predictive_score": 0.018514241971109006
+        },
+        "KYC_RATING": {
+          "iv": 0.03920678920986614,
+          "iv_band": "weak",
+          "cramers_v_target": 0.0699363307740793,
+          "lift": {
+            "max_lift": 1.6978276283960516,
+            "max_lift_category": "HIGH",
+            "top_bad_rate": 0.2138498789346247
+          },
+          "target_rate_by_cat": {
+            "LOW": {
+              "rate": 0.12617987195384264,
+              "n": 158068
+            },
+            "MEDIUM": {
+              "rate": 0.09611794855569969,
+              "n": 31607
+            },
+            "HIGH": {
+              "rate": 0.2138498789346247,
+              "n": 10325
+            }
+          },
+          "predictive_rank": 7,
+          "predictive_score": 0.03920678920986614
+        },
+        "INTERNET_BANKING_FLAG": {
+          "iv": 0.0016408594030499146,
+          "iv_band": "useless",
+          "cramers_v_target": 0.013276591097054641,
+          "lift": {
+            "max_lift": 1.0402226085094597,
+            "max_lift_category": "Y",
+            "top_bad_rate": 0.131021238654809
+          },
+          "target_rate_by_cat": {
+            "N": {
+              "rate": 0.1220160329902771,
+              "n": 112518
+            },
+            "Y": {
+              "rate": 0.131021238654809,
+              "n": 87482
+            }
+          },
+          "predictive_rank": 25,
+          "predictive_score": 0.0016408594030499146
+        },
+        "MOBILE_BANKING_FLAG": {
+          "iv": 0.0080735249117542,
+          "iv_band": "useless",
+          "cramers_v_target": 0.029349312057740357,
+          "lift": {
+            "max_lift": 1.0551134646272,
+            "max_lift_category": "Y",
+            "top_bad_rate": 0.13289681643711898
+          },
+          "target_rate_by_cat": {
+            "Y": {
+              "rate": 0.13289681643711898,
+              "n": 132870
+            },
+            "N": {
+              "rate": 0.11221510502011023,
+              "n": 67130
+            }
+          },
+          "predictive_rank": 18,
+          "predictive_score": 0.0080735249117542
+        },
+        "UPI_FLAG": {
+          "iv": 0.0006892749295503548,
+          "iv_band": "useless",
+          "cramers_v_target": 0.008577586047442524,
+          "lift": {
+            "max_lift": 1.0910248422917002,
+            "max_lift_category": "N",
+            "top_bad_rate": 0.1374200340108511
+          },
+          "target_rate_by_cat": {
+            "Y": {
+              "rate": 0.12520050519315112,
+              "n": 187651
+            },
+            "N": {
+              "rate": 0.1374200340108511,
+              "n": 12349
+            }
+          },
+          "predictive_rank": 28,
+          "predictive_score": 0.0006892749295503548
+        },
+        "DEMAT_FLAG": {
+          "iv": 3.170446984354759e-05,
+          "iv_band": "useless",
+          "cramers_v_target": 0.0,
+          "lift": {
+            "max_lift": 1.0001796550841422,
+            "max_lift_category": "N",
+            "top_bad_rate": 0.12597762845612315
+          },
+          "target_rate_by_cat": {
+            "N": {
+              "rate": 0.12597762845612315,
+              "n": 199718
+            },
+            "Y": {
+              "rate": 0.1099290780141844,
+              "n": 282
+            }
+          },
+          "predictive_rank": 35,
+          "predictive_score": 3.170446984354759e-05
+        },
+        "MUTUAL_FUND_FLAG": {
+          "iv": 3.5974688549062796e-07,
+          "iv_band": "useless",
+          "cramers_v_target": 0.0,
+          "lift": {
+            "max_lift": 0.999988634109883,
+            "max_lift_category": "N",
+            "top_bad_rate": 0.12595356840931032
+          },
+          "target_rate_by_cat": {
+            "N": {
+              "rate": 0.12595356840931032,
+              "n": 199907
+            },
+            "Y": {
+              "rate": 0.12903225806451613,
+              "n": 93
+            }
+          },
+          "predictive_rank": 39,
+          "predictive_score": 3.5974688549062796e-07
+        },
+        "MPASSBOOK_FLAG": {
+          "iv": 0.0585551549146229,
+          "iv_band": "weak",
+          "cramers_v_target": 0.07456533079052588,
+          "lift": {
+            "max_lift": 1.1042067141859133,
+            "max_lift_category": "N",
+            "top_bad_rate": 0.13908035668528673
+          },
+          "target_rate_by_cat": {
+            "N": {
+              "rate": 0.13908035668528673,
+              "n": 156104
+            },
+            "Y": {
+              "rate": 0.07927829414980864,
+              "n": 43896
+            }
+          },
+          "predictive_rank": 5,
+          "predictive_score": 0.0585551549146229
+        },
+        "FAST_TAG_FLAG": {
+          "iv": 1.3142969930017132e-05,
+          "iv_band": "useless",
+          "cramers_v_target": 0.0,
+          "lift": {
+            "max_lift": 1.0000627559037458,
+            "max_lift_category": "N",
+            "top_bad_rate": 0.12596290441985633
+          },
+          "target_rate_by_cat": {
+            "N": {
+              "rate": 0.12596290441985633,
+              "n": 199916
+            },
+            "Y": {
+              "rate": 0.10714285714285714,
+              "n": 84
+            }
+          },
+          "predictive_rank": 38,
+          "predictive_score": 1.3142969930017132e-05
+        },
+        "SSA_FLAG": {
+          "iv": 0.004015557622983218,
+          "iv_band": "useless",
+          "cramers_v_target": 0.016764740174112315,
+          "lift": {
+            "max_lift": 1.0030105108054324,
+            "max_lift_category": "N",
+            "top_bad_rate": 0.12633418888849823
+          },
+          "target_rate_by_cat": {
+            "N": {
+              "rate": 0.12633418888849823,
+              "n": 199091
+            },
+            "Y": {
+              "rate": 0.0429042904290429,
+              "n": 909
+            }
+          },
+          "predictive_rank": 22,
+          "predictive_score": 0.004015557622983218
+        },
+        "PPF_FLAG": {
+          "iv": 0.002852710692671544,
+          "iv_band": "useless",
+          "cramers_v_target": 0.015020895843665814,
+          "lift": {
+            "max_lift": 1.0030329565853433,
+            "max_lift_category": "N",
+            "top_bad_rate": 0.12633701604670694
+          },
+          "target_rate_by_cat": {
+            "N": {
+              "rate": 0.12633701604670694,
+              "n": 198857
+            },
+            "Y": {
+              "rate": 0.0594925634295713,
+              "n": 1143
+            }
+          },
+          "predictive_rank": 23,
+          "predictive_score": 0.002852710692671544
+        },
+        "LOCKER_FLAG": {
+          "iv": 0.002545149154710167,
+          "iv_band": "useless",
+          "cramers_v_target": 0.014006506058860212,
+          "lift": {
+            "max_lift": 1.002521904264684,
+            "max_lift_category": "N",
+            "top_bad_rate": 0.12627264645165828
+          },
+          "target_rate_by_cat": {
+            "N": {
+              "rate": 0.12627264645165828,
+              "n": 199093
+            },
+            "Y": {
+              "rate": 0.05622932745314223,
+              "n": 907
+            }
+          },
+          "predictive_rank": 24,
+          "predictive_score": 0.002545149154710167
+        },
+        "ATM_ISSUED_FLAG": {
+          "iv": 0.00018012206787115505,
+          "iv_band": "useless",
+          "cramers_v_target": 0.0038991077616909826,
+          "lift": {
+            "max_lift": 1.0475286684293474,
+            "max_lift_category": "N",
+            "top_bad_rate": 0.13194147343201848
+          },
+          "target_rate_by_cat": {
+            "Y": {
+              "rate": 0.12558347007376017,
+              "n": 188313
+            },
+            "N": {
+              "rate": 0.13194147343201848,
+              "n": 11687
+            }
+          },
+          "predictive_rank": 33,
+          "predictive_score": 0.00018012206787115505
+        },
+        "CREDIT_CARD_FLAG": {
+          "iv": 0.005365800485636797,
+          "iv_band": "useless",
+          "cramers_v_target": 0.021206339008384627,
+          "lift": {
+            "max_lift": 1.0067007250786129,
+            "max_lift_category": "N",
+            "top_bad_rate": 0.1267989898272767
+          },
+          "target_rate_by_cat": {
+            "N": {
+              "rate": 0.1267989898272767,
+              "n": 197194
+            },
+            "Y": {
+              "rate": 0.06664290805416964,
+              "n": 2806
+            }
+          },
+          "predictive_rank": 21,
+          "predictive_score": 0.005365800485636797
+        },
+        "NUM_CREDIT_CARDS": {
+          "iv": 0.0,
+          "iv_band": "useless",
+          "auc": 0.5034658134584584,
+          "ks": 0.006936095519784802,
+          "point_biserial": -0.018218895363664465,
+          "lift": {
+            "max_lift": 1.0,
+            "top_bin_rate": 0.125955,
+            "top_bin_capture": 1.0
+          },
+          "predictive_rank": 13,
+          "predictive_score": 0.018218895363664465
+        },
+        "ACCOUNT_STATUS": {
+          "iv": 0.01010158504737551,
+          "iv_band": "useless",
+          "cramers_v_target": 0.021120566267813237,
+          "lift": {
+            "max_lift": 0.998599941972332,
+            "max_lift_category": "A",
+            "top_bad_rate": 0.12639792854696033
+          },
+          "target_rate_by_cat": {
+            "A": {
+              "rate": 0.12639792854696033,
+              "n": 198508
+            },
+            "D": {
+              "rate": 0.408,
+              "n": 125
+            }
+          },
+          "predictive_rank": 17,
+          "predictive_score": 0.01010158504737551
+        },
+        "FREEZE_CODES": {
+          "iv": 2.949497934296431,
+          "iv_band": "strong",
+          "cramers_v_target": 0.6007692501888562,
+          "lift": {
+            "max_lift": 3.954340485345983,
+            "max_lift_category": "045|XX|XX|XX|XX",
+            "top_bad_rate": 0.49806895583175337
+          },
+          "target_rate_by_cat": {
+            "XX|XX|XX|XX|XX": {
+              "rate": 0.019187736647658295,
+              "n": 152389
+            },
+            "045|XX|XX|XX|XX": {
+              "rate": 0.49806895583175337,
+              "n": 42723
+            },
+            "999|XX|XX|XX|XX": {
+              "rate": 0.10021905805038335,
+              "n": 1826
+            },
+            "030|XX|XX|XX|XX": {
+              "rate": 0.0175054704595186,
+              "n": 914
+            },
+            "013|XX|XX|XX|XX": {
+              "rate": 0.024132730015082957,
+              "n": 663
+            },
+            "045|013|XX|XX|XX": {
+              "rate": 0.4896142433234421,
+              "n": 337
+            },
+            "999|045|XX|XX|XX": {
+              "rate": 0.6473429951690821,
+              "n": 207
+            },
+            "045|999|XX|XX|XX": {
+              "rate": 0.717948717948718,
+              "n": 156
+            },
+            "030|045|XX|XX|XX": {
+              "rate": 0.9252336448598131,
+              "n": 107
+            },
+            "046|XX|XX|XX|XX": {
+              "rate": 0.14285714285714285,
+              "n": 84
+            },
+            "038|XX|XX|XX|XX": {
+              "rate": 0.0125,
+              "n": 80
+            },
+            "045|045|XX|XX|XX": {
+              "rate": 0.7368421052631579,
+              "n": 57
+            },
+            "045|046|XX|XX|XX": {
+              "rate": 0.5283018867924528,
+              "n": 53
+            },
+            "046|045|XX|XX|XX": {
+              "rate": 0.5135135135135135,
+              "n": 37
+            },
+            "999|046|045|XX|XX": {
+              "rate": 0.7741935483870968,
+              "n": 31
+            },
+            "022|XX|XX|XX|XX": {
+              "rate": 0.0,
+              "n": 29
+            },
+            "999|999|XX|XX|XX": {
+              "rate": 0.07407407407407407,
+              "n": 27
+            },
+            "007|XX|XX|XX|XX": {
+              "rate": 0.13636363636363635,
+              "n": 22
+            },
+            "038|045|XX|XX|XX": {
+              "rate": 0.8,
+              "n": 20
+            },
+            "013|045|XX|XX|XX": {
+              "rate": 0.8333333333333334,
+              "n": 18
+            }
+          },
+          "high_cardinality_capped": {
+            "n_distinct": 119,
+            "kept_top": 10
+          },
+          "predictive_rank": 1,
+          "predictive_score": 2.949497934296431
+        },
+        "KYC_COMPLIANT_FLAG": {
+          "iv": 0.0002229277378001749,
+          "iv_band": "useless",
+          "cramers_v_target": 0.0043810714234805296,
+          "lift": {
+            "max_lift": 1.0045026122196539,
+            "max_lift_category": "Y",
+            "top_bad_rate": 0.12652212652212652
+          },
+          "target_rate_by_cat": {
+            "Y": {
+              "rate": 0.12652212652212652,
+              "n": 178451
+            },
+            "N": {
+              "rate": 0.12125852707782264,
+              "n": 21549
+            }
+          },
+          "predictive_rank": 32,
+          "predictive_score": 0.0002229277378001749
+        },
+        "PINCODE": {
+          "iv": 0.019154975204680253,
+          "iv_band": "useless",
+          "cramers_v_target": 0.05145758722943764,
+          "lift": {
+            "max_lift": 0.9788931755436755,
+            "max_lift_category": "__other__",
+            "top_bad_rate": 0.12329648992560366
+          },
+          "target_rate_by_cat": {
+            "122108.0": {
+              "rate": 0.2629987908101572,
+              "n": 1654
+            },
+            "321024.0": {
+              "rate": 0.1663716814159292,
+              "n": 1130
+            },
+            "321204.0": {
+              "rate": 0.20738636363636365,
+              "n": 704
+            },
+            "321023.0": {
+              "rate": 0.18803418803418803,
+              "n": 702
+            },
+            "301405.0": {
+              "rate": 0.23168908819133036,
+              "n": 669
+            },
+            "301411.0": {
+              "rate": 0.1951219512195122,
+              "n": 615
+            },
+            "247001.0": {
+              "rate": 0.07751937984496124,
+              "n": 516
+            },
+            "783301.0": {
+              "rate": 0.22474226804123712,
+              "n": 485
+            },
+            "121102.0": {
+              "rate": 0.1673913043478261,
+              "n": 460
+            },
+            "248001.0": {
+              "rate": 0.08928571428571429,
+              "n": 448
+            },
+            "132103.0": {
+              "rate": 0.06413301662707839,
+              "n": 421
+            },
+            "321022.0": {
+              "rate": 0.21241050119331742,
+              "n": 419
+            },
+            "251001.0": {
+              "rate": 0.0746987951807229,
+              "n": 415
+            },
+            "822114.0": {
+              "rate": 0.09951456310679611,
+              "n": 412
+            },
+            "301001.0": {
+              "rate": 0.16666666666666666,
+              "n": 390
+            },
+            "845438.0": {
+              "rate": 0.23622047244094488,
+              "n": 381
+            },
+            "244001.0": {
+              "rate": 0.10317460317460317,
+              "n": 378
+            },
+            "250002.0": {
+              "rate": 0.08533333333333333,
+              "n": 375
+            },
+            "301707.0": {
+              "rate": 0.16844919786096257,
+              "n": 374
+            },
+            "201301.0": {
+              "rate": 0.15633423180592992,
+              "n": 371
+            }
+          },
+          "high_cardinality_capped": {
+            "n_distinct": 5618,
+            "kept_top": 10
+          },
+          "predictive_rank": 11,
+          "predictive_score": 0.019154975204680253
+        },
+        "AREA_CATEGORY": {
+          "iv": 0.03527122076739705,
+          "iv_band": "weak",
+          "cramers_v_target": 0.061269592128349926,
+          "lift": {
+            "max_lift": 1.136230119411528,
+            "max_lift_category": "N",
+            "top_bad_rate": 0.14311386469047904
+          },
+          "target_rate_by_cat": {
+            "N": {
+              "rate": 0.14311386469047904,
+              "n": 116858
+            },
+            "Y": {
+              "rate": 0.10183781963387939,
+              "n": 83142
+            }
+          },
+          "predictive_rank": 8,
+          "predictive_score": 0.03527122076739705
+        },
+        "BRANCH_CATEGORY": {
+          "iv": 0.006166056208286759,
+          "iv_band": "useless",
+          "cramers_v_target": 0.026705170722778816,
+          "lift": {
+            "max_lift": 1.1068026775767112,
+            "max_lift_category": "VERY LARGE",
+            "top_bad_rate": 0.13936223218734428
+          },
+          "target_rate_by_cat": {
+            "MEDIUM": {
+              "rate": 0.12120453692221932,
+              "n": 87901
+            },
+            "LARGE": {
+              "rate": 0.1282808733149978,
+              "n": 58902
+            },
+            "SMALL": {
+              "rate": 0.12182839434437343,
+              "n": 30978
+            },
+            "VERY LARGE": {
+              "rate": 0.13936223218734428,
+              "n": 20070
+            },
+            "NEW": {
+              "rate": 0.1970649895178197,
+              "n": 1908
+            },
+            "EXCEPTIONALLY LARGE": {
+              "rate": 0.0916030534351145,
+              "n": 131
+            }
+          },
+          "predictive_rank": 19,
+          "predictive_score": 0.006166056208286759
+        },
+        "SCHEME_TYPE": {
+          "iv": 0.025628815931920276,
+          "iv_band": "weak",
+          "cramers_v_target": 0.04244316098576428,
+          "lift": {
+            "max_lift": 1.715186444550022,
+            "max_lift_category": "CAA",
+            "top_bad_rate": 0.21603630862329803
+          },
+          "target_rate_by_cat": {
+            "SBA": {
+              "rate": 0.1250614351245085,
+              "n": 195328
+            },
+            "CAA": {
+              "rate": 0.21603630862329803,
+              "n": 3305
+            },
+            "TDA": {
+              "rate": 0.0037593984962406013,
+              "n": 798
+            },
+            "CCA": {
+              "rate": 0.08616187989556136,
+              "n": 383
+            },
+            "ODA": {
+              "rate": 0.06593406593406594,
+              "n": 182
+            },
+            "LAA": {
+              "rate": 0.25,
+              "n": 4
+            }
+          },
+          "predictive_rank": 9,
+          "predictive_score": 0.025628815931920276
+        },
+        "ACCOUNT_TYPE": {
+          "iv": 0.16663918190187757,
+          "iv_band": "medium",
+          "cramers_v_target": 0.15973325252157028,
+          "lift": {
+            "max_lift": 3.0402591516900896,
+            "max_lift_category": "SBSLA",
+            "top_bad_rate": 0.3829358414511253
+          },
+          "target_rate_by_cat": {
+            "SBGEN": {
+              "rate": 0.1128808864265928,
+              "n": 125628
+            },
+            "SBBDA": {
+              "rate": 0.12273156899810964,
+              "n": 42320
+            },
+            "SBVID": {
+              "rate": 0.11109301189118749,
+              "n": 6139
+            },
+            "SBSLA": {
+              "rate": 0.3829358414511253,
+              "n": 5954
+            },
+            "SBPWR": {
+              "rate": 0.12762054507337525,
+              "n": 3816
+            },
+            "CAGEN": {
+              "rate": 0.22480889506601806,
+              "n": 2878
+            },
+            "SBWSL": {
+              "rate": 0.08076923076923077,
+              "n": 2860
+            },
+            "SBWPL": {
+              "rate": 0.3485005170630817,
+              "n": 967
+            },
+            "SBKIS": {
+              "rate": 0.3665893271461717,
+              "n": 862
+            },
+            "RDNEW": {
+              "rate": 0.003778337531486146,
+              "n": 794
+            },
+            "SBSAL": {
+              "rate": 0.04078947368421053,
+              "n": 760
+            },
+            "SBSNR": {
+              "rate": 0.04340836012861737,
+              "n": 622
+            },
+            "SBMIN": {
+              "rate": 0.10964912280701754,
+              "n": 456
+            },
+            "SBSVV": {
+              "rate": 0.08158508158508158,
+              "n": 429
+            },
+            "SBDPS": {
+              "rate": 0.03588516746411483,
+              "n": 418
+            },
+            "SBRIS": {
+              "rate": 0.32098765432098764,
+              "n": 324
+            },
+            "SBNEO": {
+              "rate": 0.14779874213836477,
+              "n": 318
+            },
+            "SBPPS": {
+              "rate": 0.1048951048951049,
+              "n": 286
+            },
+            "SBPEN": {
+              "rate": 0.07719298245614035,
+              "n": 285
+            },
+            "SBSPP": {
+              "rate": 0.04296875,
+              "n": 256
+            }
+          },
+          "high_cardinality_capped": {
+            "n_distinct": 140,
+            "kept_top": 10
+          },
+          "predictive_rank": 4,
+          "predictive_score": 0.16663918190187757
+        },
+        "APY_FLAG": {
+          "iv": 2.3628470984469204e-05,
+          "iv_band": "useless",
+          "cramers_v_target": 0.0,
+          "lift": {
+            "max_lift": 1.0009510104231707,
+            "max_lift_category": "N",
+            "top_bad_rate": 0.12607478451785048
+          },
+          "target_rate_by_cat": {
+            "N": {
+              "rate": 0.12607478451785048,
+              "n": 190387
+            },
+            "Y": {
+              "rate": 0.12358264849682721,
+              "n": 9613
+            }
+          },
+          "predictive_rank": 36,
+          "predictive_score": 2.3628470984469204e-05
+        },
+        "UDHYAM_FLAG": {
+          "iv": 0.0006032818691344673,
+          "iv_band": "useless",
+          "cramers_v_target": 0.037754524428778406,
+          "lift": {
+            "max_lift": 1.0155979202772965,
+            "max_lift_category": "N",
+            "top_bad_rate": 0.16984402079722705
+          },
+          "target_rate_by_cat": {
+            "N": {
+              "rate": 0.16984402079722705,
+              "n": 577
+            },
+            "Y": {
+              "rate": 0.0,
+              "n": 9
+            }
+          },
+          "predictive_rank": 29,
+          "predictive_score": 0.0006032818691344673
+        },
+        "LIEN_AMOUNT": {
+          "iv": 0.42126146895928174,
+          "iv_band": "strong",
+          "auc": 0.6203448737527595,
+          "ks": 0.2516108271580588,
+          "point_biserial": -0.000848523712837494,
+          "lift": {
+            "max_lift": 2.8587672312279246,
+            "top_bin_rate": 0.36007602660931326,
+            "top_bin_capture": 0.2857766662696995
+          },
+          "predictive_rank": 2,
+          "predictive_score": 0.42126146895928174
+        }
+      }
+    },
+    "is_victim_account": {
+      "supervised": true,
+      "positive_rate": 0.14344,
+      "n_pos": 28688,
+      "n_neg": 171312,
+      "columns": {
+        "ACCOUNT_OPEN_MODE": {
+          "iv": 0.36351993319115394,
+          "iv_band": "strong",
+          "cramers_v_target": 0.19785283833428766,
+          "lift": {
+            "max_lift": 1.5666135290917793,
+            "max_lift_category": "BRANCH",
+            "top_bad_rate": 0.22471504461292485
+          },
+          "target_rate_by_cat": {
+            "BRANCH": {
+              "rate": 0.22471504461292485,
+              "n": 77556
+            },
+            "BCA": {
+              "rate": 0.0713207600400615,
+              "n": 70891
+            },
+            "TAB_EKYC": {
+              "rate": 0.10840715590638034,
+              "n": 29011
+            },
+            "TAB_OTHER": {
+              "rate": 0.1244589700556488,
+              "n": 11321
+            },
+            "OOSA": {
+              "rate": 0.17080479452054795,
+              "n": 2336
+            },
+            "EVEDA": {
+              "rate": 0.20111972437553832,
+              "n": 2322
+            },
+            "DMS_OTHER": {
+              "rate": 0.1696522655426765,
+              "n": 1898
+            },
+            "KYC-VIDEO": {
+              "rate": 0.0752571737953438,
+              "n": 1847
+            },
+            "KYC-BRANCH": {
+              "rate": 0.10592160133444536,
+              "n": 1199
+            },
+            "ONLINE FDR - MB": {
+              "rate": 0.0,
+              "n": 752
+            },
+            "KIT": {
+              "rate": 0.2712215320910973,
+              "n": 483
+            },
+            "TAB_ETB": {
+              "rate": 0.16272189349112426,
+              "n": 338
+            },
+            "KYC-AADHR OTP": {
+              "rate": 0.0625,
+              "n": 16
+            },
+            "DMS_EKYC": {
+              "rate": 0.2,
+              "n": 10
+            },
+            "ONLINE-LOANS": {
+              "rate": 0.0,
+              "n": 8
+            },
+            "ONLINE OD - MB": {
+              "rate": 0.8571428571428571,
+              "n": 7
+            },
+            "DMS_NRE_NRO": {
+              "rate": 0.2,
+              "n": 5
+            }
+          },
+          "high_cardinality_capped": {
+            "n_distinct": 17,
+            "kept_top": 10
+          },
+          "predictive_rank": 3,
+          "predictive_score": 0.36351993319115394
+        },
+        "HAS_NOMINATION": {
+          "iv": 0.011599405927939108,
+          "iv_band": "useless",
+          "cramers_v_target": 0.03870411529367648,
+          "lift": {
+            "max_lift": 1.2122723519053489,
+            "max_lift_category": "N",
+            "top_bad_rate": 0.1739563223938224
+          },
+          "target_rate_by_cat": {
+            "Y": {
+              "rate": 0.1374315364658403,
+              "n": 166512
+            },
+            "N": {
+              "rate": 0.1739563223938224,
+              "n": 33152
+            }
+          },
+          "predictive_rank": 25,
+          "predictive_score": 0.011599405927939108
+        },
+        "BRANCH_CODE": {
+          "iv": 0.07226045589215029,
+          "iv_band": "weak",
+          "cramers_v_target": 0.06014317873379978,
+          "lift": {
+            "max_lift": 1.0240050949954318,
+            "max_lift_category": "__other__",
+            "top_bad_rate": 0.14688329082614474
+          },
+          "target_rate_by_cat": {
+            "5310": {
+              "rate": 0.015111695137976347,
+              "n": 1522
+            },
+            "235500": {
+              "rate": 0.013215859030837005,
+              "n": 454
+            },
+            "236400": {
+              "rate": 0.01327433628318584,
+              "n": 452
+            },
+            "79200": {
+              "rate": 0.008948545861297539,
+              "n": 447
+            },
+            "90000": {
+              "rate": 0.011494252873563218,
+              "n": 435
+            },
+            "233300": {
+              "rate": 0.011933174224343675,
+              "n": 419
+            },
+            "267600": {
+              "rate": 0.007772020725388601,
+              "n": 386
+            },
+            "110220": {
+              "rate": 0.005633802816901409,
+              "n": 355
+            },
+            "118220": {
+              "rate": 0.014619883040935672,
+              "n": 342
+            },
+            "331900": {
+              "rate": 0.018808777429467086,
+              "n": 319
+            },
+            "82700": {
+              "rate": 0.009433962264150943,
+              "n": 318
+            },
+            "874800": {
+              "rate": 0.003194888178913738,
+              "n": 313
+            },
+            "787100": {
+              "rate": 0.025889967637540454,
+              "n": 309
+            },
+            "195910": {
+              "rate": 0.010135135135135136,
+              "n": 296
+            },
+            "108620": {
+              "rate": 0.013937282229965157,
+              "n": 287
+            },
+            "603100": {
+              "rate": 0.014652014652014652,
+              "n": 273
+            },
+            "630300": {
+              "rate": 0.011764705882352941,
+              "n": 255
+            },
+            "694300": {
+              "rate": 0.01568627450980392,
+              "n": 255
+            },
+            "355800": {
+              "rate": 0.015748031496062992,
+              "n": 254
+            },
+            "116410": {
+              "rate": 0.04417670682730924,
+              "n": 249
+            }
+          },
+          "high_cardinality_capped": {
+            "n_distinct": 10048,
+            "kept_top": 10
+          },
+          "predictive_rank": 13,
+          "predictive_score": 0.07226045589215029
+        },
+        "PMJDY_FLAG": {
+          "iv": 0.1558215737634551,
+          "iv_band": "medium",
+          "cramers_v_target": 0.12058074938553916,
+          "lift": {
+            "max_lift": 1.1506131624708587,
+            "max_lift_category": "N",
+            "top_bad_rate": 0.16504395202481997
+          },
+          "target_rate_by_cat": {
+            "N": {
+              "rate": 0.16504395202481997,
+              "n": 158582
+            },
+            "Y": {
+              "rate": 0.060722391230865806,
+              "n": 41418
+            }
+          },
+          "predictive_rank": 8,
+          "predictive_score": 0.1558215737634551
+        },
+        "SCSS_FLAG": {
+          "iv": 0.022864996091665667,
+          "iv_band": "weak",
+          "cramers_v_target": 0.06820670944817966,
+          "lift": {
+            "max_lift": 0.9941716177618457,
+            "max_lift_category": "N",
+            "top_bad_rate": 0.14260397685175916
+          },
+          "target_rate_by_cat": {
+            "N": {
+              "rate": 0.14260397685175916,
+              "n": 199756
+            },
+            "Y": {
+              "rate": 0.8278688524590164,
+              "n": 244
+            }
+          },
+          "predictive_rank": 20,
+          "predictive_score": 0.022864996091665667
+        },
+        "PMJJBY_FLAG": {
+          "iv": 0.007514364540716251,
+          "iv_band": "useless",
+          "cramers_v_target": 0.032214472162502394,
+          "lift": {
+            "max_lift": 1.3600809841509487,
+            "max_lift_category": "Y",
+            "top_bad_rate": 0.1950900163666121
+          },
+          "target_rate_by_cat": {
+            "N": {
+              "rate": 0.14095946760290304,
+              "n": 190835
+            },
+            "Y": {
+              "rate": 0.1950900163666121,
+              "n": 9165
+            }
+          },
+          "predictive_rank": 28,
+          "predictive_score": 0.007514364540716251
+        },
+        "CHEQUE_ALLOWED_FLAG": {
+          "iv": 0.1693762520720449,
+          "iv_band": "medium",
+          "cramers_v_target": 0.13040559025841889,
+          "lift": {
+            "max_lift": 1.1982536192567588,
+            "max_lift_category": "Y",
+            "top_bad_rate": 0.17186914720938945
+          },
+          "target_rate_by_cat": {
+            "Y": {
+              "rate": 0.17186914720938945,
+              "n": 144162
+            },
+            "N": {
+              "rate": 0.06993796837462798,
+              "n": 55778
+            }
+          },
+          "predictive_rank": 6,
+          "predictive_score": 0.1693762520720449
+        },
+        "CHEQUE_BOOK_AVAILED_FLAG": {
+          "iv": 0.16278481622105298,
+          "iv_band": "medium",
+          "cramers_v_target": 0.14098737204088352,
+          "lift": {
+            "max_lift": 1.3803752130970184,
+            "max_lift_category": "Y",
+            "top_bad_rate": 0.19800102056663635
+          },
+          "target_rate_by_cat": {
+            "N": {
+              "rate": 0.09866732208203616,
+              "n": 109854
+            },
+            "Y": {
+              "rate": 0.19800102056663635,
+              "n": 90146
+            }
+          },
+          "predictive_rank": 7,
+          "predictive_score": 0.16278481622105298
+        },
+        "NUM_CHEQUE_BOOKS": {
+          "iv": 0.2303721227314205,
+          "iv_band": "medium",
+          "auc": 0.6300355802644814,
+          "ks": 0.20015704655741473,
+          "point_biserial": 0.06767761847470585,
+          "lift": {
+            "max_lift": 2.5071150128441135,
+            "top_bin_rate": 0.35962057744235965,
+            "top_bin_capture": 0.18105131065253766
+          },
+          "predictive_rank": 5,
+          "predictive_score": 0.26007116052896273
+        },
+        "PAN_FLAG": {
+          "iv": 0.09015369037459368,
+          "iv_band": "weak",
+          "cramers_v_target": 0.09977303580915409,
+          "lift": {
+            "max_lift": 1.1685446885215829,
+            "max_lift_category": "Y",
+            "top_bad_rate": 0.16761605012153585
+          },
+          "target_rate_by_cat": {
+            "Y": {
+              "rate": 0.16761605012153585,
+              "n": 135351
+            },
+            "N": {
+              "rate": 0.09282432829587464,
+              "n": 64649
+            }
+          },
+          "predictive_rank": 9,
+          "predictive_score": 0.09015369037459368
+        },
+        "AADHAR_FLAG": {
+          "iv": 0.008233616740836086,
+          "iv_band": "useless",
+          "cramers_v_target": 0.034239769314241844,
+          "lift": {
+            "max_lift": 1.458511571921295,
+            "max_lift_category": "N",
+            "top_bad_rate": 0.2092088998763906
+          },
+          "target_rate_by_cat": {
+            "Y": {
+              "rate": 0.1412405440039684,
+              "n": 193528
+            },
+            "N": {
+              "rate": 0.2092088998763906,
+              "n": 6472
+            }
+          },
+          "predictive_rank": 27,
+          "predictive_score": 0.008233616740836086
+        },
+        "GSTN_FLAG": {
+          "iv": 0.0019812290391852654,
+          "iv_band": "useless",
+          "cramers_v_target": 0.01875632374297627,
+          "lift": {
+            "max_lift": 0.9986379170514152,
+            "max_lift_category": "N",
+            "top_bad_rate": 0.14324462282185502
+          },
+          "target_rate_by_cat": {
+            "N": {
+              "rate": 0.14324462282185502,
+              "n": 199826
+            },
+            "Y": {
+              "rate": 0.367816091954023,
+              "n": 174
+            }
+          },
+          "predictive_rank": 35,
+          "predictive_score": 0.0019812290391852654
+        },
+        "PASSPORT_FLAG": {
+          "iv": 0.0009444695284615019,
+          "iv_band": "useless",
+          "cramers_v_target": 0.012325628457140062,
+          "lift": {
+            "max_lift": 0.9991311271050048,
+            "max_lift_category": "N",
+            "top_bad_rate": 0.1433153688719419
+          },
+          "target_rate_by_cat": {
+            "N": {
+              "rate": 0.1433153688719419,
+              "n": 199839
+            },
+            "Y": {
+              "rate": 0.2981366459627329,
+              "n": 161
+            }
+          },
+          "predictive_rank": 38,
+          "predictive_score": 0.0009444695284615019
+        },
+        "VOTER_ID_FLAG": {
+          "iv": 0.004485797024968623,
+          "iv_band": "useless",
+          "cramers_v_target": 0.02461816127604007,
+          "lift": {
+            "max_lift": 1.295238076730563,
+            "max_lift_category": "Y",
+            "top_bad_rate": 0.18578894972623194
+          },
+          "target_rate_by_cat": {
+            "N": {
+              "rate": 0.14166718759767458,
+              "n": 191964
+            },
+            "Y": {
+              "rate": 0.18578894972623194,
+              "n": 8036
+            }
+          },
+          "predictive_rank": 32,
+          "predictive_score": 0.004485797024968623
+        },
+        "KYC_RATING": {
+          "iv": 0.052008215067672725,
+          "iv_band": "weak",
+          "cramers_v_target": 0.07436568387151797,
+          "lift": {
+            "max_lift": 1.0932254462879085,
+            "max_lift_category": "LOW",
+            "top_bad_rate": 0.1568122580155376
+          },
+          "target_rate_by_cat": {
+            "LOW": {
+              "rate": 0.1568122580155376,
+              "n": 158068
+            },
+            "MEDIUM": {
+              "rate": 0.09624450280001265,
+              "n": 31607
+            },
+            "HIGH": {
+              "rate": 0.08319612590799032,
+              "n": 10325
+            }
+          },
+          "predictive_rank": 14,
+          "predictive_score": 0.052008215067672725
+        },
+        "INTERNET_BANKING_FLAG": {
+          "iv": 0.07638208108353833,
+          "iv_band": "weak",
+          "cramers_v_target": 0.0972699449433434,
+          "lift": {
+            "max_lift": 1.2696421093422796,
+            "max_lift_category": "Y",
+            "top_bad_rate": 0.1821174641640566
+          },
+          "target_rate_by_cat": {
+            "N": {
+              "rate": 0.11336852770223431,
+              "n": 112518
+            },
+            "Y": {
+              "rate": 0.1821174641640566,
+              "n": 87482
+            }
+          },
+          "predictive_rank": 12,
+          "predictive_score": 0.07638208108353833
+        },
+        "MOBILE_BANKING_FLAG": {
+          "iv": 0.021926069104189063,
+          "iv_band": "weak",
+          "cramers_v_target": 0.05076368882152484,
+          "lift": {
+            "max_lift": 1.0882595323265916,
+            "max_lift_category": "Y",
+            "top_bad_rate": 0.1560999473169263
+          },
+          "target_rate_by_cat": {
+            "Y": {
+              "rate": 0.1560999473169263,
+              "n": 132870
+            },
+            "N": {
+              "rate": 0.11838224340831223,
+              "n": 67130
+            }
+          },
+          "predictive_rank": 21,
+          "predictive_score": 0.021926069104189063
+        },
+        "UPI_FLAG": {
+          "iv": 0.006557332555369815,
+          "iv_band": "useless",
+          "cramers_v_target": 0.026714384331785485,
+          "lift": {
+            "max_lift": 1.0168052265552607,
+            "max_lift_category": "Y",
+            "top_bad_rate": 0.1458505416970866
+          },
+          "target_rate_by_cat": {
+            "Y": {
+              "rate": 0.1458505416970866,
+              "n": 187651
+            },
+            "N": {
+              "rate": 0.10681026803789781,
+              "n": 12349
+            }
+          },
+          "predictive_rank": 29,
+          "predictive_score": 0.006557332555369815
+        },
+        "DEMAT_FLAG": {
+          "iv": 0.00898744894664547,
+          "iv_band": "useless",
+          "cramers_v_target": 0.042727272452173136,
+          "lift": {
+            "max_lift": 0.996071220041005,
+            "max_lift_category": "N",
+            "top_bad_rate": 0.14287645580268177
+          },
+          "target_rate_by_cat": {
+            "N": {
+              "rate": 0.14287645580268177,
+              "n": 199718
+            },
+            "Y": {
+              "rate": 0.5425531914893617,
+              "n": 282
+            }
+          },
+          "predictive_rank": 26,
+          "predictive_score": 0.00898744894664547
+        },
+        "MUTUAL_FUND_FLAG": {
+          "iv": 0.001527335675370948,
+          "iv_band": "useless",
+          "cramers_v_target": 0.01683022544159376,
+          "lift": {
+            "max_lift": 0.9991051304556563,
+            "max_lift_category": "N",
+            "top_bad_rate": 0.14331163991255935
+          },
+          "target_rate_by_cat": {
+            "N": {
+              "rate": 0.14331163991255935,
+              "n": 199907
+            },
+            "Y": {
+              "rate": 0.41935483870967744,
+              "n": 93
+            }
+          },
+          "predictive_rank": 36,
+          "predictive_score": 0.001527335675370948
+        },
+        "MPASSBOOK_FLAG": {
+          "iv": 0.024736414793612604,
+          "iv_band": "weak",
+          "cramers_v_target": 0.056979066379797556,
+          "lift": {
+            "max_lift": 1.2627766120824446,
+            "max_lift_category": "Y",
+            "top_bad_rate": 0.18113267723710588
+          },
+          "target_rate_by_cat": {
+            "N": {
+              "rate": 0.13284092656177932,
+              "n": 156104
+            },
+            "Y": {
+              "rate": 0.18113267723710588,
+              "n": 43896
+            }
+          },
+          "predictive_rank": 18,
+          "predictive_score": 0.024736414793612604
+        },
+        "FAST_TAG_FLAG": {
+          "iv": 0.0028840139998456368,
+          "iv_band": "useless",
+          "cramers_v_target": 0.024229369306165895,
+          "lift": {
+            "max_lift": 0.9987811724203585,
+            "max_lift_category": "N",
+            "top_bad_rate": 0.14326517137197622
+          },
+          "target_rate_by_cat": {
+            "N": {
+              "rate": 0.14326517137197622,
+              "n": 199916
+            },
+            "Y": {
+              "rate": 0.5595238095238095,
+              "n": 84
+            }
+          },
+          "predictive_rank": 33,
+          "predictive_score": 0.0028840139998456368
+        },
+        "SSA_FLAG": {
+          "iv": 0.005918324929141171,
+          "iv_band": "useless",
+          "cramers_v_target": 0.031436947069489005,
+          "lift": {
+            "max_lift": 0.9947960272522832,
+            "max_lift_category": "N",
+            "top_bad_rate": 0.14269354214906751
+          },
+          "target_rate_by_cat": {
+            "N": {
+              "rate": 0.14269354214906751,
+              "n": 199091
+            },
+            "Y": {
+              "rate": 0.3069306930693069,
+              "n": 909
+            }
+          },
+          "predictive_rank": 30,
+          "predictive_score": 0.005918324929141171
+        },
+        "PPF_FLAG": {
+          "iv": 0.019642614371461163,
+          "iv_band": "useless",
+          "cramers_v_target": 0.06090061313677587,
+          "lift": {
+            "max_lift": 0.9887095941257437,
+            "max_lift_category": "N",
+            "top_bad_rate": 0.1418205041813967
+          },
+          "target_rate_by_cat": {
+            "N": {
+              "rate": 0.1418205041813967,
+              "n": 198857
+            },
+            "Y": {
+              "rate": 0.4251968503937008,
+              "n": 1143
+            }
+          },
+          "predictive_rank": 23,
+          "predictive_score": 0.019642614371461163
+        },
+        "LOCKER_FLAG": {
+          "iv": 0.04299586406829016,
+          "iv_band": "weak",
+          "cramers_v_target": 0.09485168345176731,
+          "lift": {
+            "max_lift": 0.9843510929987178,
+            "max_lift_category": "N",
+            "top_bad_rate": 0.1411953207797361
+          },
+          "target_rate_by_cat": {
+            "N": {
+              "rate": 0.1411953207797361,
+              "n": 199093
+            },
+            "Y": {
+              "rate": 0.6361631753031973,
+              "n": 907
+            }
+          },
+          "predictive_rank": 15,
+          "predictive_score": 0.04299586406829016
+        },
+        "ATM_ISSUED_FLAG": {
+          "iv": 0.014907783516657381,
+          "iv_band": "useless",
+          "cramers_v_target": 0.04595765518558796,
+          "lift": {
+            "max_lift": 1.4513387415794314,
+            "max_lift_category": "N",
+            "top_bad_rate": 0.20818002909215366
+          },
+          "target_rate_by_cat": {
+            "Y": {
+              "rate": 0.1394221323010095,
+              "n": 188313
+            },
+            "N": {
+              "rate": 0.20818002909215366,
+              "n": 11687
+            }
+          },
+          "predictive_rank": 24,
+          "predictive_score": 0.014907783516657381
+        },
+        "CREDIT_CARD_FLAG": {
+          "iv": 0.021870814788470125,
+          "iv_band": "weak",
+          "cramers_v_target": 0.06102542938061762,
+          "lift": {
+            "max_lift": 2.2509728376648077,
+            "max_lift_category": "Y",
+            "top_bad_rate": 0.32287954383464007
+          },
+          "target_rate_by_cat": {
+            "N": {
+              "rate": 0.14088663955292757,
+              "n": 197194
+            },
+            "Y": {
+              "rate": 0.32287954383464007,
+              "n": 2806
+            }
+          },
+          "predictive_rank": 22,
+          "predictive_score": 0.021870814788470125
+        },
+        "NUM_CREDIT_CARDS": {
+          "iv": 0.0,
+          "iv_band": "useless",
+          "auc": 0.5070340651230585,
+          "ks": 0.014066069854066998,
+          "point_biserial": 0.03990107969625034,
+          "lift": {
+            "max_lift": 1.0,
+            "top_bin_rate": 0.14344,
+            "top_bin_capture": 1.0
+          },
+          "predictive_rank": 16,
+          "predictive_score": 0.03990107969625034
+        },
+        "ACCOUNT_STATUS": {
+          "iv": 0.002505311914671483,
+          "iv_band": "useless",
+          "cramers_v_target": 0.0033057043425177286,
+          "lift": {
+            "max_lift": 1.00024455717232,
+            "max_lift_category": "A",
+            "top_bad_rate": 0.14391359542184698
+          },
+          "target_rate_by_cat": {
+            "A": {
+              "rate": 0.14391359542184698,
+              "n": 198508
+            },
+            "D": {
+              "rate": 0.088,
+              "n": 125
+            }
+          },
+          "predictive_rank": 34,
+          "predictive_score": 0.002505311914671483
+        },
+        "FREEZE_CODES": {
+          "iv": 0.8167043193069462,
+          "iv_band": "strong",
+          "cramers_v_target": 0.2278232503619041,
+          "lift": {
+            "max_lift": 1.2446315280758953,
+            "max_lift_category": "XX|XX|XX|XX|XX",
+            "top_bad_rate": 0.17852994638720643
+          },
+          "target_rate_by_cat": {
+            "XX|XX|XX|XX|XX": {
+              "rate": 0.17852994638720643,
+              "n": 152389
+            },
+            "045|XX|XX|XX|XX": {
+              "rate": 0.008917913067902536,
+              "n": 42723
+            },
+            "999|XX|XX|XX|XX": {
+              "rate": 0.20153340635268346,
+              "n": 1826
+            },
+            "030|XX|XX|XX|XX": {
+              "rate": 0.700218818380744,
+              "n": 914
+            },
+            "013|XX|XX|XX|XX": {
+              "rate": 0.05128205128205128,
+              "n": 663
+            },
+            "045|013|XX|XX|XX": {
+              "rate": 0.002967359050445104,
+              "n": 337
+            },
+            "999|045|XX|XX|XX": {
+              "rate": 0.05314009661835749,
+              "n": 207
+            },
+            "045|999|XX|XX|XX": {
+              "rate": 0.00641025641025641,
+              "n": 156
+            },
+            "030|045|XX|XX|XX": {
+              "rate": 0.2336448598130841,
+              "n": 107
+            },
+            "046|XX|XX|XX|XX": {
+              "rate": 0.011904761904761904,
+              "n": 84
+            },
+            "038|XX|XX|XX|XX": {
+              "rate": 0.1,
+              "n": 80
+            },
+            "045|045|XX|XX|XX": {
+              "rate": 0.0,
+              "n": 57
+            },
+            "045|046|XX|XX|XX": {
+              "rate": 0.0,
+              "n": 53
+            },
+            "046|045|XX|XX|XX": {
+              "rate": 0.0,
+              "n": 37
+            },
+            "999|046|045|XX|XX": {
+              "rate": 0.0,
+              "n": 31
+            },
+            "022|XX|XX|XX|XX": {
+              "rate": 0.034482758620689655,
+              "n": 29
+            },
+            "999|999|XX|XX|XX": {
+              "rate": 0.037037037037037035,
+              "n": 27
+            },
+            "007|XX|XX|XX|XX": {
+              "rate": 0.0,
+              "n": 22
+            },
+            "038|045|XX|XX|XX": {
+              "rate": 0.0,
+              "n": 20
+            },
+            "013|045|XX|XX|XX": {
+              "rate": 0.0,
+              "n": 18
+            }
+          },
+          "high_cardinality_capped": {
+            "n_distinct": 119,
+            "kept_top": 10
+          },
+          "predictive_rank": 2,
+          "predictive_score": 0.8167043193069462
+        },
+        "KYC_COMPLIANT_FLAG": {
+          "iv": 0.0005021769864616683,
+          "iv_band": "useless",
+          "cramers_v_target": 0.007445970478056902,
+          "lift": {
+            "max_lift": 1.0066018863333368,
+            "max_lift_category": "Y",
+            "top_bad_rate": 0.14438697457565383
+          },
+          "target_rate_by_cat": {
+            "Y": {
+              "rate": 0.14438697457565383,
+              "n": 178451
+            },
+            "N": {
+              "rate": 0.13559793957956287,
+              "n": 21549
+            }
+          },
+          "predictive_rank": 39,
+          "predictive_score": 0.0005021769864616683
+        },
+        "PINCODE": {
+          "iv": 0.08625858519163197,
+          "iv_band": "weak",
+          "cramers_v_target": 0.0678879490543007,
+          "lift": {
+            "max_lift": 1.026205001234631,
+            "max_lift_category": "__other__",
+            "top_bad_rate": 0.1471988453770955
+          },
+          "target_rate_by_cat": {
+            "122108.0": {
+              "rate": 0.013905683192261185,
+              "n": 1654
+            },
+            "321024.0": {
+              "rate": 0.01327433628318584,
+              "n": 1130
+            },
+            "321204.0": {
+              "rate": 0.008522727272727272,
+              "n": 704
+            },
+            "321023.0": {
+              "rate": 0.009971509971509971,
+              "n": 702
+            },
+            "301405.0": {
+              "rate": 0.01046337817638266,
+              "n": 669
+            },
+            "301411.0": {
+              "rate": 0.016260162601626018,
+              "n": 615
+            },
+            "247001.0": {
+              "rate": 0.16085271317829458,
+              "n": 516
+            },
+            "783301.0": {
+              "rate": 0.012371134020618556,
+              "n": 485
+            },
+            "121102.0": {
+              "rate": 0.1108695652173913,
+              "n": 460
+            },
+            "248001.0": {
+              "rate": 0.28348214285714285,
+              "n": 448
+            },
+            "132103.0": {
+              "rate": 0.22327790973871733,
+              "n": 421
+            },
+            "321022.0": {
+              "rate": 0.011933174224343675,
+              "n": 419
+            },
+            "251001.0": {
+              "rate": 0.14216867469879518,
+              "n": 415
+            },
+            "822114.0": {
+              "rate": 0.05825242718446602,
+              "n": 412
+            },
+            "301001.0": {
+              "rate": 0.10256410256410256,
+              "n": 390
+            },
+            "845438.0": {
+              "rate": 0.06824146981627296,
+              "n": 381
+            },
+            "244001.0": {
+              "rate": 0.1349206349206349,
+              "n": 378
+            },
+            "250002.0": {
+              "rate": 0.19733333333333333,
+              "n": 375
+            },
+            "301707.0": {
+              "rate": 0.016042780748663103,
+              "n": 374
+            },
+            "201301.0": {
+              "rate": 0.23180592991913745,
+              "n": 371
+            }
+          },
+          "high_cardinality_capped": {
+            "n_distinct": 5618,
+            "kept_top": 10
+          },
+          "predictive_rank": 10,
+          "predictive_score": 0.08625858519163197
+        },
+        "AREA_CATEGORY": {
+          "iv": 0.03560284146647491,
+          "iv_band": "weak",
+          "cramers_v_target": 0.06508072661987453,
+          "lift": {
+            "max_lift": 1.1342246457026315,
+            "max_lift_category": "N",
+            "top_bad_rate": 0.16269318317958548
+          },
+          "target_rate_by_cat": {
+            "N": {
+              "rate": 0.16269318317958548,
+              "n": 116858
+            },
+            "Y": {
+              "rate": 0.11637920665848789,
+              "n": 83142
+            }
+          },
+          "predictive_rank": 17,
+          "predictive_score": 0.03560284146647491
+        },
+        "BRANCH_CATEGORY": {
+          "iv": 0.08321620698995968,
+          "iv_band": "weak",
+          "cramers_v_target": 0.10384327411934342,
+          "lift": {
+            "max_lift": 1.5881364745472755,
+            "max_lift_category": "VERY LARGE",
+            "top_bad_rate": 0.22775286497259592
+          },
+          "target_rate_by_cat": {
+            "MEDIUM": {
+              "rate": 0.12544794712233082,
+              "n": 87901
+            },
+            "LARGE": {
+              "rate": 0.16556313877287698,
+              "n": 58902
+            },
+            "SMALL": {
+              "rate": 0.10120085221770289,
+              "n": 30978
+            },
+            "VERY LARGE": {
+              "rate": 0.22775286497259592,
+              "n": 20070
+            },
+            "NEW": {
+              "rate": 0.0770440251572327,
+              "n": 1908
+            },
+            "EXCEPTIONALLY LARGE": {
+              "rate": 0.2595419847328244,
+              "n": 131
+            }
+          },
+          "predictive_rank": 11,
+          "predictive_score": 0.08321620698995968
+        },
+        "SCHEME_TYPE": {
+          "iv": 0.023139791765575776,
+          "iv_band": "weak",
+          "cramers_v_target": 0.03460066768522813,
+          "lift": {
+            "max_lift": 1.3795454334514874,
+            "max_lift_category": "CAA",
+            "top_bad_rate": 0.19788199697428138
+          },
+          "target_rate_by_cat": {
+            "SBA": {
+              "rate": 0.14296465432503278,
+              "n": 195328
+            },
+            "CAA": {
+              "rate": 0.19788199697428138,
+              "n": 3305
+            },
+            "TDA": {
+              "rate": 0.002506265664160401,
+              "n": 798
+            },
+            "CCA": {
+              "rate": 0.13577023498694518,
+              "n": 383
+            },
+            "ODA": {
+              "rate": 0.2967032967032967,
+              "n": 182
+            },
+            "LAA": {
+              "rate": 0.25,
+              "n": 4
+            }
+          },
+          "predictive_rank": 19,
+          "predictive_score": 0.023139791765575776
+        },
+        "ACCOUNT_TYPE": {
+          "iv": 0.26205873638661775,
+          "iv_band": "medium",
+          "cramers_v_target": 0.16556342465271964,
+          "lift": {
+            "max_lift": 2.2091823724662127,
+            "max_lift_category": "__other__",
+            "top_bad_rate": 0.31688511950655357
+          },
+          "target_rate_by_cat": {
+            "SBGEN": {
+              "rate": 0.16208966154042093,
+              "n": 125628
+            },
+            "SBBDA": {
+              "rate": 0.06252362948960302,
+              "n": 42320
+            },
+            "SBVID": {
+              "rate": 0.1496986479882717,
+              "n": 6139
+            },
+            "SBSLA": {
+              "rate": 0.051394020826335235,
+              "n": 5954
+            },
+            "SBPWR": {
+              "rate": 0.2361111111111111,
+              "n": 3816
+            },
+            "CAGEN": {
+              "rate": 0.20361362056984017,
+              "n": 2878
+            },
+            "SBWSL": {
+              "rate": 0.12657342657342657,
+              "n": 2860
+            },
+            "SBWPL": {
+              "rate": 0.09410548086866598,
+              "n": 967
+            },
+            "SBKIS": {
+              "rate": 0.054524361948955914,
+              "n": 862
+            },
+            "RDNEW": {
+              "rate": 0.0012594458438287153,
+              "n": 794
+            },
+            "SBSAL": {
+              "rate": 0.3907894736842105,
+              "n": 760
+            },
+            "SBSNR": {
+              "rate": 0.3215434083601286,
+              "n": 622
+            },
+            "SBMIN": {
+              "rate": 0.1513157894736842,
+              "n": 456
+            },
+            "SBSVV": {
+              "rate": 0.1864801864801865,
+              "n": 429
+            },
+            "SBDPS": {
+              "rate": 0.44258373205741625,
+              "n": 418
+            },
+            "SBRIS": {
+              "rate": 0.12962962962962962,
+              "n": 324
+            },
+            "SBNEO": {
+              "rate": 0.20125786163522014,
+              "n": 318
+            },
+            "SBPPS": {
+              "rate": 0.583916083916084,
+              "n": 286
+            },
+            "SBPEN": {
+              "rate": 0.5368421052631579,
+              "n": 285
+            },
+            "SBSPP": {
+              "rate": 0.7265625,
+              "n": 256
+            }
+          },
+          "high_cardinality_capped": {
+            "n_distinct": 140,
+            "kept_top": 10
+          },
+          "predictive_rank": 4,
+          "predictive_score": 0.26205873638661775
+        },
+        "APY_FLAG": {
+          "iv": 0.004821708468757087,
+          "iv_band": "useless",
+          "cramers_v_target": 0.022890517906589178,
+          "lift": {
+            "max_lift": 1.0126290715382078,
+            "max_lift_category": "N",
+            "top_bad_rate": 0.14525151402144054
+          },
+          "target_rate_by_cat": {
+            "N": {
+              "rate": 0.14525151402144054,
+              "n": 190387
+            },
+            "Y": {
+              "rate": 0.1075626755435348,
+              "n": 9613
+            }
+          },
+          "predictive_rank": 31,
+          "predictive_score": 0.004821708468757087
+        },
+        "UDHYAM_FLAG": {
+          "iv": 0.0013309685118561624,
+          "iv_band": "useless",
+          "cramers_v_target": 0.0,
+          "lift": {
+            "max_lift": 1.0081847967716226,
+            "max_lift_category": "N",
+            "top_bad_rate": 0.23570190641247835
+          },
+          "target_rate_by_cat": {
+            "N": {
+              "rate": 0.23570190641247835,
+              "n": 577
+            },
+            "Y": {
+              "rate": 0.1111111111111111,
+              "n": 9
+            }
+          },
+          "predictive_rank": 37,
+          "predictive_score": 0.0013309685118561624
+        },
+        "LIEN_AMOUNT": {
+          "iv": 2.1945899733300105,
+          "iv_band": "strong",
+          "auc": 0.8141930323475839,
+          "ks": 0.6284848176216975,
+          "point_biserial": -0.000909240591570667,
+          "lift": {
+            "max_lift": 2.3404092557599303,
+            "top_bin_rate": 0.3357083036462044,
+            "top_bin_capture": 0.9361754043502509
+          },
+          "predictive_rank": 1,
+          "predictive_score": 2.1945899733300105
+        }
+      }
+    }
+  },
+  "supervised": true
+}

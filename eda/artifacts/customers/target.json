@@ -1,0 +1,1362 @@
+{
+  "primary_target": "is_fraudster_account",
+  "results": {
+    "is_fraudster_account": {
+      "supervised": true,
+      "positive_rate": 0.126705,
+      "n_pos": 25341,
+      "n_neg": 174659,
+      "columns": {
+        "NUM_LOAN_ACCOUNT": {
+          "iv": 0.0,
+          "iv_band": "useless",
+          "auc": 0.5103581454436723,
+          "ks": 0.02067286125887735,
+          "point_biserial": -0.033206253610613384,
+          "lift": {
+            "max_lift": 1.0,
+            "top_bin_rate": 0.126705,
+            "top_bin_capture": 1.0
+          },
+          "predictive_rank": 3,
+          "predictive_score": 0.033206253610613384
+        },
+        "LOAN_ACCOUNT_BALANCE": {
+          "iv": 0.0,
+          "iv_band": "useless",
+          "auc": 0.5101192603453819,
+          "ks": 0.020213251791541542,
+          "point_biserial": -0.0029880331511067787,
+          "lift": {
+            "max_lift": 1.0,
+            "top_bin_rate": 0.126705,
+            "top_bin_capture": 1.0
+          },
+          "predictive_rank": 8,
+          "predictive_score": 0.020238520690763817
+        },
+        "NUM_OVER_DRAFT_ACCOUNT": {
+          "iv": 0.0,
+          "iv_band": "useless",
+          "auc": 0.5010853667877354,
+          "ks": 0.002170722052739049,
+          "point_biserial": -0.01061667175235497,
+          "lift": {
+            "max_lift": 1.0,
+            "top_bin_rate": 0.126705,
+            "top_bin_capture": 1.0
+          },
+          "predictive_rank": 14,
+          "predictive_score": 0.01061667175235497
+        },
+        "OVER_DRAFT_ACCOUNT_BALANCE": {
+          "iv": 0.0,
+          "iv_band": "useless",
+          "auc": 0.500962549716174,
+          "ks": 0.0019247063038473344,
+          "point_biserial": 0.0007404552611428133,
+          "lift": {
+            "max_lift": 1.0,
+            "top_bin_rate": 0.126705,
+            "top_bin_capture": 1.0
+          },
+          "predictive_rank": 19,
+          "predictive_score": 0.0019250994323480874
+        },
+        "NUM_CURRENT_ACCOUNT": {
+          "iv": 0.0,
+          "iv_band": "useless",
+          "auc": 0.5067704871680848,
+          "ks": 0.013541127294787403,
+          "point_biserial": 0.01807067004271137,
+          "lift": {
+            "max_lift": 1.0,
+            "top_bin_rate": 0.126705,
+            "top_bin_capture": 1.0
+          },
+          "predictive_rank": 11,
+          "predictive_score": 0.01807067004271137
+        },
+        "CURRENT_ACCOUNT_BALANCE": {
+          "iv": 0.0,
+          "iv_band": "useless",
+          "auc": 0.5060135485153994,
+          "ks": 0.012110189710012098,
+          "point_biserial": 0.00493540365800403,
+          "lift": {
+            "max_lift": 1.0,
+            "top_bin_rate": 0.126705,
+            "top_bin_capture": 1.0
+          },
+          "predictive_rank": 13,
+          "predictive_score": 0.012027097030798739
+        },
+        "NUM_SAVING_ACCOUNT": {
+          "iv": 0.001512264177375579,
+          "iv_band": "useless",
+          "auc": 0.5076661886587854,
+          "ks": 0.009455515176114728,
+          "point_biserial": -0.0217364895511567,
+          "lift": {
+            "max_lift": 1.0056559692253988,
+            "top_bin_rate": 0.12742163958070415,
+            "top_bin_capture": 0.9761651079278639
+          },
+          "predictive_rank": 6,
+          "predictive_score": 0.0217364895511567
+        },
+        "SAVING_ACCOUNT_BALANCE": {
+          "iv": 0.06688164777684111,
+          "iv_band": "weak",
+          "auc": 0.517694669533086,
+          "ks": 0.06837003516285223,
+          "point_biserial": -0.0024694683917881044,
+          "lift": {
+            "max_lift": 1.3106555121002805,
+            "top_bin_rate": 0.16606660666066606,
+            "top_bin_capture": 0.13105244465490706
+          },
+          "predictive_rank": 1,
+          "predictive_score": 0.06688164777684111
+        },
+        "NUM_TERM_DEPOSIT_ACCOUNT": {
+          "iv": 0.0,
+          "iv_band": "useless",
+          "auc": 0.5097307940323895,
+          "ks": 0.019446689172410214,
+          "point_biserial": -0.017782579539797363,
+          "lift": {
+            "max_lift": 1.0,
+            "top_bin_rate": 0.126705,
+            "top_bin_capture": 1.0
+          },
+          "predictive_rank": 9,
+          "predictive_score": 0.019461588064779045
+        },
+        "TERM_DEPOSIT_ACCOUNT_BALANCE": {
+          "iv": 0.0,
+          "iv_band": "useless",
+          "auc": 0.5095223600125491,
+          "ks": 0.019031991925048453,
+          "point_biserial": -0.0011765739577649498,
+          "lift": {
+            "max_lift": 1.0,
+            "top_bin_rate": 0.126705,
+            "top_bin_capture": 1.0
+          },
+          "predictive_rank": 10,
+          "predictive_score": 0.019044720025098272
+        },
+        "CUSTOMER_PIN_CODE": {
+          "iv": 0.024744730553866445,
+          "iv_band": "weak",
+          "cramers_v_target": 0.06197739917575171,
+          "lift": {
+            "max_lift": 0.9773031429903836,
+            "max_lift_category": "__other__",
+            "top_bad_rate": 0.12382919473259656
+          },
+          "target_rate_by_cat": {
+            "321204": {
+              "rate": 0.2058011049723757,
+              "n": 724
+            },
+            "122108": {
+              "rate": 0.26353276353276356,
+              "n": 702
+            },
+            "321024": {
+              "rate": 0.1721958925750395,
+              "n": 633
+            },
+            "122508": {
+              "rate": 0.33707865168539325,
+              "n": 534
+            },
+            "110094": {
+              "rate": 0.11238095238095239,
+              "n": 525
+            },
+            "301405": {
+              "rate": 0.2222222222222222,
+              "n": 504
+            },
+            "783330": {
+              "rate": 0.3695652173913043,
+              "n": 460
+            },
+            "301411": {
+              "rate": 0.22717149220489977,
+              "n": 449
+            },
+            "321023": {
+              "rate": 0.21330275229357798,
+              "n": 436
+            },
+            "301001": {
+              "rate": 0.20149253731343283,
+              "n": 402
+            },
+            "247001": {
+              "rate": 0.05527638190954774,
+              "n": 398
+            },
+            "250002": {
+              "rate": 0.10451977401129943,
+              "n": 354
+            },
+            "248001": {
+              "rate": 0.09686609686609686,
+              "n": 351
+            },
+            "321022": {
+              "rate": 0.23880597014925373,
+              "n": 335
+            },
+            "110059": {
+              "rate": 0.1411042944785276,
+              "n": 326
+            },
+            "122108.0": {
+              "rate": 0.2090032154340836,
+              "n": 311
+            },
+            "321024.0": {
+              "rate": 0.12786885245901639,
+              "n": 305
+            },
+            "143001": {
+              "rate": 0.11551155115511551,
+              "n": 303
+            },
+            "321204.0": {
+              "rate": 0.16095890410958905,
+              "n": 292
+            },
+            "742148": {
+              "rate": 0.03793103448275862,
+              "n": 290
+            }
+          },
+          "high_cardinality_capped": {
+            "n_distinct": 19015,
+            "kept_top": 10
+          },
+          "predictive_rank": 5,
+          "predictive_score": 0.024744730553866445
+        },
+        "PERMANENT_PIN_CODE": {
+          "iv": 0.02545056233634955,
+          "iv_band": "weak",
+          "cramers_v_target": 0.062313294886658356,
+          "lift": {
+            "max_lift": 0.979413810768508,
+            "max_lift_category": "__other__",
+            "top_bad_rate": 0.12409662689342381
+          },
+          "target_rate_by_cat": {
+            "321204": {
+              "rate": 0.20441988950276244,
+              "n": 724
+            },
+            "122108": {
+              "rate": 0.2624821683309558,
+              "n": 701
+            },
+            "321024": {
+              "rate": 0.18019480519480519,
+              "n": 616
+            },
+            "122508": {
+              "rate": 0.3426443202979516,
+              "n": 537
+            },
+            "110094": {
+              "rate": 0.11507936507936507,
+              "n": 504
+            },
+            "301405": {
+              "rate": 0.22266401590457258,
+              "n": 503
+            },
+            "783330": {
+              "rate": 0.36899563318777295,
+              "n": 458
+            },
+            "301411": {
+              "rate": 0.22799097065462753,
+              "n": 443
+            },
+            "321023": {
+              "rate": 0.21478060046189376,
+              "n": 433
+            },
+            "247001": {
+              "rate": 0.0532994923857868,
+              "n": 394
+            },
+            "301001": {
+              "rate": 0.20971867007672634,
+              "n": 391
+            },
+            "250002": {
+              "rate": 0.09855072463768116,
+              "n": 345
+            },
+            "321022": {
+              "rate": 0.24390243902439024,
+              "n": 328
+            },
+            "122108.0": {
+              "rate": 0.21241830065359477,
+              "n": 306
+            },
+            "110059": {
+              "rate": 0.12786885245901639,
+              "n": 305
+            },
+            "321024.0": {
+              "rate": 0.13043478260869565,
+              "n": 299
+            },
+            "248001": {
+              "rate": 0.08417508417508418,
+              "n": 297
+            },
+            "321204.0": {
+              "rate": 0.1598639455782313,
+              "n": 294
+            },
+            "143001": {
+              "rate": 0.11498257839721254,
+              "n": 287
+            },
+            "742148": {
+              "rate": 0.03859649122807018,
+              "n": 285
+            }
+          },
+          "high_cardinality_capped": {
+            "n_distinct": 19168,
+            "kept_top": 10
+          },
+          "predictive_rank": 4,
+          "predictive_score": 0.02545056233634955
+        },
+        "GENDER": {
+          "iv": 0.008824495915991512,
+          "iv_band": "useless",
+          "cramers_v_target": 0.014420197045276289,
+          "lift": {
+            "max_lift": 1.0181888981790586,
+            "max_lift_category": "M     ",
+            "top_bad_rate": 0.12775210149198177
+          },
+          "target_rate_by_cat": {
+            "M     ": {
+              "rate": 0.12775210149198177,
+              "n": 161195
+            },
+            "F     ": {
+              "rate": 0.11518849786842765,
+              "n": 35889
+            },
+            "T     ": {
+              "rate": 0.2,
+              "n": 15
+            }
+          },
+          "predictive_rank": 15,
+          "predictive_score": 0.008824495915991512
+        },
+        "OCCUPATION": {
+          "iv": 0.036561758295641934,
+          "iv_band": "weak",
+          "cramers_v_target": 0.06365867418025474,
+          "lift": {
+            "max_lift": 1.3852495626458994,
+            "max_lift_category": "PVT EMPLOYEE",
+            "top_bad_rate": 0.1755180458350487
+          },
+          "target_rate_by_cat": {
+            "OTHERS": {
+              "rate": 0.12770071200589247,
+              "n": 65168
+            },
+            "STUDENT": {
+              "rate": 0.11676250965582353,
+              "n": 58255
+            },
+            "HOUSEWIFE": {
+              "rate": 0.12471055243135958,
+              "n": 15115
+            },
+            "PVT EMPLOYEE": {
+              "rate": 0.1755180458350487,
+              "n": 14574
+            },
+            "AGRICULTURE AND ALLIED ACTIVITIES": {
+              "rate": 0.10117548278757346,
+              "n": 14292
+            },
+            "FARMER": {
+              "rate": 0.1519297914504105,
+              "n": 10597
+            },
+            "LABOURER": {
+              "rate": 0.1236234458259325,
+              "n": 5630
+            },
+            "OTHERS-NOT WORKING": {
+              "rate": 0.08280399274047187,
+              "n": 4408
+            },
+            "SMALL BUSINESSMAN": {
+              "rate": 0.22043969102792632,
+              "n": 1683
+            },
+            "GOVT EMPLOYEE": {
+              "rate": 0.05158968206358728,
+              "n": 1667
+            },
+            "TRADER": {
+              "rate": 0.11027756939234809,
+              "n": 1333
+            },
+            "INDUSTRIALIST": {
+              "rate": 0.06483126110124333,
+              "n": 1126
+            },
+            "BUSINESS CORRESPONDENTS": {
+              "rate": 0.14954954954954955,
+              "n": 555
+            },
+            "PERSON BELOW OFFICER RANK": {
+              "rate": 0.04417670682730924,
+              "n": 498
+            },
+            "PSU EMPLOYEE": {
+              "rate": 0.08311688311688312,
+              "n": 385
+            },
+            "SMALL FARMER": {
+              "rate": 0.14714714714714713,
+              "n": 333
+            },
+            "ENTREPRENEUR": {
+              "rate": 0.1943127962085308,
+              "n": 211
+            },
+            "DOCTOR": {
+              "rate": 0.07017543859649122,
+              "n": 114
+            },
+            "ARCHITECT": {
+              "rate": 0.08849557522123894,
+              "n": 113
+            },
+            "RETIRED - GOVT EMPLOYEE": {
+              "rate": 0.07368421052631578,
+              "n": 95
+            }
+          },
+          "high_cardinality_capped": {
+            "n_distinct": 56,
+            "kept_top": 10
+          },
+          "predictive_rank": 2,
+          "predictive_score": 0.036561758295641934
+        },
+        "NATIONALITY": {
+          "iv": 0.007149672216833127,
+          "iv_band": "useless",
+          "cramers_v_target": 0.03002786807452437,
+          "lift": {
+            "max_lift": 1.6604046756181738,
+            "max_lift_category": "__other__",
+            "top_bad_rate": 0.21038157442420075
+          },
+          "target_rate_by_cat": {
+            "INDIA": {
+              "rate": 0.125482733247063,
+              "n": 197055
+            },
+            "ZIMBABWE": {
+              "rate": 0.07692307692307693,
+              "n": 13
+            },
+            "NICARAGUA": {
+              "rate": 0.0,
+              "n": 7
+            },
+            "NIGERIA": {
+              "rate": 0.0,
+              "n": 4
+            },
+            "TANZANIA": {
+              "rate": 0.25,
+              "n": 4
+            },
+            "UNITED ARAB EMIRATES": {
+              "rate": 0.0,
+              "n": 3
+            },
+            "NAMIBIA": {
+              "rate": 0.0,
+              "n": 2
+            },
+            "BANGLA DESH": {
+              "rate": 0.0,
+              "n": 1
+            },
+            "BURKINA FASO": {
+              "rate": 0.0,
+              "n": 1
+            },
+            "CAMEROON REPUBLIC": {
+              "rate": 0.0,
+              "n": 1
+            },
+            "KAZAKHSTAN": {
+              "rate": 0.0,
+              "n": 1
+            },
+            "MYANMAR": {
+              "rate": 0.0,
+              "n": 1
+            },
+            "CANADA": {
+              "rate": 1.0,
+              "n": 1
+            },
+            "INDONESIA": {
+              "rate": 0.0,
+              "n": 1
+            },
+            "RWANDA": {
+              "rate": 0.0,
+              "n": 1
+            },
+            "RUSSIAN FEDERATION": {
+              "rate": 0.0,
+              "n": 1
+            },
+            "UNITED STATES OF AMERICA": {
+              "rate": 0.0,
+              "n": 1
+            },
+            "YEMEN": {
+              "rate": 0.0,
+              "n": 1
+            }
+          },
+          "high_cardinality_capped": {
+            "n_distinct": 18,
+            "kept_top": 10
+          },
+          "predictive_rank": 16,
+          "predictive_score": 0.007149672216833127
+        },
+        "KYC_VERIFIED_FLAG": {
+          "iv": 0.004908978676142586,
+          "iv_band": "useless",
+          "cramers_v_target": 0.025450190533864183,
+          "lift": {
+            "max_lift": 1.5427861836885308,
+            "max_lift_category": "N",
+            "top_bad_rate": 0.19547872340425532
+          },
+          "target_rate_by_cat": {
+            "Y": {
+              "rate": 0.12565484892787523,
+              "n": 196992
+            },
+            "N": {
+              "rate": 0.19547872340425532,
+              "n": 3008
+            }
+          },
+          "predictive_rank": 18,
+          "predictive_score": 0.004908978676142586
+        },
+        "CUSTOMER_SPECIAL_STATUS": {
+          "iv": 0.001594149984939675,
+          "iv_band": "useless",
+          "cramers_v_target": 0.012245903758656007,
+          "lift": {
+            "max_lift": 1.0011903551344947,
+            "max_lift_category": "OTHERS",
+            "top_bad_rate": 0.12669415658401606
+          },
+          "target_rate_by_cat": {
+            "OTHERS": {
+              "rate": 0.12669415658401606,
+              "n": 184310
+            },
+            "ILLITERATE": {
+              "rate": 0.0970873786407767,
+              "n": 1339
+            },
+            "BLIND": {
+              "rate": 0.14285714285714285,
+              "n": 210
+            },
+            "HANDICAPPED": {
+              "rate": 0.23636363636363636,
+              "n": 165
+            },
+            "SELF HELP GROUP": {
+              "rate": 0.06837606837606838,
+              "n": 117
+            },
+            "PARDA-NASHEEN WOMAN": {
+              "rate": 0.058823529411764705,
+              "n": 34
+            },
+            "DIFFERENTLY ABLED": {
+              "rate": 0.0,
+              "n": 3
+            },
+            "VISUALLY IMPAIRED": {
+              "rate": 0.0,
+              "n": 3
+            }
+          },
+          "predictive_rank": 20,
+          "predictive_score": 0.001594149984939675
+        },
+        "ANNUAL_INCOME": {
+          "iv": null,
+          "iv_band": null,
+          "auc": null,
+          "ks": null,
+          "point_biserial": null,
+          "lift": null,
+          "predictive_rank": 21,
+          "predictive_score": 0.0
+        },
+        "NUM_CREDIT_CARDS": {
+          "iv": 0.0,
+          "iv_band": "useless",
+          "auc": 0.5034341394496729,
+          "ks": 0.006867856625111357,
+          "point_biserial": -0.020627054950132135,
+          "lift": {
+            "max_lift": 1.0,
+            "top_bin_rate": 0.126705,
+            "top_bin_capture": 1.0
+          },
+          "predictive_rank": 7,
+          "predictive_score": 0.020627054950132135
+        },
+        "CREDIT_CARD_OUTSTANDING_AMOUNT": {
+          "iv": 0.0037448200205654016,
+          "iv_band": "useless",
+          "auc": 0.502275453405781,
+          "ks": 0.004879197577572714,
+          "point_biserial": -0.01438688567993868,
+          "lift": {
+            "max_lift": 1.0042629064077124,
+            "top_bin_rate": 0.12724513155638922,
+            "top_bin_capture": 0.9958170553648238
+          },
+          "predictive_rank": 12,
+          "predictive_score": 0.01438688567993868
+        },
+        "MAX_SANCTIONED_LIMIT": {
+          "iv": 0.0,
+          "iv_band": "useless",
+          "auc": 0.5034287359662115,
+          "ks": 0.006856405740816807,
+          "point_biserial": -0.004756141543946949,
+          "lift": {
+            "max_lift": 1.0,
+            "top_bin_rate": 0.126705,
+            "top_bin_capture": 1.0
+          },
+          "predictive_rank": 17,
+          "predictive_score": 0.0068574719324230315
+        }
+      }
+    },
+    "is_victim_account": {
+      "supervised": true,
+      "positive_rate": 0.142385,
+      "n_pos": 28477,
+      "n_neg": 171523,
+      "columns": {
+        "NUM_LOAN_ACCOUNT": {
+          "iv": 0.0,
+          "iv_band": "useless",
+          "auc": 0.5195923001257102,
+          "ks": 0.03904460771712526,
+          "point_biserial": 0.06953050652402232,
+          "lift": {
+            "max_lift": 1.0,
+            "top_bin_rate": 0.142385,
+            "top_bin_capture": 1.0
+          },
+          "predictive_rank": 7,
+          "predictive_score": 0.06953050652402232
+        },
+        "LOAN_ACCOUNT_BALANCE": {
+          "iv": 0.0,
+          "iv_band": "useless",
+          "auc": 0.5182132026716528,
+          "ks": 0.036090528328896365,
+          "point_biserial": 0.006316335416065043,
+          "lift": {
+            "max_lift": 1.0,
+            "top_bin_rate": 0.142385,
+            "top_bin_capture": 1.0
+          },
+          "predictive_rank": 12,
+          "predictive_score": 0.03642640534330566
+        },
+        "NUM_OVER_DRAFT_ACCOUNT": {
+          "iv": 0.0,
+          "iv_band": "useless",
+          "auc": 0.503725401937028,
+          "ks": 0.007450683082823595,
+          "point_biserial": 0.038146131011541635,
+          "lift": {
+            "max_lift": 1.0,
+            "top_bin_rate": 0.142385,
+            "top_bin_capture": 1.0
+          },
+          "predictive_rank": 11,
+          "predictive_score": 0.038146131011541635
+        },
+        "OVER_DRAFT_ACCOUNT_BALANCE": {
+          "iv": 0.0,
+          "iv_band": "useless",
+          "auc": 0.5028910577910991,
+          "ks": 0.005781384692876479,
+          "point_biserial": 0.004033001751474347,
+          "lift": {
+            "max_lift": 1.0,
+            "top_bin_rate": 0.142385,
+            "top_bin_capture": 1.0
+          },
+          "predictive_rank": 19,
+          "predictive_score": 0.005782115582198211
+        },
+        "NUM_CURRENT_ACCOUNT": {
+          "iv": 0.0,
+          "iv_band": "useless",
+          "auc": 0.5035944223736148,
+          "ks": 0.007187394024055327,
+          "point_biserial": 0.007218323604895098,
+          "lift": {
+            "max_lift": 1.0,
+            "top_bin_rate": 0.142385,
+            "top_bin_capture": 1.0
+          },
+          "predictive_rank": 16,
+          "predictive_score": 0.007218323604895098
+        },
+        "CURRENT_ACCOUNT_BALANCE": {
+          "iv": 0.0,
+          "iv_band": "useless",
+          "auc": 0.5034206938717591,
+          "ks": 0.006887226992567497,
+          "point_biserial": -0.0003404010572245983,
+          "lift": {
+            "max_lift": 1.0,
+            "top_bin_rate": 0.142385,
+            "top_bin_capture": 1.0
+          },
+          "predictive_rank": 17,
+          "predictive_score": 0.006841387743518279
+        },
+        "NUM_SAVING_ACCOUNT": {
+          "iv": 0.029980967959133947,
+          "iv_band": "weak",
+          "auc": 0.5116349637462343,
+          "ks": 0.03349037134627675,
+          "point_biserial": 0.043554617920764885,
+          "lift": {
+            "max_lift": 1.9794320484957255,
+            "top_bin_rate": 0.2818414322250639,
+            "top_bin_capture": 0.058046844822137164
+          },
+          "predictive_rank": 10,
+          "predictive_score": 0.043554617920764885
+        },
+        "SAVING_ACCOUNT_BALANCE": {
+          "iv": 0.1799958641070381,
+          "iv_band": "medium",
+          "auc": 0.5651223041702449,
+          "ks": 0.14543985977934637,
+          "point_biserial": 0.05759067122969283,
+          "lift": {
+            "max_lift": 2.0669312076412543,
+            "top_bin_rate": 0.2943,
+            "top_bin_capture": 0.20669312076412544
+          },
+          "predictive_rank": 1,
+          "predictive_score": 0.1799958641070381
+        },
+        "NUM_TERM_DEPOSIT_ACCOUNT": {
+          "iv": 0.0,
+          "iv_band": "useless",
+          "auc": 0.5389207442927835,
+          "ks": 0.07751441704727025,
+          "point_biserial": 0.07653249178414716,
+          "lift": {
+            "max_lift": 1.0,
+            "top_bin_rate": 0.142385,
+            "top_bin_capture": 1.0
+          },
+          "predictive_rank": 3,
+          "predictive_score": 0.07784148858556694
+        },
+        "TERM_DEPOSIT_ACCOUNT_BALANCE": {
+          "iv": 0.0,
+          "iv_band": "useless",
+          "auc": 0.5385563874696366,
+          "ks": 0.07661631867467722,
+          "point_biserial": 0.006186915490180409,
+          "lift": {
+            "max_lift": 1.0,
+            "top_bin_rate": 0.142385,
+            "top_bin_capture": 1.0
+          },
+          "predictive_rank": 5,
+          "predictive_score": 0.07711277493927327
+        },
+        "CUSTOMER_PIN_CODE": {
+          "iv": 0.07062758047823225,
+          "iv_band": "weak",
+          "cramers_v_target": 0.058293052951851276,
+          "lift": {
+            "max_lift": 1.0209459389536715,
+            "max_lift_category": "__other__",
+            "top_bad_rate": 0.14536738751791853
+          },
+          "target_rate_by_cat": {
+            "321204": {
+              "rate": 0.013812154696132596,
+              "n": 724
+            },
+            "122108": {
+              "rate": 0.011396011396011397,
+              "n": 702
+            },
+            "321024": {
+              "rate": 0.007898894154818325,
+              "n": 633
+            },
+            "122508": {
+              "rate": 0.009363295880149813,
+              "n": 534
+            },
+            "110094": {
+              "rate": 0.21333333333333335,
+              "n": 525
+            },
+            "301405": {
+              "rate": 0.003968253968253968,
+              "n": 504
+            },
+            "783330": {
+              "rate": 0.008695652173913044,
+              "n": 460
+            },
+            "301411": {
+              "rate": 0.008908685968819599,
+              "n": 449
+            },
+            "321023": {
+              "rate": 0.020642201834862386,
+              "n": 436
+            },
+            "301001": {
+              "rate": 0.06218905472636816,
+              "n": 402
+            },
+            "247001": {
+              "rate": 0.20351758793969849,
+              "n": 398
+            },
+            "250002": {
+              "rate": 0.17231638418079095,
+              "n": 354
+            },
+            "248001": {
+              "rate": 0.33618233618233617,
+              "n": 351
+            },
+            "321022": {
+              "rate": 0.005970149253731343,
+              "n": 335
+            },
+            "110059": {
+              "rate": 0.3006134969325153,
+              "n": 326
+            },
+            "122108.0": {
+              "rate": 0.01607717041800643,
+              "n": 311
+            },
+            "321024.0": {
+              "rate": 0.03278688524590164,
+              "n": 305
+            },
+            "143001": {
+              "rate": 0.19471947194719472,
+              "n": 303
+            },
+            "321204.0": {
+              "rate": 0.010273972602739725,
+              "n": 292
+            },
+            "742148": {
+              "rate": 0.027586206896551724,
+              "n": 290
+            }
+          },
+          "high_cardinality_capped": {
+            "n_distinct": 19015,
+            "kept_top": 10
+          },
+          "predictive_rank": 6,
+          "predictive_score": 0.07062758047823225
+        },
+        "PERMANENT_PIN_CODE": {
+          "iv": 0.06890481095292628,
+          "iv_band": "weak",
+          "cramers_v_target": 0.057297440585649395,
+          "lift": {
+            "max_lift": 1.0190289260059981,
+            "max_lift_category": "__other__",
+            "top_bad_rate": 0.14509443362936406
+          },
+          "target_rate_by_cat": {
+            "321204": {
+              "rate": 0.013812154696132596,
+              "n": 724
+            },
+            "122108": {
+              "rate": 0.011412268188302425,
+              "n": 701
+            },
+            "321024": {
+              "rate": 0.008116883116883116,
+              "n": 616
+            },
+            "122508": {
+              "rate": 0.00931098696461825,
+              "n": 537
+            },
+            "110094": {
+              "rate": 0.20238095238095238,
+              "n": 504
+            },
+            "301405": {
+              "rate": 0.003976143141153081,
+              "n": 503
+            },
+            "783330": {
+              "rate": 0.008733624454148471,
+              "n": 458
+            },
+            "301411": {
+              "rate": 0.009029345372460496,
+              "n": 443
+            },
+            "321023": {
+              "rate": 0.020785219399538105,
+              "n": 433
+            },
+            "247001": {
+              "rate": 0.20304568527918782,
+              "n": 394
+            },
+            "301001": {
+              "rate": 0.0639386189258312,
+              "n": 391
+            },
+            "250002": {
+              "rate": 0.17391304347826086,
+              "n": 345
+            },
+            "321022": {
+              "rate": 0.006097560975609756,
+              "n": 328
+            },
+            "122108.0": {
+              "rate": 0.016339869281045753,
+              "n": 306
+            },
+            "110059": {
+              "rate": 0.29180327868852457,
+              "n": 305
+            },
+            "321024.0": {
+              "rate": 0.033444816053511704,
+              "n": 299
+            },
+            "248001": {
+              "rate": 0.35353535353535354,
+              "n": 297
+            },
+            "321204.0": {
+              "rate": 0.01020408163265306,
+              "n": 294
+            },
+            "143001": {
+              "rate": 0.1986062717770035,
+              "n": 287
+            },
+            "742148": {
+              "rate": 0.028070175438596492,
+              "n": 285
+            }
+          },
+          "high_cardinality_capped": {
+            "n_distinct": 19168,
+            "kept_top": 10
+          },
+          "predictive_rank": 8,
+          "predictive_score": 0.06890481095292628
+        },
+        "GENDER": {
+          "iv": 0.077762592598729,
+          "iv_band": "weak",
+          "cramers_v_target": 0.10383679380740686,
+          "lift": {
+            "max_lift": 1.5416875193180597,
+            "max_lift_category": "F     ",
+            "top_bad_rate": 0.21859065451809748
+          },
+          "target_rate_by_cat": {
+            "M     ": {
+              "rate": 0.1246874903067713,
+              "n": 161195
+            },
+            "F     ": {
+              "rate": 0.21859065451809748,
+              "n": 35889
+            },
+            "T     ": {
+              "rate": 0.13333333333333333,
+              "n": 15
+            }
+          },
+          "predictive_rank": 4,
+          "predictive_score": 0.077762592598729
+        },
+        "OCCUPATION": {
+          "iv": 0.11135862959815312,
+          "iv_band": "medium",
+          "cramers_v_target": 0.11777749259102985,
+          "lift": {
+            "max_lift": 1.591253751644773,
+            "max_lift_category": "__other__",
+            "top_bad_rate": 0.226570665427941
+          },
+          "target_rate_by_cat": {
+            "OTHERS": {
+              "rate": 0.1605082248956543,
+              "n": 65168
+            },
+            "STUDENT": {
+              "rate": 0.1249678139215518,
+              "n": 58255
+            },
+            "HOUSEWIFE": {
+              "rate": 0.15355607012901093,
+              "n": 15115
+            },
+            "PVT EMPLOYEE": {
+              "rate": 0.1637848222862632,
+              "n": 14574
+            },
+            "AGRICULTURE AND ALLIED ACTIVITIES": {
+              "rate": 0.11985726280436608,
+              "n": 14292
+            },
+            "FARMER": {
+              "rate": 0.06520713409455506,
+              "n": 10597
+            },
+            "LABOURER": {
+              "rate": 0.06021314387211368,
+              "n": 5630
+            },
+            "OTHERS-NOT WORKING": {
+              "rate": 0.09346642468239565,
+              "n": 4408
+            },
+            "SMALL BUSINESSMAN": {
+              "rate": 0.1503267973856209,
+              "n": 1683
+            },
+            "GOVT EMPLOYEE": {
+              "rate": 0.40191961607678467,
+              "n": 1667
+            },
+            "TRADER": {
+              "rate": 0.23705926481620404,
+              "n": 1333
+            },
+            "INDUSTRIALIST": {
+              "rate": 0.18650088809946713,
+              "n": 1126
+            },
+            "BUSINESS CORRESPONDENTS": {
+              "rate": 0.07927927927927927,
+              "n": 555
+            },
+            "PERSON BELOW OFFICER RANK": {
+              "rate": 0.4036144578313253,
+              "n": 498
+            },
+            "PSU EMPLOYEE": {
+              "rate": 0.5766233766233766,
+              "n": 385
+            },
+            "SMALL FARMER": {
+              "rate": 0.10510510510510511,
+              "n": 333
+            },
+            "ENTREPRENEUR": {
+              "rate": 0.14691943127962084,
+              "n": 211
+            },
+            "DOCTOR": {
+              "rate": 0.5350877192982456,
+              "n": 114
+            },
+            "ARCHITECT": {
+              "rate": 0.07964601769911504,
+              "n": 113
+            },
+            "RETIRED - GOVT EMPLOYEE": {
+              "rate": 0.6842105263157895,
+              "n": 95
+            }
+          },
+          "high_cardinality_capped": {
+            "n_distinct": 56,
+            "kept_top": 10
+          },
+          "predictive_rank": 2,
+          "predictive_score": 0.11135862959815312
+        },
+        "NATIONALITY": {
+          "iv": 0.0021477583358809806,
+          "iv_band": "useless",
+          "cramers_v_target": 0.014841340862923574,
+          "lift": {
+            "max_lift": 1.286824284614725,
+            "max_lift_category": "__other__",
+            "top_bad_rate": 0.18322447576486764
+          },
+          "target_rate_by_cat": {
+            "INDIA": {
+              "rate": 0.14177767628327118,
+              "n": 197055
+            },
+            "ZIMBABWE": {
+              "rate": 0.0,
+              "n": 13
+            },
+            "NICARAGUA": {
+              "rate": 0.2857142857142857,
+              "n": 7
+            },
+            "NIGERIA": {
+              "rate": 0.25,
+              "n": 4
+            },
+            "TANZANIA": {
+              "rate": 0.0,
+              "n": 4
+            },
+            "UNITED ARAB EMIRATES": {
+              "rate": 0.3333333333333333,
+              "n": 3
+            },
+            "NAMIBIA": {
+              "rate": 0.5,
+              "n": 2
+            },
+            "BANGLA DESH": {
+              "rate": 0.0,
+              "n": 1
+            },
+            "BURKINA FASO": {
+              "rate": 0.0,
+              "n": 1
+            },
+            "CAMEROON REPUBLIC": {
+              "rate": 1.0,
+              "n": 1
+            },
+            "KAZAKHSTAN": {
+              "rate": 0.0,
+              "n": 1
+            },
+            "MYANMAR": {
+              "rate": 0.0,
+              "n": 1
+            },
+            "CANADA": {
+              "rate": 0.0,
+              "n": 1
+            },
+            "INDONESIA": {
+              "rate": 1.0,
+              "n": 1
+            },
+            "RWANDA": {
+              "rate": 0.0,
+              "n": 1
+            },
+            "RUSSIAN FEDERATION": {
+              "rate": 0.0,
+              "n": 1
+            },
+            "UNITED STATES OF AMERICA": {
+              "rate": 1.0,
+              "n": 1
+            },
+            "YEMEN": {
+              "rate": 0.0,
+              "n": 1
+            }
+          },
+          "high_cardinality_capped": {
+            "n_distinct": 18,
+            "kept_top": 10
+          },
+          "predictive_rank": 20,
+          "predictive_score": 0.0021477583358809806
+        },
+        "KYC_VERIFIED_FLAG": {
+          "iv": 0.006344950198799263,
+          "iv_band": "useless",
+          "cramers_v_target": 0.02426668653089355,
+          "lift": {
+            "max_lift": 1.007390504238992,
+            "max_lift_category": "Y",
+            "top_bad_rate": 0.14343729694606888
+          },
+          "target_rate_by_cat": {
+            "Y": {
+              "rate": 0.14343729694606888,
+              "n": 196992
+            },
+            "N": {
+              "rate": 0.07347074468085106,
+              "n": 3008
+            }
+          },
+          "predictive_rank": 18,
+          "predictive_score": 0.006344950198799263
+        },
+        "CUSTOMER_SPECIAL_STATUS": {
+          "iv": 0.013586173739261848,
+          "iv_band": "useless",
+          "cramers_v_target": 0.014969536945895973,
+          "lift": {
+            "max_lift": 1.0036158384525267,
+            "max_lift_category": "OTHERS",
+            "top_bad_rate": 0.13914057837339266
+          },
+          "target_rate_by_cat": {
+            "OTHERS": {
+              "rate": 0.13914057837339266,
+              "n": 184310
+            },
+            "ILLITERATE": {
+              "rate": 0.08364451082897685,
+              "n": 1339
+            },
+            "BLIND": {
+              "rate": 0.1,
+              "n": 210
+            },
+            "HANDICAPPED": {
+              "rate": 0.10303030303030303,
+              "n": 165
+            },
+            "SELF HELP GROUP": {
+              "rate": 0.1111111111111111,
+              "n": 117
+            },
+            "PARDA-NASHEEN WOMAN": {
+              "rate": 0.058823529411764705,
+              "n": 34
+            },
+            "DIFFERENTLY ABLED": {
+              "rate": 0.0,
+              "n": 3
+            },
+            "VISUALLY IMPAIRED": {
+              "rate": 0.6666666666666666,
+              "n": 3
+            }
+          },
+          "predictive_rank": 15,
+          "predictive_score": 0.013586173739261848
+        },
+        "ANNUAL_INCOME": {
+          "iv": null,
+          "iv_band": null,
+          "auc": null,
+          "ks": null,
+          "point_biserial": null,
+          "lift": null,
+          "predictive_rank": 21,
+          "predictive_score": 0.0
+        },
+        "NUM_CREDIT_CARDS": {
+          "iv": 0.0,
+          "iv_band": "useless",
+          "auc": 0.507014849173912,
+          "ks": 0.014023983898875936,
+          "point_biserial": 0.04538411582660423,
+          "lift": {
+            "max_lift": 1.0,
+            "top_bin_rate": 0.142385,
+            "top_bin_capture": 1.0
+          },
+          "predictive_rank": 9,
+          "predictive_score": 0.04538411582660423
+        },
+        "CREDIT_CARD_OUTSTANDING_AMOUNT": {
+          "iv": 0.0055685075825253625,
+          "iv_band": "useless",
+          "auc": 0.5035372506549249,
+          "ks": 0.007701074504201877,
+          "point_biserial": 0.017453880353775944,
+          "lift": {
+            "max_lift": 1.7829437587302133,
+            "top_bin_rate": 0.25386444708680145,
+            "top_bin_capture": 0.014994557010921094
+          },
+          "predictive_rank": 13,
+          "predictive_score": 0.017453880353775944
+        },
+        "MAX_SANCTIONED_LIMIT": {
+          "iv": 0.0,
+          "iv_band": "useless",
+          "auc": 0.5070104511446664,
+          "ks": 0.0139946979622102,
+          "point_biserial": 0.01613722475569107,
+          "lift": {
+            "max_lift": 1.0,
+            "top_bin_rate": 0.142385,
+            "top_bin_capture": 1.0
+          },
+          "predictive_rank": 14,
+          "predictive_score": 0.01613722475569107
+        }
+      }
+    }
+  },
+  "supervised": true
+}
